@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>DTALE Design Studio</title>
+    <link rel="icon" href="images/dtalefavicon.png" type="image/png" sizes="16x16">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        $("#dynamic_footer").load("footer.html");
+        $("#header").load("header.html");
+        return false;
+
+    });
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+</script>
+<body>
+
+<div class="main">
+    <div class="header_work" id="header">
+
+    </div>
+
+<div class="contactus">
+    <h2 class="work_with_us_hdr1">Work with us</h2>
+    <form action="">
+        <h4 class="work_with_us_hdr2">About Yourself</h4>
+        <div class="row">
+            <input type="text" placeholder="NAME" class="input1">
+            <input type="text" placeholder="COMPANY" class="input1">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="EMAIL" class="input1">
+            <input type="text" placeholder="PHONE" class="input1">
+        </div>
+        <h4 class="work_with_us_hdr2">About Yourself</h4>
+        <div class="row">
+            <select name="" class="input1"></select>
+            <select name="" class="input1"></select>
+        </div>
+        <div class="row">
+            <textarea class ="contactus_textarea" placeholder="BRIEF"> </textarea>
+        </div>
+        <button class="send_button">SEND</button>
+    </form>
+</div>
+
+
+
+
+
+
+    <section id="dynamic_footer">
+
+
+    </section>
+
+
+
+</div>
+
+</body>
+</html>

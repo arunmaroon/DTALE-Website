@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>DTALE Design Studio</title>
+    <link rel="icon" href="images/dtalefavicon.png" type="image/png" sizes="16x16">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fullpage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="assets/js/jquery.fullpage.js" id="scScrollFlow"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="assets/js/jquery.fullpage.js" id="scScrollFlow"></script>
+</head>
+
+<script>
+    $(document).ready(function () {
+        $("#dynamic_footer").load("footer.html");
+        return false;
+
+
+
+    });
+    function toggleDemo() {
+        $('body').toggleClass('has-mobile-navigation-open');
+        $('.sidenav').toggleClass('width_100');
+        $('body').toggleclass('overflow_hidden');
+    };
+
+    $(document).ready(function () {
+        //            if (window.innerWidth > 1024)
+        //            {
+        $('#fullpage').fullpage({
+            scrollOverflow: true
+        });
+        //            }
+    });
+
+    $(window).resize(function () { location.reload(); });
+
+</script>
+
+<body onResize="refresh()">
+
+
+    <!-- Header -->
+
+    <div class="main">
+
+        <header class="content">
+            <div class="inner">
+                <div class="logo">
+                    <a href="index.html">
+                                 <img src="images/logo.svg">
+                        </a>
+                </div>
+                <div class="mobile-nav-toggle-button" onClick="toggleDemo()">
+                    <span class="icon-bar icon-bar-1"></span>
+                    <span class="icon-bar icon-bar-2"></span>
+                    <span class="icon-bar icon-bar-3"></span>
+                </div>
+                <div id="mySidenav" class="sidenav">
+
+                    <a href="index.html"><span class="active_page">HOME</span></a>
+                    <a href="work.html">WORK</a>
+                    <a href="about_us.html">ABOUT US</a>
+                    <!--<a href="#">BLOG</a>-->
+                    <!--<a href="#">LEARN</a>-->
+                    <a href="contactus.html">CONTACT</a>
+                </div>
+
+
+            </div>
+        </header>
+
+
+        <div id="fullpage">
+            <section class="section intialpage">
+                <div class="content">
+                    <div class="page_content">
+                        <div class="flipcart">
+                            <img src="images/flipcart.svg">
+                        </div>
+                    </div>
+                    <div class="page_content1">
+                        <div class="subcontainer1">
+                            <h1><span class="light"> ekart </span><br>Helping Flipkart Optimise Logistics</h1>
+                            <a href="flipcart.html"><button class="view_button">VIEW</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="content">
+                    <div class="page_content">
+                        <div class="flipcart">
+                            <img src="images/sap_localization.svg">
+                        </div>
+                    </div>
+                    <div class="page_content1">
+                        <div class="subcontainer1"> 
+                            <h1><span class="light"> SAP </span><br>Branding SAP Localisation Hub</h1>
+                            <a href="sap_localization.html"><button class="view_button">VIEW</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section">
+                <div class="content">
+                    <div class="page_content">
+                        <div class="flipcart">
+                            <img src="images/alore.svg">
+                        </div>
+                    </div>
+                    <div class="page_content1">
+                        <div class="subcontainer1">
+                            <h1><span class="light">Alore </span><br>Improve productivity, that translates into growth</h1>
+                            <a href="alore.html"><button class="view_button">VIEW</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section">
+                <div class="content">
+                    <div class="page_content">
+                        <div class="flipcart">
+                            <img src="images/cognihealth.svg">
+                        </div>
+                    </div>
+                    <div class="page_content1">
+                        <div class="subcontainer1">
+                            <h1><span class="light">CogniHealth</span> <br>Simplifying <br> Dementia Care</h1>
+                            <a href="cognihealth.html"><button class="view_button">VIEW</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section">
+                <div class="content">
+                    <div class="page_content">
+                        <div class="flipcart">
+                            <img src="images/bordo.svg">
+                        </div>
+                    </div>
+                    <div class="page_content1">
+                        <div class="subcontainer1">
+                            <h1><span class="light">Bordo</span><br> Aggregating Ad Spaces Online </h1>
+                            <a href="bordo.html"><button class="view_button" >VIEW</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="section">
+                <div class="content">
+                    <div class="page_content">
+                        <div class="flipcart">
+                            <img src="images/jiyo.svg">
+                        </div>
+                    </div>
+                    <div class="page_content1">
+                        <div class="subcontainer1">
+                            <h1><span class="light">Jiyo </span><br>E-Commerce For A Personal Well Being</h1>
+                            <a href="jiyo.html"><button class="view_button">VIEW</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="section">
+                <div class="content">
+                    <div class="contact_form">
+                        <h1>Work with us</h1>
+                        <form class="form_elements">
+
+                            <div class="about_yourself">
+                                <h3>About Yourself</h3>
+                                <input class="form_input1" placeholder="NAME" type="text" required>
+                                <input class="form_input1" placeholder="COMPANY" type="text" required>
+                                <input class="form_input1" placeholder="EMAIL" type="email" required>
+                                <input class="form_input1" placeholder="PHONE" type="tel">
+                            </div>
+
+                            <div class="about_project">
+                                <h3>About Yourself</h3>
+
+                                <select id="project" name="services">
+                                <option value="service2">service2</option>
+                                <option value="service2">service2</option>
+                                <option value="service2">service1</option>
+                            </select>
+
+                                <select id="project" name="services">
+                                <option value="service2">service2</option>
+                                <option value="service2">service2</option>
+                                <option value="service2">service1</option>
+                            </select>
+
+                                <textarea class="textarea" name="" id="" placeholder="BRIEF"></textarea>
+                            </div>
+
+                            <button type="button">SEND</button>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section  fp-auto-height" id="dynamic_footer">
+
+            </section>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
