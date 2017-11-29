@@ -5,8 +5,10 @@
     <link rel="icon" href="images/dtalefavicon.png" type="image/png" sizes="16x16">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/formvalidator.js"></script>
 </head>
 <script>
     $(document).ready(function() {
@@ -23,10 +25,57 @@
         document.getElementById("mySidenav").style.width = "0";
     }
 
+    $(function () {
+
+        'use strict';
+
+        $.fn.validator.setDefaults({
+            trigger: 'input change',
+            success: function (e) {
+                $(this).removeClass('erroricon');
+            },
+            error: function (e) {
+                $(this).addClass('erroricon');
+            }
+        });
+
+        var $form = $('.contactus form');
+        var $inputs = $form.find('input');
+        var $selects = $form.find('select');
+        var textareas = $form.find('textarea');
+        var $submit = $form.find(':submit');
+
+        $inputs.validator();
+
+        $submit.click(function (e) {
+            var validity = [];
+
+            $inputs.each(function () {
+                validity.push($(this).validator('isValid'));
+            });
+            $selects.each(function () {
+                validity.push($(this).validator('isValid'));
+            });
+            textareas.each(function () {
+                validity.push($(this).validator('isValid'));
+            });
+            // if (document.getElementById('project').value== "service2")
+            // {
+            //     $('#project').addClass('erroricon');
+            //     return false;
+            // }
+            if ($.inArray(false, validity) !== -1) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    });
+
+
 </script>
 <body>
 
-<div class="main">
+<div class="main contact_hdr">
     <div class="header_work" id="header">
 
     </div>
@@ -45,8 +94,16 @@
         </div>
         <h4 class="work_with_us_hdr2">About Yourself</h4>
         <div class="row">
-            <select name="" class="input1"></select>
-            <select name="" class="input1"></select>
+            <select name="" class="input1">
+                <option value="service2">Branding & Creatie Design</option>
+                <option value="service1">UI/UX Design</option>
+                <option value="service3">Website Design</option>
+            </select>
+            <select name="" class="input1">
+                <option value="service2">1000$</option>
+                <option value="service2">1000$ - 10000$</option>
+                <option value="service2">Above 10000$</option>
+            </select>
         </div>
         <div class="row">
             <textarea class ="contactus_textarea" placeholder="BRIEF"> </textarea>
