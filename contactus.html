@@ -1,130 +1,93 @@
 <!DOCTYPE HTML>
+
 <html>
+
 <head>
     <title>DTALE Design Studio</title>
     <link rel="icon" href="images/dtalefavicon.png" type="image/png" sizes="16x16">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/formvalidator.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQG86PLLfQqtZV2vfXurB9UpuPeDK7f5o"></script>
 </head>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $("#dynamic_footer").load("footer.html");
         $("#header").load("header.html");
         return false;
-
     });
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-    }
+    function toggleDemo() {
+        $('body').toggleClass('has-mobile-navigation-open');
+        $('.sidenav').toggleClass('width_100');
+        $('body').toggleclass('overflow_hidden');
+    };
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
 
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
+    function init() {
+        // var isDraggable = $(window).width() < 980 ? false : true;
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 14,
+            scrollwheel: false,
+            draggable: false,
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(12.9297657, 77.6306088), // Plash
 
-    $(function () {
+            // map styles
+            styles: [{"featureType":"all","elementType":"all","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":-30}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#353535"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#656565"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#505050"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"color":"#808080"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#454545"}]}]
+        };
 
-        'use strict';
+        var mapElement = document.getElementsByClassName('contact-map')[0];
 
-        $.fn.validator.setDefaults({
-            trigger: 'input change',
-            success: function (e) {
-                $(this).removeClass('erroricon');
-            },
-            error: function (e) {
-                $(this).addClass('erroricon');
-            }
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(12.9297657, 77.6306088),
+            map: map,
+            title: 'Plash'
         });
-
-        var $form = $('.contactus form');
-        var $inputs = $form.find('input');
-        var $selects = $form.find('select');
-        var textareas = $form.find('textarea');
-        var $submit = $form.find(':submit');
-
-        $inputs.validator();
-
-        $submit.click(function (e) {
-            var validity = [];
-
-            $inputs.each(function () {
-                validity.push($(this).validator('isValid'));
-            });
-            $selects.each(function () {
-                validity.push($(this).validator('isValid'));
-            });
-            textareas.each(function () {
-                validity.push($(this).validator('isValid'));
-            });
-            // if (document.getElementById('project').value== "service2")
-            // {
-            //     $('#project').addClass('erroricon');
-            //     return false;
-            // }
-            if ($.inArray(false, validity) !== -1) {
-                e.preventDefault();
-                return false;
-            }
-        });
-    });
-
-
+    }
 </script>
-<body>
 
-<div class="main contact_hdr">
-    <div class="header_work" id="header">
 
+<body class="forwork contact_hdr">
+<div class="main">
+    <div id="header"></div>
+    <div class="content">
+    <section class="contactus_container">
+        <div class="contact-location-container">
+        <div class="contact-map">
+        </div>
+            <div class="contact-address">
+            <div class="contact-address-lines">
+                <h2 class="contact-address-lines-heading">DTALE Design Studio</h2>
+                <p>408, 4th Block</p>
+                <p>7th Cross Road, Koramangala</p>
+                <p>Bengaluru, Karnataka - 560034</p>
+                <p><a style="color:#2196f3" target="_blank" href="https://www.google.co.in/maps/place/DTALE+Design+Studio/@12.9296295,77.6288918,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1467538949e9:0xab0dfa68204d17bf!8m2!3d12.9296295!4d77.6310805">Get Directions</a></p>
+            </div>
+            </div>
     </div>
-
-<div class="contactus">
-    <h2 class="work_with_us_hdr1">Work with us</h2>
-    <form action="">
-        <h4 class="work_with_us_hdr2">About Yourself</h4>
-        <div class="row">
-            <input type="text" placeholder="NAME" class="input1">
-            <input type="text" placeholder="COMPANY" class="input1">
-        </div>
-        <div class="row">
-            <input type="text" placeholder="EMAIL" class="input1">
-            <input type="text" placeholder="PHONE" class="input1">
-        </div>
-        <h4 class="work_with_us_hdr2">About Yourself</h4>
-        <div class="row">
-            <select name="" class="input1">
-                <option value="service2">Branding & Creatie Design</option>
-                <option value="service1">UI/UX Design</option>
-                <option value="service3">Website Design</option>
-            </select>
-            <select name="" class="input1">
-                <option value="service2">1000$</option>
-                <option value="service2">1000$ - 10000$</option>
-                <option value="service2">Above 10000$</option>
-            </select>
-        </div>
-        <div class="row">
-            <textarea class ="contactus_textarea" placeholder="BRIEF"> </textarea>
-        </div>
-        <button class="send_button">SEND</button>
-    </form>
-</div>
-
-
-
-
-
-
-    <section id="dynamic_footer">
-
-
     </section>
+        <section class="contact-for-work">
+            <div class="contact-for-work-info">
+                <p class="contact-for-work-info-firstline">Careers</p>
+                <p class="contact-for-work-info-secondline">Want to work for us?</p>
+                <p class="contact-for-work-info-thirdline">We’re currently in look of a few design interns – If you’re a passionate worker and think you have what it takes, send your resume and details to <a target="_blank" href="mailto:contact@dtale.io">contact@dtale.io</a></p>
+            </div>
+        </section>
+    </div>
+    <!--<section id="dynamic_footer">-->
 
 
-
+    <!--</section>-->
 </div>
 
 </body>
+
 </html>

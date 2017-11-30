@@ -759,13 +759,11 @@ input:focus{
 }
 
 
-.l1 {
-    margin-left: 80px;
-}
-.hover_effect:hover {
-    background-color: #ffffff !important;
-    color: #313131 !important;
-}
+
+/*.hover_effect:hover {*/
+    /*background-color: #ffffff !important;*/
+    /*color: #313131 !important;*/
+/*}*/
 .overlay_menu {
     display: none;
     width: 100%;

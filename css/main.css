@@ -49,6 +49,10 @@ p{
     font-family:Montserrat-Light;
     src: url(../fonts/Montserrat-Light_0.otf);
 }
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../fonts/Montserrat-Bold.otf);
+}
 a{
     text-decoration: none;
     color:inherit;
@@ -64,6 +68,146 @@ a{
 }
 .contact_hdr #contactus{
     font-family: VisbyCF-Bold;
+}
+/*for contact us page*/
+.contact-location-container {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.contact-map {
+     -webkit-box-flex: 1;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
+    height: 500px;
+    margin: 20px;
+}
+.contact-address {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
+    margin: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.contactus_container{
+    display: block;
+    width:100%;
+    margin-top: 130px;
+}
+.contact-address-lines{
+    margin:auto;
+}
+.contact-address-lines-heading{
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+    font-family: Montserrat-Bold;
+    color:#333333;
+
+}
+.contact-address-lines p{
+    font-size: 1.5rem;
+    font-family: Montserrat-Light;
+    color: #4c4c4c;
+    margin: 0;
+    margin: 10px 0;
+
+
+}
+.contact-for-work-info-secondline {
+    font-family: VisbyCF-Thin;
+    font-weight: normal;
+    font-size: 3.75rem;
+    color: #757575;
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+}
+.contact-for-work-info-firstline {
+    color: #1976d2;
+   font-size: 1.5rem;
+    font-family: Montserrat-Bold;
+}
+.contact-for-work-info-thirdline {
+    font-family: Montserrat-Light;
+    width: 45%;
+    color: #4c4c4c;
+    line-height: 1.2;
+    font-size: 1.125rem;
+}
+.contact-for-work-info a {
+    color: #2196f3;
+}
+/*contact us page css ends*/
+.subsection1{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+
+}
+.margin_bottom_40{
+    margin-bottom:40px !important;
+}
+.section_content_hdr_span{
+    display:block;
+}
+.section_content_hdr{
+    font-size:6.75rem;
+    font-family:VisbyCF-Thin;
+    line-height:1.185;
+    color:#000000;
+    letter-spacing:0.05em;
+    font-weight:normal;
+
+}
+.mailto_btn{
+    font-family: VisbyCF-Bold;
+    padding: 10px 42px;
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+    color: #4c4c4c;
+    border: 1px solid #4c4c4c;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    text-transform:uppercase;
+}
+.bold{
+    font-family: VisbyCF-Bold;
+}
+.subsection2{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+.subsection1 img{
+    margin:0 auto;
+    display: block;
+}
+.subsection2 img{
+    margin:0 auto;
+    display: block;
+}
+.future_experiences{
+    font-family:VisbyCF-Regular;
+    color:rgba(76,76,76,0.5);
+    font-size:1.875rem;
+    letter-spacing: 0.2em;
+    text-align:center;
+    margin-bottom: 100px;
+
+}
+.section_title1{
+    font-family: Montserrat-Bold;
+    font-size: 2.125rem;
+    color:#4c4c4c;
+    text-align: center;
+    margin: 0;
+    /*padding-left: 80px;*/
 }
 .subcontainer3{
     overflow-x: hidden;
@@ -226,14 +370,14 @@ header{
     background-color:#f5f5f5;
 }
 .section_header{
-    font-family:Montserrat-Medium;
+    font-family: VisbyCF-Bold;
     font-size: 1.5rem;
     color:#333333;
     font-weight: normal;
     margin: 0;
 }
 .client_details1_h2{
-    font-family:Montserrat-Medium;
+    font-family: VisbyCF-Bold;
     font-size: 1.5rem;
     color:#333333;
     font-weight: normal;
@@ -726,7 +870,7 @@ li{
 .social_icons a{
     height: 32px;
     width: 32px;
-    background: #111111;
+    background: #ffffff;
     border-radius: 50%;
     margin-right: 35px;
     display: flex;
@@ -734,7 +878,7 @@ li{
     justify-content: center;
 }
 .social_icons a i{
-    color:#ffffff;
+    color: #333333;
     text-align: center;
 }
 .copyright{
@@ -909,7 +1053,7 @@ color: #fff;
     float: left;
     font-size: 3.75rem;
     line-height: 1.2;
-    width: 780px;
+    width: 1010px;
     font-family: VisbyCF-Bold;
 }
 .abt_main h1 span{
@@ -938,7 +1082,7 @@ color: #fff;
     margin-right: 90px;
 }
 .projects1{
-    width: 642px;
+    width: 923px;
     float: left;
     margin-right: 90px;
 }
@@ -946,7 +1090,7 @@ color: #fff;
 .client_details {
     width:550px;
     float: left;
-    margin-top: 50px;
+    margin-top: -50px;
 }
 .client_details1{
   margin-top:50px;
@@ -986,16 +1130,17 @@ color: #fff;
 }
 
 .projects1 p{
-    font-family:VisbyCF-Regular;
-    font-size: 1rem;
-    color:#333333;
-    line-height: 1.25;
+    font-family:Montserrat-Regular;
+    font-size: 1.25rem;
+    color:#4c4c4c;
+    line-height: 2.4;
     font-weight: normal;
     margin:0;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .section_header1{
     font-family: VisbyCF-Bold;
+    /*font-family:VisbyCF-Medium;*/
     font-size: 1.5rem;
     color: #333333;
     font-weight: normal;
@@ -1287,53 +1432,111 @@ color: #fff;
 }
 
 /* responsive design **/
-@media(min-width:1366px) and (max-width:1440px){
-    .wrapper{
-        width:1200px;
-        display:block;
+@media(min-width:1366px) and (max-width:1439px) {
+    .subsection1 img {
+        width: 480px;
     }
-    .projects{
-        width:600px;
+
+    .subsection2 img {
+        width: 296px;
+    }
+
+    .future_experiences {
+
+        font-size: 1.5rem;
+        margin-bottom: 60px;
+    }
+
+    .section_title1 {
+        font-size: 1.7rem;
+    }
+
+    .section_content_hdr {
+        font-size: 5.375rem;
+    }
+
+    .wrapper {
+        width: 1200px;
+        display: block;
+    }
+
+    .projects {
+        width: 600px;
         float: left;
         margin-right: 60px;
     }
-    .client_details{
+
+    .client_details {
         width: 500px;
         float: left;
         margin-top: 20px
     }
+
     .client_details1_para {
         margin-top: 15px;
     }
+
     .client_details1 {
         margin-top: 30px;
     }
-.work_container{
-    width:1200px;
-}
-.work1{
-    width: 350px;
-}
-.work1 img{
-   width:295px;
-}
-.inner {
-    
-       margin-top: 15px;
-       margin-bottom: 15px;
-    
-   }
-   .nav_container {
-     
-       padding-right: 60px;
-       padding-left: 60px;
-   }
-   .footer_container {
-       margin: 0 90px;
-   }
+
+    .work_container {
+        width: 1200px;
+    }
+
+    .work1 {
+        width: 350px;
+    }
+
+    .work1 img {
+        width: 295px;
+    }
+
+    .inner {
+
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+    }
+
+    .nav_container {
+
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+
+    .footer_container {
+        margin: 0 90px;
+    }
+
+    .footer_container5 {
+        margin: 0 90px;
+    }
 }
 @media(min-width:1280px) and (max-width:1365px){
+    .footer_container5 {
+        margin: 0 90px;
+    }
+    .subcontainer1 h1 {
+        font-size: 3rem;
+    }
+    .subsection1 img{
+        width:480px;
+    }
+    .subsection2 img{
+        width:296px;
+    }
+    .future_experiences {
 
+        font-size: 1.5rem;
+        margin-bottom: 60px;
+    }
+    .section_title1{
+        font-size: 1.7rem;
+    }
+    .section_content_hdr{
+        font-size: 5.375rem;
+    }
     .wrapper{
         width:1200px;
         display:block;
@@ -1379,6 +1582,31 @@ color: #fff;
        }
 }
 @media(min-width:1024px) and (max-width:1279px){
+    .subcontainer1 h1 {
+        font-size: 3rem;
+    }
+
+    .abt_main h1 {
+
+        width: 950px;
+    }
+    .subsection1 img{
+        width:384px;
+    }
+    .subsection2 img{
+        width:236px;
+    }
+    .future_experiences {
+
+        font-size: 1.5rem;
+        margin-bottom: 60px;
+    }
+    .section_title1{
+        font-size: 1.7rem;
+    }
+    .section_content_hdr{
+        font-size: 5.375rem;
+    }
     .contactus_popup_container {
         width: 1000px;
         padding: 50px;
@@ -1444,8 +1672,36 @@ color: #fff;
     .footer_container {
         margin: 0 90px;
     }
+    .contact-for-work-info-thirdline {
+
+        width: 80%;
+    }
+    .contact-address-lines p {
+        font-size: 1.25rem;
+    }
+    .contact-for-work-info-secondline {
+       font-size: 3rem;
+    }
+
 }
 @media(min-width:768px) and (max-width:1023px){
+    .subsection1 img{
+        width:310px;
+    }
+    .subsection2 img{
+        width:189px;
+    }
+    .future_experiences {
+
+        font-size: 1.25rem;
+        margin-bottom: 60px;
+    }
+    .section_title1{
+        font-size: 1.5rem;
+    }
+    .section_content_hdr{
+        font-size: 3.75rem;
+    }
     .contactus_popup_container {
         width: 700px;
         padding: 50px;
@@ -1476,7 +1732,7 @@ color: #fff;
         margin-bottom: 30px;
     }
     .projects p {
-        font-family: Montserrat-Regular;
+        margin-top: 20px;
         font-size: 0.875rem;
     }
     .section_header {
@@ -1551,6 +1807,7 @@ color: #fff;
 
     .work_container{
         width: 660px;
+        padding-top: 120px;
     }
     .work1{
         padding: 20px;
@@ -1577,6 +1834,73 @@ color: #fff;
     }
 }
 @media(min-width:600px) and (max-width:767px){
+    .contact-address-lines-heading {
+        font-size: 1.5rem;
+    }
+    .contact-address-lines p {
+        font-size: 1rem;
+    }
+
+    .contact-address{
+        margin:0;
+        margin-top: 20px;
+    }
+    .contact-for-work-info-firstline {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .contact-for-work-info-secondline {
+
+        font-size: 3rem;
+    }
+    .contact-for-work-info-thirdline {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .client_details1_h2{
+        font-size: 1.1rem;
+    }
+    .client_details1_para {
+        font-size: 0.875rem;
+        margin-top: 8px;
+    }
+    .client_details1 {
+        margin-top: 35px;
+    }
+    .margin_bottom_40 {
+        margin-bottom: 28px !important;
+    }
+    .section_header1{
+        font-size: 1.1rem;
+    }
+    .projects1 p {
+        font-size: 0.875rem;
+        line-height: 2;
+        margin-top: 30px;
+    }
+    .client_name {
+
+        font-size: 1rem
+    }
+
+    .subsection1 img{
+        width: 250px;
+
+    }
+    .subsection2 img{
+        width:145px;
+    }
+    .future_experiences {
+
+        font-size: 1.25rem;
+        margin-bottom: 60px;
+    }
+    .section_title1{
+        font-size: 1.5rem;
+    }
+    .section_content_hdr{
+        font-size: 3.5rem;
+    }
     .clients {
         width: 100%;
     }
@@ -1714,6 +2038,8 @@ color: #fff;
     }
     .work_container{
         width: 580px;
+        padding-top: 20px;
+
     }
     .work1{
         padding: 20px;
@@ -1734,11 +2060,84 @@ color: #fff;
 
     }
     .work_type {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-top: 10px;
       }
 }
 @media(min-width:425px) and (max-width:599px){
+    .contact-address-lines-heading {
+        font-size: 1.5rem;
+    }
+    .contact-address-lines p {
+        font-size: 1rem;
+    }
+
+    .contact-address{
+        margin:0;
+        margin-top: 20px;
+    }
+    .contact-for-work-info-firstline {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .contact-for-work-info-secondline {
+
+        font-size: 3rem;
+    }
+    .contact-for-work-info-thirdline {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .client_details1_h2{
+        font-size: 1.1rem;
+    }
+    .client_details1_para {
+        font-size: 0.875rem;
+        margin-top: 8px;
+    }
+    .client_details1 {
+        margin-top: 35px;
+    }
+    .margin_bottom_40 {
+        margin-bottom: 28px !important;
+    }
+    .section_header1{
+        font-size: 1.1rem;
+    }
+    .projects1 p {
+        font-size: 0.875rem;
+        line-height: 2;
+        margin-top: 30px;
+    }
+    .subsection1 img{
+        width: 250px;
+
+    }
+    .subsection1 {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .subsection2 {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 50px;
+    }
+    .subsection2 img{
+        width:145px;
+    }
+    .future_experiences {
+
+        font-size: 1.25rem;
+        margin-bottom: 60px;
+    }
+    .section_title1{
+        font-size: 1.5rem;
+    }
+    .section_content_hdr{
+        font-size: 3.5rem;
+    }
     .clients {
         width: 100%;
     }
@@ -1884,6 +2283,7 @@ color: #fff;
     }
     .work_container{
         width: 100%;
+        padding-top: 80px;
     }
     .work1{
         padding: 20px;
@@ -1905,7 +2305,7 @@ color: #fff;
 
     }
     .work_type {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-top: 10px;
     }
     .inner {
@@ -1917,10 +2317,89 @@ color: #fff;
       .testimonial_box{
         font-size:0.875rem;
     }
+    .abt_main h1 span {
+        display: inline;
+    }
 }
 
 
 @media (max-width: 424px){
+    .contact-address-lines-heading {
+        font-size: 1.25rem;
+    }
+    .contact-address-lines p {
+        font-size: 1rem;
+    }
+
+    .contact-address{
+        margin:0;
+        margin-top: 20px;
+    }
+    .contact-for-work-info-firstline {
+        font-size: 0.875rem;
+        margin-bottom: 0;
+    }
+    .contact-for-work-info-secondline {
+
+        font-size: 2rem;
+    }
+    .contact-for-work-info-thirdline {
+        width: 100%;
+        font-size: 0.875rem;
+    }
+    .abt_main h1 span {
+        display: inline;
+    }
+    .client_details1_h2{
+        font-size: 1.1rem;
+    }
+    .client_details1_para {
+        font-size: 0.875rem;
+        margin-top: 8px;
+    }
+    .client_details1 {
+        margin-top: 35px;
+    }
+    .margin_bottom_40 {
+        margin-bottom: 28px !important;
+    }
+    .section_header1{
+        font-size: 1.1rem;
+    }
+    .projects1 p {
+        font-size: 0.875rem;
+        line-height: 2;
+        margin-top: 30px;
+    }
+    .subsection1 img{
+        width: 250px;
+
+    }
+    .subsection1 {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .subsection2 {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 50px;
+    }
+    .subsection2 img{
+        width:145px;
+    }
+    .future_experiences {
+        margin-bottom: 25px;
+        font-size: 1rem;
+        margin-top: 60px;
+    }
+    .section_title1{
+        font-size: 1.125rem;
+    }
+    .section_content_hdr{
+        font-size: 2.75rem;
+    }
     .clients {
         width: 100%;
     }
@@ -2078,6 +2557,7 @@ color: #fff;
     /*for work page*/
     .work_container{
         width: 100%;
+        padding-top: 80px;
     }
     .work1{
         padding: 20px;
@@ -2210,15 +2690,15 @@ h3  {
   
 
  .abt_main h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     width: 100%;
 }
 
-    
-    .bg_top {
-    width: 270px;
-    
-}
+    /**/
+    /*.bg_top {*/
+    /*width: 270px;*/
+    /**/
+/*}*/
 
 .projects {
     width: 100%;
@@ -2253,9 +2733,9 @@ h3  {
 }
 
 
-.bg_top2 img {
-    width: 270px;
-}
+/*.bg_top2 img {*/
+    /*width: 270px;*/
+/*}*/
     .innerpage{
         padding-top: 30px;
 }
@@ -2405,394 +2885,6 @@ font-size:1rem;
 }
 
 
-    /**/
-    /*body{*/
-        /*background-color: unset;*/
-    /*}*/
-    /**/
-    /*.content {*/
-    /**/
-    /*margin: 10px auto;*/
-/*}*/
-    /**/
-    /*.intialpage{*/
-        /**/
-        /*margin-top: 111px;*/
-    /*}*/
-    /**/
-    /**/
-/*.img-responsive {*/
-    /*width: 100px;*/
-/*}*/
-    /*.nav_container {*/
-    /*left: 36px;*/
-/*} */
-    /**/
-/*section {*/
-    /*width: 100%;*/
-    /*float: left;*/
-    /*margin-top: 35px;*/
-    /*margin-bottom: 0px;*/
-    /*padding-top: 0px;*/
-    /*padding-bottom: 20px;*/
-/*}*/
-
-/*.page_content {*/
-    /*width: 400px;*/
-    /*float: left;*/
-/*}*/
-
-/*.flipcart img {*/
-    /*width: 250px;*/
-    /*float: left;*/
-    /*margin-bottom: 20px;*/
-/*}*/
-    /**/
-    /*.subcontainer1 h1{*/
-        /**/
-        /*font-size: 2em;*/
-        /*width: 100%;*/
-        /*margin: 0px 0px 15px 0px;*/
-        /*line-height: 42px;*/
-    /*}*/
-    /**/
-    /*.button{*/
-
-	/*width: 100%;*/
-	/*padding: 11px 0px;*/
-/*}*/
-    /*.page_content1 {*/
-    /*width: 100%;*/
-    /*float: left;*/
-/*}*/
-    /*.about_project select {*/
-    /*width: 100%;*/
-    /*}*/
-    /**/
-    /*h3 {*/
-    /*font-size: 1em;*/
-    /*margin: 8px 0px 24px 0px;*/
-/*}*/
-
-/*.contact_form h1 {*/
-    /*font-size: 2em;*/
-
-/*}*/
-
-/*h3 {*/
-    /*font-size: 1em;*/
-    /*margin: 13px 0px 24px 0px;*/
-/*}*/
-
-/*.form_elements input {*/
-    /*width: 94%;*/
-    /*height: 42px;*/
-    /*border: 1px solid gray;*/
-    /*border-radius: 8px;*/
-    /*margin: 0px 13px 21px 0px;*/
-    /*padding: 0px 10px;*/
-/*}*/
-    /*.subcontainer1 img {*/
-    /*width: 50px;*/
-/*}*/
-
-    /*!* innerpage **!*/
-    /**/
-    /**/
-    /*.abt_main h1 {*/
-    /*font-size: 2rem;*/
-    /*width: 100%;*/
-/*}*/
-
-    /*.bg_top {*/
-    /*width: 100%;*/
-    /*height: 150px;*/
-    /*background-color: #f2f2f2;*/
-/*}*/
-
-/*.bg_top {*/
-    /*width: 350px;*/
-    /**/
-/*}*/
-
-
-/*.projects {*/
-    /*width: 100%;*/
-    /*float: left;*/
-/*}*/
-
-/*.cliet_details {*/
-    /*width: 100%;*/
-    /*float: left;*/
-    /*margin-top: 50px;*/
-/*}*/
-/*.cliet_details1 {*/
-    /*width: 100%;*/
-    /*float: left;*/
-    /*margin-left: 0px;*/
-/*}*/
-
-/*.Spec {*/
-    /*width: 100%;*/
-    /*float: left;*/
-/*}*/
-
-/*.bg_top2 {*/
-    /*width: 100%;*/
-    /*float: left;*/
-    /*margin: 0px auto;*/
-/*}*/
-
-/*.Initial_concepts {*/
-    /*width: 100%;*/
-    /*float: left;*/
-/*}*/
-
-
-/*.bg_top2 img {*/
-    /*width: 350px;*/
-/*}*/
-    /*.innerpage{*/
-    /*padding-top: 1px;*/
-/*}*/
-    /**/
-    /**/
-/*.abt_bg {*/
-    /*width: 100%;*/
-    /*margin: 0px auto;*/
-/*}*/
-
-
-
-/*.abt_bg img {*/
-    /*width: 100%;*/
-    /*margin-top: 132px;*/
-/*}*/
-
-/*.abt_service {*/
-    /*width: 100%;*/
-    /*padding: 0px 0px 0px 0px;*/
-/*}*/
-
-/*.abt_box {*/
-    /*width: 100%;*/
-/*text-align: center;*/
-/*margin-top: 50px;*/
-/*padding:0px;*/
-/*}*/
-
-/*.abt_photos {*/
-    /*width: 270px;*/
-    /*float: none;*/
-    /*padding: 38px 0px;*/
-    /*margin: 0px auto;*/
-/*}*/
-
-/*.testimonial_box {*/
-    /*width: 100%;*/
-/*}*/
-
-/*.clients img {*/
-    /*width: 36%;*/
-    /*float: left;*/
-/*}*/
-
-/*.text_head {*/
-    /*font-size: 1.3em;*/
-    /*margin-top: 0px;*/
-/*}*/
-
-/*.footer_nav a {*/
-    /*text-decoration: none;*/
-    /*padding: 0px 8px;*/
-    /*letter-spacing: 2px;*/
-    /*font-weight: 700;*/
-    /*font-size: 1.3em;*/
-    /*color: #ffff;*/
-    /*line-height: 3pc;*/
-/*}*/
-
-/* .footer_nav {
-    margin-top: 50px;
-}
-
-.copyrite{
-	margin-top:50px;
-}
-
-.testimonial_box{
-
-	padding:0px;
-}
-.abt_box img {
-    margin-top: 30px;
-} */
-  
-
-
-/* @media  (min-width :481px) and (max-width: 768px) {
-
-    body{
-        background: none;
-    }
-
-    .content {
-
-    margin: 10px auto;
-}
-    .img-responsive {
-    width: 100px;
-}
-    inner {
-    margin-top: 5px;
-}
-    .nav_container {
-    left: 47px;
-}
-    .intialpage{
-
-        margin-top: 120px;
-    }
-
-section {
-    width: 100%;
-    float: left;
-    margin-top: 35px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 20px;
-}
-
-.page_content {
-    width: 400px;
-    float: left;
-}
-
-.flipcart img {
-    width: 300px;
-    float: left;
-    margin-bottom: 20px;
-}
-
-    .subcontainer1 h1 {
-    font-size: 3rem;
-    width: 100%;
-    margin: 0px 0px 15px 0px;
-    line-height: 55px;
-}
-    .button{
-
-	width: 100%;
-	padding: 11px 0px;
-}
-    .page_content1 {
-    width: 100%;
-    float: left;
-}
-    .about_project select {
-    width: 100%;
-    }
-
-    h3 {
-    font-size: 1em;
-    margin: 8px 0px 24px 0px;
-}
-
-.contact_form h1 {
-    font-size: 2em;
-
-}
-
-h3 {
-    font-size: 1em;
-    margin: 13px 0px 24px 0px;
-}
-
-.form_elements input {
-    width: 94%;
-    height: 42px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    margin: 0px 13px 21px 0px;
-    padding: 0px 10px;
-}
-
-    .subcontainer1 img {
-    width: 50px;
-}
-
-    .bg_top {
-    width: 100%;
-
-}
-
-
- .abt_main h1 {
-    font-size: 2rem;
-    width: 100%;
-}
-
-
-    .bg_top {
-    width: 420px;
-
-}
-
-
-.projects {
-    width: 100%;
-    float: left;
-}
-
-.cliet_details {
-    width: 100%;
-    float: left;
-    margin-top: 50px;
-}
-.cliet_details1 {
-    width: 100%;
-    float: left;
-    margin-left: 0px;
-}
-
-.Spec {
-    width: 100%;
-    float: left;
-}
-
-.bg_top2 {
-    width: 100%;
-    float: left;
-    margin: 0px auto;
-}
-
-.Initial_concepts {
-    width: 100%;
-    float: left;
-}
-
-
-.bg_top2 img {
-    width: 420px;
-}
-    .innerpage{
-    padding-top: 1px;
-}
-
-    .text_head {
-    margin-top: 0px;
-}
-    .abt_photos {
-    width: 176px;
-    float: none;
-    padding: 38px 17px;
-    margin: 0px auto;
-}
-
-
-
-
-} */
 @media  (max-width: 767px) {
     .logo img {
         width: 75px;
@@ -2837,70 +2929,135 @@ h3 {
         font-size: 36px;
         margin-left: 50px;
     }
+
 }
 @media  (min-width :768px) and (max-width: 1023px) {
-    
-    content {
-    width: 90%;
-    margin: 0px auto;
-}
-    
+    .client_details1_h2 {
+        font-size: 1.1rem;
+    }
+
+    .client_details1_para {
+        font-size: 0.875rem;
+        margin-top: 8px;
+    }
+
+    .client_details1 {
+        margin-top: 35px;
+    }
+
+    .margin_bottom_40 {
+        margin-bottom: 28px !important;
+    }
+
+    .section_header1 {
+        font-size: 1.1rem;
+    }
+
+    .projects1 p {
+        font-size: 0.875rem;
+        line-height: 2;
+        margin-top: 30px;
+    }
+
+    .client_name {
+
+        font-size: 1rem
+    }
+
+    .work_type {
+
+        font-size: 0.8rem;
+    }
+
+    .content {
+        width: 90%;
+        margin: 0px auto;
+    }
+
     #mySidenav a {
         padding: 8px 8px 8px 13px;
     }
 
-.flipcart img {
-    width: 250px;
-    float: right;
-}
+    .flipcart img {
+        width: 250px;
+        float: right;
+    }
 
-.subcontainer1 h1 {
-    font-size: 2rem;
-    letter-spacing: 0px;
-    margin: 0px 0px 44px 0px;
-    font-family: VisbyCF-Bold;
-}
+    .subcontainer1 h1 {
+        font-size: 2rem;
+        letter-spacing: 0px;
+        margin: 0px 0px 44px 0px;
+        font-family: VisbyCF-Bold;
+    }
 
-.about_project select {
-    width: 350;
-    height: 40px;
-  
-    padding: 0px 26px;
-    font-size: 18px;
-    
-}
+    .about_project select {
+        width: 350px;
+        height: 40px;
 
-.form_elements input {
-    width: 43%;
-    height: 50px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    margin: 0px 5px 15px 0px;
-    padding: 0px 18px;
-}
-   
+        padding: 0px 26px;
+        font-size: 18px;
+
+    }
+
+    .form_elements input {
+        width: 43%;
+        height: 50px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        margin: 0px 5px 15px 0px;
+        padding: 0px 18px;
+    }
+
     #mySidenav a {
         padding: 8px 8px 8px 13px;
-}
+    }
+
     .intialpage {
-    margin-top: 140px;
-}
+        margin-top: 140px;
+    }
 
+    .flipcart img {
+        width: 220px;
+        float: right;
+    }
 
+    .nav_container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
 
-.flipcart img {
-    width: 220px;
-    float: right;
-}
+    .contact-address-lines-heading {
+        font-size: 1.5rem;
+    }
+    .contact-address-lines p {
+        font-size: 1rem;
+    }
 
-.nav_container {
-	width: 90%;
-    margin: 0 auto;
-    padding: 0;
-}
+    .contact-address{
+        margin:0;
+        margin-top: 20px;
+    }
+    .contact-for-work-info-firstline {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .contact-for-work-info-secondline {
+
+        font-size: 3rem;
+    }
+    .contact-for-work-info-thirdline {
+        width: 80%;
+    }
 }
 
 @media (max-width:1024px){
+    .client_details {
+       margin-top: -20px;
+    }
+    .projects1 {
+        width: 100%;
+    }
     .footer_container {
        max-width: 500px;
         margin: 0 auto;
@@ -2934,6 +3091,18 @@ h3 {
     .footer_container2 ul li, .footer_container3 ul li, .footer_container4 ul li{
         font-size:0.875rem !important;
     }
+
+    .contact-location-container{
+        display: block;
+    }
+    .contact-address-lines {
+        margin: 0;
+    }
+    .contact-map{
+        margin:0;
+    }
+
+
 }
 
 
@@ -2961,3 +3130,8 @@ h3 {
     }
 }
 
+@media (min-width:1024px){
+    .contact-for-work{
+        margin:20px;
+    }
+}
