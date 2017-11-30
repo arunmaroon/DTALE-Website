@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/jquery.fullpage.js" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/formvalidator.js"></script>
+
     <script src="js/custom.js"></script>
     <script>
         $(document).ready(function () {
@@ -20,54 +20,7 @@
             });
         });
 
-
-        $(function () {
-
-            'use strict';
-
-            $.fn.validator.setDefaults({
-                trigger: 'input change',
-                success: function (e) {
-                    $(this).removeClass('erroricon');
-                },
-                error: function (e) {
-                    $(this).addClass('erroricon');
-                }
-            });
-
-            var $form = $('.contact_form form');
-            var $inputs = $form.find('input');
-            var $selects = $form.find('select');
-            var textareas = $form.find('textarea');
-            var $submit = $form.find(':submit');
-
-            $inputs.validator();
-
-            $submit.click(function (e) {
-                var validity = [];
-
-                $inputs.each(function () {
-                    validity.push($(this).validator('isValid'));
-                });
-                $selects.each(function () {
-                    validity.push($(this).validator('isValid'));
-                });
-                textareas.each(function () {
-                    validity.push($(this).validator('isValid'));
-                });
-                // if (document.getElementById('project').value== "service2")
-                // {
-                //     $('#project').addClass('erroricon');
-                //     return false;
-                // }
-                if ($.inArray(false, validity) !== -1) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-        });
-
-    </script>
+   </script>
 </head>
 <body class="landingpage">
     <!-- Header -->
@@ -83,7 +36,7 @@
                     </div>
                     <div class="page_content1">
                         <div class="subcontainer1">
-                            <h1><span class="light"> ekart </span><br>Helping Flipkart Optimise Logistics</h1>
+                            <h1><span class="light"> ekart </span><br>Helping Flipkart to rethink Logistic experience</h1>
                             <a href="flipkart.html"><button class="view_button">VIEW</button></a>
                         </div>
                     </div>
@@ -98,7 +51,7 @@
                     </div>
                     <div class="page_content1">
                         <div class="subcontainer1"> 
-                            <h1><span class="light"> SAP </span><br>Branding SAP Localisation Hub</h1>
+                            <h1><span class="light"> SAP </span><br>Defining the purpose for SAP Localisation Hub</h1>
                             <a href="SAP_Localization.html"><button class="view_button">VIEW</button></a>
                         </div>
                     </div>
@@ -113,7 +66,7 @@
                     </div>
                     <div class="page_content1">
                         <div class="subcontainer1">
-                            <h1><span class="light">Alore </span><br>Improve productivity, that translates into growth</h1>
+                            <h1><span class="light">Alore </span><br>Improving productivity that directly translates into growth</h1>
                             <a href="alore.html"><button class="view_button">VIEW</button></a>
                         </div>
                     </div>
@@ -129,7 +82,7 @@
                     </div>
                     <div class="page_content1">
                         <div class="subcontainer1">
-                            <h1><span class="light">CogniHealth</span> <br>Simplifying <br> Dementia Care</h1>
+                            <h1><span class="light">CogniHealth</span> <br>Making sense of data for Dementia Care homes</h1>
                             <a href="cognihealth.html"><button class="view_button">VIEW</button></a>
                         </div>
                     </div>
@@ -144,7 +97,7 @@
                     </div>
                     <div class="page_content1">
                         <div class="subcontainer1">
-                            <h1><span class="light">Bordo</span><br> Aggregating Ad Spaces Online </h1>
+                            <h1><span class="light">Bordo</span><br> Simplifying OOH advertising experience with technology</h1>
                             <a href="bordo.html"><button class="view_button" >VIEW</button></a>
                         </div>
                     </div>
@@ -160,7 +113,7 @@
                     <div class="page_content1">
                         <div class="subcontainer1">
                             <h1>
-                                 <span class="light">Jiyo </span><br>E-Commerce For A Personal Well Being</h1>
+                                 <span class="light">Jiyo </span><br>Designing E-Commerce for personalised wellbeing</h1>
                                  <a href="jiyo.html"><button class="view_button">VIEW</button></a>
                         </div>
                     </div>

@@ -116,10 +116,7 @@ li {
     position: relative;
 }
 */
-
-body{
-	border:25px solid #ffffff;
-}/* Icon 3 */
+/* Icon 3 */
  #nav-icon3 {
   width: 36px;
  height: 30px;
@@ -964,9 +961,7 @@ margin-left: 20px;
 
 
 @media  (max-width: 424px){
-    body{
-border:12px solid #ffffff;
-    }
+
     .dtale_recent_work {
     padding: 20px;
     padding-top: 0;
