@@ -703,13 +703,13 @@ body.has-mobile-navigation-open:not(.has-lightbox-open) .mobile-nav-toggle-butto
     background: #f5f5f5;
 }
 .work_container{
-    width: 1290px;
+    width: 1292px;
     margin: 0 auto;
     display: table;
     padding-top: 175px;
 }
 .work_container1{
-    width: 1290px;
+    width: 1292px;
     margin: 0 auto;
     display: table;
     padding-top: 110px;
@@ -2620,6 +2620,9 @@ color: #fff;
 
 
 @media (max-width: 424px){
+    .m_top20 {
+        margin-top: 20px;
+    }
     #careers{
         margin-top: -50px;
     }
