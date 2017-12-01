@@ -105,7 +105,8 @@ a{
 /*for contact us page*/
 
 .m_top20{
-    margin-top: 20px;
+    margin-top: 40px;
+    float: left;
 }
 .contact-location-container {
 
@@ -1450,10 +1451,23 @@ color: #fff;
         font-size: 1.2rem;
     }
     .projects p {
-        font-size: 1.25rem;
-    }
-    .projects p {
         font-size: 1rem;
+    }
+    .client_details1_h2
+    {
+        font-size: 1.2rem;
+    }
+    .client_details1_para{
+        font-size: 1rem;
+    }
+    .section_header1{
+        font-size: 1.2rem;
+    }
+    .projects1 p{
+        font-size: 1rem
+    }
+    .more_projects_hdr{
+        font-size: 2.375rem;
     }
     .wrapper{
         width:85%;
@@ -1483,11 +1497,25 @@ color: #fff;
     .section_header {
         font-size: 1.2rem;
     }
-    .projects p {
-        font-size: 1.25rem;
-    }
+
     .projects p {
         font-size: 1rem;
+    }
+    .client_details1_h2
+    {
+        font-size: 1.2rem;
+    }
+    .client_details1_para{
+        font-size: 1rem;
+    }
+    .section_header1{
+        font-size: 1.2rem;
+    }
+    .projects1 p{
+        font-size: 1rem
+    }
+    .more_projects_hdr{
+        font-size: 2.375rem;
     }
     .subsection1 img {
         width: 480px;
@@ -1567,6 +1595,7 @@ color: #fff;
 
     .footer_container5 {
         margin: 0 90px;
+        margin-top: 40px;
     }
 }
 @media(min-width:1280px) and (max-width:1365px){
@@ -1576,14 +1605,29 @@ color: #fff;
     .section_header {
          font-size: 1.2rem;
     }
-    .projects p {
-         font-size: 1.25rem;
-    }
+
     .projects p {
          font-size: 1rem;
     }
+    .client_details1_h2
+    {
+        font-size: 1.2rem;
+    }
+    .client_details1_para{
+        font-size: 1rem;
+    }
+    .section_header1{
+        font-size: 1.2rem;
+    }
+    .projects1 p{
+        font-size: 1rem
+    }
+    .more_projects_hdr{
+        font-size: 2.375rem;
+    }
     .footer_container5 {
         margin: 0 90px;
+        margin-top: 40px;
     }
     .subcontainer1 h1 {
         font-size: 3rem;
@@ -1617,7 +1661,7 @@ color: #fff;
     .client_details{
         width: 495px;
         float: left;
-        margin-top: 20px
+        /*margin-top: 20px*/
     }
     .client_details1_para {
         margin-top: 15px;
@@ -1650,11 +1694,36 @@ color: #fff;
        }
 }
 @media(min-width:1024px) and (max-width:1279px){
+    .abt_main h1 {
+        font-size: 3rem;
+    }
+    .section_header {
+        font-size: 1.2rem;
+    }
+
+    .projects p {
+        font-size: 1rem;
+    }
+    .client_details1_h2
+    {
+        font-size: 1.2rem;
+    }
+    .client_details1_para{
+        font-size: 1rem;
+    }
     .client_name {
 
         font-size: 1rem
     }
-
+   .section_header1{
+       font-size: 1.2rem;
+    }
+    .projects1 p{
+        font-size: 1rem
+    }
+    .more_projects_hdr{
+        font-size: 2.375rem;
+    }
     .work_type {
 
         font-size: 0.8rem;
@@ -1717,7 +1786,7 @@ color: #fff;
     .client_details{
         width:30%;
         float: left;
-        margin-top: 20px
+        margin-top: -30px;
     }
     .client_details1_para {
         margin-top: 15px;
@@ -1750,7 +1819,7 @@ color: #fff;
         padding-left: 35px;
     }
     .footer_container {
-        margin: 0 90px;
+        margin: 0 40px;
     }
     .contact-for-work-info-thirdline {
 
@@ -1761,6 +1830,13 @@ color: #fff;
     }
     .contact-for-work-info-secondline {
        font-size: 3rem;
+    }
+    .footer_container1 h4
+    {
+        font-size: 1rem;
+    }
+    .footer_container2,.footer_container3 ,.footer_container4{
+        font-size: 0.875rem;
     }
 
 }
