@@ -397,7 +397,7 @@ width: 100%;
 	text-align: center;
 }
 .team-member-name{
-	margin-top: -20%;
+	/*margin-top: -20%;*/
 	color: #4f5362;
 	font-family: Montserrat-Light_0;
 }
@@ -920,7 +920,8 @@ margin-left: 20px;
     margin-bottom: 28px;
 }
 .team-member-image img{
-	width: 100%;
+	width: auto;
+    object-fit: contain;
 }
 .team-member{
 	width: 25%;

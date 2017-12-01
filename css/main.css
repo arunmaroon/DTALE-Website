@@ -1479,7 +1479,7 @@ color: #fff;
     .nav_container {
         padding-right: 100px;
         padding-left: 100px;
-         }
+    }
     .projects {
         width: 650px;
         margin-right: 70px;
@@ -1488,9 +1488,12 @@ color: #fff;
         width: 430px;
         margin-top: -50px;
     }
-}
-
+   }
 @media(min-width:1366px) and (max-width:1439px) {
+    .team-member-image img {
+        width: 75%;
+        object-fit: contain;
+    }
     .abt_main h1 {
         font-size: 3rem;
     }
@@ -1599,6 +1602,10 @@ color: #fff;
     }
 }
 @media(min-width:1280px) and (max-width:1365px){
+    .team-member-image img {
+        width: 75%;
+        object-fit: contain;
+    }
     .abt_main h1 {
         font-size: 3rem;
     }
@@ -1694,6 +1701,10 @@ color: #fff;
        }
 }
 @media(min-width:1024px) and (max-width:1279px){
+    .team-member-image img {
+        width: 75%;
+        object-fit: contain;
+    }
     .abt_main h1 {
         font-size: 3rem;
     }
@@ -1841,6 +1852,10 @@ color: #fff;
 
 }
 @media(min-width:768px) and (max-width:1023px){
+    .team-member-image img {
+        width: 75%;
+        object-fit: contain;
+    }
     /*work icons*/
     .img_container{
         width: 25%;
@@ -2024,6 +2039,10 @@ color: #fff;
     }
 }
 @media(min-width:600px) and (max-width:767px){
+    .team-member-image img {
+        width: 75%;
+        object-fit: contain;
+    }
     /*work icons*/
     .img_container{
         width: 33.3%;
@@ -2268,6 +2287,10 @@ color: #fff;
       }
 }
 @media(min-width:425px) and (max-width:599px){
+    .team-member-image img {
+        width: 75%;
+        object-fit: contain;
+    }
     /*work icons*/
     .img_container{
         width: 33.3%;
@@ -2589,6 +2612,10 @@ color: #fff;
 
 
 @media (max-width: 424px){
+    .team-member-image img {
+        width: 75%;
+        object-fit: contain;
+    }
     /*work icons*/
     .img_container{
         width: 33.3%;

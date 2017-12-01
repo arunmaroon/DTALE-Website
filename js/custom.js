@@ -7,12 +7,11 @@ $(document).ready(function() {
         $('.contactus_popup').css('display','block');
     });
 });
-
+var menuFlag;
 function toggleDemo(){
     $('body').toggleClass('has-mobile-navigation-open');
     $('.sidenav').toggleClass('width_100');
-    $('body').toggleclass('overflow_hidden');
-    $('.overlay').toggleClass('darkerside');
+     menuFlag=true;
 }
 
 
