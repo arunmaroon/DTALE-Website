@@ -2266,7 +2266,12 @@ color: #fff;
        
         font-size: 1.1rem;
     }
-    .work_container,.work_container1{
+    .work_container{
+        width: 580px;
+
+        padding-top: 95px;
+    }
+   .work_container1{
         width: 580px;
         padding-top: 20px;
 
