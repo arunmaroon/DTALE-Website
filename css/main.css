@@ -68,7 +68,15 @@ a{
 .contact_hdr #contactus{
     font-family: VisbyCF-Bold;
 }
-
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/ring.gif) 50% 50% no-repeat #fff;
+}
 
 /*for mobile menu*/
 .darkerside {
@@ -2612,6 +2620,13 @@ color: #fff;
 
 
 @media (max-width: 424px){
+    #careers{
+        margin-top: -50px;
+    }
+    .work_container1 {
+        width: 100%;
+    }
+
     .team-member-image img {
         width: 75%;
         object-fit: contain;
@@ -2919,12 +2934,12 @@ color: #fff;
         box-sizing: border-box;
     }
     .main header{
-        width: 100%;
-        padding: 10px;
+        width: 90%;
+        /* padding: 10px; */
         box-sizing: border-box;
-        position: fixed;
+        /* position: fixed; */
         background: #ffffff;
-        margin: 0;
+        /* margin: 0; */
     }
     /*for work page*/
     .work_container,.work_container{
@@ -2963,10 +2978,10 @@ color: #fff;
         background-color:unset;
     }
     
-    .content {
-    
-    margin: 10px auto;
-}
+    /*.content {*/
+
+    /*margin: 10px auto;*/
+/*}*/
 
     
     .img-responsive {

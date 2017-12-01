@@ -11,28 +11,13 @@
     <link rel="stylesheet" href="css/jquery.fullpage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="js/custom.js"></script>
 </head>
-
-<script>
-    $(document).ready(function () {
-        $("#dynamic_footer").load("footer.html");
-        $("#header").load("header.html");
-        return false;
-
-    });
-    function toggleDemo() {
-        $('body').toggleClass('has-mobile-navigation-open');
-        $('.sidenav').toggleClass('width_100');
-        $('body').toggleclass('overflow_hidden');
-    };
-
-</script>
 
 
 <body class="forwork work_page">
 
-
+<div class="loader"></div>
 <!-- Header -->
 
 <div class="main">

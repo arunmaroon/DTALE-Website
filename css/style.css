@@ -502,19 +502,7 @@ width: 100%;
     width: 50%;
     float: left;
 }
-.work4_div2 {
-    background-image: url('/images/dtale_img4.png');
-    background-repeat: no-repeat;
-    /*background-size: contain;
-    height: 500px;
-    background-position: 70% 50%;
-    width: 50%;*/
-    float: left;
-    background-size: contain;
-    height: 85vh;
-    /* background-position: 69% -19%; */
-    width: 65%;
-}
+
 .work4_div1 {
     width: 35%;
     float: left;

@@ -9,22 +9,11 @@
     <link rel="stylesheet" href="css/jquery.fullpage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/custom.js"></script>
 </head>
-<script>
-    $(document).ready(function () {
-        $("#dynamic_footer").load("footer.html");
-        $("#header").load("header.html");
-        return false;
 
-    });
-    function toggleDemo() {
-        $('body').toggleClass('has-mobile-navigation-open');
-        $('.sidenav').toggleClass('width_100');
-        $('body').toggleclass('overflow_hidden');
-    };
-
-</script>
 <body class="forwork work_page">
+<div class="loader"></div>
 <!-- Header -->
 <div class="main">
     <div class="header_work" id="header">
@@ -100,30 +89,29 @@
             <h2  class="section_header1 margin_bottom_40">All Companies</h2>
 
             <div class="bg_top2">
-                <img src="images/alore6.png">
+                <img src="images/alore.png">
             </div>
         </section>
 
 
     </div>
-    <div class="work_container1">
+    <div class="work_container">
         <h4 class="more_projects_hdr">More Projects</h4>
         <a class="work1" href="cognihealth.html">
-            <a class="work1" href="cisco.html">
-                <img src="images/cisco_work.png" alt="Cisco">
-                <h3 class="client_name">Cisco</h3>
-                <p class="work_type">IOT | User Research & UX Strategy</p>
-            </a>
-            <a class="work1" href="teriflix.html">
-                <img src="images/teriflix.png" alt="TeriFLix">
-                <h3 class="client_name">TeriFLix</h3>
-                <p class="work_type">Branding</p>
-            </a>
-            <a class="work1" href="flipkart.html">
-                <img src="images/flipkartwork.png" alt="Flipkart">
-                <h3 class="client_name">Flipkart</h3>
-                <p class="work_type">User Experience</p>
-            </a>
+            <img src="images/cogni.png" alt="CogniHealth">
+            <h3 class="client_name">CogniHealth</h3>
+            <p class="work_type">Dementia Care | Product Design</p>
+        </a>
+        <a class="work1" href="teriflix.html">
+            <img src="images/teriflix.png" alt="TeriFLix">
+            <h3 class="client_name">TeriFLix</h3>
+            <p class="work_type">Branding</p>
+        </a>
+        <a class="work1" href="flipkart.html">
+            <img src="images/flipkartwork.png" alt="Flipkart">
+            <h3 class="client_name">Flipkart</h3>
+            <p class="work_type">User Experience</p>
+        </a>
         <div class="work_btn_container">
             <button><a href="mailto:contact@dtale.io" target="_blank"></a>Work with us</button>
         </div>
