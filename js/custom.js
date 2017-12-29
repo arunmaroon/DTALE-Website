@@ -3,6 +3,11 @@ window.onload = function() {
     setTimeout(function() {
         $(".loader").css("visibility", "hidden");
     }, 0);
+    
+
+
+};
+document.addEventListener('DOMContentLoaded', function() {
     var wow = new WOW(
         {
             boxClass:     'wow',
@@ -17,9 +22,7 @@ window.onload = function() {
         }
     );
     wow.init();
-
-
-};
+ }, 0);
 $(document).ready(function() {
     $("#dynamic_footer").load("footer.html");
     $("#header").load("header.html");
