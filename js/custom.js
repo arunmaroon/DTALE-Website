@@ -7,22 +7,7 @@ window.onload = function() {
 
 
 };
-$(window).on('load', function() {
-    var wow = new WOW(
-        {
-            boxClass:     'wow',
-            animateClass: 'animated',
-            offset:       0,
-            mobile:       true,
-            live:         true,
-            callback:     function(box) {
 
-            },
-            scrollContainer: null
-        }
-    );
-    wow.init();
-});
 
 $(document).ready(function() {
     $("#dynamic_footer").load("footer.html");
@@ -74,6 +59,21 @@ function toggleDemo(){
     // console.log("inside on clice ");
 }
 
+$(window).on('load', function() {
+    var wow = new WOW(
+        {
+            boxClass:     'wow',
+            animateClass: 'animated',
+            offset:       0,
+            mobile:       true,
+            live:         true,
+            callback:     function(box) {
 
+            },
+            scrollContainer: null
+        }
+    );
+    wow.init();
+});
 
 
