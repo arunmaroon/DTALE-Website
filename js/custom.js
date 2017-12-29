@@ -7,7 +7,7 @@ window.onload = function() {
 
 
 };
-document.addEventListener('DOMContentLoaded', function() {
+$(window).on('load', function() {
     var wow = new WOW(
         {
             boxClass:     'wow',
@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     );
     wow.init();
- }, 0);
+});
+
 $(document).ready(function() {
     $("#dynamic_footer").load("footer.html");
     $("#header").load("header.html");
