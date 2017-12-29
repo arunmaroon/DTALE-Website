@@ -1,7 +1,30 @@
 
+window.onload = function() {
+    setTimeout(function() {
+        $(".loader").css("visibility", "hidden");
+    }, 0);
+    var wow = new WOW(
+        {
+            boxClass:     'wow',
+            animateClass: 'animated',
+            offset:       0,
+            mobile:       true,
+            live:         true,
+            callback:     function(box) {
+
+            },
+            scrollContainer: null
+        }
+    );
+    wow.init();
+
+
+};
 $(document).ready(function() {
     $("#dynamic_footer").load("footer.html");
     $("#header").load("header.html");
+   
+
 
     $("#emailLink").click(function()
     {
@@ -49,9 +72,4 @@ function toggleDemo(){
 
 
 
-window.onload = function() {
-    setTimeout(function() {
-        $(".loader").css("visibility", "hidden");
-    }, 0);
-};
 
