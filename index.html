@@ -1,6 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WH3L7K');</script>
+                <!-- End Google Tag Manager -->
     <title>DTALE Design Studio</title>
     <link rel="icon" href="images/dtalefavicon.png" type="image/png" sizes="16x16">
     <meta charset="utf-8"/>
@@ -34,8 +41,11 @@
                 scrollOverflow: true,
                 scrollBar: true,
             });
-
-//
+            $('.scroll-link').click(function(e){
+                $('body,html').animate({
+                    scrollTop: $('#sec1').offset().top -20
+                }, 700);
+            });
         });
 
    </script>
@@ -67,17 +77,17 @@
                             <button class="view_button wow animated fadeInLeft" data-wow-delay="100ms"><a href="flipkart.html">VIEW</a></button>
                         </div>
                     </div>
-                    <!-- <a class="scroll-link" href="#content">
+                    <div class="scroll-link wow animated fadeInDown" data-wow-delay="50ms" >
                         <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYmid meet">
                         <g fill="none" fill-rule="evenodd">
-                            <rect width="70" height="118" x="1.5" y="1.5" stroke="#FFF" stroke-width="3" rx="36"/>
-                            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#FFF"/>
+                            <rect width="70" height="118" x="1.5" y="1.5" stroke="#333" stroke-width="3" rx="36"/>
+                            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#333"/>
                         </g>
                     </svg>
-                    </a> -->
+                    </div>
                 </div>
             </section>
-            <section class="section">
+            <section class="section " id="sec1">
                 <div class="content">
                     <div class="page_content">
                         <div class="flipcart">
@@ -185,5 +195,8 @@
         </div>
     </div>
 </body>
-
+<!-- Google Tag Manager (noscript)-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH3L7K"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 </html>
