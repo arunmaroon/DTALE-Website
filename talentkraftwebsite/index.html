@@ -8,51 +8,66 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 </head>
 <body>
-<div class="container">
+<div class="container" id="home">
     <header>
         <nav class="nav_bar">
-            <div class="logo_container">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Talentkraft" class="logo">
-                </a>
+            <!--<div class="logo_container">-->
+                <!--<a href="index.html">-->
+                    <!--<img src="images/talentKraft.png" alt="Talentkraft" class="logo">-->
+                <!--</a>-->
+            <!--</div>-->
+
+            <ul id="menu">
+                <li class="active_menu">
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#services">Our services</a>
+                </li>
+                <li>
+                    <a href="#aboutus">About us</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="#contactus">Contact us</a>
+                </li>
+            </ul>
+            <div id="menu-button">
+                <div id="line-1"></div>
+                <div id="line-2"></div>
+                <div id="line-3"></div>
             </div>
-            <!--<ul>-->
-                <!--<li class="active_menu">-->
-                    <!--<a href="">Home</a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">About us</a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">Join the waiting list</a>-->
-                <!--</li>-->
-            <!--</ul>-->
         </nav>
     </header>
     <section class="section1">
         <div class="section1_content">
+            <a href="index.html">
+                <img src="images/talentKraft.png" alt="Talentkraft" class="logo">
+            </a>
             <h1 class="section1_header1">Building productive talent pipelines</h1>
             <!--<h2 class="section1_header2">Check back soon for more information</h2>-->
         </div>
         <!--<div class="image_container">-->
             <!--<img src="images/website_screen.png" alt="website">-->
         <!--</div>-->
-        <div class="scroll-link " >
-            <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYmid meet">
-                <g fill="none" fill-rule="evenodd">
-                    <rect width="70" height="118" x="1.5" y="1.5" stroke="#005fea" stroke-width="3" rx="36"></rect>
-                    <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#005fea"></circle>
-                </g>
-            </svg>
-        </div>
+        <!--<div class="scroll-link " >-->
+            <!--<svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYmid meet">-->
+                <!--<g fill="none" fill-rule="evenodd">-->
+                    <!--<rect width="70" height="118" x="1.5" y="1.5" stroke="#005fea" stroke-width="3" rx="36"></rect>-->
+                    <!--<circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#005fea"></circle>-->
+                <!--</g>-->
+            <!--</svg>-->
+        <!--</div>-->
     </section>
-    <section class="section2">
+    <section class="section2" id="services">
         <div class="section2_content">
             <h2 class="section2_header1">Does this sound familiar?</h2>
             <ul>
                 <li>
                     <p class="icon_container">
-                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        <img src="images/bullet.png" alt="bullet icon">
                     </p>
                     <p class="section2_para1">
                         I advertise like crazy but don’t get any applicants
@@ -60,7 +75,7 @@
                 </li>
                 <li>
                     <p class="icon_container">
-                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        <img src="images/bullet.png" alt="bullet icon">
                     </p>
                     <p class="section2_para1">
                         Sometimes people get thrown into interviews at short notice – they don’t know what to do!
@@ -68,7 +83,7 @@
                 </li>
                 <li>
                     <p class="icon_container">
-                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        <img src="images/bullet.png" alt="bullet icon">
                     </p>
                     <p class="section2_para1">
                         I think my HR just copied-and-pasted the JD from her old company
@@ -76,7 +91,7 @@
                 </li>
                 <li>
                     <p class="icon_container">
-                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        <img src="images/bullet.png" alt="bullet icon">
                     </p>
                     <p class="section2_para1">
                         I try my best but I only have 1 minute per CV so often just use my gut
@@ -85,7 +100,7 @@
                 </li>
                 <li>
                     <p class="icon_container">
-                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        <img src="images/bullet.png" alt="bullet icon">
                     </p>
                     <p class="section2_para1">
                         We have too many applicants, and can’t sort out the best ones
@@ -93,7 +108,7 @@
                 </li>
                 <li>
                     <p class="icon_container">
-                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        <img src="images/bullet.png" alt="bullet icon">
                     </p>
                     <p class="section2_para1">
                         We spend so much on headhunters I’m tempted to become one myself!
@@ -101,8 +116,7 @@
                     </p>
                 </li>
             </ul>
-            <h3 class="section2_header2">That's why we're building a new simple tool for you.</h3>
-            <p class="down_arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></p>
+            <div class="button"><a href="https://talentkraft.typeform.com/to/OwJa3L" target="_blank">Evaluate your hiring process</a></div>
         </div>
     </section>
     <section  class="section3">
@@ -110,23 +124,33 @@
             <h1 class="section3_hdr1">What if…</h1>
             <ul>
                 <li>
-                    <p class="icon_container1"><i class="fa fa-list-ul" aria-hidden="true"></i></p>
+                    <p class="icon_container1">
+                        <img src="images/tick.png" alt="tick">
+                    </p>
                     <p class="section3_para1">Your JDs were precisely formulated to attract top candidates </p>
                 </li>
                 <li>
-                    <p class="icon_container1"><i class="fa fa-list-ul" aria-hidden="true"></i></p>
+                    <p class="icon_container1">
+                        <img src="images/tick.png" alt="tick">
+                    </p>
                     <p class="section3_para1">You received multiple applications from suitably-qualified candidates …</p>
                 </li>
                 <li>
-                    <p class="icon_container1"><i class="fa fa-list-ul" aria-hidden="true"></i></p>
-                    <p class="section3_para1">… and they are objectively assessed, ranked and sorted in a simple report, automatically</p>
+                    <p class="icon_container1">
+                        <img src="images/tick.png" alt="tick">
+                    </p>
+                    <p class="section3_para1">Automatically they are objectively assessed, ranked and sorted in a simple report, automatically</p>
                 </li>
                 <li>
-                    <p class="icon_container1"><i class="fa fa-list-ul" aria-hidden="true"></i></p>
+                    <p class="icon_container1">
+                        <img src="images/tick.png" alt="tick">
+                    </p>
                     <p class="section3_para1">Your interviewers reliably and systematically found the best candidate for each role</p>
                 </li>
                 <li>
-                    <p class="icon_container1"><i class="fa fa-list-ul" aria-hidden="true"></i></p>
+                    <p class="icon_container1">
+                        <img src="images/tick.png" alt="tick">
+                    </p>
                     <p class="section3_para1">And it didn’t cost you 25% of annual salary?</p>
                 </li>
 
@@ -136,7 +160,7 @@
 
     <section class="section5">
         <div class="section5_content">
-            <h1 class="section5_hdr1">TalentKraft prepares your organisation for the Future of Work
+            <h1 class="section5_hdr1">TalentKraft prepares your organisation for the Future of Work.
                 We work with you to address your recruiting and HR challenges by designing custom technology-enabled recruiting solutions</h1>
            <h2  class="section5_hdr2"> We help clients with </h2>
             <ul>
@@ -162,32 +186,42 @@
                     <p class="section5_para1">And many more</p>
                 </li>
             </ul>
-            <p class="section5_text">If you aren’t 100% happy with your current recruiting process and don’t want to spend a fortune on headhunters, we want to talk to you!</p>
+            <p class="section5_text">If you aren’t 100% happy with your current recruiting process and don’t want to spend a fortune on headhunters, <span class="underline">we want to talk to you!</span></p>
+
 
 
         </div>
     </section>
-    <section class="section4">
+    <section class="section4" id="aboutus">
         <div class="section4_content">
             <h1 class="section4_hdr1">The team</h1>
-            <img src="images/eugene.png" alt="">
+            <div class="team_container">
+            <div class="team_member1">
+            <img src="images/eugene.png" alt="Eugene Goh">
             <h2 class="section4_content_hdr1">Eugene spent 8.5 years at The Boston Consulting Group, and worked in their Singapore, Oslo and Dubai offices. He has an MSc in Economics for Development and a BA in Politics, Philosophy and Economics, both from the University of Oxford. Eugene was actively involved in developing BCG’s intellectual property in Strategy and Sustainability topics, and has published numerous articles on BCG Perspectives, as well as in collaboration with the World Economic Forum and the MIT Sloan Management Review.</h2>
             <h2 class="section4_content_hdr1">As an active member of the BCG Recruiting team, Eugene has worked on all aspects of the recruiting process, from CV reviews to coffee chats to interviews. He has approximately 300 recruiting interviews for BCG under his belt. He was also a member of the European Training Cadre, and served as team leader for Europe-wide skills training sessions for consultants, covering topics such as analysis, storylining, team dynamics, etc.</h2>
             <h2 class="section4_content_hdr1">Most recently, Eugene served as COO of a shift-based hiring platform, Freeboh Innovations, which aims to help companies hire and manage part-time staff</h2>
-
-
+            </div>
+                <div  class="team_member1">
+                    <img src="images/zanyu_ang.jpg" alt="Zanyu Ang">
+                    <h2 class="section4_content_hdr1">Eugene spent 8.5 years at The Boston Consulting Group, and worked in their Singapore, Oslo and Dubai offices. He has an MSc in Economics for Development and a BA in Politics, Philosophy and Economics, both from the University of Oxford. Eugene was actively involved in developing BCG’s intellectual property in Strategy and Sustainability topics, and has published numerous articles on BCG Perspectives, as well as in collaboration with the World Economic Forum and the MIT Sloan Management Review.</h2>
+                    <h2 class="section4_content_hdr1">As an active member of the BCG Recruiting team, Eugene has worked on all aspects of the recruiting process, from CV reviews to coffee chats to interviews. He has approximately 300 recruiting interviews for BCG under his belt. He was also a member of the European Training Cadre, and served as team leader for Europe-wide skills training sessions for consultants, covering topics such as analysis, storylining, team dynamics, etc.</h2>
+                    <h2 class="section4_content_hdr1">Most recently, Eugene served as COO of a shift-based hiring platform, Freeboh Innovations, which aims to help companies hire and manage part-time staff</h2>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="section6">
+    <section class="section6" id="contactus">
         <div class="section6_content">
-
-            <img src="images/rocket.png" alt="">
-            <h2 class="section3_hdr1">Want to supercharge your recruiting function? </h2>
-            <h3 class="section6_header2">The product is currently in the works. Sign up with your email below to hear when it's live.</h3>
+             <h2 class="section3_hdr1 color_white">Want to supercharge your recruiting function? </h2>
+            <h3 class="section6_header2 color_white">We would love to talk to you.</h3>
             <div class="form_container">
-                <form>
-                    <input type="email" name="email" class="userlist_field" placeholder="Enter your Email id">
-                    <button class="signup_btn">Sign Up</button>
+                <form class="contact_form">
+                    <input type="text" name="Name"  placeholder="Enter your name">
+                    <input type="email" name="email"  placeholder="Enter your Email id">
+                    <input type="text" name="Name"  placeholder="Company name">
+
+                    <button class="signup_btn">Yes, I would love to</button>
                 </form>
             </div>
         </div>
@@ -205,5 +239,27 @@
         <!--</div>-->
     <!--</section>-->
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $( document ).ready(function() {
+
+
+    $('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+    scrollTop: $($(this).attr('href')).offset().top
+    }, 500, 'linear');
+    });
+
+        $("#menu-button").click(function(){
+            $(this).toggleClass("active");
+            $("#line-1").toggleClass("active");
+            $("#line-2").toggleClass("active");
+            $("#line-3").toggleClass("active");
+            $("#menu").slideToggle("slow");
+        });
+    });
+</script>
 </body>
 </html>
