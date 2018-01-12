@@ -63,24 +63,6 @@ ul{
     transform: translate(0px, -12px) rotate(-45deg);
 }
 
-#menu{
-    background: #005fea;
-    width: 100%;
-    padding: 10px;
-    padding-top: 30px;
-    color: #fff;
-    font-family: arial;
-    font-size: 1.5rem;
-    display: none;
-    position: absolute;
-    top: 8px;
-    border-radius: 5px;
-    position: absolute;
-    top: 0;
-    margin: 0;
-    width: 100%;
-    right: 0;
-}
 
 #menu ul{
     list-style: none;
@@ -786,5 +768,29 @@ ul{
     }
     .active_menu{
         color:#ffffff;
+    }
+    #menu{
+        background: #005fea;
+        width: 100%;
+        padding: 10px;
+        padding-top: 30px;
+        color: #fff;
+        font-family: arial;
+        font-size: 1.5rem;
+        display: none;
+        position: absolute;
+        top: 8px;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        margin: 0;
+        width: 100%;
+        right: 0;
+    }
+
+}
+@media(min-width:600px){
+    #menu-button{
+        display: none;
     }
 }
