@@ -153,6 +153,13 @@ header{
 .contact_form input{
     display: block;
 }
+.social_media_icons{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    margin: 0 auto;
+    align-items: baseline;
+}
 .section1,.section3,.section5_content,.footer_content{
     width:960px;
     display: table;
@@ -324,7 +331,7 @@ header{
     width: 800px;
     margin: 0 auto;
 }
-.section4_content img{
+.section4_content_img{
     display: block;
     width: 100px;
     height: 100px;
