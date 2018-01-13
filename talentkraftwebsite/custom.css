@@ -747,17 +747,13 @@ ul{
     }
     .button {
         font-size: 1rem;
-        color: #ffffff;
         height: 51px;
         width: 100%;
-        margin: 0 auto;
-        margin-top: 120px;
-        cursor: pointer;
-        background: transparent;
-        border-radius: 5px;
-        text-align: center;
+
+
+
         line-height: 51px;
-        border: 2px solid #ffffff;
+
     }
     .contact_form input {
 
@@ -791,7 +787,12 @@ ul{
         width: 100%;
         right: 0;
     }
-
+.section2,.section3,.section4,.section5{
+    padding:60px 0;
+}
+.button{
+margin-top:60px;
+    }
 }
 @media(min-width:600px){
     #menu-button{
