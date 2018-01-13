@@ -847,6 +847,10 @@ margin-top:60px;
         padding: 12px 0;
 
     }
+    .hero_section {
+   
+    background-position-x: center;
+}
 }
 @media(min-width:600px){
     #menu-button{
