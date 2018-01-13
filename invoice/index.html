@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+    <title></title>
+    <meta content='invoice, invoice items, payment, template, free, overdue, automatic reminders, VAT, discount, shipping, currencies, remittance advice' name='keywords'>
+    <meta content='Save time with our free professional invoicing app. Using our invoicing software instead of Excel and Word is a no brainer for any business, and it’s 100% FREE for life!' name='description'>
+    <meta content='index,follow' name='robots'>
+    <!--<meta content='https://invoicetemplate.co/assets/invoicetemplate-logo-1200x630-7f4a4a9d49108b9a018a50299a0b9b73c11b5d6b7a9c9b9c9b885d3d057bd723.png' property='og:image'>-->
+    <!--<meta content='image/png' property='og:image:type'>-->
+    <!--<meta content='1200' property='og:image:width'>-->
+    <!--<meta content='630' property='og:image:height'>-->
+    <!--<link rel="icon" type="image/png" href="https://invoicetemplate.co/assets/favicon-32x32-e9a0a2794be2d7ee9738517e14557f6b56b7a5568bbc4a6e54074f7e83b00f0d.png" />-->
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+    <link rel="stylesheet" media="all" href="../assets/application-0e43454c1a269b5fc1d66612f990d73217b77440348f9552c97d3c218ac470d0.css" />
+    <script src="../assets/application-2a80faaa20d910e472fe7a5d7b08ca8628e7b8729d6a470018bc1e10f3fc879c.js"></script>
+    <!--<meta name="csrf-param" content="authenticity_token" />-->
+    <!--<meta name="csrf-token" content="IDWrGsUji6mhDdxtIwD228DPUJeVU/ZUH7FrFlvzAcz92FWbYox3gCjyEYeRxk7W5ztwMpbMLIwZrXATJ4SWFA==" />-->
+</head>
+<body al-app='invoiceController' al-cloak class='cbp-spmenu-push cbp-spmenu-push-toright'>
+<!-- start Mixpanel -->
+<script type="text/javascript">
+    (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+
+        0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+
+        for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+
+    mixpanel.init("a45155b0148aad8a5e6efbb622d3fc8b");
+
+    mixpanel.track_links(".root_invoice_link", "variant_4. FromLanding To 1stPage", {
+        "referrer": document.referrer
+    });
+</script>
+<!-- end Mixpanel -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-5ZTVF37':true});
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-101915501-1', 'auto');
+    ga('require', 'GTM-5ZTVF37');
+    ga('send', 'pageview');
+</script>
+<script>
+    $(function() {
+        $(document).on('click', '.root_invoice_link', function(event) {
+            dataLayer.push({'event': "variant_4. FromLanding To 1stPage"});
+        });
+    });
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function()
+    {n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+
+    ;
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '796051027239337');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img alt="alt_pixel" height="1" width="1"
+         src="https://www.facebook.com/tr?id=796051027239337&ev=PageView
+            &noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+<script data-cfasync="false">window.ju_num="E589CD79-3C9A-42A9-94FC-DF57BD6415B3";window.asset_host='//cdn.justuno.com/';(function(i,s,o,g,r,a,m){i['JustunoApp']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)};a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script',asset_host+'vck.js','juapp');</script>
+<script>
+    (function(h,e,a,t,m,p) {
+        m=e.createElement(a);m.async=!0;m.src=t;
+        p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+    })(window,document,'script','https://u.heatmap.it/log.js');
+</script>
+
+<script>
+    window.invoice_themes = [{"name":"Nadelhorn","template":"london"},{"name":"Schilthorn","template":"paris"},{"name":"Aletschhorn","template":"oslo"},{"name":"Matterhorn","template":"amsterdam"},{"name":"Jungfrau","template":"budapest"}];
+</script>
+<div class="top_nav">
+    <div class="alore_logo cursor" ng-click="toHomeFeed();"><img src="images/alore_icon.png" alt=""></div>
+    <div class="LeftHeader">
+        <input type="text" autocomplete="off" ng-click="ShowHide()" name="text" placeholder="What do you want to do today?" class="Search ng-pristine ng-valid ng-touched" ng-focus="setNewPlaceholder()" ng-blur="setPlaceholder()" ng-model="searchStr" ng-change="algoloiaSearch(searchStr);" ng-keypress="enterKeyEvent($event);" style="">
+        <!--<div class="sub_menu cursor  ng-hide" ng-show="shSearch &amp;&amp; resultList.length > 0">-->
+            <!--&lt;!&ndash; ngRepeat: res in resultListToShow &ndash;&gt;-->
+            <!--<span class="see_results" ng-click="seeAllResults();">Press Enter to see all results</span>-->
+        <!--</div>-->
+        <!--<div class="sub_menu1 cursor  ng-hide" ng-show="IsVisible &amp;&amp; resultList.length===0">-->
+            <!--<li ng-click="addDealPopup();">-->
+                <!--Add a New Deal-->
+            <!--</li>-->
+            <!--<li ng-click="addTaskPopup();">-->
+                <!--Add a New Task-->
+            <!--</li>-->
+            <!--<li ng-click="addEventPopup();">-->
+                <!--Add a New Event-->
+            <!--</li>-->
+            <!--<li ng-click="addNotePopup();">-->
+                <!--Add a New Note-->
+            <!--</li>-->
+            <!--<li ng-click="addProspectPopup(true);">-->
+                <!--Add a New Prospect-->
+            <!--</li>-->
+            <!--<li ng-click="addComapnyPopup();">-->
+                <!--Add a New Company-->
+            <!--</li>-->
+        <!--</div>-->
+    </div>
+    <div class="home_navigation">
+        <div class="home" ng-click="toHomeFeed();"><img src="images/home_icon.png" alt=""></div>
+        <div class="inbox" ng-click="toInbox();"><img src="images/message_icon.png" alt="">
+
+        </div>
+        <div class="setup" ng-class="{'setup_icon_for_onboarding1':$root.lastDemoPup}" ng-click="toSetupWizard();">
+            <img src="images/setupwizard_icon.png" alt="">
+
+        </div>
+        <div class="setup" ng-class="{'setup_icon_for_onboarding1':$root.helpObj.report2}" ng-click="showDashboardDropdown();"><img src="images/dashboard_icon.png" alt="">
+            <div class="dashboard_dropdown ng-hide" ng-class="{'onboarding_dashboard_dropdown':$root.helpObj.report2}" ng-show="showDashboardAnalytics || $root.helpObj.report2 || $root.helpObj.report3 || $root.helpObj.report6">
+                <div class="profile_dropdown_triangle"></div>
+                <!--<ul>-->
+                    <!--<li class="menu_item" ng-click="toPersonalAnalytics();" ng-class="{'onboarding_db_highlighter':$root.helpObj.report3}">Dashboard-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+
+                    <!--<li class="menu_item" ng-click="toSalesTargetAnalytics();">Sales Target-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toCallLogAnalytics();">Call Log-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toProductivity();">Productivity-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toLeaderboard();" ng-class="{'onboarding_db_highlighter':$root.helpObj.report6}">Leaderboard-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toLostOpportunity();">Lost Opportunity-->
+                    <!--</li>-->
+                <!--</ul>-->
+            </div>
+
+        </div>
+        <div class="userprofile">
+            <div class="cursor" ng-click="Show()">
+                <span class="userprofile_img ng-binding ng-hide" ng-show="usrInfo.userphoto === null || usrInfo.userphoto === ''" style="color:#989898">US</span>
+                <!--<img class="userprofile_img" ng-show="usrInfo.userphoto" ng-src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAM5AAAAJDMxMmEzYWJkLTg4MDAtNDcwZC1iMzJlLWEwMTIxMWM4MTU2YQ.jpg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAM5AAAAJDMxMmEzYWJkLTg4MDAtNDcwZC1iMzJlLWEwMTIxMWM4MTU2YQ.jpg">-->
+                <!--<img class="dropdown_icon" src="images/dropdown.png" alt="">-->
+            </div>
+            <!--<div class="profile_dropdown ng-hide" ng-show="Visible || $root.helpObj.user1">-->
+                <!--<div class="profile_dropdown_triangle"></div>-->
+                <!--<ul ng-class="{'onboarding_dashboard_dropdown':$root.helpObj.user1}">-->
+                    <!--<li class="menu_item1">-->
+                        <!--<div class="user_profile_info"><span class="userprofile_img1 ng-binding ng-hide" ng-show="usrInfo.userphoto === null || usrInfo.userphoto === ''" style="color:#989898">US</span>-->
+                            <!--<img class="userprofile_img1" ng-show="usrInfo.userphoto" ng-src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAM5AAAAJDMxMmEzYWJkLTg4MDAtNDcwZC1iMzJlLWEwMTIxMWM4MTU2YQ.jpg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAM5AAAAJDMxMmEzYWJkLTg4MDAtNDcwZC1iMzJlLWEwMTIxMWM4MTU2YQ.jpg">-->
+                        <!--</div>-->
+                        <!--<div class="User_info">-->
+                            <!--<div class="ng-binding">Utsav</div>-->
+                            <!--<div class="ng-binding">utsav@plash.in</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toUserProfile()">Profile-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toReferral();">Referrals-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toBiiling();">Account &amp; Billing-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toSubscription();">Subscription-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toPrivacy();">Privacy Policy-->
+                    <!--</li>-->
+                    <!--<div class="border_bottom222"></div>-->
+                    <!--<li class="menu_item" ng-click="toLogout()">Sign Out-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+        </div>
+
+    </div>
+</div>
+<main role='main'>
+    <nav class='cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left' id='cbp-spmenu-s1'>
+        <!--<div class='logo'></div>-->
+        <!--<div class='slide-block'>-->
+            <!--&lt;!&ndash; Class "cbp-spmenu-open" gets applied to menu &ndash;&gt;-->
+            <!--<div class='button-round button-menu' id='showLeftPush'>-->
+                <!--<i class='icon-menu'></i>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class='round-button button-menu'></div>
+        <div class='above-block'>
+            <ul class='nav nav-tabs' role='tablist'>
+                <li al-class="active: invoice.status == 'draft'" role='presentation' class="helvetica_med">
+                    <a aria-controls='settings' data-toggle='tab' href='index.html#settings' role='tab'>
+                        Settings
+                    </a>
+                </li>
+                <li al-class="active: invoice.status == 'sent'" role='presentation' class="helvetica_med">
+                    <a aria-controls='saved' data-toggle='tab' href='index.html#saved' role='tab'>
+                        Saved
+                    </a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class='tab-content'>
+                <div al-class="disabled: (invoice.status == 'sent' || current_page == 'finalize'), active: invoice.status == 'draft'" class='tab-pane' id='settings' role='tabpanel'>
+                    <div id='accordionInvoiceSettings'>
+                        <div class='panel-heading'>
+                            <a class='collapse-settings helvetica_light' data-parent='#accordionInvoiceSettings' data-toggle='collapse' href='index.html#collapseInvoiceSettings'>
+                        <span>
+                        Invoice Settings
+                        </span>
+                                <span>
+                        <i class='zmdi zmdi-chevron-up zmdi-hc-lg'></i>
+                        </span>
+                            </a>
+                        </div>
+                        <!-- / section with main invoice settings -->
+                        <div class='panel-collapse collapse in' id='collapseInvoiceSettings'>
+                            <ul class='nav nav-pills nav-stacked'>
+                                <li class='panel-group' id='accordionCurrency'>
+                                    <div class='currency-push-menu'>
+                                        <div class='panel-heading'>
+                                            <a class='collapse-currency helvetica_light' data-parent='#accordionCurrency' data-toggle='collapse' href='index.html#collapseCurrency'>
+                                    <span>
+                                    Currency
+                                    </span>
+                                                <span>
+                                    {{invoice.currency}}
+                                    <i class='zmdi zmdi-chevron-down zmdi-hc-lg'></i>
+                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class='panel-collapse collapse' id='collapseCurrency'>
+                                            <ul class='list-group'>
+                                                <li al-class='active: invoice.currency == currency.iso' al-repeat='currency in hot_currencies' class='list-group-item'>
+                                                    <a al-click='invoice.currency = currency.iso' al-inline-edit al-model='invoice.currency' class='currency-item' href='index.html' onClick="$('#collapseCurrency').collapse('hide');">
+                                                        <span class='flag-icon flag-icon-{{currency.code.toLowerCase()}} helvetica_light'  style='width: 40px; height: 20px;'></span>
+                                                        {{currency.iso}}
+                                                    </a>
+                                                </li>
+                                                <li class='list-group-item'>
+                                                    <a class='more-currency-item helvetica_light' data-target='#moreCurrency' data-toggle='modal'>
+                                                        + Show more
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='vat-push-menu'>
+                                        <div class='panel-heading'>
+                                            <!-- /old title with tooltip -->
+                                            <!-- /span with edit icon -->
+                                            <span al-click='tax_title_form.edit = true' al-hide='tax_title_form.edit' class='title helvetica_light' style='cursor: pointer;'>
+                                    {{invoice.tax_title}}
+                                    <i class='zmdi zmdi-edit zmdi-hc-lg'></i>
+                                    </span>
+                                            <!-- /edit input -->
+                                            <div al-show='tax_title_form.edit' class='input-group input-edit-vat'>
+                                                <input al-model='tax_title_form.tax_title' maxlength='5' placeholder='VAT' type='text'>
+                                                <span class='input-group-btn'>
+                                       <button al-click='submitTaxTitle()' class='btn btn-secondary helvetica_roman' type='button'>OK
+                                       </button>
+                                       </span>
+                                            </div>
+                                            <label class='switch'>
+                                                <input al-inline-edit al-model='invoice.tax_active' type='checkbox'>
+                                                <div class='slider round'></div>
+                                            </label>
+                                        </div>
+                                        <div al-show-animate='invoice.tax_active' class='panel-collapse'>
+                                            <div class='flex-line'>
+                                                <div class='dropdown'>
+                                                    <button aria-expanded='false' aria-haspopup='false' class='dropdown-toggle helvetica_light' data-toggle='dropdown' id='dropdownVAT' type='button'>
+                                                        {{invoice.tax || 0}} %
+                                                        <i class='zmdi zmdi-chevron-down zmdi-hc-lg'></i>
+                                                    </button>
+                                                    <ul aria-labelledby='dropdownVAT' class='dropdown-menu helvetica_light'>
+                                                        <li al-repeat='tax in taxes'>
+                                                            <a @click.nostop='invoice.tax = tax.value;' al-inline-edit='' al-model='invoice.tax' href='javascript:void(0);'>{{tax.title}}</a>
+                                                        </li>
+                                                        <li style="border:none;">
+                                                            <div class='input-group input-vat'>
+                                                                <input al-inline-edit al-input-color al-model='invoice.tax' al-number-format maxlength='10' placeholder='custom value' type='text'>
+                                                                <span class='input-group-btn'>
+                                                   <button class='btn btn-secondary helvetica_roman' type='button'>
+                                                   OK
+                                                   </button>
+                                                   </span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class='btn-group helvetica_roman'>
+                                                    <a al-class="active: (invoice.tax_type == 'percent')" al-click="invoice.tax_type = 'percent'" al-inline-edit al-model='invoice.tax_type' class='btn' type='button'>%</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='vat-push-menu'>
+                                        <div class='panel-heading'>
+                                    <span class='title helvetica_light'>
+                                    Discount
+                                    <i class='zmdi zmdi-help-outline zmdi-hc-lg' data-placement='top' data-title='Enter either a value (e.g. £10) or a percentage (e.g. 10%)' data-toggle='tooltip'></i>
+                                    </span>
+                                            <label class='switch'>
+                                                <input al-inline-edit al-model='invoice.discount_active' type='checkbox'>
+                                                <div class='slider round'></div>
+                                            </label>
+                                        </div>
+                                        <div al-show-animate='invoice.discount_active' class='panel-collapse'>
+                                            <div class='flex-line'>
+                                                <div class='input-group'>
+                                                    <input al-inline-edit al-input-color al-model='invoice.discount' al-number-format maxlength='10' placeholder='custom value' type='text'>
+                                                </div>
+                                                <div class='btn-group '>
+                                                    <a al-class="active: (invoice.discount_type == 'flat')" al-click="invoice.discount_type = 'flat'" al-inline-edit al-model='invoice.discount_type' class='btn  helvetica_roman' type='button'>FLAT</a>
+                                                    <a al-class="active: (invoice.discount_type == 'percent')" al-click="invoice.discount_type = 'percent'" al-inline-edit al-model='invoice.discount_type' class='btn helvetica_roman' type='button'>%</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='vat-push-menu'>
+                                        <div class='panel-heading'>
+                                    <span class='title helvetica_light'>
+                                    Shipping
+                                    <i class='zmdi zmdi-help-outline zmdi-hc-lg' data-placement='top' data-title='Enter either a value (e.g. £10) or a percentage (e.g. 10%).' data-toggle='tooltip'></i>
+                                    </span>
+                                            <label class='switch'>
+                                                <input al-inline-edit al-model='invoice.shipping_active' type='checkbox'>
+                                                <div class='slider round'></div>
+                                            </label>
+                                        </div>
+                                        <div al-show-animate='invoice.shipping_active' class='panel-collapse'>
+                                            <div class='flex-line'>
+                                                <div class='input-group'>
+                                                    <input al-inline-edit al-input-color al-model='invoice.shipping' al-number-format maxlength='10' placeholder='custom value' type='text'>
+                                                </div>
+                                                <div class='btn-group'>
+                                                    <a al-class="active: (invoice.shipping_type == 'flat')" al-click="invoice.shipping_type = 'flat'" al-inline-edit al-model='invoice.shipping_type' class='btn helvetica_roman'  type='button'>FLAT</a>
+                                                    <a al-class="active: (invoice.shipping_type == 'percent')" al-click="invoice.shipping_type = 'percent'" al-inline-edit al-model='invoice.shipping_type' class='btn helvetica_roman' type='button'>%</a>
+                                                </div>
+                                            </div>
+                                            <div class='apply-vat helvetica_light' >
+                                                <span>Apply {{invoice.tax_title}}</span>
+                                                <label class='switch'>
+                                                    <input al-inline-edit al-model='invoice.shipping_tax_active' type='checkbox'>
+                                                    <div class='slider round'></div>
+                                                </label>
+                                            </div>
+                                            <div al-show-animate='invoice.shipping_tax_active' class='shipping-vat-input'>
+                                                <div class='flex-line'>
+                                                    <div class='input-group'>
+                                                        <input al-inline-edit al-input-color al-model='invoice.shipping_tax' al-number-format maxlength='10' class="helvetica_light" placeholder='custom value' type='text'>
+                                                    </div>
+                                                    <div class='btn-group '>
+                                                        <a al-class='active: true' al-click='' class='btn helvetica_roman' type='button'>%</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                              <span class='title helvetica_light'>
+                              Notes
+                              </span>
+                                    <label class='switch'>
+                                        <input al-inline-edit al-model='invoice.notes_active' type='checkbox'>
+                                        <div class='slider round'></div>
+                                    </label>
+                                </li>
+                                <li>
+                              <span class='title helvetica_light'>
+                              Terms &amp; conditions
+                              </span>
+                                    <label class='switch'>
+                                        <input al-inline-edit al-model='invoice.terms_active' type='checkbox'>
+                                        <div class='slider round'></div>
+                                    </label>
+                                </li>
+                                <li>
+                              <span class='title helvetica_light'>
+                              Purchase Order
+                              </span>
+                                    <label class='switch'>
+                                        <input al-inline-edit al-model='invoice.purchase_order_active' type='checkbox'>
+                                        <div class='slider round'></div>
+                                    </label>
+                                </li>
+                                <li>
+                              <span class='title helvetica_light'>
+                              Remittance advice
+                              </span>
+                                    <label class='switch'>
+                                        <input al-inline-edit al-model='invoice.payment_stub_active' type='checkbox'>
+                                        <div class='slider round'></div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class='panel-heading'>
+                            <a class='collapse-format collapsed' data-parent='#accordionInvoiceSettings' data-toggle='collapse' href='index.html#collapseInvoiceFormat'>
+                        <span class='title helvetica_light'>
+                        Invoice Date Format
+                        </span>
+                                <span>
+                        <i class='zmdi zmdi-chevron-up zmdi-hc-lg'></i>
+                        </span>
+                            </a>
+                        </div>
+                        <!-- / section for invoice format select -->
+                        <div class='panel-collapse collapse' id='collapseInvoiceFormat'>
+                            <div class='dropdown-block'>
+                                <div class='dropdown'>
+                                    <button aria-expanded='false' aria-haspopup='true' class='dropdown-toggle helvetica_roman'  data-toggle='dropdown' id='dropdownInvoiceFormat' type='button'>
+                                        {{invoice.date_format}}
+                                        <i class='zmdi zmdi-chevron-down zmdi-hc-lg'></i>
+                                    </button>
+                                    <ul aria-labelledby='dropdownInvoiceFormat' class='dropdown-menu helvetica_light'>
+                                        <li al-repeat='date_format in date_formats'>
+                                            <a @click.nostop='invoice.date_format = date_format;' al-inline-edit='' al-model='invoice.date_format' href='javascript:void(0);'>
+                                                {{date_format}}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='panel-heading'>
+                            <a class='collapse-template' data-parent='#accordionInvoiceSettings' data-toggle='collapse' href='index.html#collapseSelectTemplate'>
+                        <span class='title helvetica_light'>
+                        Select template
+                        </span>
+                                <span>
+                        <i class='zmdi zmdi-chevron-up zmdi-hc-lg'></i>
+                        </span>
+                            </a>
+                        </div>
+                        <!-- / section for select templates -->
+                        <div class='panel-collapse collapse themes in' id='collapseSelectTemplate'>
+                            <ul al-init='templates_opened = true;' class='nav nav-stacked template-nav'>
+                                <li al-class='active: invoice.template == theme.template' al-repeat='theme in themes' al-show='templates_opened || invoice.template == theme.template'>
+                                    <a al-click='invoice.template = theme.template; templates_opened = false;' al-inline-edit al-model='invoice.template' href='javascript:void(0)'>
+                                        <div class='image-template {{theme.template}} helvetica_light'></div>
+                                        <span>{{theme.name}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div al-click='templates_opened = !templates_opened' class='more-templates helvetica_light'>
+                                {{ templates_opened ? '- Hide templates' : '+ Show more templates' }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div al-class="active: invoice.status == 'sent'" class='tab-pane' id='saved' role='tabpanel'>
+                    <ul class='nav'>
+                        <li class='cookie-block helvetica_light'>
+                            <i class='icon-cookie zmdi-hc-lg '></i>
+                            <div>
+                                Sent invoices are stored here
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class='nav nav-pills'>
+                        <li al-class='active: stored_invoice.uid == invoice.uid' al-init='scrollToStoredInvoice(stored_invoice, $element)' al-repeat='stored_invoice in stored_invoices' class='saved-invoice-item'>
+                            <div>
+                                <a class='saved-invoice-name no-wrap-line helvetica_light' href='https://invoicetemplate.co/free-invoice-template/{{stored_invoice.uid}}'>
+                                    {{stored_invoice.invoice_number || 'Unnamed Invoice' }}
+                                </a>
+                                <div class='saved-invoice-info'>
+                              <span class='paid'>
+                                 <div class='flex-line helvetica_light'>
+                                    Sent - {{stored_invoice.sent_at | moment}}
+                                    <span al-show='isOverdue(stored_invoice)' class='yellow-label'>
+                                    overdue
+                                    </span>
+                                 </div>
+                              </span>
+                                </div>
+                                <div class='saved-invoice-info yellow-text helvetica_light'>
+                              <span al-show='stored_invoice.views &gt; 0' class='viewed'>
+                              Viewed - {{stored_invoice.sent_at | moment}}
+                              </span>
+                                </div>
+                                <div class='mark-as-paid'>
+                                    <label class='switch-button'>
+                                        <input al-change='switchPaid(stored_invoice)' al-model='stored_invoice.paid' type='checkbox'>
+                                        <div class='slide-button round'></div>
+                                        </input>
+                                    </label>
+                                </div>
+                            </div>
+                            <div al-click='deleteInvoice(stored_invoice)' class='delete-block'>
+                                <i class='icon-trash zmdi-hc-lg'></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class='button-round button-feedback animated' data-ding='/assets/ding-eba6c3172c52caf1377a8976566c1e46e04426c0e3f28ac5eaaa5a9b2482062d.mp3'>
+        <div class='icon-feedback'></div>
+        <div class='feedback-text helvetica_light'>
+            <a href="mailto:support@trialbalance.io?subject=Feedback / Support">
+                <div>Feedback /</div>
+                <div>Need Support?</div>
+            </a>
+        </div>
+    </div>
+    <div class='container relative-block'>
+        <!--<a class="next-step" id="next_step_button" al-click="submitReportingStep()" href="javascript:void(0);">-->
+            <!--<div class='icon-forward zmdi-hc-lg'></div>-->
+            <!--<div class='next-text helvetica_light'>-->
+                <!--Next-->
+            <!--</div>-->
+        <!--</a>-->
+        <div al-show='hasValidationErrors()' class='error-block helvetica_light'>
+            <p>
+                Please check the following
+            <ol>
+                  <span al-repeat='object in invoice.errors'>
+                     <li>{{object.title}} {{object.errors.join(', ')}}</li>
+                  </span>
+                <span al-repeat='invoice_line in invoice.invoice_lines track by $index' al-show='invoice_line.errors'>
+                     <li>Invoice Line №{{$index + 1}}: {{invoice_line.errors}}</li>
+                  </span>
+            </ol>
+            </p>
+        </div>
+        <div class='flex-line mobile-column'>
+
+            <div class='button-group'>
+                <ul class='navigation-group helvetica_light' style='height: 40px;'>
+                    <li>
+                        <span data-placement='bottom' data-toggle='tooltip' title='{{controlTooltip("Print")}}'>
+                        <a class="button-round button-print" id="print_invoice_button" onclick="fbq(&quot;trackCustom&quot;, &quot;PRINT&quot;);" target="_blank" al-class="disabled: !isPreviewAvailable()" href="preview%3Fprint=true.html"><i class='icon-print'></i>
+                        </a></span>
+                    </li>
+                    <li>
+                        <span data-placement='bottom' data-toggle='tooltip' title='{{controlTooltip("Download")}}'>
+                        <a class="button-round button-download" id="download_pdf_invoice_button" onclick="fbq(&quot;trackCustom&quot;, &quot;EXPORT&quot;);" target="_blank" al-class="disabled: !isPreviewAvailable()" href="pdf"><i class='icon-download'></i>
+                        </a></span>
+                    </li>
+                    <li>
+                        <span data-placement='bottom' data-toggle='tooltip' title='{{controlTooltip("Preview")}}'>
+                        <a class="button-round button-preview" id="preview_invoice_button" target="_blank" al-class="disabled: !isPreviewAvailable()" href="preview.html"><i class='icon-eye'></i>
+                        </a></span>
+                    </li>
+                    <li>
+                        <span data-placement='bottom' data-toggle='tooltip' title='{{controlTooltip("Share Invoice link")}}'>
+                        <a class="button-round button-share" id="share_invoice_button" data-target="#invoiceShare" data-toggle="modal" al-class="disabled: !isPreviewAvailable()" href="index.html"><i class='icon-share'></i>
+                        </a></span>
+                    </li>
+                </ul>
+                <div al-click='deleteInvoice(invoice)' al-show="invoice.status == 'draft'" class='button-round button-reset' data-placement='top' data-title='Start again' data-toggle='tooltip'>
+                    <i class='zmdi zmdi-refresh-sync zmdi-hc-lg'></i>
+                </div>
+                <div al-show="invoice.status == 'sent'" class='dropdown button-round button-duplicate' data-placement='top' data-title='Invoice Menu' data-toggle='tooltip'>
+                    <div class='dropdown-toggle' data-toggle='dropdown' type='button'>
+                        <div class='icon-invoice-dublicate'></div>
+                    </div>
+                    <ul class='dropdown-menu dropdown-menu-right'>
+                        <li>
+                            <a al-click='newInvoice()' data-title='Create new Invoice'>
+                                + Create new Invoice
+                            </a>
+                        </li>
+                        <li>
+                            <a al-click='cloneInvoice(invoice)' data-title='Duplicate Invoice'>
+                                + Duplicate Invoice
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="invoice_template_btn_container">
+                <button class="btn_primary btn_primary_hover m_right25">Save & Send</button>
+                <button class="btn_secondary btn_primary_hover m_right25" >Save as Template</button>
+                <button class="btn_tertiary">Save as Draft</button>
+
+            </div>
+        </div>
+        <div class='main relative-block helvetica_light'>
+            <div al-show="invoice.status == 'sent'" class='create-invoice-flex-line'>
+                <div al-click='newInvoice()' class='btn-gradient-create'>
+                    + Create new invoice
+                </div>
+            </div>
+            <!--<div class='bookmark'>-->
+                <!--<img src="../assets/bookmark-835ca845b544d61ce84bfe3aabe5e91695692e2df30923e5ad6953ba64a5768e.svg" alt="Bookmark" />-->
+                <!--<div>-->
+                    <!--Regular User?-->
+                <!--</div>-->
+                <!--<div class="helvetica_light">-->
+                    <!--<a target="_blank" href="https://chrome.google.com/webstore/detail/invoice-template/idmlaoolbpgamkhhekcgkbbiampkmahp">Download our Google Chrome extension for easy access</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div al-class="disabled: invoice.status == 'sent'" class='invoice'>
+                <div class='invoice-head'>
+                    <div class='title-block'>
+                        <h3>
+                            <input al-inline-edit al-input-color al-model='invoice.title' placeholder='Invoice' type='text'>
+                        </h3>
+                    </div>
+                    <div class='media-previews'>
+                        <div id='logo-preview-template'>
+                            <img class='thumb' data-dz-thumbnail=''>
+                            <button class='button-round button-delete' data-dz-remove=''>
+                                <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                            </button>
+                        </div>
+                    </div>
+                    <form data-delete-logo-path="/free-invoice-template/c8f6897d-0489-40f6-9380-4f83a017a109/delete_logo" id="upload_logo_form" class="invoice-logo-block logo-dropzone" onsubmit="return false;" action="https://invoicetemplate.co/free-invoice-template/c8f6897d-0489-40f6-9380-4f83a017a109/upload_logo" accept-charset="UTF-8" method="post">
+                        <input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IFXdJlTrpJjwv/TbFy86KuI1UlESW7j/gUWnQjHQJIP9uCOn80RYsXlAOTGl6YInxcFy9BHEYieHWbxHTaezWw==" />
+                </div>
+                <div class='invoice-body'>
+                    <div class='info-block'>
+                        <div class='client'>
+                            <div class='name helvetica_light'>
+                                <input al-blur="cleanCompany('client')" al-inline-edit al-input-color al-input-errors al-model='invoice.client_name' placeholder='Company name*' type='text'>
+                                <a al-click="fetchCompanies('client')" al-show='invoice.client_name &amp;&amp; invoice.client_name.length &gt;= 3' class='find-company-block'>
+                                    <i class='zmdi zmdi-search zmdi-hc-lg'></i>
+                                    Find
+                                </a>
+                            </div>
+                            <div class='street-name'>
+                                <input al-inline-edit al-input-color al-model='invoice.client_address' class='input-large helvetica_light' placeholder='Street ' type='text'>
+                            </div>
+                            <div class='city'>
+                                <input al-inline-edit al-input-color al-model='invoice.client_city' placeholder='City' type='text' class="helvetica_light">
+                            </div>
+                            <div class='postal-code'>
+                                <input al-inline-edit al-input-color al-model='invoice.client_postcode' class='input-small' placeholder='Post code' type='text' class="helvetica_light">
+                            </div>
+                            <div class='country'>
+                                <input al-inline-edit al-input-color al-model='invoice.client_country' placeholder='Country' type='text' class="helvetica_light">
+                            </div>
+                        </div>
+                        <div class='user'>
+                            <div class='name class="helvetica_light"'>
+                                <input al-blur="cleanCompany('owner')" al-inline-edit al-input-color al-input-errors al-model='invoice.owner_name' placeholder='Your name' type='text'>
+                                <a al-click="fetchCompanies('owner')" al-show='invoice.owner_name &amp;&amp; invoice.owner_name.length &gt;= 3' class='find-company-2-block'>
+                                    Find
+                                    <i class='zmdi zmdi-search zmdi-hc-lg'></i>
+                                </a>
+                            </div>
+                            <div class='street-name helvetica_light'>
+                                <input al-inline-edit al-input-color al-model='invoice.owner_address' class='input-large' placeholder='Street' type='text'>
+                            </div>
+                            <div class='city helvetica_light'>
+                                <input al-inline-edit al-input-color al-model='invoice.owner_city' placeholder='City' type='text'>
+                            </div>
+                            <div class='postal-code helvetica_light'>
+                                <input al-inline-edit al-input-color al-model='invoice.owner_postcode' class='input-small' placeholder='Post code' type='text'>
+                            </div>
+                            <div class='country helvetica_light'>
+                                <input al-inline-edit al-input-color al-model='invoice.owner_country' placeholder='Country' type='text'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='description'>
+                        <div class='description-left'>
+                            <div class='invoice-number'>
+                                <div class='item-title helvetica_light'>Invoice number</div>
+                                <div class='item-value helvetica_light'>
+                                    <input al-inline-edit al-input-color al-model='invoice.invoice_number' placeholder='INV0001' type='text'>
+                                </div>
+                            </div>
+                            <div al-show-animate='invoice.purchase_order_active' class='purchase-order'>
+                                <div class='item-title helvetica_light'>Purchase order</div>
+                                <div class='item-value helvetica_light'>
+                                    <input al-inline-edit al-input-color al-model='invoice.purchase_order' placeholder='PO-005' type='text'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='description-right'>
+                            <div class='invoice-date'>
+                                <div class='item-title helvetica_light"'>Invoice date</div>
+                                <div class='item-value helvetica_light"'>
+                                    <input al-datepicker-edit al-input-color al-model='invoice.invoice_date' class='input-small' id='invoiceDateDatepicker' placeholder='Set date' readonly style='width: 0;' type='text'>
+                                    <span al-click='showInvoiceDateCalendar()' style='cursor: pointer;'>
+                  {{invoiceDate()}}
+                  </span>
+                                </div>
+                            </div>
+                            <div class='due-date'>
+                                <div class='item-title helvetica_light'>Due date</div>
+                                <div class='item-value'>
+                                    <div class='dropdown '>
+                                        <button aria-expanded='false' aria-haspopup='true' class='dropdown-toggle helvetica_roman' data-toggle='dropdown' id='dropdownDueDate' type='button'>
+                                            {{invoiceDueDate()}}
+                                            <i class='zmdi zmdi-chevron-down zmdi-hc-lg'></i>
+                                        </button>
+                                        <ul aria-labelledby='dropdownDueDate' class='dropdown-menu dropdown-menu-right helvetica_light'>
+                                            <li>
+                                                <a al-model='invoice.due_date' al-offset-due-date='14' href='javascript:void(0)'>
+                                                    Net 14
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a al-model='invoice.due_date' al-offset-due-date='30' href='javascript:void(0)'>
+                                                    Net 30 (default)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a al-model='invoice.due_date' al-offset-due-date='60' href='javascript:void(0)'>
+                                                    Net 60
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a al-model='invoice.due_date' al-offset-due-date='90' href='javascript:void(0)'>
+                                                    Net 90
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-target="#specificDate" data-toggle="modal" href="javascript:void(0)">Custom Date</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='invoice-items-table'>
+                        <table class='lines-table'>
+                            <thead>
+                            <tr class="helvetica_heavy">
+                                <th class='th-item'>Product/Service</th>
+                                <th class='th-quantity'>Quantity</th>
+                                <th class='th-cost'>Cost</th>
+                                <th class='th-price'>Price</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr  al-class='error: invoice_line.errors' al-repeat='invoice_line in invoice.invoice_lines' class='invoice-line helvetica_light'>
+                                <td class='td-item'>
+                                    <input al-change='trackChangeInvoiceLine($index)' al-model='invoice_line.title' class='input-large' placeholder='Enter text' type='text'>
+                                </td>
+                                <td class='td-quantity'>
+                                    <input al-change='trackChangeInvoiceLine($index)' al-model='invoice_line.quantity' al-number-format-integer class='input-small input-right' maxlength='4' placeholder='Quantity' type='text'>
+                                </td>
+                                <td class='td-cost'>
+                                    <input al-change='trackChangeInvoiceLine($index)' al-model='invoice_line.unit_cost' al-number-format class='input-small' maxlength='10' placeholder='Cost' type='text'>
+                                </td>
+                                <td class='td-price'>
+                                    {{invoice.currency | sym}} {{(invoice_line.quantity * invoice_line.unit_cost) | currency}}
+                                    <button al-click='removeInvoiceLine($index)' class='button-round button-delete' data-dz-remove>
+                                        <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr al-click='addInvoiceLine()' class='add-item'>
+                                <td class=''>
+                                    + Add line
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class='invoice-total'>
+                        <div class='total-row'>
+                            <div class='total-title helvetica_med'>
+                                Sub Total:
+                            </div>
+                            <div class='total-input'>
+                                <!-- /empty -->
+                            </div>
+                            <div class='total-value helvetica_light'>
+                                {{invoice.currency | sym}} {{subTotalPrice() | currency}}
+                            </div>
+                        </div>
+                        <div al-show-animate='invoice.discount_active' class='total-row'>
+                            <div class='total-title helvetica_med'>
+                                Discount:
+                            </div>
+                            <div class='total-input helvetica_light' >
+                                <span al-show="invoice.discount_type == 'percent'">({{invoice.discount || 0}}%)</span>
+                                <span al-show="invoice.discount_type == 'flat'">({{invoice.currency | sym}} {{invoice.discount || 0}})</span>
+                            </div>
+                            <div class='total-value helvetica_light'>
+                                - {{invoice.currency | sym}} {{discountPrice() | currency}}
+                            </div>
+                        </div>
+                        <div al-show-animate='invoice.shipping_active' class='total-row'>
+                            <div class='total-title helvetica_med'>
+                                Shipping:
+                            </div>
+                            <div class='total-input helvetica_light'>
+                                <span al-show="invoice.shipping_type == 'percent'">({{invoice.shipping || 0}}%)</span>
+                                <span al-show="invoice.shipping_type == 'flat'">({{invoice.currency | sym}} {{invoice.shipping || 0}})</span>
+                            </div>
+                            <div class='total-value helvetica_light'>
+                                {{invoice.currency | sym}} {{shippingPrice() | currency}}
+                            </div>
+                        </div>
+                        <div al-show-animate='invoice.shipping_active &amp;&amp; invoice.shipping_tax_active' class='total-row'>
+                            <div class='total-title helvetica_light'>
+                                Shipping {{invoice.tax_title}}
+                            </div>
+                            <div class='total-input helvetica_light'>
+                                ({{invoice.shipping_tax || 0}}%)
+                            </div>
+                            <div class='total-value helvetica_light' >
+                                {{invoice.currency | sym}} {{shippingVAT() | currency}}
+                            </div>
+                        </div>
+                        <div al-show-animate='invoice.tax_active' class='total-row'>
+                            <div class='total-title helvetica_light'>
+                                {{invoice.tax_title}}
+                            </div>
+                            <div class='total-input helvetica_light'>
+                                ({{invoice.tax || 0}}%)
+                            </div>
+                            <div class='total-value helvetica_light'>
+                                {{invoice.currency | sym}} {{VATPrice() | currency}}
+                            </div>
+                        </div>
+                        <div class='total-row gradient-green final-total'>
+                            <div class='total-title helvetica_med'>
+                                Total:
+                            </div>
+                            <div class='total-input'>
+                                <!-- /empty -->
+                            </div>
+                            <div class='total-value helvetica_light'>
+                                {{invoice.currency | sym}} {{totalPrice() | currency}}
+                            </div>
+                        </div>
+                    </div>
+                    <div al-show-animate='invoice.payment_stub_active'>
+                        <h3 class='payment-stub-title'>
+                            Remittance advice
+                        </h3>
+                        <div class='payment-stub'>
+                            <div class='total-row'>
+                                <div class='total-title'>
+                                    Client:
+                                </div>
+                                <div class='total-value'>
+                                    {{invoice.client_name}}
+                                </div>
+                            </div>
+                            <div class='total-row'>
+                                <div class='total-title'>
+                                    Invoice number
+                                </div>
+                                <div class='total-value'>
+                                    {{invoice.title}}
+                                </div>
+                            </div>
+                            <div class='total-row'>
+                                <div class='total-title'>
+                                    Due date
+                                </div>
+                                <div class='total-value'>
+                                    {{invoice.due_date}}
+                                </div>
+                            </div>
+                            <div class='total-row gradient-green final-total'>
+                                <div class='total-title'>
+                                    Amount due
+                                </div>
+                                <div class='total-value'>
+                                    {{invoice.currency | sym}} {{totalPrice() | currency}}
+                                </div>
+                            </div>
+                            <div class='total-row'>
+                                <div class='total-title'>
+                                    Amount enclosed
+                                </div>
+                                <div class='total-value'>
+                                    <div class='white-block has-border-bottom' placeholder='' type='text'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div al-show-animate='invoice.notes_active' class='notes'>
+                        <h4>
+                            Notes
+                        </h4>
+                        <textarea al-inline-edit al-input-color al-model='invoice.notes' class='full-textarea' placeholder=''></textarea>
+                    </div>
+                    <div al-show-animate='invoice.terms_active' class='terms'>
+                        <h4>
+                            Terms &amp; Conditions
+                        </h4>
+                        <textarea al-inline-edit al-input-color al-model='invoice.terms' class='full-textarea' placeholder=''></textarea>
+                    </div>
+                </div>
+                <div class='invoice-footer'>
+                    <div class='row'>
+                        <div>
+                            <input al-inline-edit al-input-color al-model='invoice.my_email_address' placeholder='Your email address' type='text'>
+                        </div>
+                        <div>
+                            <input al-inline-edit al-input-color al-model='invoice.my_phone_number' class='input-small' placeholder='Your phone number' type='text'>
+                        </div>
+                        <div>
+                            <input al-inline-edit al-input-color al-model='invoice.my_website' placeholder='Your website' type='text'>
+                        </div>
+                    </div>
+                    <div al-show-animate='invoice.tax_active' class='row'>
+                        <div>
+                            {{invoice.tax_title}} Number
+                        </div>
+                        <div>
+                            <input al-inline-edit al-input-color al-model='invoice.company_registration_number' class='input-small' placeholder='Company number or {{invoice.tax_title}} number' type='text'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class='row'>-->
+            <!--<div class='col-md-9'>-->
+                <!--<ul class='logo-list'>-->
+                    <!--<li>Create <b>automated reminders for yourself</b> and clients to help <b>ensure they pay time</b></li>-->
+                    <!--<li><b>Save all your invoices as PDFs</b> and download them for your local records</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class='col-md-3'>-->
+                <!--<a target="_blank" href="https://chrome.google.com/webstore/detail/invoice-template/idmlaoolbpgamkhhekcgkbbiampkmahp"><img src="../assets/Chrome-store-banner-2b60012203ddf604515afa73e03b4fc2924b45fa2970af305892189996af42d0.svg" alt="Chrome store banner" />-->
+                <!--</a></div>-->
+        <!--</div>-->
+    </div>
+    <!--<div class='faq'>-->
+        <!--<div class='container'>-->
+            <!--<div class='row'>-->
+                <!--<div class='col-md-12'>-->
+                    <!--<h2 class="helvetica_heavy faq">-->
+                        <!--Frequently Asked Questions-->
+                    <!--</h2>-->
+                <!--</div>-->
+                <!--<div class='col-md-12 faq-block'>-->
+                    <!--<div aria-multiselectable='false' class='accordion-faq panel-group' role='tablist'>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingTwo' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseTwo' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseTwo' role='button'>-->
+                                        <!--Automatically calculate VAT-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingTwo' class='panel-collapse collapse' id='collapseTwo' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--VAT is calculated automatically. Use the top slider button to include VAT, then select the VAT percentage or set your own custom amount.-->
+                                    <!--<img alt="Automatically calculate VAT" src="../assets/faq/faq-2-bc16a5944a1a20dc1e75dcbbca1ea8d43bb75f83f26fabb9e78818d5de3d708d.png" />-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingThree' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseThree' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseThree' role='button'>-->
+                                        <!--Upload your logo-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingThree' class='panel-collapse collapse' id='collapseThree' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--Click the +image icon at the top right hand corner of Invoice Builder then select a .jpg or .png file from your desktop/mobile and upload it. We take care of all formatting and resizing so that your logo fits neatly into the available space-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingFour' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseFour' aria-expanded='true' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseFour' role='button'>-->
+                                        <!--Update your logo-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingFour' class='panel-collapse collapse' id='collapseFour' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--<p>-->
+                                        <!--If you need to change your logo at anytime click the +image icon at the top right hand corner of Invoice Builder then select a .jpg or .png file from your desktop/mobile and upload it.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--The old logo will be deleted and replaced with the new one. We take care of all formatting and resizing so that your logo fits neatly into the available space.-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingFive' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseFive' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseFive' role='button'>-->
+                                        <!--Select a new  template-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingFive' class='panel-collapse collapse' id='collapseFive' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--To select a different template click on the template thumbnails in the ‘settings’ sections.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingSix' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseSix' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseSix' role='button'>-->
+                                        <!--Is InvoiceTemplate.co free?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingSix' class='panel-collapse collapse' id='collapseSix' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--Yes! You’ll never have to pay to use InvoiceTemplate.co, and there is no limit on the number of invoices any user can create. Invoices can be stored on our server for free too.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingSeven' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseSix' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseSeven' role='button'>-->
+                                        <!--Can I  delete account and all information relating to it?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingSeven' class='panel-collapse collapse' id='collapseSeven' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--To remove an account and all the information associated with it, including invoices, send us an e-mail at support@trialblance.io. We will cancel your account and delete all your invoices, as well as any other information we hold about you from   from our servers.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingEight' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseEight' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseEight' role='button'>-->
+                                        <!--Can I recover a deleted account?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingEight' class='panel-collapse collapse' id='collapseEight' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--No. Once an account has been deleted, everything associated with it will be removed from our servers. The only way you will be able to access any data you have created with us will be to download it before deleting the account.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingNine' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseNine' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseNine' role='button'>-->
+                                        <!--Can I delete invoices?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingNine' class='panel-collapse collapse' id='collapseNine' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--Yes. Invoices can be deleted from our system. Once they’re gone they can’t be recovered, so make sure backup copies are kept locally if you think you will need invoices at some point in the future.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingNineOne' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseNine' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseNineOne' role='button'>-->
+                                        <!--Can I recover deleted invoices?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingNineOne' class='panel-collapse collapse' id='collapseNineOne' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--<p>-->
+                                        <!--No. Once an invoice has been deleted from our servers it is gone forever.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--Make sure you have created a local backup copy of an invoice if you think you will need it at a later date but want to remove it from our service. It is easy to export an invoice as a PDF at any time.-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingTen' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseNine' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseTen' role='button'>-->
+                                        <!--Will your be branded all over my invoices?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingTen' class='panel-collapse collapse' id='collapseTen' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--<p>-->
+                                        <!--No. You can edit and change what’s on invoices to suit your own needs. We will not add anything you can’t edit or remove.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--Please note: Some browsers will impose headers and footers on your printed form, which must be de-activated by yourself.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--In Chrome: Print → More Settings → Uncheck ‘Headers & Footers’-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--In Safari: Print → Show details → Uncheck ‘Headers & Footers’-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--In Internet Explorer: Print → Turn off ‘Headers & Footers’-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingEleven' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseNine' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseEleven' role='button'>-->
+                                        <!--Who is InvoiceTemplate.co?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingEleven' class='panel-collapse collapse' id='collapseEleven' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--TrialBalance LTD is a UK registered company that specialises in building financial management solutions for Small and Medium sized Enterprises (SMEs). Invoice Builder is our first product, and it is free for any SME to use as much and as often as they like.-->
+                                    <!--We are  developing a portfolio of products that will bring more features and functions to SMEs. Invoice Builder is just the first step. If you want to know more about us and get information about new products and services please-->
+                                    <!--<a href="index.html#">sign up</a>.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='headingTwelve' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseNine' aria-expanded='false' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapseTwelve' role='button'>-->
+                                        <!--How can I learn more about new services?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='headingTwelve' class='panel-collapse collapse' id='collapseTwelve' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--We will keep users informed of developments if they have asked for this when they create an account. Signed up users can change their-->
+                                    <!--<a href="index.html#">preferences</a>  at any time.-->
+                                    <!--Anyone who has not created an account can <a href="index.html#">join our mailing list</a> to be kept up to date with developments. Users with an account will have opportunities to join any Beta testing programmes we run.-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='panel panel-default'>-->
+                            <!--<div class='panel-heading' id='heading13' role='tab'>-->
+                                <!--<div class='panel-title'>-->
+                                    <!--<a aria-controls='collapseNine' aria-expanded='false' class='collapsed' data-parent='.accordion-faq' data-toggle='collapse' href='index.html#collapse13' role='button'>-->
+                                        <!--Why can’t I see my saved invoices?-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div aria-labelledby='heading13' class='panel-collapse collapse' id='collapse13' role='tabpanel'>-->
+                                <!--<div class='panel-body'>-->
+                                    <!--<p>-->
+                                        <!--Access to saved invoices is controlled by a ‘cookie’ (a small piece of information stored on your computer which lets 'InvoiceTemplate.co know who you are). This cookie saves you having to create an account with InvoiceTemplate.co.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--If you can’t see saved invoices, it is probably because the cookie has been deleted. But your invoices are still in InvoiceTemplate.co.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--To see them just open an email about a previous invoice and click to see your invoices. This will put the cookie on your computer, and you’ll be able to see all saved invoices again.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--If you’ve deleted emails from us, create a new invoice and click on the email you get when the invoice is sent. This will also set the cookie up.-->
+                                    <!--</p>-->
+                                    <!--<p>-->
+                                        <!--If you are still having trouble, email us and we’ll fix it.-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class='footer'>-->
+            <!--<div class='footer-share-flex'>-->
+                <!--<div class='flex-block'>-->
+         <!--<span>-->
+         <!--Made with-->
+         <!--</span>-->
+                    <!--<span>-->
+         <!--<i class='zmdi zmdi-favorite zmdi-hc-lg'></i>-->
+         <!--</span>-->
+                    <!--<span>-->
+         <!--from London-->
+         <!--•-->
+         <!--</span>-->
+                    <!--<span>-->
+         <!--TrialbalanceLtd ©-->
+         <!--2017-->
+         <!--•-->
+         <!--</span>-->
+                    <!--<span>-->
+         <!--<a href="privacy.html">Privacy Policy</a>-->
+         <!--</span>-->
+                    <!--<span>-->
+         <!--and-->
+         <!--</span>-->
+                    <!--<span>-->
+         <!--<a href="terms.html">T&amp;Cs</a>-->
+         <!--</span>-->
+                <!--</div>-->
+                <!--<div class='flex-block'>-->
+                    <!--<div class='flex-block-item'>-->
+                        <!--<a target="_blank" href="https://blog.invoicetemplate.co"><img src="../assets/landing/icon-blog-842aa0b1210788df6dfed67ebbfa219689b4da0f7345fa732bc721cfb84bd767.png" alt="Icon blog" />-->
+                            <!--<span>Blog</span>-->
+                        <!--</a></div>-->
+                    <!--<div class='flex-block-item'>-->
+                        <!--<a target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=www.invoicetemplate.co"><i class='zmdi zmdi-facebook-box zmdi-hc-2x'></i>-->
+                            <!--<span>Facebook</span>-->
+                        <!--</a></div>-->
+                    <!--<div class='flex-block-item'>-->
+                        <!--<a target="_blank" class="twitter" href="https://twitter.com/intent/tweet?text=These free invoice templates are making my life easier! Check them out: www.invoicetemplate.co&amp;hashtags=smallbiz"><i class='zmdi zmdi-twitter zmdi-hc-2x'></i>-->
+                            <!--<span>Twitter</span>-->
+                        <!--</a></div>-->
+                    <!--<div class='flex-block-item'>-->
+                        <!--<a class="btn btn-rounded-grey add-to-bookmark" id="sign_up_for_more_footer" href="javascript:;">Sign up for more free stuff</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!-- / helper templates -->
+    <div class='email-modal fade modal td-modal' id='emailModal' role='dialog'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <button class='button-round button-delete' data-dismiss='modal'>
+                    <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                </button>
+                <div class='templates'>
+                    <img src="../assets/templates-616f3d425707697331833b348b0f536af4d4820f7ae2f3975b8d6037ee4dc120.png" alt="Templates" />
+                </div>
+                <div class='modal-body'>
+                    <div class='flex-center-text'>
+                        <h2>
+                            Create beautiful invoices in
+                            <br>
+                            seconds
+                            <b>
+                                for FREE
+                            </b>
+                        </h2>
+                        <div class='row col-md-12'>
+                            <div class='col-md-6 check-block'>
+                                Automated reminders to make
+                                <br>
+                                sure you get paid on time!
+                            </div>
+                            <div class='col-md-6 check-block'>
+                                Super fast professional
+                                <br>
+                                HMRC compliant invoices
+                            </div>
+                        </div>
+                        <form>
+                            <div class='input-group'>
+                                <input class='form-control' placeholder='Enter your email to get started ' type='text'>
+                                <div class='input-group-btn'>
+                                    <button class='btn btn-gradient' type='submit'>
+                                        Start FREE invoicing now >>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class='text-center'>
+                            <div class='small'>
+                                No spam, ever. We’ll never share your email address and you can opt out at any time.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='fade modal more-currency td-modal' id='moreCurrency' role='dialog'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <button class='button-round button-delete' data-dismiss='modal'>
+                    <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                </button>
+                <div class='modal-body'>
+                    <div class='select-company'>
+                        <h4>
+                            Select your currency
+                        </h4>
+                    </div>
+                    <div al-init='currency_search={}' class='currency-push-menu'>
+                        <ul class='list-group'>
+                            <li class='list-group-item'>
+                                <div class='currency-search'>
+                                    <i class='zmdi zmdi-search zmdi-hc-2x'></i>
+                                    <input al-model='currency_search.__all' class='currency-search-input' placeholder='Type your currency' type='text'>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class='list-group scroll-list'>
+                            <li al-class='active: invoice.currency == currency.iso' al-repeat='currency in currencies | filter:currency_search' class='list-group-item'>
+                                <a al-click='invoice.currency = currency.iso; currency_search = {}; ' al-inline-edit al-model='invoice.currency' class='currency-item' href='index.html' onClick="$('#moreCurrency').modal('hide'); $('#collapseCurrency').collapse('hide');">
+                                    <span class='flag-icon flag-icon-{{currency.code.toLowerCase()}}'></span>
+                                    <span class='currency-iso'>
+                              {{currency.iso}}
+                              </span>
+                                    <span class='currency-name'>
+                              -
+                              {{currency.currency}}
+                              </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='modal-footer'></div>
+            </div>
+        </div>
+    </div>
+    <div class='calendar-modal fade modal td-modal' id='specificDate' role='dialog'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button class='button-round button-delete' data-dismiss='modal'>
+                        <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                    </button>
+                    <h4>Select a Due Date</h4>
+                </div>
+                <div al-datepicker-edit='inline' al-model='invoice.due_date' id='due_date_datetime_picker'></div>
+            </div>
+        </div>
+    </div>
+    <div class='company-modal fade modal td-modal' id='companySelector' role='dialog'>
+        <div class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button class='button-round button-delete' data-dismiss='modal'>
+                        <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                    </button>
+                    <div class='flex-line'>
+                        <div class='select-company'>
+                            Select a Company
+                            <span class='small'>(UK ONLY)</span>
+                        </div>
+                        <div class='companies-house'>
+                            Companies House
+                        </div>
+                    </div>
+                </div>
+                <ul class='company-list-group'>
+                    <li al-repeat='company in invoice.companies' class='company-item'>
+                        <a al-click='processCompanyInfo(company)'>
+                            <h5>{{company.title}}</h5>
+                            <small>{{company.address_snippet}}</small>
+                        </a>
+                    </li>
+                </ul>
+                <div class='modal-footer'>
+                    <div class='flex-line'>
+                        <div class='results'>
+                            Results found: {{invoice.companies.length}}
+                        </div>
+                        <a class="button-success" data-dismiss="modal" href="javascript:void(0)">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='fade modal td-modal' id='invoiceShare' role='dialog'>
+        <!-- / not saved invoice -->
+        <div al-show="invoice.status == 'draft'" class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button class='button-round button-delete' data-dismiss='modal'>
+                        <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                    </button>
+                </div>
+                <div class='flex-center-text'>
+                    <p>
+                        <span class='alert-circle'>
+                        !
+                        </span>
+                        Please add the customer's email address to share this invoice's link
+                    </p>
+                    <a class="button-success" data-dismiss="modal" href="javascript:void(0)">OK</a>
+                </div>
+            </div>
+        </div>
+        <!-- / already stored invoice -->
+        <div al-show="invoice.status == 'sent'" class='modal-dialog'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button class='button-round button-delete' data-dismiss='modal'>
+                        <i class='zmdi zmdi-close zmdi-hc-lg'></i>
+                    </button>
+                </div>
+                <div class='modal-body'>
+                    <div class='invoice-share'>
+                        <h2>
+                            Share Invoice link
+                        </h2>
+                        <p>Enable your customers to pay, print and download this invoice</p>
+                        <div class='copy-link-block'>
+                            <label>Copy and share link</label>
+                            <input id='invoice-link' onmouseover='this.select();' value='https://invoicetemplate.co/free-invoice-template/cdd60691-5897-479e-bd03-2d77a64d1032/shared'>
+                        </div>
+                        <div class='buttons'>
+                            <a class="button-gray" data-dismiss="modal" href="javascript:void(0)">Cancel</a>
+                            <a class="button-success copy-link trackable-event" data-clipboard-target="#invoice-link" data-dismiss="modal" href="javascript:void(0)">Copy link and close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.invoice = {"id":29597,"title":null,"created_at":"2017-12-04T14:00:15.950Z","updated_at":"2017-12-04T14:00:15.950Z","uid":"c8f6897d-0489-40f6-9380-4f83a017a109","logo":{"url":null,"thumb":{"url":null}},"client_name":null,"client_address":null,"client_postcode":null,"client_country":null,"owner_name":null,"owner_address":null,"owner_postcode":null,"owner_country":null,"invoice_number":null,"invoice_date":"2017-12-04T00:00:00.000Z","purchase_order":null,"due_date":"2018-01-03T00:00:00.000Z","currency":"GBP","email_sender":null,"email_receiver":null,"email_subject":null,"email_body":null,"status":"draft","client_city":null,"owner_city":null,"shipping":"20.0","shipping_active":false,"payment_stub_active":false,"tax":"20.0","tax_active":true,"discount":"0.0","discount_active":false,"notes":null,"notes_active":true,"terms":null,"terms_active":true,"tax_type":"percent","discount_type":"percent","shipping_tax_active":false,"my_email_address":null,"my_phone_number":null,"my_website":null,"company_registration_number":null,"shipping_tax":"20.0","shipping_type":"percent","views":0,"template":"london","paid":false,"sent_at":null,"paid_at":null,"viewed_at":null,"share_uid":"cdd60691-5897-479e-bd03-2d77a64d1032","reminder_active":false,"confirmed":false,"purchase_order_active":true,"tax_title":"VAT","date_format":"DD/MM/YYYY"};
+        window.invoice_lines = [];
+        window.stored_invoices = [];
+        window.currencies = [{"code":"AF","iso":"AFN","sym":"AFN","currency":"Afghan afghani"},{"code":"AL","iso":"ALL","sym":"ALL","currency":"Albanian lek"},{"code":"DZ","iso":"DZD","sym":"DZD","currency":"Algerian dinar"},{"code":"AO","iso":"AOA","sym":"AOA","currency":"Angolan kwanza"},{"code":"AI","iso":"XCD","sym":"XCD","currency":"East Caribbean dollar"},{"code":"AR","iso":"ARS","sym":"ARS","currency":"Argentine peso"},{"code":"AM","iso":"AMD","sym":"AMD","currency":"Armenian dram"},{"code":"AW","iso":"AWG","sym":"AWG","currency":"Aruban florin"},{"code":"AU","iso":"AUD","sym":"AUD","currency":"Australian dollar"},{"code":"AZ","iso":"AZN","sym":"AZN","currency":"Azerbaijani manat"},{"code":"BS","iso":"BSD","sym":"BSD","currency":"Bahamian dollar"},{"code":"BH","iso":"BHD","sym":"BHD","currency":"Bahraini dinar"},{"code":"BD","iso":"BDT","sym":"BDT","currency":"Bangladeshi taka"},{"code":"BB","iso":"BBD","sym":"BBD","currency":"Barbadian dollar"},{"code":"BY","iso":"BYN","sym":"BYN","currency":"Belarusian ruble"},{"code":"BZ","iso":"BZD","sym":"BZD","currency":"Belize dollar"},{"code":"BJ","iso":"XOF","sym":"XOF","currency":"West African CFA franc"},{"code":"BM","iso":"BMD","sym":"BMD","currency":"Bermudian dollar"},{"code":"BT","iso":"BTN","sym":"BTN","currency":"Bhutanese ngultrum"},{"code":"BO","iso":"BOB","sym":"BOB","currency":"Bolivian boliviano"},{"code":"BA","iso":"KM","sym":"KM","currency":"Bosnia and Herzegovina convertible mark"},{"code":"BW","iso":"BWP","sym":"BWP","currency":"Botswana pula"},{"code":"BR","iso":"BRL","sym":"BRL","currency":"Brazilian real"},{"code":"BN","iso":"BND","sym":"BND","currency":"Brunei dollar"},{"code":"BG","iso":"BGN","sym":"BGN","currency":"Bulgarian lev"},{"code":"BI","iso":"BIF","sym":"BIF","currency":"Burundian franc"},{"code":"KH","iso":"KHR","sym":"KHR","currency":"Cambodian riel"},{"code":"CM","iso":"XAF","sym":"XAF","currency":"Central African CFA franc"},{"code":"CA","iso":"CAD","sym":"CAD","currency":"Canadian dollar"},{"code":"CV","iso":"CVE","sym":"CVE","currency":"Cape Verdean escudo"},{"code":"KY","iso":"KYD","sym":"KYD","currency":"Cayman Islands dollar"},{"code":"CL","iso":"CLP","sym":"CLP","currency":"Chilean peso"},{"code":"CN","iso":"CNY","sym":"CNY","currency":"Chinese yuan"},{"code":"CO","iso":"COP","sym":"COP","currency":"Colombian peso"},{"code":"KM","iso":"KMF","sym":"KMF","currency":"Comorian franc"},{"code":"CR","iso":"CRC","sym":"CRC","currency":"Costa Rican colón"},{"code":"HR","iso":"HRK","sym":"HRK","currency":"Croatian kuna"},{"code":"CU","iso":"CUC","sym":"CUC","currency":"Cuban convertible peso"},{"code":"CW","iso":"ANG","sym":"ANG","currency":"Netherlands Antillean guilder"},{"code":"CZ","iso":"CZK","sym":"CZK","currency":"Czech koruna"},{"code":"CD","iso":"CDF","sym":"CDF","currency":"Congolese franc"},{"code":"DK","iso":"DKK","sym":"DKK","currency":"Danish krone"},{"code":"DJ","iso":"DJF","sym":"DJF","currency":"Djiboutian franc"},{"code":"DO","iso":"DOP","sym":"DOP","currency":"Dominican peso"},{"code":"EG","iso":"EGP","sym":"EGP","currency":"Egyptian pound"},{"code":"ER","iso":"ERN","sym":"ERN","currency":"Eritrean nakfa"},{"code":"ET","iso":"ETB","sym":"ETB","currency":"Ethiopian birr"},{"code":"FK","iso":"FKP","sym":"FKP","currency":"Falkland Islands pound"},{"code":"FJ","iso":"FJD","sym":"FJD","currency":"Fijian dollar"},{"code":"PF","iso":"XPF","sym":"XPF","currency":"CFP franc"},{"code":"GM","iso":"GMD","sym":"GMD","currency":"Gambian dalasi"},{"code":"GE","iso":"GEL","sym":"GEL","currency":"Georgian lari"},{"code":"GH","iso":"GHS","sym":"GHS","currency":"Ghanaian cedi"},{"code":"GI","iso":"GIP","sym":"GIP","currency":"Gibraltar pound"},{"code":"GT","iso":"GTQ","sym":"GTQ","currency":"Guatemalan quetzal"},{"code":"GN","iso":"GNF","sym":"GNF","currency":"Guinean franc"},{"code":"GY","iso":"GYD","sym":"GYD","currency":"Guyanese dollar"},{"code":"HT","iso":"HTG","sym":"HTG","currency":"Haitian gourde"},{"code":"HN","iso":"HNL","sym":"HNL","currency":"Honduran lempira"},{"code":"HK","iso":"HKD","sym":"HKD","currency":"Hong Kong dollar"},{"code":"HU","iso":"HUF","sym":"HUF","currency":"Hungarian forint"},{"code":"IS","iso":"ISK","sym":"ISK","currency":"Icelandic króna"},{"code":"IN","iso":"INR","sym":"INR","currency":"Indian rupee"},{"code":"ID","iso":"IDR","sym":"IDR","currency":"Indonesian rupiah"},{"code":"IR","iso":"IRR","sym":"IRR","currency":"Iranian rial"},{"code":"IQ","iso":"IQD","sym":"IQD","currency":"Iraqi dinar"},{"code":"IM","iso":"IMP","sym":"IMP","currency":"Manx pound"},{"code":"IL","iso":"ILS","sym":"ILS","currency":"Israeli new shekel"},{"code":"JM","iso":"JMD","sym":"JMD","currency":"Jamaican dollar"},{"code":"JP","iso":"JPY","sym":"JPY","currency":"Japanese yen"},{"code":"JE","iso":"JEP","sym":"JEP","currency":"Jersey pound"},{"code":"JO","iso":"JOD","sym":"JOD","currency":"Jordanian dinar"},{"code":"KZ","iso":"KZT","sym":"KZT","currency":"Kazakhstani tenge"},{"code":"KE","iso":"KES","sym":"KES","currency":"Kenyan shilling"},{"code":"KW","iso":"KWD","sym":"KWD","currency":"Kuwaiti dinar"},{"code":"KG","iso":"KGS","sym":"KGS","currency":"Kyrgyzstani som"},{"code":"LA","iso":"LAK","sym":"LAK","currency":"Lao kip"},{"code":"LB","iso":"LBP","sym":"LBP","currency":"Lebanese pound"},{"code":"LS","iso":"LSL","sym":"LSL","currency":"Lesotho loti"},{"code":"LR","iso":"LRD","sym":"LRD","currency":"Liberian dollar"},{"code":"LY","iso":"LYD","sym":"LYD","currency":"Libyan dinar"},{"code":"MO","iso":"MOP","sym":"MOP","currency":"Macanese pataca"},{"code":"MK","iso":"MKD","sym":"MKD","currency":"Macedonian denar"},{"code":"MG","iso":"MGA","sym":"MGA","currency":"Malagasy ariary"},{"code":"MW","iso":"MWK","sym":"MWK","currency":"Malawian kwacha"},{"code":"MY","iso":"MYR","sym":"MYR","currency":"Malaysian ringgit"},{"code":"MV","iso":"MVR","sym":"MVR","currency":"Maldivian rufiyaa"},{"code":"MR","iso":"UM","sym":"UM","currency":"Mauritanian ouguiya"},{"code":"MU","iso":"MUR","sym":"MUR","currency":"  Mauritian rupee"},{"code":"MX","iso":"MXN","sym":"MXN","currency":"Mexican peso"},{"code":"MD","iso":"MDL","sym":"MDL","currency":"Moldovan leu"},{"code":"MN","iso":"MNT","sym":"MNT","currency":"Mongolian tögrög"},{"code":"MA","iso":"MAD","sym":"MAD","currency":"Moroccan dirham"},{"code":"MZ","iso":"MZN","sym":"MZN","currency":"Mozambican metical"},{"code":"MM","iso":"MMK","sym":"MMK","currency":"Burmese kyat"},{"code":"NA","iso":"NAD","sym":"NAD","currency":"Namibian dollar"},{"code":"NP","iso":"NPR","sym":"NPR","currency":"Nepalese rupee"},{"code":"NZ","iso":"NZD","sym":"NZD","currency":"New Zealand dollar"},{"code":"NI","iso":"NIO","sym":"NIO","currency":"Nicaraguan córdoba"},{"code":"NG","iso":"NGN","sym":"NGN","currency":"Nigerian naira"},{"code":"NO","iso":"NOK","sym":"NOK","currency":"Norwegian krone"},{"code":"OM","iso":"OMR","sym":"OMR","currency":"Omani rial"},{"code":"PK","iso":"PKR","sym":"PKR","currency":"Pakistani rupee"},{"code":"PA","iso":"PAB","sym":"PAB","currency":"Panamanian balboa"},{"code":"PG","iso":"PGK","sym":"PGK","currency":"Papua New Guinean kina"},{"code":"PY","iso":"PYG","sym":"PYG","currency":"Paraguayan guaraní"},{"code":"PE","iso":"PEN","sym":"PEN","currency":"Peruvian sol"},{"code":"PH","iso":"PHP","sym":"PHP","currency":"Philippine peso"},{"code":"PL","iso":"PLN","sym":"PLN","currency":"Polish złoty"},{"code":"QA","iso":"QAR","sym":"QAR","currency":"Qatari riyal"},{"code":"RO","iso":"RON","sym":"RON","currency":"Romanian leu"},{"code":"RU","iso":"RUB","sym":"RUB","currency":"Russian ruble"},{"code":"RW","iso":"RWF","sym":"RWF","currency":"Rwandan franc"},{"code":"SH","iso":"SHP","sym":"SHP","currency":"Saint Helena pound"},{"code":"WS","iso":"WST","sym":"WST","currency":"Samoan tālā"},{"code":"ST","iso":"STD","sym":"STD","currency":"São Tomé and Príncipe dobra"},{"code":"SA","iso":"SAR","sym":"SAR","currency":"Saudi riyal"},{"code":"RS","iso":"RSD","sym":"RSD","currency":"Serbian dinar"},{"code":"SC","iso":"SCR","sym":"SCR","currency":"Seychellois rupee"},{"code":"SL","iso":"SLL","sym":"SLL","currency":"Sierra Leonean leone"},{"code":"SG","iso":"SGD","sym":"SGD","currency":"Singapore dollar"},{"code":"SB","iso":"SBD","sym":"SBD","currency":"Solomon Islands dollar"},{"code":"SO","iso":"SOS","sym":"SOS","currency":"Somali shilling"},{"code":"ZA","iso":"ZAR","sym":"ZAR","currency":"South African rand"},{"code":"KR","iso":"KRW","sym":"KRW","currency":"South Korean won"},{"code":"SS","iso":"SSP","sym":"SSP","currency":"South Sudanese pound"},{"code":"LK","iso":"LKR","sym":"LKR","currency":"Sri Lankan rupee"},{"code":"SD","iso":"SDG","sym":"SDG","currency":"Sudanese pound"},{"code":"SR","iso":"SRD","sym":"SRD","currency":"Surinamese dollar"},{"code":"SZ","iso":"SZL","sym":"SZL","currency":"Swazi lilangeni"},{"code":"SE","iso":"SEK","sym":"SEK","currency":"Swedish krona"},{"code":"CH","iso":"CHF","sym":"CHF","currency":"Swiss franc"},{"code":"SY","iso":"SYP","sym":"SYP","currency":"Syrian pound"},{"code":"TW","iso":"TWD","sym":"TWD","currency":"New Taiwan dollar"},{"code":"TJ","iso":"TJS","sym":"TJS","currency":"Tajikistani somoni"},{"code":"TZ","iso":"TZS","sym":"TZS","currency":"Tanzanian shilling"},{"code":"TH","iso":"THB","sym":"THB","currency":"Thai baht"},{"code":"TO","iso":"TOP","sym":"TOP","currency":"Tongan paʻanga"},{"code":"TT","iso":"TTD","sym":"TTD","currency":"Trinidad and Tobago dollar"},{"code":"TN","iso":"TND","sym":"TND","currency":"Tunisian dinar"},{"code":"TR","iso":"TRY","sym":"TRY","currency":"Turkish lira"},{"code":"TM","iso":"TMT","sym":"TMT","currency":"Turkmenistan manat"},{"code":"TV","iso":"TVD","sym":"TVD","currency":"Tuvaluan dollar"},{"code":"UG","iso":"UGX","sym":"UGX","currency":"Ugandan shilling"},{"code":"UA","iso":"UAH","sym":"UAH","currency":"Ukrainian hryvnia"},{"code":"AE","iso":"AED","sym":"AED","currency":"United Arab Emirates dirham"},{"code":"GB","iso":"GBP","sym":"GBP","currency":"British pound"},{"code":"US","iso":"USD","sym":"USD","currency":"United States dollar"},{"code":"UY","iso":"UYU","sym":"UYU","currency":"Uruguayan peso"},{"code":"UZ","iso":"UZS","sym":"UZS","currency":"Uzbekistani soʻm"},{"code":"VU","iso":"VUV","sym":"VUV","currency":"Vanuatu vatu"},{"code":"VE","iso":"VEF","sym":"VEF","currency":"Venezuelan bolívar"},{"code":"VN","iso":"VND","sym":"VND","currency":"Vietnamese đồng"},{"code":"YE","iso":"YER","sym":"YER","currency":"Yemeni rial"},{"code":"ZM","iso":"ZMW","sym":"ZMW","currency":"Zambian kwacha"},{"code":"EU","iso":"EUR","sym":"EUR","currency":"Euro"}];
+        window.current_page = 'index';
+        window.current_landing = "variant_4";
+
+        autosize(document.querySelectorAll('textarea'));
+    </script>
+</main>
+</body>
+</html>
