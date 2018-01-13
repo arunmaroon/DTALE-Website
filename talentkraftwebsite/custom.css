@@ -36,7 +36,13 @@ ul{
     padding: 4px;
     z-index: 1;
 }
-
+.recuritment_hdr{
+    padding-left: 30px;
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 120px;
+}
 #menu-button.active{
     background: #005fea;
 }
@@ -93,7 +99,7 @@ ul{
     align-items: center;
 }
 .logo{
-    max-width: 145px;
+    max-width: 200px;
     display: inline-block;
 }
 .nav_bar ul{
@@ -117,6 +123,25 @@ ul{
 }
 .section1{
     position: relative;
+
+}
+.hero_section{
+    background: url("images/talentkraft_cover_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero_section:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.85);
+}
+header{
+    position:relative;
 }
 .contact_form input{
     display: block;
@@ -216,7 +241,7 @@ ul{
     height: 51px;
     width: 335px;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 20px;
     cursor: pointer;
     background: transparent;
     border-radius: 5px;
@@ -793,9 +818,21 @@ ul{
 .button{
 margin-top:60px;
     }
+    .recuritment_hdr {
+
+        font-size: 1.25rem;
+
+        margin-top: 60px;
+    }
+    .logo {
+        max-width: 150px;
+        display: inline-block;
+    }
 }
 @media(min-width:600px){
     #menu-button{
         display: none;
     }
+
+
 }
