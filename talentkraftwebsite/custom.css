@@ -50,6 +50,9 @@ ul{
 #menu-button.active{
     background: #005fea;
 }
+.text_indent_0{
+    text-indent: 0 !important;
+}
 #line-1,#line-2,#line-3{
     width: 90%;
     background: #fff;
