@@ -4,7 +4,7 @@ html,body{
     padding:0;
     height: 100%;
     width:100%;
-    font-family: sans-serif;
+    font-family: 'Source Sans Pro',Open Sans;
 }
 
 h1,h2,h3,h4,h5,p{
@@ -35,6 +35,10 @@ ul{
     transition: all linear .3s;
     padding: 4px;
     z-index: 1;
+}
+.form_center{
+    width:400px;
+    margin: 0 auto;
 }
 .recuritment_hdr{
     padding-left: 30px;
@@ -109,6 +113,7 @@ ul{
 
 }
 .nav_bar ul li{
+    line-height: 1.2;
 
     padding: 0 15px;
     font-size: 1rem;
@@ -117,6 +122,29 @@ ul{
 .nav_bar ul li a:hover{
     color:#005fea;
     border-bottom: 1px solid #005fea;
+}
+.bgnd-color{
+    background:#005fea !important;
+    border:none !important;
+    color:#ffffff !important;
+}
+.social-icon {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 38px!important;
+    color: #777;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.social-icon:last-child {
+    margin-right: 0;
 }
 .active_menu{
     color:#005fea;
@@ -149,6 +177,7 @@ ul{
 }
 header{
     position:relative;
+    z-index: 1;
 }
 .contact_form input{
     display: block;
@@ -160,10 +189,26 @@ header{
     margin: 0 auto;
     align-items: baseline;
 }
-.section1,.section3,.section5_content,.footer_content{
+.section1,.section3,.section5_content{
     width:960px;
     display: table;
     margin: 0 auto;
+}
+.footer_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+.footer_content .socials-icons ul{
+    display: flex;
+}
+.footer_content .socials-icons ul li{
+  margin-left: 10px;
+}
+.section1{
+    width:800px;
 }
 .image_container img{
     display: block;
@@ -683,6 +728,10 @@ header{
     }
 }
 @media (max-width:424px){
+    .form_center {
+        width: 300px;
+        margin: 0 auto;
+    }
     .nav_bar{
         width: 80%;
     }
@@ -848,14 +897,37 @@ margin-top:60px;
 
     }
     .hero_section {
-   
-    background-position-x: center;
-}
+
+        background-position-x: center;
+    }
 }
 @media(min-width:600px){
     #menu-button{
         display: none;
     }
 
+
+}
+
+@media (max-width:1024px){
+    .socials-icons{
+
+    }
+    .footer_content{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .copyright{
+        width:100%;
+    }
+    .footer_content .socials-icons ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .footer_content p{
+        margin-top: 10px;
+    }
 
 }
