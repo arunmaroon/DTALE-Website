@@ -1,111 +1,326 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
 <head>
-
     <title>DTALE Design Studio</title>
     <link rel="icon" href="images/dtalefavicon.png" type="image/png" sizes="16x16">
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8">
     <meta name="keywords" content="User Interface design, user experience design, user experience design studio, UI Design for Flipkart, UI design for ecommerce, Design studio India, Mobile App Design, Web Design Studio, UX Design Studio, UI Design Studio, UX Studio, UI Studio, UX Studio in India, UI Studio in India, DTALE Design Studio, Bangalore, Delhi, Best Design Studio, UI Design Agency" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/main.css" />
-    <meta name="description" content="We DESIGN experiences that tell a STORY">
-    <link rel="canonical" href="https://dtale.io/">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Website - We DESIGN experiences that tell a STORY">
-    <meta property="og:description" content="We DESIGN experiences that tell a STORY">
-    <meta property="og:url" content="https://dtale.io/">
-    <meta property="og:site_name" content="Website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:description" content="We DESIGN experiences that tell a STORY">
-    <meta name="twitter:title" content="Website - We DESIGN experiences that tell a STORY">
-    <meta name="twitter:site" content="@DTaleStudio">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        var $grid = $(".grid").masonry({
+            itemSelector: ".grid-item",
+            percentPosition: true,
+            columnWidth: ".grid-sizer"
+        });
+        // layout Masonry after each image loads
+        $grid.imagesLoaded().progress(function() {
+            $grid.masonry();
+        });
+        });
+    </script>
 </head>
-<body>
-<!-- Header -->
-<div class="main work_page">
-    <div class="loader">
-        <li class="three-bounce selected">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-        </li>
-    </div>
+<body >
+<div class="main ">
+<div class="loader">
+    <li class="three-bounce selected">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </li>
+</div>
+<div class="containernew">
+    <div class="header1 writing">
     <div class="header_work" id="header">
     </div>
-    <div class="work_container">
-        <a class="work1 wow animated fadeInDown" data-wow-delay="200ms" href="flipkart.html">
-            <img src="images/flipkartwork.png" alt="Flipkart">
-            <h3 class="client_name">Flipkart</h3>
-            <p class="work_type">User Experience</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="300ms" href="SAP-Localization.html">
-            <img src="images/slh.png" alt="SAP localization hub">
-            <h3 class="client_name">SAP Localization Hub</h3>
-            <p class="work_type">Marketing | Branding</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="400ms" href="smart-home.html">
-            <img src="images/smarthome.png" alt="Smart Home">
-            <h3 class="client_name">Connect Homes</h3>
-            <p class="work_type">Smart Home | Mobile UI / UX</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="500ms" href="jiyo.html">
-            <img src="images/jiyo_work.png" alt="Jiyo">
-            <h3 class="client_name">Jiyo Marketplace</h3>
-            <p class="work_type">E-Commerce | UI / UX</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="600ms" href="fastfilmz.html">
-            <img src="images/fastflimz.png" alt="FastFilmz">
-            <h3 class="client_name">FastFilmz</h3>
-            <p class="work_type">Media Streamer | Usability Study</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="700ms" href="bordo.html">
-            <img src="images/bordo1.png" alt="Bordo">
-            <h3 class="client_name">Bordo</h3>
-            <p class="work_type">Ad Aggregation | UI / UX</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="800ms" href="cognihealth.html">
-            <img src="images/cogni.png" alt="CogniHealth">
-            <h3 class="client_name">CogniHealth</h3>
-            <p class="work_type">Dementia Care | Product Design</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="900ms" href="alore.html">
-            <img src="images/alore_work.png" alt="Alore">
-            <h3 class="client_name">Alore</h3>
-            <p class="work_type">CRM | Product Design</p>
-        </a>
-        <!--<a class="work1">-->
-            <!--<img src="images/kwikxchange.png" alt="KwikXchange">-->
-            <!--<h3 class="client_name">KwikXchange</h3>-->
-            <!--<p class="work_type">Fin Tech | Mobile App UI / UX</p>-->
-        <!--</a>-->
-        <a class="work1 wow animated fadeInDown" data-wow-delay="1000ms" href="cisco.html">
-            <img src="images/cisco_work.png" alt="Cisco">
-            <h3 class="client_name">Cisco</h3>
-            <p class="work_type">IOT | User Research & UX Strategy</p>
-        </a>
-        <a class="work1 wow animated fadeInDown" data-wow-delay="1100ms" href="teriflix.html">
-            <img src="images/teriflix.png" alt="TeriFLix">
-            <h3 class="client_name">TeriFLix</h3>
-            <p class="work_type">Branding</p>
-        </a>
-        <div class="work_btn_container wow animated fadeInDown" data-wow-delay="200ms"id="emailLink">
-            <button class="work_btn"><a target="_blank" href="mailto:contact@dtale.io">Work with us</a></button>
+        <div class="inspire_container ">
+        <h1 class="inspire_hdr">
+            <span>Good design</span> <span>is as little design</span> <span>as possible</span></h1>
+        <h2 class="inspire_hdr1">-Dieter Rams</h2>
         </div>
     </div>
+<div class="image_grid_container">
+    <h1 class="grid_hdr">Design inspiration week #2</h1>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item">
+            <a href="https://dribbble.com/shots/3861169-iPhone-X-City-Guides-Concept" target="_blank">
+                <img src="images/curation2_1.png" alt="UI Interaction Design"/>
+                <p class="category_name">UI Interaction Design</p>
+            </a>
 
-    <section id="dynamic_footer">
-    </section>
+        </div>
+        <div class="grid-item">
+            <a href="https://dribbble.com/shots/3934996--Travel-Exploration/attachments/897696" target="_blank">
+                <img src="images/curation2_2.png" alt="web design" />
+                <p class="category_name">web design</p>
+            </a>
 
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/57861165/The-Minimal-Portfolio" target="_blank">
+                <img src="images/curation2_3.png" alt="Editorial Design" />
+                <p class="category_name">Editorial Design</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/58293341/-Electric-Indigo-Opening-AudioVisual-Performance" target="_blank">
+                <img src="images/curation2_4.png" alt="Motion Graphics" />
+                <p class="category_name">Motion Graphics</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="http://dwarfplanet.co/index.html" target="_blank">
+                <img src="images/curation2_5.png" alt="web design" />
+                <p class="category_name">web design</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/56224323/Cienne" target="_blank">
+                <img src="images/curation2_6.png" alt="Branding print design" />
+                <p class="category_name">Branding print design</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://dribbble.com/shots/2256384-Ebay-Redesign/attachments/422448" target="_blank">
+                <img src="images/curation2_7.png" alt="Redesign, ebay" />
+                <p class="category_name">Redesign, ebay</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://dribbble.com/shots/3247997-Football-Legends-Alessandro-Del-Piero" target="_blank">
+                <img src="images/curation2_8.png" alt="Poster" />
+                <p class="category_name">Poster</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/47810259/2017-Design-Trends-Guide" target="_blank">
+                <img src="images/curation2_9.png" alt="Graphic design" />
+                <p class="category_name">Graphic design</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/56510293/Renault-Subtil-(New-Pick-Up)" target="_blank">
+                <img src="images/curation2_10.png" alt="Industrial Design" />
+                <p class="category_name">Industrial Design</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/33799862/Naturalist" target="_blank">
+                <img src="images/curation2_11.png" alt="Exhibition Design" />
+                <p class="category_name">Exhibition Design</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://blksport.com/" target="_blank">
+                <img src="images/curation2_12.png" alt="Garmen, game day kit" />
+                <p class="category_name">Garmen, game day kit</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://pinthemall.net/pin/550b2b422a34a/" target="_blank">
+                <img src="images/curation2_13.png" alt="advertisement" />
+                <p class="category_name">advertisement</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/55806401/Quenita" target="_blank">
+                <img src="images/curation2_14.png" alt="Branding" />
+                <p class="category_name">Branding</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://muuto.com/professionals/architects-contract-dealers" target="_blank">
+                <img src="images/curation2_15.png" alt="Furniture architects" />
+                <p class="category_name">Furniture architects</p>
+            </a>
+
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/44249045/Socks-Side-Table" target="_blank">
+                <img src="images/curation2_16.png" alt=">Furniture Design" />
+                <p class="category_name">Furniture Design</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/50691611/Thrive" target="_blank">
+                <img src="images/curation2_17.png" alt="UI/UX interaction design" />
+                <p class="category_name">UI/UX interaction design</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/3613983/AJORI" target="_blank">
+                <img src="images/curation2_18.png" alt="Craft" />
+                <p class="category_name">Craft</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/30906667/INSELLER-Online-Luxury-Shop" target="_blank">
+                <img src="images/curation2_19.png" alt="Interaction Design" />
+                <p class="category_name">Interaction Design</p>
+            </a>
+        </div>
+
+
+
+
+    </div>
 </div>
+    <div class="image_grid_container">
+        <h1 class="grid_hdr">Design inspiration week #1</h1>
+        <div class="grid">
 
+            <div class="grid-sizer"></div>
 
-
+        <div class="grid-item">
+            <a href="https://www.behance.net/gallery/9957399/All-Involved-Ted-Bed" target="_blank">
+                <img src="images/curated1.jpg" alt="Furniture" />
+                <p class="category_name">Furniture</p>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="http://cargocollective.com/MiguelMestre/My-Desk" target="_blank">
+            <img src="images/curated2.jpg" alt="Furniture" />
+                <p class="category_name">Furniture</p>
+        </a>
+    </div>
+        <div class="grid-item">
+            <a href="https://dribbble.com/shots/3151504-Product-Design-Concept/attachments/668485" target="_blank">
+            <img src="images/curated3.jpg" alt="Blanket" />
+                <p class="category_name">Blanket</p>
+        </a>
+    </div>
+        <div class="grid-item">
+          <a href="https://www.behance.net/gallery/54737307/Utopick-Chocolates" target="_blank">
+            <img src="images/curated4.jpg" alt="Graphic Design" />
+              <p class="category_name">Graphic Design</p>
+       
+    </a>
+</div>
+        <div class="grid-item">
+                <a href="https://dribbble.com/shots/3537236--Artisti-E-Commerce-Template-Concept/attachments/785304" target="_blank">
+            <img src="images/curated5.jpg" alt="E-commerce" />
+                    <p class="category_name">E-commerce</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://dribbble.com/shots/3088047-Fancy-eCommerce-PSD-Template/attachments/651487" target="_blank">
+            <img src="images/curated6.jpg" alt="E-commerce" />
+                    <p class="category_name">E-commerce</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/58311239/SPOTLIGHT" target="_blank">
+            <img src="images/curated7.jpg" alt="Graphic Design" />
+                    <p class="category_name">Graphic Design</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://designyoutrust.com/2017/11/how-cool-are-these-beer-cans-that-show-the-pantone-color-of-the-brew-inside/" target="_blank">
+            <img src="images/curated8.jpg" alt="Product Design" />
+                    <p class="category_name">Product Design</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.brandingidentitydesign.com/back/" target="_blank">
+            <img src="images/curated9.jpg" alt="Branding" />
+                    <p class="category_name">Branding</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/56205417/Polypore" target="_blank">
+            <img src="images/curated10.jpg" alt="Interior Design" />
+                    <p class="category_name">Interior Design</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/58419121/Luna-de-Octubre-Videoart-Festival-Madrid" target="_blank">
+            <img src="images/curated11.jpg" alt="graphic design " />
+                    <p class="category_name">graphic design </p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="http://www.packagingoftheworld.com/2016/01/hush-chocolate.html?utm_content=buffera14bf&utm_medium=social&utm_source=pinterest.com&utm_campaign=buffer" target="_blank">
+        <img src="images/curated12.jpg" alt="Packaging Design" />
+                    <p class="category_name">Packaging Design</p>
+    </a>
+</div>
+        <div class="grid-item">
+                <a href="https://i.pinimg.com/originals/18/79/e9/1879e941add9cb02c6f3626d536658f0.jpg" target="_blank">
+        <img src="images/curated13.jpg" alt="Product Design" />
+                    <p class="category_name">Product Design</p>
+    </a>
+</div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/24099521/M-S-Coffee" target="_blank">
+            <img src="images/curated14.jpg" alt="Packaging Design" />
+                    <p class="category_name">Packaging Design</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/57692917/Foster-Friends" target="_blank">
+            <img src="images/curated15.jpg" alt="UI/UX interaction, Motion graphics" />
+                    <p class="category_name">UI/UX interaction, Motion graphics</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/56374945/Petits-poids" target="_blank">
+            <img src="images/curated16.jpg" alt="Interior Design" />
+                    <p class="category_name">Interior Design</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/19484739/Big-John-Slim-Joe-FREE-Font" target="_blank">
+            <img src="images/curated17.jpg" alt="Graphic Design Typography" />
+                    <p class="category_name">Graphic Design Typography</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/40322447/N-A-T-U-R-A-L-I-S-Lookbook-Magazine" target="_blank">
+            <img src="images/curated18.jpg" alt="Editorial Design" />
+                    <p class="category_name">Editorial Design</p>
+        </a>
+    </div>
+        <div class="grid-item">
+                <a href="http://thefoxisblack.com/2013/09/23/a-beatifully-smart-and-simple-sweeper-and-dustpan-by-jan-kochanski/" target="_blank">
+            <img src="images/curated19.jpg" alt="Product Design"/>
+                    <p class="category_name">Product Design</p>
+            </a>
+        </div>
+       
+        <div class="grid-item">
+                <a href="https://www.behance.net/gallery/56224581/Maisonette" target="_blank">
+            <img src="images/curated20.jpg" alt="Branding print design" />
+                    <p class="category_name">Branding print design</p>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<div id="dynamic_footer"></div>
+</div>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112112888-1"></script>
 <script>
@@ -115,7 +330,6 @@
 
     gtag('config', 'UA-112112888-1');
 </script>
-
 </body>
 
 </html>
