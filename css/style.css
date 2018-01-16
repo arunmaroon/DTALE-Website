@@ -93,6 +93,15 @@ html {
     box-shadow: 0 14px 28px rgba(0, 0, 0, .11), 0 10px 10px rgba(0, 0, 0, .11);
 
 }
+.grid_hdr{
+    font-family: VisbyCF-Bold;
+    letter-spacing: .025em;
+    color: #4c4c4c;
+    font-size: 1.5rem;
+    margin: 25px ;
+    margin-top: 75px;
+    line-height: 1;
+}
 .category_name{
     margin: 0;
     margin-top: 15px;
@@ -346,6 +355,14 @@ li {
     font-size: 8.3rem
 }
 @media (max-width: 424px) {
+    .grid_hdr {
+
+        font-size: 1rem;
+
+
+        
+        margin-left: 5px;
+    }
     .category_name {
         margin-top: 5px !important;
         margin-bottom: 5px !important;
@@ -650,6 +667,9 @@ li {
    
 }
 @media (min-width: 425px) and (max-width: 599px) {
+    .grid_hdr{
+        margin-left: 6px;
+    }
     .para2_common {
         width: 100%;
         margin-top: 0
@@ -756,6 +776,9 @@ li {
  }
 }
 @media (min-width: 600px) and (max-width: 767px) {
+    .grid_hdr{
+        margin-left: 15px;
+    }
     .image {
         width: 73px;
         margin-top: 63px;
@@ -827,6 +850,9 @@ li {
  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+    .grid_hdr{
+        margin-left: 15px;
+    }
     .about_us_hdr_text,.inspire_container{
         width:90%;
         margin:0 auto;
@@ -974,6 +1000,9 @@ li {
  .grid-sizer, .grid-item {
      width: 286px;
      margin: 15px;
+ }
+ .grid_hdr{
+     margin-left: 15px;
  }
 }
 @media screen and (min-width: 1280px) and (max-width: 1365px) {
