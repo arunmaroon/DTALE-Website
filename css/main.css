@@ -53,9 +53,15 @@ body {
 p {
     color: #7a7a7a
 }
-@font-face {
-    font-family: VisbyCF-Bold;
-    src: url(../fonts/VisbyCF-Bold.otf)
+
+@font-face{
+    font-family: 'VisbyCF-Bold';
+    src: url('../fonts/VisbyCF-Bold.otf');
+    /*src: url('../fonts/VisbyCF-Bold.eot?#iefix') format('embedded-opentype'),*/
+    /*url('../fonts/VisbyCF-Bold.woff') format('woff'),*/
+    /*url('../fonts/VisbyCF-Bold.ttf') format('truetype'),*/
+    /*url('../fonts/VisbyCF-Bold.svg#webfont') format('svg');*/
+
 }
 @font-face {
     font-family: VisbyCF-Regular;
@@ -3221,10 +3227,13 @@ p {
 a {
     color: inherit
 }
+.writing{
+    background: linear-gradient(#f7f6f6, #dfdede) !important;
+}
 .aboutus #about_us,
 .contact_hdr #contactus,
 .landingpage #home,
-.work_page #work {
+.work_page #work ,.writing #inspire{
     font-family: VisbyCF-Bold
 }
 .social_icons_mobile li a{
@@ -3287,7 +3296,29 @@ a {
     -webkit-transform: scale(1);
 }
 }
+.inspire_container{
+    padding-top: 222px;
+    padding-right: 138px;
+    padding-left: 138px;
+}
+.inspire_hdr{
+    font-family: VisbyCF-Bold;
+    font-size: 7.75rem;
+    letter-spacing: -0.1rem;
+    color: #333333;
+    line-height: 1;
 
+}
+.inspire_hdr1{
+    font-family:VisbyCF-Regular;
+    font-size: 4rem;
+    letter-spacing: -0.01rem;
+    color:#333333;
+    margin-top: 50px;
+}
+.inspire_hdr span{
+    display: block;
+}
 .loader {
     height: 100%;
     z-index: 9999;
@@ -4413,7 +4444,35 @@ textarea::-webkit-input-placeholder {
     width: 100%;
     margin-top: 97px
 }
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .inspire_hdr {
+
+        font-size: 5.75rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 3rem;
+
+    }
+
+}
 @media (min-width: 1440px) and (max-width: 1599px) {
+    .inspire_container{
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-top: 180px;
+    }
+    .inspire_hdr {
+
+        font-size: 5.75rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 3rem;
+
+    }
     .mouse {
         max-width: 1.5rem;
     }
@@ -4467,6 +4526,21 @@ textarea::-webkit-input-placeholder {
     }
 }
 @media(min-width:1366px) and (max-width:1439px) {
+    .inspire_container{
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-top: 180px;
+    }
+    .inspire_hdr {
+
+        font-size: 4.75rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 2.5rem;
+
+    }
     .mouse {
         max-width: 1.5rem;
     }
@@ -4564,6 +4638,21 @@ textarea::-webkit-input-placeholder {
     }
 }
 @media(min-width:1280px) and (max-width:1365px) {
+    .inspire_container{
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-top: 180px;
+    }
+    .inspire_hdr {
+
+        font-size: 4.75rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 2.5rem;
+
+    }
     .mouse {
         max-width: 1.5rem;
     }
@@ -4663,6 +4752,16 @@ textarea::-webkit-input-placeholder {
     }
 }
 @media(min-width:1024px) and (max-width:1279px) {
+    .inspire_hdr {
+
+        font-size: 3.75rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 2rem;
+
+    }
     .mouse {
         max-width: 1.5rem;
     }
@@ -4803,6 +4902,19 @@ textarea::-webkit-input-placeholder {
     }
 }
 @media(min-width:768px) and (max-width:1023px) {
+    .inspire_hdr {
+
+        font-size: 3.75rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 2rem;
+
+    }
+    .subcontainer1 h2 {
+        font-size: 2rem;
+    }
     .team-member-image img {
         width: 75%;
         object-fit: contain
@@ -4962,6 +5074,16 @@ textarea::-webkit-input-placeholder {
     }
 }
 @media(min-width:600px) and (max-width:767px) {
+    .inspire_hdr {
+
+        font-size: 3.75rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 2rem;
+
+    }
     .nav_container, .work1 {
         box-sizing: border-box
     }
@@ -5166,6 +5288,16 @@ textarea::-webkit-input-placeholder {
     }
 }
 @media(min-width:425px) and (max-width:599px) {
+    .inspire_hdr {
+
+        font-size: 3rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 1.75rem;
+
+    }
     .contactus, .nav_container, .work1 {
         box-sizing: border-box
     }
@@ -5434,6 +5566,19 @@ textarea::-webkit-input-placeholder {
     }
 }
 @media (max-width: 424px) {
+    .inspire_container {
+        padding-top: 50px;
+    }
+    .inspire_hdr {
+
+        font-size: 2.5rem;
+
+    }
+    .inspire_hdr1 {
+
+        font-size: 1.5rem;
+
+    }
     .about_project textarea,
     .contactus,
     .footer,
@@ -6053,7 +6198,7 @@ textarea::-webkit-input-placeholder {
         padding: 8px 8px 8px 13px
     }
     .intialpage {
-        margin-top: 140px
+        margin-top: 0px
     }
     .flipcart img {
         width: 220px;
