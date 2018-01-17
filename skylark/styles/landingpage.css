@@ -6375,6 +6375,11 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size(max-width:1023px) ================================================*/
 @media(max-width:1023px){
+    .skylark_landing_menu {
+        /*margin-top: -100px;
+        */
+        height: 50px;
+    }
     .contact_us_container{
         width: 90%;
         margin: 96px auto;
