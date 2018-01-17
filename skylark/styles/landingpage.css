@@ -3055,7 +3055,11 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size (min-width:1600px) and (max-width: 1919px) ================================================*/
 @media(min-width:1600px) and (max-width: 1919px) {
+    .skylark_achievements {
+     
+        padding-top: 180px;
 
+    }
     .story_video_container {
         width: 800px;
         height: 440px;
@@ -3367,6 +3371,11 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size (min-width:1440px) and (max-width: 1599px) ================================================*/
 @media(min-width:1440px) and (max-width: 1599px){
+    .skylark_achievements {
+
+        padding-top: 180px;
+
+    }
     .testimonials_container .slick-center img{
         width:240px !important;
         height: 240px !important;
