@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skylark-Royaume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/landingpage.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+
+</head>
+<body>
+<!--<div class="skylark_projectpage_container " >-->
+    <!--hero section starts here-->
+<div class="skylark_landing_menu ">
+    <div class="logo_mobile">
+        <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo"></a>
+    </div>
+    <nav class="main_menu">
+        <ul class="nav_list1">
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li class="active_menu">
+                <a href="projects.html">PROJECTS</a>
+            </li>
+            <li>
+                <a href="">ABOUT</a>
+            </li>
+            <li>
+                <a href="">BLOG</a>
+            </li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo" class="main_logo"></a>
+        </div>
+        <ul class="nav_list2">
+            <li>
+                <a href="contact.html">CONTACT US</a>
+            </li>
+            <li>
+                <a href="signup.html">SIGNUP</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-toggle">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+    </div>
+
+</div>
+<!--</div>-->
+<section class="skylark_feed_container" ng-app="skylarkApp" ng-controller="feedController">
+    <div class="user_profile  wow  fadeInDown" data-wow-delay="100ms" >
+        <h3 class="skylark_customer_name" ng-hide="!fromLocal.firstname">{{fromLocal.firstname}} {{fromLocal.lastname}}</h3>
+        <p class="customer_mailid" ng-hide="!fromLocal.emailid">{{fromLocal.emailid}}</p>
+        <p class="customer_contact_number" ng-hide="!fromLocal.phone">{{fromLocal.phone}}</p>
+        <p class="booked_project_name" ng-hide="!fromLocal.residing">{{fromLocal.residing}}</p>
+        <p class="customer_id" ng-hide="!fromLocal.houseno">{{fromLocal.houseno}}</p>
+    </div>
+    <div class="skylark_feed_section" id="lightgallery">
+        <div class="skylark_feed_section1 wow  fadeInDown" data-wow-delay="100ms">
+            <h1 class="skylark_feed_section1_hdr">Royaume Project 50% Completed</h1>
+            <p class="skylark_feed_section1_para"></p>
+            <div class="feed_image_container">
+                <div class="image_big">
+                    <img src="images/feedimg1.png" alt="">
+                </div>
+                <div class="image_small">
+                    <img src="images/feedimg2.png" alt="">
+                    <img src="images/feedimg3.png" alt="">
+                    <img src="images/feed_img4.png" alt="">
+                </div>
+            </div>
+            <p class="date_updated">2 Dec, 2017</p>
+        </div>
+
+
+
+        <div class="skylark_feed_section1 wow  fadeInDown" data-wow-delay="100ms">
+            <h1 class="skylark_feed_section1_hdr">New Referral Offer </h1>
+            <h1 class="skylark_feed_section1_hdr">1%  off on your Sale deed on successful referral. </h1>
+            <p class="skylark_feed_section1_para"></p>
+            <div class="feed_image_container">
+                <div class="image_big">
+                    <img src="images/feedimg1.png" alt="">
+                </div>
+                <!--<div class="image_small">-->
+                    <!--<img src="images/feedimg2.png" alt="">-->
+                    <!--<img src="images/feedimg3.png" alt="">-->
+                    <!--<img src="images/feed_img4.png" alt="">-->
+                <!--</div>-->
+            </div>
+            <p class="date_updated">2 Dec, 2017</p>
+        </div>
+
+
+        <div class="skylark_feed_section1  wow  fadeInDown" data-wow-delay="100ms">
+            <h1 class="skylark_feed_section1_hdr">New Project Launch </h1>
+            <h1 class="skylark_feed_section1_hdr">Skylark North City launches 50 Villa project</h1>
+            <p class="skylark_feed_section1_para"></p>
+            <div class="feed_image_container">
+                <div class="image_big">
+                    <a class="fancybox" href="images/feedimg1.png"><img src="images/feedimg1.png" alt=""></a>
+                </div>
+                <div class="image_small">
+                    <a class="fancybox" href="images/feedimg2.png"> <img src="images/feedimg2.png" alt=""></a>
+                        <a class="fancybox" href="images/feedimg3.png"><img src="images/feedimg3.png" alt=""></a>
+                            <a class="fancybox" href="images/feed_img4.png"> <img src="images/feed_img4.png" alt=""></a>
+                </div>
+            </div>
+            <p class="date_updated">2 Dec, 2017</p>
+        </div>
+    </div>
+    <div class="referral_section wow  fadeInDown" data-wow-delay="100ms">
+            <h3 class="referral_form_hdr">Referrals</h3>
+         <form>
+            <input type="text" placeholder="Name" class="referral_section_input" ng-model="referral.fname">
+            <p class="error_msg" ng-show="errorReferral.fname">Enter Name</p>
+            <input type="text" placeholder="Email ID" class="referral_section_input" ng-class="{'error':invalidEmail && referral.email,'valid_field':!invalidEmail}" ng-model="referral.email" ng-change="validateEmail(referral.email)">
+            <p class="error_msg" ng-show="errorReferral.invalidEmail">Invalid Email ID</p>
+            <p class="error_msg" ng-show="errorReferral.email">Enter Email ID</p>
+            <input type="text" placeholder="Phone Number" class="referral_section_input" ng-model="referral.phone">
+            <p class="error_msg" ng-show="errorReferral.phone">Enter Phone No</p>
+            <select name="" id="" class="referral_section_select" ng-options="val as val for val in projectList" ng-model="referral.residing">
+                <option value="">Projects</option>
+            </select>
+            <p class="error_msg" ng-show="errorReferral.residing">Select Project</p>
+            <p class="error_msg" ng-show="successReferral" style="margin-top: 15px;left: 50px;color: green">Referral sent successfully</p>
+            <button class="add" ng-click="sendReferral();">ADD</button>
+        </form>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="http://fancyapps.com/fancybox/source/jquery.fancybox.js"></script>
+<link rel="stylesheet" href="http://fancyapps.com/fancybox/source/jquery.fancybox.css">
+<script>
+    $(document).ready(function() {
+        $('.nav-toggle').click(function() {
+            $(this).toggleClass('opened');
+            $('.main_menu').toggleClass('display_block');
+        });
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true,
+            callback: function(box) {
+
+            },
+            scrollContainer: null
+        });
+        wow.init();
+
+    })
+        </script>
+</body>
+</html>

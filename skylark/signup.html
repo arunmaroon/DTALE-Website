@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skylark-Royaume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/landingpage.css">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/controller.js"></script>
+<div class="signup_page_container" ng-app="skylarkApp" ng-controller="signUpController">
+    <div class="for_vertical_align">
+        <div class="signup_page_wrapper">
+            <div class="signup_page_container1">
+                <h3 class="signup_page_txt">
+                    <span class="signup_page_txt_span1">25 years</span>
+                    <span class="signup_page_txt_span1">of making </span>
+                    <span class="signup_page_txt_span2">Dreams</span>
+                    <span class="signup_page_txt_span2">come</span>
+                    <span class="signup_page_txt_span2">true</span>
+                </h3>
+            </div>
+            <div class="signup_page_container2">
+                <img src="images/close.png" alt="close icon" class="close_icon1" ng-click="toHome();">
+                <form>
+                    <h1 class="signup_hdr">
+                        <span class="signup_hdr_span1">SIGN UP</span><span class="signup_hdr_span2">or</span><span class="signup_hdr_span3"><a href="signin.html">sign in</a></span>
+                    </h1>
+                    <div class="form_div1">
+                        <label>Name</label>
+                        <input type="text" placeholder="John" ng-model="signUpObj.fname">
+                        <p class="error_msg1" ng-show="errorField.fname">Enter First Name</p>
+                    </div>
+                    <div class="form_div1">
+                        <label>Surname</label>
+                        <input type="text" placeholder="Williamson" ng-model="signUpObj.lname">
+                    </div>
+                    <div class="form_div1">
+                        <label>Email ID</label>
+                        <input type="text" placeholder="john@gmail.com" ng-class="{'valid_field':!invalidEmail,'invalid_field':invalidEmail && isEmailChanged }" ng-model="signUpObj.email" ng-change="isEmailChanged=true; validateEmail(signUpObj.email)">
+                        <p class="error_msg1" ng-show="errorField.validEmail">Enter Valid Email ID</p>
+                        <p class="error_msg1" ng-show="errorField.email" >Enter Email ID</p>
+                    </div>
+                    <div class="form_div1">
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="+91 9916357893" ng-model="signUpObj.phone">
+                        <p class="error_msg1" ng-show="errorField.phone">Enter Phone No</p>
+                        <p class="error_msg1" ng-show="errorField.validPhone">Enter Valid Phone No</p>
+                    </div>
+                    <div class="form_div1">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter your password" ng-model="signUpObj.password" ng-change="passwordValidator(signUpObj.password)">
+                        <p class="error_msg1" ng-show="errorField.password">Enter password</p>
+                        <p class="error_msg1" ng-show="pswdVerifier">Password must be 8-20 character</p>
+                    </div>
+                    <div class="form_div1">
+                        <label>Repeat Password</label>
+                        <input type="password" placeholder="Repeat your password" ng-class="{'invalid_field':!reVerify && changedVal,'valid_field':reVerify}" ng-model="signUpObj.repassword" ng-change="changedVal=true; passwordCheck(signUpObj.repassword);">
+                        <p class="error_msg1" ng-show="!reVerify && changedVal">Password doesn't match</p>
+                    </div>
+                    <div class="form_div1">
+                        <label>Residing</label>
+                        <div class="select_project">
+                            <select ng-model="signUpObj.residing" ng-options="val as val for val in projectList">
+                                <option disabled value="">Select Project</option>
+                            </select>
+                        </div>
+                        <p class="error_msg1" ng-show="errorField.residing">Select Project</p>
+                    </div>
+                    <div class="form_div1">
+                        <label>House Number</label>
+                        <input type="text" placeholder="#A101" ng-model="signUpObj.houseno">
+                        <p class="error_msg1" ng-show="errorField.houseno">Enter House No</p>
+                    </div>
+                    <button class="sign_up_btn" ng-click="signUp();">SIGN UP</button>
+                </form >
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skylark Mansions - Referral Scheme - Apartments in Bangalore</title>
+    <meta name="description" content="Refer Someone successfully and get 1% off on your sale deed.Buy Villas in Whitefield,Apartments in Whitefield ,Flats in Electronic City">
+    <link rel="stylesheet" href="styles/landingpage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!--<div class="skylark_projectpage_container " >-->
+<!--hero section starts here-->
+<div class="skylark_landing_menu ">
+    <div class="logo_mobile">
+        <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo"></a>
+    </div>
+    <nav  class="main_menu">
+        <ul class="nav_list1">
+            <li>
+                <a href="home.html">HOME</a>
+            </li>
+            <li>
+                <a href="projects.html">PROJECTS</a>
+            </li>
+            <li>
+                <a href="">ABOUT</a>
+            </li>
+            <li>
+                <a href="">BLOG</a>
+            </li>
+        </ul>
+        <div class="logo">
+            <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo"></a>
+        </div>
+        <ul class="nav_list2">
+            <li>
+                <a href="contact.html">CONTACTUS</a>
+            </li>
+            <li>
+                <a href="signup.html">SIGNUP</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-toggle">
+        <span class="bar-top"></span>
+        <span class="bar-mid"></span>
+        <span class="bar-bot"></span>
+    </div>
+</div>
+<div class="referral_page_container">
+    <div class="referral_page_hero_container">
+        <h1 class="referral_offer_hdr1" >New Referral offer</h1>
+        <h3 class="referral_offer_hdr2" >
+            <span>1% off on your sale deed on</span>
+            <span>sucessful referal</span>
+        </h3>
+    </div>
+    <div class="referral_block">
+        <div class="user_profile_on_referral_page">
+            <h3 class="skylark_customer_name">Arun M</h3>
+            <p class="customer_mailid">arun@plash.in</p>
+            <p class="customer_contact_number">9087654321</p>
+            <p class="booked_project_name">Skylark Royaume</p>
+            <p class="customer_id">#A101</p>
+        </div>
+
+        <div class="referral_page_form_container">
+            <h3  class="referral_page_form_container_hdr">Referrals</h3>
+            <form>
+                <div class="referral_form1">
+                    <label>Name</label>
+                    <input type="text" placeholder="John">
+                </div>
+                <div class="referral_form1">
+                    <label>Email ID</label>
+                    <input type="email" placeholder="john@gmail.com">
+                </div>
+                <div class="referral_form1">
+                    <label>Phone Number</label>
+                    <input type="number" placeholder="+91 9916357893">
+                </div>
+                <div class="referral_form1">
+                    <label>Project Name</label>
+                    <select>
+                        <option>Project 1</option>
+                        <option>Project 2</option>
+                    </select>
+                </div>
+                <button class="referral_button">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.paroller.min.js"></script>
+<script>
+    $( document ).ready(function() {
+    $("body").paroller();
+    $('.nav-toggle').click(function() {
+        $(this).toggleClass('opened');
+        $('.main_menu').toggleClass('display_block');
+    });
+    });
+</script>
+</body>
+</html>

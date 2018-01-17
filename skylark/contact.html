@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/landingpage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+<div class="skylark_projectpage_container" ng-app="skylarkApp" ng-controller="contactUsController">
+    <!--hero section starts here-->
+    <div class="skylark_landing_menu ">
+        <div class="logo_mobile">
+            <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo"></a>
+        </div>
+        <nav class="main_menu">
+            <ul class="nav_list1">
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="active_menu">
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="">BLOG</a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/skylarklogo.png" alt="Skylark logo"></a>
+            </div>
+            <ul class="nav_list2">
+                <li>
+                    <a href="contact.html">CONTACT US</a>
+                </li>
+                <li>
+                    <a href="signup.html">SIGNUP</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav-toggle">
+            <span class="bar-top"></span>
+            <span class="bar-mid"></span>
+            <span class="bar-bot"></span>
+        </div>
+
+    </div>
+
+
+    <div class="contact_us_container">
+        <div class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.154455634042!2d77.57635079333495!3d12.99887048947999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb8c505f764f75d8!2sSkylark+Mansions+Pvt+Ltd!5e0!3m2!1sen!2sin!4v1436974343773" width="600" height="310" frameborder="0" style="border: solid #ccc 2px" allowfullscreen="true"></iframe>
+        <div>
+             <p>Skylark Chambers</p>
+            <p> No 37/21, Yellappachetty Layout,</p>
+            <p> Ulsoor Road, Bangalore,</p>
+            <p>Karnataka 560 042,India</p>
+        </div>
+        </div>
+        <div class="contact_us_container2">
+            <form>
+                <h3>Send Details to know more</h3>
+                <div class="contact_us_div1">
+                    <label>Name*</label>
+                    <input type="text" placeholder="John" ng-model="contact.name">
+                </div>
+                <div class="contact_us_div1">
+                    <label>Phone Number*</label>
+                    <input type="text" placeholder="+91 9916357893" ng-model="contact.mobileNumber">
+                </div>
+                <div class="contact_us_div1">
+                    <label>Email ID*</label>
+                    <input type="email" placeholder="john@gmail.com" ng-model="contact.email">
+                </div>
+               <div class="contact_us_div1">
+                    <label>Message </label>
+                    <textarea ng-model="contact.message"></textarea>
+                </div>
+                <button class="contactus_button1" ng-click="toContact('FromContactusPage');">
+                    <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
+                    <span ng-show="!processing">SUBMIT</span>
+                </button>
+
+            </form>
+        </div>
+    </div>
+    <section class="footer" id="dynamic_footer">
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6NAnCIgbpffq4baL20YQzdjrBm2Umijs&callback=myMap">-->
+<!--</script>-->
+<script>
+    // function myMap() {
+    //     var myCenter = new google.maps.LatLng(12.975537,77.615802);
+    //     var mapCanvas = document.getElementById("map");
+    //     var mapOptions = {center: myCenter, zoom: 15};
+    //     var map = new google.maps.Map(mapCanvas, mapOptions);
+    //     var marker = new google.maps.Marker({position:myCenter});
+    //     marker.setMap(map);
+    //
+    //     var infowindow = new google.maps.InfoWindow({
+    //         content: "Hello World!"
+    //     });
+    //     infowindow.open(map,marker);
+    // }
+</script>
+
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6NAnCIgbpffq4baL20YQzdjrBm2Umijs&callback=myMap"></script>-->
+<script>
+    $(document).ready(function() {
+        $("#dynamic_footer").load("footer.html");
+        $('.load_more').click(function() {
+            $('.lead_form_popup_container').css('display', 'block');
+            $(body).css('overflow', 'hidden');
+        });
+
+        $('.close_icon').click(function() {
+            $('.lead_form_popup_container').css('display', 'none');
+            $(body).css('overflow', 'auto');
+        });
+        $('.nav-toggle').click(function() {
+            $(this).toggleClass('opened');
+            $('.main_menu').toggleClass('display_block');
+        });
+
+    });
+    // function initialize() {
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //         center: {lat: 12.975537, lng: 77.615802},
+    //         zoom: 15,
+    //     });
+    //     var marker = new google.maps.Marker({
+    //
+    //         title:"Hello World!",
+    //         visible: true
+    //     });
+    //     marker.setMap(map);
+    // }
+</script>
+</body>
+</html>
