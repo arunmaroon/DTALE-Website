@@ -1168,6 +1168,9 @@ button{
 
 /*==============================================for screen size(max-width:1023px) ================================================*/
 @media(max-width:1023px){
+    .skylark_main_menu {
+        height: 50px;
+    }
     .contact_us_container{
         width: 90%;
         margin: 96px auto;
