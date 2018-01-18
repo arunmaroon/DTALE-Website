@@ -318,7 +318,8 @@ li {
     border-radius: 5px;
     /* margin-right: 290px;
      */
-    border: 1px solid #ed1c24;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .11), 0 10px 10px rgba(0, 0, 0, .11);
+    /*border: 1px solid #ed1c24;*/
     height: 466px;
 }
 .oneaboveall{
