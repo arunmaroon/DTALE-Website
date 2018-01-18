@@ -40,6 +40,27 @@ html {
 #project_menu li a:hover{
     border-bottom:4px solid #232323;
 }
+.skylark_logo{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+}
+.skylark_logo img{
+    width: 150px;
+}
+.skylark_dasos{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+}
+.skylark_dasos img{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
 .view_profile{
     width: 150px;
     height: 40px;
@@ -56,6 +77,10 @@ html {
     border: none;
     box-shadow: 0px 5px 18px 2px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
+}
+.hero_section video{
+    width: 100%;
+    position: absolute;
 }
 .flex_container{
     width: 330px;
@@ -1694,25 +1719,30 @@ option[value=””][disabled] {
     text-align: center;
 }
 .landing_page_contactus_btn{
-    font-family:AvenirNextCondensed-Medium;
-    color:#000000;
+    font-family: AvenirNextCondensed-Medium;
+    color: #000000;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
     width: 270px;
     background: #ffffff;
-    height: 46px;
+    height: 40px;
     -webkit-border-radius: 23px;
     -moz-border-radius: 23px;
     border-radius: 23px;
-    outline:none;
-    border:none;
-    margin:0 auto;
+    outline: none;
+    border: none;
+    /* margin: 0 auto; */
     display: block;
 }
 .landing_page_btn_container{
-    position: absolute;
-    bottom: 160px;
-    width:100%;
+    /* position: absolute; */
+    /* bottom: 160px; */
+    width: 100%;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    margin-top: 50px;
 }
 .landing_page_hdr{
     padding-top: 148px;
@@ -1892,7 +1922,7 @@ option[value=””][disabled] {
 }
 .contactus_image{
     width:100%;
-    height: 400px;
+    height: 200px;
 }
 .skylark_contactus_container{
     width: 1000px;
@@ -3106,6 +3136,11 @@ option[value=””][disabled] {
 
         padding-top: 75px;
     }
+    .landing_page_hdr {
+        padding-top: 30px;
+    }
+
+
     .skylark_achievements {
         padding-top: 120px;
 
@@ -3429,6 +3464,11 @@ option[value=””][disabled] {
         padding-top: 120px;
 
     }
+    .landing_page_hdr {
+        padding-top: 30px;
+    }
+
+
     /*.testimonials_container .slick-center img{*/
         /*width:240px !important;*/
         /*height: 240px !important;*/
@@ -4015,6 +4055,11 @@ option[value=””][disabled] {
         /*width: 640px;*/
         height: 450px;
     }
+    .landing_page_hdr {
+        padding-top: 30px;
+    }
+
+
     /*.testimonials_container .slick-center img{*/
         /*width:200px !important;*/
         /*height: 200px !important;*/
