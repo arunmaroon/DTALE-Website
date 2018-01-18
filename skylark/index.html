@@ -32,17 +32,30 @@
 <div class="skylark_landingpage_container "  id="parallax-container" >
     <!--hero section starts here-->
     <section class="hero_section" >
+        <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+            <!--<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">-->
+            <source src="https://ak5.picdn.net/shutterstock/videos/6123905/preview/stock-footage-aerial-view-mangrove-forest-in-krabi-province-thailand-february-krabi-is-southern-province.mp4" type="video/mp4">
+        </video>
         <h4 class="landing_page_hdr " data-paroller-factor="0.3" data-paroller-type="foreground">
             <span class="hero_section_span1 wow  fadeInDown" data-wow-delay="300ms">Experience serenity with</span>
             <span class="hero_section_span2  wow  fadeInDown" data-wow-delay="400ms">80% OPEN SPACES</span>
+
         </h4>
-        <div class="landing_page_btn_container" data-paroller-factor="0.3" data-paroller-type="foreground">
-            <button class="landing_page_contactus_btn wow  fadeInDown" data-wow-delay="500ms">CONTACT US</button>
+        <div class="skylark_dasos "  data-paroller-factor="0.3" data-paroller-type="foreground" >
+            <img src="images/skylark_dasos.svg" alt="Skylark dasos" class="wow  fadeInDown" data-wow-delay="500ms">
+         </div>
+
+        <div class="landing_page_btn_container " data-paroller-factor="0.3" data-paroller-type="foreground">
+            <button class="landing_page_contactus_btn wow  fadeInDown" data-wow-delay="450ms" >CONTACT US</button>
+            <div>
+                call us
+            </div>
         </div>
     </section>
     <div class="skylark_landing_menu " >
         <div class="logo_mobile">
-            <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo"></a>
+            <a href="index.html"><img src="images/skylark_logo.svg" alt="Skylark logo"></a>
         </div>
         <nav class="main_menu">
             <ul class="nav_list1">
@@ -60,7 +73,7 @@
                 </li>
             </ul>
             <div class="logo">
-                <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo" class="main_logo"></a>
+                <a href="index.html"><img src="images/skylark_logo.svg" alt="Skylark logo" class="main_logo"></a>
             </div>
             <ul class="nav_list2">
                 <li>
@@ -155,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects"><a href="skylark_dasos.html">Load More Details<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects"><a href="skylark_dasos.html">Know More <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
             </div>
         </div>
         <div style="background: url('images/image1.png') no-repeat center;" class="contactus_image"
@@ -190,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects"><a href="skylark_dasos.html">Load More Details<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
             </div>
             <div class="project_container1" >
                 <div class="bg2" style="background: url('images/image1.png') repeat center;"   data-paroller-factor="-0.2"
@@ -235,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects"><a href="skylark_dasos.html">Load More Details<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
             </div>
         </div>
     </section>
@@ -451,6 +464,8 @@
             $(body).css('overflow', 'auto');
         });
         $("body").paroller();
+        $(window).on('load', function() {
+
         var wow = new WOW(
             {
                 boxClass:     'wow',      // animated element css class (default is wow)
@@ -466,7 +481,7 @@
             }
         );
         wow.init();
-
+        });
         $('.testimonials_container').slick({
             centerMode: true,
             centerPadding: '0px',
@@ -508,6 +523,24 @@
         // $(iframe).on("mouseleave", function () {
         //     disableAutoPlay = true;
         // });
+    });
+    $(window).on('load', function() {
+
+        var wow = new WOW(
+            {
+                boxClass:     'wow',      // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset:       0,          // distance to the element when triggering the animation (default is 0)
+                mobile:       true,       // trigger animations on mobile devices (default is true)
+                live:         true,       // act on asynchronously loaded content (default is true)
+                callback:     function(box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                },
+                scrollContainer: null // optional scroll container selector, otherwise use window
+            }
+        );
+        wow.init();
     });
 </script>
 </body>
