@@ -40,6 +40,26 @@ html {
 #project_menu li a:hover{
     border-bottom:4px solid #232323;
 }
+.call_us{
+    font-family:Antonio-Light;
+    font-size: 2rem;
+    line-height: 1.12;
+    letter-spacing: 0.2em;
+    color:#ffffff;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.call_us_number{
+    font-family:Antonio-Light;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.12;
+    letter-spacing: 0.2em;
+    color:#ffffff;
+    display: block;
+}
 .skylark_logo{
     width: 50%;
     margin: 0 auto;
@@ -81,6 +101,9 @@ html {
 .hero_section video{
     width: 100%;
     position: absolute;
+    height: 100vh;
+    min-height: 100%;
+    object-fit: fill;
 }
 .flex_container{
     width: 330px;
@@ -848,6 +871,8 @@ option[value=””][disabled] {
     height: 445px;
     margin-bottom: 20px;
 }
+
+
 .google-maps {
     width: 620px;
 }
@@ -1742,8 +1767,9 @@ option[value=””][disabled] {
     display: flex;
     width: 50%;
     margin: 0 auto;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-top: 50px;
+    align-items: center;
 }
 .landing_page_hdr{
     padding-top: 115px;
