@@ -1510,6 +1510,7 @@ option[value=””][disabled] {
     background-image: url("../images/skylark_landing_page_banner.png");
     /*background-attachment: fixed;
     */
+    overflow-y: hidden;
 }
 .skylark_landing_menu {
     /*margin-top: -100px;
@@ -1745,7 +1746,7 @@ option[value=””][disabled] {
     margin-top: 50px;
 }
 .landing_page_hdr{
-    padding-top: 148px;
+    padding-top: 115px;
 }
 .projects_section{
     width:1360px;
@@ -3137,7 +3138,7 @@ option[value=””][disabled] {
         padding-top: 75px;
     }
     .landing_page_hdr {
-        padding-top: 30px;
+        padding-top: 80px;
     }
 
 
@@ -9707,5 +9708,9 @@ option[value=””][disabled] {
     .lead_form_popup_container {
 
         padding-top: 125px;
+    }
+    .landing_page_btn_container {
+
+        margin-top: 130px;
     }
 }
