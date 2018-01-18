@@ -4078,6 +4078,31 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size (min-width:1366px) and (max-width: 1439px) ================================================*/
 @media(min-width:1366px) and (max-width: 1439px){
+    .skylark_achievements_hdr{
+        font-size: 2.4rem;
+    }
+    .skylark_achievements_para {
+
+        font-size: 1.2rem;
+
+        margin-top: 50px;
+    }
+    .content1 {
+        font-size: 3.6rem;
+    }
+    .skylark_experience {
+        width: 216px;
+        height: 280px;
+
+        border: solid 4px #000;
+    }
+    .exp_span1 {
+        display: block;
+        font-size: 7.6rem;
+        color: #000000;
+        margin-top: 80px;
+       
+    }
     .skylark_dasos {
 
         margin-top: 5px;
@@ -4091,18 +4116,6 @@ option[value=””][disabled] {
         padding-top: 80px;
     }
 
-
-    /*.testimonials_container .slick-center img{*/
-        /*width:200px !important;*/
-        /*height: 200px !important;*/
-        /*margin-top: 100px !Important;*/
-
-    /*}*/
-    /*.testimonials_container .slick-active img{*/
-        /*width:100px;*/
-        /*height:100px;*/
-        /*margin-top: 180px;*/
-    /*}*/
     .list1 {
         margin-top: 35px;
         margin-bottom: 35px;
