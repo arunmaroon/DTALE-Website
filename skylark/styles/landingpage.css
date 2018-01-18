@@ -40,6 +40,30 @@ html {
 #project_menu li a:hover{
     border-bottom:4px solid #232323;
 }
+.view_profile{
+    width: 150px;
+    height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: AvenirNext-Medium;
+    color: #ffffff;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+    background: #ed1c24;
+    outline: none;
+    border: none;
+    box-shadow: 0px 5px 18px 2px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+.flex_container{
+    width: 330px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 10px;
+}
 .loader{
     display: block ;
     height: 30px;
@@ -94,6 +118,13 @@ html {
     width: 230px;
     display: inline-block;
     text-align: center;
+}
+.error_msg2 {
+    font-size: 0.875rem;
+    position: absolute;
+    right: 56px;
+    color: #ed1c24;
+    font-family: AvenirNext-Regular;
 }
 .mobile_menu span{
     margin-right: 10px;
@@ -795,7 +826,7 @@ option[value=””][disabled] {
 .google-maps {
     width: 620px;
 }
-.contact_us_container p{
+.contact_us_container_para{
     font-family: AvenirNext-Regular;
     font-size: 1.3125rem;
     color:#666666;
@@ -863,6 +894,7 @@ option[value=””][disabled] {
 }
 .contact_us_div1 {
     margin-top: 50px;
+    position: relative;
 }
 .contact_us_container2 form {
     display: flex;
@@ -980,15 +1012,15 @@ option[value=””][disabled] {
     display:none !Important;
 }
 .testimonials_container .slick-center img{
-    width:320px !important;
-    height: 320px !important;
-    margin-top: 60px !Important;
+    width:160px !important;
+    height: 160px !important;
+    margin-top: 0px !Important;
 
 }
 .testimonials_container .slick-active img{
-    width:160px;
-    height:160px;
-    margin-top: 160px;
+    width:80px;
+    height:80px;
+    margin-top: 80px;
 
 }
 .slick-center .customer_feedback,.slick-center .customer_name{
@@ -1553,7 +1585,7 @@ option[value=””][disabled] {
 .skylark_achievements{
     width:1180px;
     margin:0 auto;
-    padding-top:290px;
+    padding-top:180px;
     /*padding-top: 20px;
     */
     display: flex;
@@ -1929,6 +1961,7 @@ option[value=””][disabled] {
 }
 .landing_page_form_container1{
     margin-top: 30px;
+    position: relative;
 }
 .landing_page_form_container1 label {
     font-family: AvenirNext-DemiBold;
@@ -1970,8 +2003,13 @@ option[value=””][disabled] {
     margin-top: 300px;
 }
 .testimonials_container{
-    width: 1566px;
+    /*width: 1566px;*/
+    width: 1200px;
     margin: 0 auto;
+    height: 400px;
+}
+.story_video_container iframe {
+    margin-top: 40px;
 }
 .testimonials_container1{
     width: 400px;
@@ -1987,16 +2025,16 @@ option[value=””][disabled] {
 }
 .customer_name{
     font-family:AvenirNext-DemiBold;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     color:#000000;
     letter-spacing: 0.025em;
     margin-top: 45px;
     text-align: center;
 }
 .customer_feedback{
-    font-family:AvenirNext-Regular;
-    font-size: 1.125rem;
-    color:#000000;
+    font-family: AvenirNext-Regular;
+    font-size: 1.25rem;
+    color: #000000;
     letter-spacing: 0.025em;
     margin-top: 45px;
 }
@@ -2035,13 +2073,13 @@ option[value=””][disabled] {
 .slick-center .customer_feedback{
     display: block !Important;
     position: absolute;
-    margin-left: -300px;
-    /* right: 0;
-     */
+    margin-left: -239px;
+    /* right: 0; */
     width: 100%;
     text-align: center;
-    width: 1100px;
+    width: 873px;
 }
+
 .testimonials_container1 .slick-slide{
     width:480px;
 }
@@ -2607,7 +2645,7 @@ option[value=””][disabled] {
     left: 0;
 }
 .input1{
-    width:318px;
+    width:100% !important;
     height:54px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -2641,7 +2679,7 @@ option[value=””][disabled] {
     padding: 0 22px;
 }
 .textarea1{
-    width:368px;
+    width:100% !important;
     height:94px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -2830,6 +2868,15 @@ option[value=””][disabled] {
 }
 .form_row1{
     margin-top: 30px;
+    position: relative;
+}
+.error_msg2 {
+    font-size: 0.875rem;
+    position: absolute;
+   float: right;
+    color: #ed1c24;
+    font-family: AvenirNext-Regular;
+    display: flex;
 }
 .contactus_button{
     color:#ed1c24;
@@ -3055,36 +3102,42 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size (min-width:1600px) and (max-width: 1919px) ================================================*/
 @media(min-width:1600px) and (max-width: 1919px) {
+    .lead_form_popup_container {
+
+        padding-top: 75px;
+    }
     .skylark_achievements {
-     
-        padding-top: 180px;
+        padding-top: 120px;
 
     }
     .story_video_container {
         width: 800px;
         height: 440px;
         margin: 0 auto;
+
+    }
+    .story_video_container iframe{
         margin-top: 40px;
     }
     .skylark_specialities ul {
         width: 1280px;
     }
 
-    .testimonials_container {
-        width: 1280px;
-    }
+    /*.testimonials_container {*/
+        /*width: 1280px;*/
+    /*}*/
 
-    .testimonials_container .slick-center img{
-        width:240px !important;
-        height: 240px !important;
-        margin-top: 100px !Important;
+    /*.testimonials_container .slick-center img{*/
+        /*width:240px !important;*/
+        /*height: 240px !important;*/
+        /*margin-top: 100px !Important;*/
 
-    }
-    .testimonials_container .slick-active img{
-        width:120px;
-        height:120px;
-        margin-top: 180px;
-    }
+    /*}*/
+    /*.testimonials_container .slick-active img{*/
+        /*width:120px;*/
+        /*height:120px;*/
+        /*margin-top: 180px;*/
+    /*}*/
     .list1 {
         margin-top: 35px;
         margin-bottom: 35px;
@@ -3112,7 +3165,7 @@ option[value=””][disabled] {
     .google-maps {
         width: 500px;
     }
-    .contact_us_container p{
+    .contact_us_container_para{
         font-size: 1.05rem;
     }
     .contact_us_container2 h3{
@@ -3373,20 +3426,20 @@ option[value=””][disabled] {
 @media(min-width:1440px) and (max-width: 1599px){
     .skylark_achievements {
 
-        padding-top: 180px;
+        padding-top: 120px;
 
     }
-    .testimonials_container .slick-center img{
-        width:240px !important;
-        height: 240px !important;
-        margin-top: 100px !Important;
+    /*.testimonials_container .slick-center img{*/
+        /*width:240px !important;*/
+        /*height: 240px !important;*/
+        /*margin-top: 100px !Important;*/
 
-    }
-    .testimonials_container .slick-active img{
-        width:120px;
-        height:120px;
-        margin-top: 180px;
-    }
+    /*}*/
+    /*.testimonials_container .slick-active img{*/
+        /*width:120px;*/
+        /*height:120px;*/
+        /*margin-top: 180px;*/
+    /*}*/
     .skylark_achievements_para {
         margin-top: 50px;
     }
@@ -3420,7 +3473,7 @@ option[value=””][disabled] {
     .google-maps {
         width: 500px;
     }
-    .contact_us_container p{
+    .contact_us_container_para{
         font-size: 1.05rem;
     }
     .contact_us_container2 h3{
@@ -3962,17 +4015,17 @@ option[value=””][disabled] {
         /*width: 640px;*/
         height: 450px;
     }
-    .testimonials_container .slick-center img{
-        width:200px !important;
-        height: 200px !important;
-        margin-top: 100px !Important;
+    /*.testimonials_container .slick-center img{*/
+        /*width:200px !important;*/
+        /*height: 200px !important;*/
+        /*margin-top: 100px !Important;*/
 
-    }
-    .testimonials_container .slick-active img{
-        width:100px;
-        height:100px;
-        margin-top: 180px;
-    }
+    /*}*/
+    /*.testimonials_container .slick-active img{*/
+        /*width:100px;*/
+        /*height:100px;*/
+        /*margin-top: 180px;*/
+    /*}*/
     .list1 {
         margin-top: 35px;
         margin-bottom: 35px;
@@ -4000,7 +4053,7 @@ option[value=””][disabled] {
     .google-maps {
         width: 500px;
     }
-    .contact_us_container p{
+    .contact_us_container_para{
         font-size: 1.05rem;
     }
     .contact_us_container2 h3{
@@ -4557,17 +4610,17 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size (min-width:1280px) and (max-width: 1365px) ================================================*/
 @media(min-width:1280px) and (max-width: 1365px){
-    .testimonials_container .slick-center img{
-        width:200px !important;
-        height: 200px !important;
-        margin-top: 100px !Important;
+    /*.testimonials_container .slick-center img{*/
+        /*width:200px !important;*/
+        /*height: 200px !important;*/
+        /*margin-top: 100px !Important;*/
 
-    }
-    .testimonials_container .slick-active img{
-        width:100px;
-        height:100px;
-        margin-top: 180px;
-    }
+    /*}*/
+    /*.testimonials_container .slick-active img{*/
+        /*width:100px;*/
+        /*height:100px;*/
+        /*margin-top: 180px;*/
+    /*}*/
     .list1 {
         margin-top: 35px;
         margin-bottom: 35px;
@@ -4595,7 +4648,7 @@ option[value=””][disabled] {
     .google-maps {
         width: 500px;
     }
-    .contact_us_container p{
+    .contact_us_container_para{
         font-size: 1.05rem;
     }
     .contact_us_container2 h3{
@@ -5222,7 +5275,7 @@ option[value=””][disabled] {
     .google-maps {
         width: 400px;
     }
-    .contact_us_container p{
+    .contact_us_container_para{
         font-size: 1.05rem;
     }
     .contact_us_container2 h3{
@@ -6384,6 +6437,9 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size(max-width:1023px) ================================================*/
 @media(max-width:1023px){
+    .add{
+        margin-bottom: 0;
+    }
     .skylark_landing_menu {
         /*margin-top: -100px;
         */
@@ -6403,7 +6459,7 @@ option[value=””][disabled] {
         width: 100%;
 
     }
-    .contact_us_container p{
+    .contact_us_container_para{
         font-size: 1.05rem;
     }
     .contact_us_container2 h3{
@@ -6503,7 +6559,7 @@ option[value=””][disabled] {
         justify-content: space-between;
     }
     .image_small img{
-        width:100%;
+        width:33%;
         height: 150px;
     }
     .image_small a{
@@ -6727,7 +6783,7 @@ option[value=””][disabled] {
     }
     .skylark_achievements {
         width: 80%;
-        padding-top: 150px;
+        padding-top: 120px;
         display: block;
         padding-bottom: 90px;
     }
@@ -9189,6 +9245,8 @@ option[value=””][disabled] {
         width: 240px;
         height: 60px;
         font-size: 1.05rem;
+
+        padding: 5px 20px;
     }
     .submit_button1 {
         width: 158px;
@@ -9323,7 +9381,7 @@ option[value=””][disabled] {
         margin: 0 auto;
     }
     .image_small img{
-        width:100%;
+        /*width:100%;*/
         height: 80px;
     }
     .image_small a{
@@ -9598,5 +9656,11 @@ option[value=””][disabled] {
     .development_photos_container .slick-slide{
         width: 110px !Important;
         height: 110px !Important;
+    }
+}
+@media(min-width:1920px){
+    .lead_form_popup_container {
+
+        padding-top: 125px;
     }
 }

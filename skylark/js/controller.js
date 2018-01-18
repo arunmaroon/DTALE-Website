@@ -108,7 +108,8 @@ app.controller('signUpController', function($scope,$http,$filter,$timeout) {
     };
     $scope.toHome=function(){
         console.log("success");
-        window.location.href="baseUrlWeb+index.html"
+        window.location.href="index.html";
+
     }
 });
 
@@ -164,7 +165,7 @@ app.controller('signInController', function($scope,$http,$filter,$timeout) {
     };
     $scope.toHome=function(){
         console.log("success");
-        window.location.href="baseUrlWeb+index.html"
+        window.location.href="index.html"
     }
 
 });
@@ -312,6 +313,7 @@ app.controller('forgotPasswordController', function($scope,$http,$filter,$timeou
     };
 
     $scope.changePass={};
+    $scopechangePass={};
     var changePasswordValidation=function () {
         var varToSend=true;
         if (!$scope.change.password || $scope.change.password.length < 8 || $scope.change.password.length > 20){
@@ -332,43 +334,52 @@ app.controller('forgotPasswordController', function($scope,$http,$filter,$timeou
 app.controller('contactUsController', function($scope,$http,$filter,$timeout) {
     const baseUrl = "http://localhost:8080/";
     const baseUrlWeb = "http://localhost/skylark-website/";
+    $scope.errorcontact={};
+    var contactFormValidation=function () {
 
-    var validationcontactData=function () {
-        $scope.ContactErrorField={};
-        var varToReturn=true;
-        if (!$scope.contact.name) {
-            $scope.ContactErrorField.name = true;
-            varToReturn=false;
+        var contactReturn=true;
+        if (!$scope.contact.name){
+            contactReturn=false;
+            $scope.errorcontact.name=true;
         }
-        if (!$scope.contact.email) {
-            $scope.ContactErrorField.email = true;
-            varToReturn=false;
+        if (!$scope.contact.email){
+            contactReturn=false;
+            $scope.errorcontact.email=true;
         }
         if ($scope.contact.email && $scope.invalidEmail){
-            $scope.ContactErrorField.email = false;
-            $scope.ContactErrorField.validEmail = true;
-            varToReturn=false;
+            contactReturn=false;
+            $scope.errorcontact.email=false;
+            $scope.errorcontact.invalidEmail=true;
         }
-        if (!$scope.contact.mobileNumber){
-            $scope.ContactErrorField.phone = true;
-            varToReturn=false;
-        }
-        if ($scope.contact.mobileNumber && !/^\+?(\d{8,12})$/.test($scope.contact.mobileNumber)){
-            $scope.ContactErrorField.phone = false;
-            $scope.ContactErrorField.validPhone = true;
-            varToReturn=false;
+        if (!$scope.contact.phone){
+            contactReturn=false;
+            $scope.errorcontact.phone=true;
         }
 
 
+        $timeout(function () {
+            $scope.contactReturn={};
+        }, 5000);
+        return contactReturn;
 
     };
 
+    $scope.errorcontact.email=false;
+    $scope.validateEmail=function (email) {
+        if (/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/.test(email)){
+            $scope.errorcontact.email=false;
+        }else {
+            $scope.errorcontact.email=true;
+        }
+    };
 
 
     $scope.contact={};
     console.log("inside the controller");
     $scope.toContact= function (projectName) {
 
+        if(!contactFormValidation())
+            return;
         $scope.processing=true;
          $scope.contact.project=projectName;
         const jsonToSend= angular.toJson($scope.contact);

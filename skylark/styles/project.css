@@ -86,6 +86,19 @@ ul{
         transform: translate3d(0, 0, 0);
     }
 }
+.mtop{
+    margin-top: 0 !important;
+}
+.error_msg{
+    font-size: 0.875rem;
+    position: absolute;
+    right: 30px;
+    color: #ed1c24;
+    font-family: AvenirNext-Regular;
+}
+#overview{
+background: #f3f3f3;
+}
 .skylark_main_menu {
     height: 70px;
     width: 100%;
@@ -188,7 +201,7 @@ li {
 }
 .projects_section1{
     width: 100%;
-    /*padding: 25px;*/
+    padding-bottom: 25px;
     margin-top: 50px;
 }
 .skylark_project_name {
@@ -296,7 +309,7 @@ li {
 .sticky_form {
     padding: 30px;
     width: 362px;
-    top: 112px;
+    top: 134px;
     position: sticky;
     margin-top: -275px;
     background: #ffffff;
@@ -321,6 +334,16 @@ li {
     letter-spacing: 0.025em;
     text-transform: uppercase;
     position: relative;
+}
+
+.form_hdr::after {
+    content: "";
+    height: 3px;
+    width: 90px;
+    background: #ed1c24;
+    bottom: 0px;
+    position: absolute;
+    left: 0;
 }
 .input1 {
     width: 300px;
@@ -403,7 +426,11 @@ li {
 }
 .overview_container {
     width: 100%;
-    padding: 25px 0;
+    padding: 25px;
+    background: #f3f3f3;
+}
+.sec{
+    margin-bottom: 50px;
 }
 #map {
     position: relative;
@@ -421,18 +448,28 @@ li {
     letter-spacing: 0.025em;
     line-height: 1.36;
 }
+.development_photos_container{
+    padding: 25px;
+    padding-bottom: 0;
+    background: #f3f3f3;
+}
+.brochure_container{
+    padding: 25px;
+    background: #f3f3f3;
+}
 .walkthrough_image{
     object-fit: contain;
     width: 100%;
 }
 .carousel img{
-    width: 190px;
-    height: 190px;
+    width: 170px;
+    height: 170px;
     object-fit: contain;
     margin-bottom: 25px;
+
 }
 .slick_carousel_container{
-    padding: 25px 0;
+    padding: 25px 0 0 0;
 }
 .carousel{
     display: flex;
@@ -448,8 +485,7 @@ li {
     flex-wrap: wrap;
 }
 .amenities li{
-
-    width: 146.5px;
+    width: 133px;
     height: 175px;
     margin-bottom: 25px;
 }
@@ -483,7 +519,7 @@ li {
     -webkit-border-radius: 27px;
     -moz-border-radius: 27px;
     border-radius: 27px;
-    margin-top: 12px;
+    margin-top: 20px;
     font-family: AvenirNext-Regular;
     font-size: 1rem;
     color: #ffffff;
@@ -491,8 +527,8 @@ li {
     outline: none;
     cursor: pointer;
 }
-.brochure_container{
-    padding: 25px 0;
+.enquiry_button_container{
+    display: none;
 }
 .footer{
     background-color:rgb(234, 233, 229);
@@ -1168,6 +1204,9 @@ button{
 
 /*==============================================for screen size(max-width:1023px) ================================================*/
 @media(max-width:1023px){
+    .enquiry_button_container{
+        display: block;
+    }
     .skylark_main_menu {
         height: 50px;
     }
