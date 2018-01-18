@@ -113,7 +113,7 @@ background: #f3f3f3;
 }
 .container3{
     margin-top: 20px;
-    width: calc(50% - 10px);
+    width: calc(49% - 10px);
     margin-top: 20px;
 }
 .submenu_container{
@@ -243,7 +243,7 @@ li {
 }
 .skylark_project_details_para {
     font-family: AvenirNextCondensed-Medium;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     color: #000000;
     letter-spacing: 0.025em;
     margin: 0;
@@ -281,7 +281,7 @@ li {
     justify-content: space-between;
 }
 .skylark_project_details_container1{
-    width: calc(50% - 10px);
+    width: calc(51% - 10px);
 }
 .enquiry_button_container button {
     background: #000000;
@@ -562,12 +562,12 @@ li {
     margin-top: 20px;
 }
 .header2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-family: AvenirNext-Regular;
     letter-spacing: 0.025em;
     color: #000000;
     margin: 0;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .nav_list2 {
     margin-left: 115px;
@@ -589,7 +589,7 @@ li {
     border-radius: 5px;
 }
 .sec{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 #map {
     position: relative;
