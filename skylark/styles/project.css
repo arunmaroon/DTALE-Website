@@ -98,6 +98,9 @@ ul{
 }
 #overview{
 background: #f3f3f3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 .skylark_main_menu {
     height: 70px;
@@ -226,7 +229,7 @@ li {
     line-height: 1.5;
     color: #666666;
     margin: 0;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .skylark_project_details_hdr {
     font-family: AvenirNext-Medium;
@@ -235,17 +238,17 @@ li {
     letter-spacing: 0.025em;
     margin: 0;
     line-height: 1;
-    margin-top: 15px;
+    margin-top: 20px;
     text-transform: uppercase;
 }
 .skylark_project_details_para {
     font-family: AvenirNextCondensed-Medium;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #000000;
     letter-spacing: 0.025em;
     margin: 0;
     margin-top: 5px;
-    line-height: 1;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 .price_container {
@@ -318,9 +321,161 @@ li {
     border-radius: 5px;
     /* margin-right: 290px;
      */
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .11), 0 10px 10px rgba(0, 0, 0, .11);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .11), -4px -5px 10px rgba(0, 0, 0, .11);
     /*border: 1px solid #ed1c24;*/
     height: 466px;
+}
+.lead_form_popup_container{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #000000;
+    z-index: 30;
+    overflow-y: auto;
+    display: none;
+}
+.lead_form_popup{
+    width:960px;
+    margin:0 auto;
+    background: #ffffff;
+    padding: 50px 100px;
+    display: table;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+.close_icon{
+    float: right;
+    margin-right: -50px;
+    cursor: pointer;
+    width: 30px;
+}
+.close_icon img{
+    width: 30px;
+}
+
+.close_icon:hover{
+    /*transform: rotate(180deg);
+    */
+}
+.lead_form_hdr{
+    font-family: AvenirNext-Regular;
+    font-size: 2.25rem;
+    color:#000000;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    position: relative;
+    clear: both;
+}
+.lead_form_hdr::after {
+    content: "";
+    height: 3px;
+    width: 140px;
+    background: #ed1c24;
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+}
+.form_row1 label{
+    font-family:AvenirNext-DemiBold;
+    font-size: 1.3125rem;
+    color:#222222;
+    display: block;
+}
+.form_row1 input{
+    width:368px;
+    height:54px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border:2px solid #ececec;
+    display: block;
+    margin-top: 10px;
+    font-family: AvenirNext-Regular;
+    /*color:#999999;
+    */
+    color:#000000;
+    font-size: 1.3125rem;
+    outline: none;
+    padding: 0 22px;
+}
+.form_row1 select{
+    width:368px;
+    height:54px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border:2px solid #ececec;
+    display: block;
+    margin-top: 10px;
+    font-family: AvenirNext-Regular;
+    /*color:#999999;
+    */
+    color:#000000;
+    font-size: 1.3125rem;
+    outline: none;
+    padding: 0 22px;
+}
+.form_row1 textarea{
+    width:368px;
+    height:90px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border:2px solid #ececec;
+    display: block;
+    margin-top: 10px;
+    font-family: AvenirNext-Regular;
+    color:#999999;
+    font-size: 1.3125rem;
+    outline: none;
+    padding: 0 22px;
+    padding-top: 18px;
+    resize: none;
+}
+.lead_form_popup form{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+.form_row1{
+    margin-top: 30px;
+    position: relative;
+}
+.error_msg2 {
+    font-size: 0.875rem;
+    position: absolute;
+    float: right;
+    color: #ed1c24;
+    font-family: AvenirNext-Regular;
+    display: flex;
+}
+.contactus_button{
+    color:#ed1c24;
+    border:1px solid #ed1c24;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
+    border-radius: 27px;
+    font-family: AvenirNext-Regular;
+    width:210px;
+    height: 54px;
+    background: #ffffff;
+    letter-spacing: 0.025em;
+    font-size: 1.25rem;
+    transition: linear 0.3s;
+    outline: none;
+}
+.contactus_button:hover{
+    color:#ffffff;
+    background:#ed1c24;
 }
 .oneaboveall{
     width: 1024px;
@@ -429,6 +584,9 @@ li {
     width: 100%;
     padding: 25px;
     background: #f3f3f3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 .sec{
     margin-bottom: 50px;
@@ -453,10 +611,16 @@ li {
     padding: 25px;
     padding-bottom: 0;
     background: #f3f3f3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 .brochure_container{
     padding: 25px;
     background: #f3f3f3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 .walkthrough_image{
     object-fit: contain;
@@ -1521,5 +1685,11 @@ button{
     }
     .container3{
         width: 100%;
+    }
+}
+@media (min-width: 1920px){
+
+    .lead_form_popup_container {
+        padding-top: 125px;
     }
 }
