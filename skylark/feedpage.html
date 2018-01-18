@@ -9,9 +9,23 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/controller.js"></script>
-
+    <link rel="stylesheet" href="styles/loader.css">
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                $(".showbox").css("visibility", "hidden");
+            }, 0);
+        };
+    </script>
 </head>
 <body>
+<div class="showbox">
+    <div class="loader1">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+</div>
 <!--<div class="skylark_projectpage_container " >-->
     <!--hero section starts here-->
 <div class="skylark_landing_menu ">
@@ -53,6 +67,10 @@
 
 </div>
 <!--</div>-->
+<div class="flex_container">
+    <button class="view_profile prof_btn">View profile</button>
+    <button  class="view_profile refer_btn">Refer someone</button>
+</div>
 <section class="skylark_feed_container" ng-app="skylarkApp" ng-controller="feedController">
     <div class="user_profile  wow  fadeInDown" data-wow-delay="100ms" >
         <h3 class="skylark_customer_name" ng-hide="!fromLocal.firstname">{{fromLocal.firstname}} {{fromLocal.lastname}}</h3>
@@ -61,6 +79,7 @@
         <p class="booked_project_name" ng-hide="!fromLocal.residing">{{fromLocal.residing}}</p>
         <p class="customer_id" ng-hide="!fromLocal.houseno">{{fromLocal.houseno}}</p>
     </div>
+
     <div class="skylark_feed_section" id="lightgallery">
         <div class="skylark_feed_section1 wow  fadeInDown" data-wow-delay="100ms">
             <h1 class="skylark_feed_section1_hdr">Royaume Project 50% Completed</h1>
@@ -106,10 +125,15 @@
                 <div class="image_big">
                     <a class="fancybox" href="images/feedimg1.png"><img src="images/feedimg1.png" alt=""></a>
                 </div>
+                <!--<div class="image_small">-->
+                    <!--<a class="fancybox" href="images/feedimg2.png"> <img src="images/feedimg2.png" alt=""></a>-->
+                        <!--<a class="fancybox" href="images/feedimg3.png"><img src="images/feedimg3.png" alt=""></a>-->
+                            <!--<a class="fancybox" href="images/feed_img4.png"> <img src="images/feed_img4.png" alt=""></a>-->
+                <!--</div>-->
                 <div class="image_small">
-                    <a class="fancybox" href="images/feedimg2.png"> <img src="images/feedimg2.png" alt=""></a>
-                        <a class="fancybox" href="images/feedimg3.png"><img src="images/feedimg3.png" alt=""></a>
-                            <a class="fancybox" href="images/feed_img4.png"> <img src="images/feed_img4.png" alt=""></a>
+                    <img src="images/feedimg2.png" alt="">
+                    <img src="images/feedimg3.png" alt="">
+                    <img src="images/feed_img4.png" alt="">
                 </div>
             </div>
             <p class="date_updated">2 Dec, 2017</p>
@@ -134,12 +158,82 @@
         </form>
     </div>
 </section>
+<div class="lead_form_popup_container popup1">
+    <div class="lead_form_popup">
+        <img src="images/close.png" alt="close icon" class="close_icon">
+        <h1 class="lead_form_hdr">Referrals</h1>
+        <form>
+            <div class="form_row1">
+                <label>Name*</label>
+                <input type="text" placeholder="Name"  ng-model="referral.fname">
+                <p class="error_msg2" ng-show="errorReferral.fname">Enter Name</p>
+            </div>
+
+            <div class="form_row1">
+                <label>Email ID*</label>
+                <input type="text" placeholder="Email ID"  ng-class="{'error':invalidEmail && referral.email,'valid_field':!invalidEmail}" ng-model="referral.email" ng-change="validateEmail(referral.email)">
+                <p class="error_msg2" ng-show="errorReferral.invalidEmail">Invalid Email ID</p>
+                <p class="error_msg2" ng-show="errorReferral.email">Enter Email ID</p>
+            </div>
+            <div class="form_row1">
+                <label>Phone*</label>
+                <input type="text" placeholder="Phone Number"  ng-model="referral.phone">
+                <p class="error_msg2" ng-show="errorReferral.phone">Enter Phone No</p>
+            </div>
+            <div class="form_row1">
+                <label>project*</label>
+                <select name="" id="" ng-options="val as val for val in projectList" ng-model="referral.residing">
+                    <option value="">Projects</option>
+                </select>
+                <p class="error_msg2" ng-show="errorReferral.residing">Select Project</p>
+            </div>
+            <div class="form_row1" style="width: 100%;">
+
+            <p class="error_msg" ng-show="successReferral" style="left:0;color: green">Referral sent successfully</p>
+            </div>
+            <button class="add" ng-click="sendReferral();">ADD
+            </button>
+
+        </form>
+    </div>
+</div>
+<div class="lead_form_popup_container popup2">
+    <div class="lead_form_popup">
+        <img src="images/close.png" alt="close icon" class="close_icon">
+        <h1 class="lead_form_hdr">Your Profile</h1>
+        <h3 class="skylark_customer_name" ng-hide="!fromLocal.firstname">{{fromLocal.firstname}} {{fromLocal.lastname}}</h3>
+        <p class="customer_mailid" ng-hide="!fromLocal.emailid">{{fromLocal.emailid}}</p>
+        <p class="customer_contact_number" ng-hide="!fromLocal.phone">{{fromLocal.phone}}</p>
+        <p class="booked_project_name" ng-hide="!fromLocal.residing">{{fromLocal.residing}}</p>
+        <p class="customer_id" ng-hide="!fromLocal.houseno">{{fromLocal.houseno}}</p>
+        <button class="add" >SIGN OUT
+        </button>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script src="http://fancyapps.com/fancybox/source/jquery.fancybox.js"></script>
-<link rel="stylesheet" href="http://fancyapps.com/fancybox/source/jquery.fancybox.css">
+<!--<script src="http://fancyapps.com/fancybox/source/jquery.fancybox.js"></script>-->
+<!--<link rel="stylesheet" href="http://fancyapps.com/fancybox/source/jquery.fancybox.css">-->
 <script>
     $(document).ready(function() {
+        $('.refer_btn').click(function(){
+            $('.popup1').css('display','block');
+            $('body ').css('overflow','hidden');
+        });
+
+        $('.popup1 .close_icon').click(function(){
+            $('.popup1').css('display','none');
+            $('body').css('overflow','auto');
+        });
+        $('.prof_btn').click(function(){
+            $('.popup2').css('display','block');
+            $('body ').css('overflow','hidden');
+        });
+
+        $('.popup2 .close_icon').click(function(){
+            $('.popup2').css('display','none');
+            $('body').css('overflow','auto');
+        });
         $('.nav-toggle').click(function() {
             $(this).toggleClass('opened');
             $('.main_menu').toggleClass('display_block');
@@ -151,7 +245,6 @@
             mobile: true,
             live: true,
             callback: function(box) {
-
             },
             scrollContainer: null
         });

@@ -7,49 +7,115 @@
     <meta name="description" content="Buy 2 bhk flats in Bangalore, 3 bhk flats in Bangalore, 4 bhk and 5 bhk Flats, Penthouses and Villas in Bangalore at the best of localities with world class amenities.  Enquire now">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/landingpage.css">
+
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/controller.js"></script>
+    <link rel="stylesheet" href="styles/loader.css">
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                $(".showbox").css("visibility", "hidden");
+            }, 0);
+
+        };
+    </script>
 </head>
 <body>
+<div class="showbox">
+    <div class="loader1">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+</div>
 <div class="skylark_projectpage_container"  ng-app="skylarkApp" ng-controller="contactUsController">
     <!--hero section starts here-->
-<div id="header">
+    <!--<div id="header">-->
 
-</div>
+    <!--</div>-->
+    <div class="skylark_landing_menu ">
+        <div class="logo_mobile">
+            <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo"></a>
+        </div>
+        <nav class="main_menu">
+            <ul class="nav_list1">
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li class="active_menu">
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="">BLOG</a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/skylarklogo.png" alt="Skylark logo" class="main_logo"></a>
+            </div>
+            <ul class="nav_list2">
+                <li>
+                    <a href="contact.html">CONTACT US</a>
+                </li>
+                <li >
+                    <a href="signup.html">SIGN UP</a>
+                </li>
+                <!--<li class="user_details" style="display: none">-->
+                <!--<div class="user_name">GK</div>-->
+                <!--<ul>-->
+                <!--<li><a href="">Referrals</a></li>-->
+                <!--<li><a href="">Sign out</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </nav>
+        <div class="nav-toggle">
+            <span class="bar-top"></span>
+            <span class="bar-mid"></span>
+            <span class="bar-bot"></span>
+        </div>
+
+    </div>
     <section class="projects_hero_section1">
         <div class="hero_container">
-        <div class="hero_container1">
-            <h2 class="project_page_hdr">
-                <span class="project_page_hdr_span1 wow animated fadeInDown" data-wow-delay="150ms"> 25 years</span>
-                <span class="project_page_hdr_span1  wow animated fadeInDown" data-wow-delay="250ms">of making</span>
-                <span class="project_page_hdr_span2  wow animated fadeInDown" data-wow-delay="350ms">Dreams</span>
-                <span class="project_page_hdr_span2 wow animated fadeInDown" data-wow-delay="450ms">come</span>
-                <span class="project_page_hdr_span2 wow animated fadeInDown" data-wow-delay="550ms">true</span>
-            </h2>
-        </div>
-        <!--<div class="hero_container2">-->
+            <div class="hero_container1">
+                <h2 class="project_page_hdr">
+                    <span class="project_page_hdr_span1 wow animated fadeInDown" data-wow-delay="150ms"> 25 years</span>
+                    <span class="project_page_hdr_span1  wow animated fadeInDown" data-wow-delay="250ms">of making</span>
+                    <span class="project_page_hdr_span2  wow animated fadeInDown" data-wow-delay="350ms">Dreams</span>
+                    <span class="project_page_hdr_span2 wow animated fadeInDown" data-wow-delay="450ms">come</span>
+                    <span class="project_page_hdr_span2 wow animated fadeInDown" data-wow-delay="550ms">true</span>
+                </h2>
+            </div>
+            <!--<div class="hero_container2">-->
             <!--<img src="images/360deg.png" alt="img_360" class="img_360">-->
             <!--<img src="images/gallery.png" alt="Gallery">-->
-        <!--</div>-->
-        <div class="hero_container3 wow animated fadeInDown" data-wow-delay="150ms">
-            <div class="hero_container3a" >
-            <h3 class="form_hdr">Send Details to know more</h3>
-            <form class="skylark_lead_form">
-                <input type="text" class="input1" placeholder="Name*" ng-model="contact.name">
-                <input type="number" class="input1" placeholder="Phone Number*" ng-model="contact.mobileNumber">
-                <input type="email" class="input1" placeholder="Email ID*" ng-model="contact.email">
-                <textarea class="textarea1" placeholder="Message" ng-model="contact.message"></textarea>
-                <!--<button class="submit_button1">SUBMIT</button>-->
-                <button class="submit_button1" ng-click="toContact('FromProjectPage');">
-                    <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
-                    <span ng-show="!processing">SUBMIT</span>
-                </button>
-            </form>
-            </div>
+            <!--</div>-->
+            <div class="hero_container3 wow animated fadeInDown" data-wow-delay="150ms">
+                <div class="hero_container3a" >
+                    <h3 class="form_hdr">Send Details to know more</h3>
+                    <form class="skylark_lead_form">
+                        <input type="text" class="input1" placeholder="Name*" ng-model="contact.name">
+                        <p class="error_msg2" ng-show="errorcontact.name">Enter your name</p>
+                        <input type="text" class="input1" placeholder="Phone Number*" ng-model="contact.mobileNumber">
+                        <p class="error_msg2" ng-show="errorcontact.phone">Enter phone number</p>
+                        <input type="email" class="input1" placeholder="Email ID*" ng-model="contact.email" ng-change="validateEmail(contact.email)" >
+                        <p class="error_msg2"   ng-show="errorcontact.email"  >Enter your email id</p>
+                        <textarea class="textarea1" placeholder="Message" ng-model="contact.message"></textarea>
+                        <!--<button class="submit_button1">SUBMIT</button>-->
+                        <button class="submit_button1" ng-click="toContact('FromProjectPage');">
+                            <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
+                            <span ng-show="!processing">SUBMIT</span>
+                        </button>
+                    </form>
+                </div>
 
-        </div>
+            </div>
         </div>
 
 
@@ -59,7 +125,7 @@
         <h1 class="all_projects_hdr wow animated fadeInDown" data-wow-delay="100ms">ONGOING  PROJECTS</h1>
         <div class="projects parallaxsub">
             <div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">
-                <img src="images/skylark_royaume_project_img.png" alt="Skylark royaume">
+                <img src="images/Royaume.png" alt="Skylark royaume">
 
             </div>
             <div class="project_container2 ">
@@ -179,28 +245,28 @@
             <div class="project_container2 ">
                 <h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">
                     <span class="projectname_hdr_span1">01</span>
-                    <span class="projectname_hdr_span2">/Skylark Royaume</span>
+                    <span class="projectname_hdr_span2">/Skylark Arcadia</span>
                 </h1>
-                <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Royaume</h2>
+                <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Arcadia</h2>
                 <div class="project_details wow animated fadeInUp" data-wow-delay="400ms">
                     <div class="project_details_container1">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">1, 2 and 3 BHK & Penthouses</p>
+                            <p class="project_details1_para">3 & 4 Bedroom Villas</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
-                            <p class="project_details1_para">615 - 1533 sq ft.</p>
+                            <p class="project_details1_para">2516 – 5738 sq ft.</p>
                         </div>
                     </div>
                     <div class="project_details_container2">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Location :</h4>
-                            <p class="project_details1_para">Near Electronic City, Off Hosa Road</p>
+                            <p class="project_details1_para">Near Hoodi Junction, Whitefield</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Project Area:</h4>
-                            <p class="project_details1_para">7.5 Acres</p>
+                            <p class="project_details1_para">12 Acres</p>
                         </div>
                     </div>
                 </div>
@@ -219,21 +285,21 @@
                     <div class="project_details_container1">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">1, 2, 2.5, 3 BHK & Penthouses</p>
+                            <p class="project_details1_para">2, 3 BHK & Penthouses</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
-                            <p class="project_details1_para">605 – 3060 sq ft.</p>
+                            <p class="project_details1_para">1143 – 4180 sq ft.</p>
                         </div>
                     </div>
                     <div class="project_details_container2">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Location :</h4>
-                            <p class="project_details1_para">Medahalli-Belathur Road</p>
+                            <p class="project_details1_para">Brookefield Main Road, Near Hoodi</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Project Area:</h4>
-                            <p class="project_details1_para">20 Acres</p>
+                            <p class="project_details1_para">2.7 Acres</p>
                         </div>
                     </div>
                 </div>
@@ -245,77 +311,77 @@
 
             </div>
         </div>
-        <div class="projects parallaxsub">
-            <div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">
-                <img src="images/skylark_royaume.png" alt="Skylark royaume">
-            </div>
+        <!--<div class="projects parallaxsub">-->
+        <!--<div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">-->
+        <!--<img src="images/skylark_royaume.png" alt="Skylark royaume">-->
+        <!--</div>-->
 
-            <div class="project_container2 ">
-                <h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">
-                    <span class="projectname_hdr_span1">03</span>
-                    <span class="projectname_hdr_span2">/ Skylark EDEN</span>
-                </h1>
-                <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Eden</h2>
-                <div class="project_details wow animated fadeInUp" data-wow-delay="400ms">
-                    <div class="project_details_container1">
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">4 & 5 Bedroom Villas</p>
-                        </div>
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Area Range :</h4>
-                            <p class="project_details1_para">2888 - 6877 sq ft.</p>
-                        </div>
-                    </div>
-                    <div class="project_details_container2">
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Location :</h4>
-                            <p class="project_details1_para">Near Hoodi Junction, Whitefield</p>
-                        </div>
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Project Area:</h4>
-                            <p class="project_details1_para">18 Acres</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">LOAD MORE DETAILS<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
-            </div>
-        </div>
-        <div class="projects parallaxsub">
-            <div class="project_container2 ">
-                <h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">
-                    <span class="projectname_hdr_span1">04</span>
-                    <span class="projectname_hdr_span2">/ Skylark ZENITH</span>
-                </h1>
-                <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Zenith</h2>
-                <div class="project_details wow animated fadeInUp" data-wow-delay="400ms">
-                    <div class="project_details_container1">
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">1, 2, 2.5, 3 BHK & Penthouses</p>
-                        </div>
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Area Range :</h4>
-                            <p class="project_details1_para">605 – 3060 sq ft.</p>
-                        </div>
-                    </div>
-                    <div class="project_details_container2">
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Location :</h4>
-                            <p class="project_details1_para">Medahalli-Belathur Road</p>
-                        </div>
-                        <div class="project_details1">
-                            <h4 class="project_details1_hdr">Project Area:</h4>
-                            <p class="project_details1_para">20 Acres</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">LOAD MORE DETAILS<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
-            </div>
-            <div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">
-                <img src="images/skylark_ithaca.png" alt="Skylark ithaca">
-            </div>
-        </div>
+        <!--<div class="project_container2 ">-->
+        <!--<h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">-->
+        <!--<span class="projectname_hdr_span1">03</span>-->
+        <!--<span class="projectname_hdr_span2">/ Skylark EDEN</span>-->
+        <!--</h1>-->
+        <!--<h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Eden</h2>-->
+        <!--<div class="project_details wow animated fadeInUp" data-wow-delay="400ms">-->
+        <!--<div class="project_details_container1">-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Type :</h4>-->
+        <!--<p class="project_details1_para">4 & 5 Bedroom Villas</p>-->
+        <!--</div>-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Area Range :</h4>-->
+        <!--<p class="project_details1_para">2888 - 6877 sq ft.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="project_details_container2">-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Location :</h4>-->
+        <!--<p class="project_details1_para">Near Hoodi Junction, Whitefield</p>-->
+        <!--</div>-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Project Area:</h4>-->
+        <!--<p class="project_details1_para">18 Acres</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">LOAD MORE DETAILS<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="projects parallaxsub">-->
+        <!--<div class="project_container2 ">-->
+        <!--<h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">-->
+        <!--<span class="projectname_hdr_span1">04</span>-->
+        <!--<span class="projectname_hdr_span2">/ Skylark ZENITH</span>-->
+        <!--</h1>-->
+        <!--<h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Zenith</h2>-->
+        <!--<div class="project_details wow animated fadeInUp" data-wow-delay="400ms">-->
+        <!--<div class="project_details_container1">-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Type :</h4>-->
+        <!--<p class="project_details1_para">1, 2, 2.5, 3 BHK & Penthouses</p>-->
+        <!--</div>-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Area Range :</h4>-->
+        <!--<p class="project_details1_para">605 – 3060 sq ft.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="project_details_container2">-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Location :</h4>-->
+        <!--<p class="project_details1_para">Medahalli-Belathur Road</p>-->
+        <!--</div>-->
+        <!--<div class="project_details1">-->
+        <!--<h4 class="project_details1_hdr">Project Area:</h4>-->
+        <!--<p class="project_details1_para">20 Acres</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">LOAD MORE DETAILS<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>-->
+        <!--</div>-->
+        <!--<div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">-->
+        <!--<img src="images/skylark_ithaca.png" alt="Skylark ithaca">-->
+        <!--</div>-->
+        <!--</div>-->
         <div class="load_more"><span>LOAD MORE</span></div>
     </section>
 
@@ -336,7 +402,7 @@
                     <div class="project_details_container1">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">1, 2 and 3 BHK & Penthouses</p>
+                            <p class="project_details1_para">T1, 2 and 3BHK apartments</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
@@ -346,7 +412,7 @@
                     <div class="project_details_container2">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Location :</h4>
-                            <p class="project_details1_para">Near Electronic City, Off Hosa Road</p>
+                            <p class="project_details1_para">Hennur Road, KR Puram Hobli</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Project Area:</h4>
@@ -406,15 +472,18 @@
                 <div class="form_row1">
                     <label>Name*</label>
                     <input type="text" placeholder="John" ng-model="contact.name">
+                    <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
                 </div>
 
                 <div class="form_row1">
                     <label>Phone Number*</label>
                     <input type="text" placeholder="+91 9916357893" ng-model="contact.mobileNumber">
+                    <p class="error_msg1"ng-show="errorcontact.phone">Enter phone number</p>
                 </div>
                 <div class="form_row1">
                     <label>Email ID*</label>
-                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email">
+                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)">
+                    <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your email id</p>
                 </div>
                 <div class="form_row1">
                     <label>Message</label>
@@ -448,9 +517,11 @@
             $('.lead_form_popup_container').css('display', 'none');
             $(body).css('overflow', 'auto');
         });
+
         $('.nav-toggle').click(function() {
-           $(this).toggleClass('opened');
+            $(this).toggleClass('opened');
             $('.main_menu').toggleClass('display_block');
+            console.log("click fn ");
         });
         var wow = new WOW({
             boxClass: 'wow',
