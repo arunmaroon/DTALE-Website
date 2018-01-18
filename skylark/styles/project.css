@@ -937,10 +937,20 @@ button{
     .footer_container{
         width:1180px;
     }
+    .sticky_form {
+
+        margin-top: -340px;
+
+    }
 }
 @media (min-width:1366px) and (max-width: 1439px){
     .footer_container{
         width:1180px;
+    }
+    .sticky_form {
+
+        margin-top: -340px;
+
     }
 }
 @media (min-width:1280px) and (max-width: 1365px){
@@ -950,10 +960,20 @@ button{
     .footer_container{
         width:1180px;
     }
+    .sticky_form {
+
+        margin-top: -340px;
+
+    }
 }
 @media (min-width:1024px) and (max-width: 1279px){
     .nav_list1 {
         width: 349px;
+
+    }
+    .sticky_form {
+
+        margin-top: -340px;
 
     }
     .footer_container{
