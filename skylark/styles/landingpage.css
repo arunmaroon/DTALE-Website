@@ -4078,12 +4078,17 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size (min-width:1366px) and (max-width: 1439px) ================================================*/
 @media(min-width:1366px) and (max-width: 1439px){
+    .skylark_dasos {
+
+        margin-top: 5px;
+    }
+
     .project_container1 div {
         /*width: 640px;*/
         height: 450px;
     }
     .landing_page_hdr {
-        padding-top: 30px;
+        padding-top: 80px;
     }
 
 
@@ -4190,9 +4195,7 @@ option[value=””][disabled] {
     .footer_container {
         width: 1180px;
     }
-    .landing_page_hdr{
-        padding-top: 118px;
-    }
+
     .hero_section_span1{
         font-size:3.6rem;
     }
@@ -4208,7 +4211,7 @@ option[value=””][disabled] {
         border-radius: 18px;
     }
     .landing_page_btn_container {
-        bottom: 128px;
+       margin-top: 5px;
     }
     .projects_section1 {
         width: 1088px;
