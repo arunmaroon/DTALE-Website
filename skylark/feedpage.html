@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Skylark-Royaume</title>
+    <title>Skylark</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/landingpage.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -160,7 +160,7 @@
 </section>
 <div class="lead_form_popup_container popup1">
     <div class="lead_form_popup">
-        <img src="images/close.png" alt="close icon" class="close_icon">
+        <img src="images/close.svg" alt="close icon" class="close_icon">
         <h1 class="lead_form_hdr">Referrals</h1>
         <form>
             <div class="form_row1">
@@ -182,7 +182,7 @@
             </div>
             <div class="form_row1">
                 <label>project*</label>
-                <select name="" id="" ng-options="val as val for val in projectList" ng-model="referral.residing">
+                <select  ng-options="val as val for val in projectList" ng-model="referral.residing">
                     <option value="">Projects</option>
                 </select>
                 <p class="error_msg2" ng-show="errorReferral.residing">Select Project</p>
@@ -191,7 +191,9 @@
 
             <p class="error_msg" ng-show="successReferral" style="left:0;color: green">Referral sent successfully</p>
             </div>
-            <button class="add" ng-click="sendReferral();">ADD
+            <button class="add" ng-click="sendReferral();">
+                <span ng-show="!processing">ADD</span>
+                <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
             </button>
 
         </form>
@@ -199,7 +201,7 @@
 </div>
 <div class="lead_form_popup_container popup2">
     <div class="lead_form_popup">
-        <img src="images/close.png" alt="close icon" class="close_icon">
+        <img src="images/close.svg" alt="close icon" class="close_icon">
         <h1 class="lead_form_hdr">Your Profile</h1>
         <h3 class="skylark_customer_name" ng-hide="!fromLocal.firstname">{{fromLocal.firstname}} {{fromLocal.lastname}}</h3>
         <p class="customer_mailid" ng-hide="!fromLocal.emailid">{{fromLocal.emailid}}</p>

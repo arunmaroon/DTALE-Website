@@ -50,7 +50,7 @@
             <button class="landing_page_contactus_btn wow  fadeInDown" data-wow-delay="1100ms" >CONTACT US</button>
             <div class=" wow  fadeInDown" data-wow-delay="1100ms">
                 <span class="call_us"> OR CALL </span>
-                <span class="call_us_number">080 41133888</span>
+                <span class="call_us_number"><a href="tel:080 41133888">080 41133888</a></span>
             </div>
         </div>
     </section>
@@ -253,12 +253,12 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="image_section">
         <div style="background: url('images/13.png') no-repeat center; background-size: 100%;" class="contactus_image"  data-paroller-factor="0.6">
             <!--<img src="images/image1.png" alt="" class="contactus_image">-->
         </div>
     </section>
-    <section class="skylark_specialities "  data-paroller-factor="0.2" data-paroller-type="foreground" >
+    <section class="skylark_specialities "  data-paroller-factor="0.1" data-paroller-type="foreground" >
         <h3 class="section_hdr">why choose us</h3>
         <ul>
             <li class="list1 wow animated fadeInLeft" data-wow-delay="50ms">
@@ -324,25 +324,25 @@
             <form class="landing_page_form">
                 <div class="landing_page_form_container1">
                     <label>Name*</label>
-                    <input type="text" placeholder="John" ng-model="contact.name">
+                    <input type="text" placeholder="John" ng-model="contact.fname">
                     <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
                 </div>
                 <div class="landing_page_form_container1">
                     <label>Phone Number*</label>
-                    <input type="text" placeholder="+91 9916357893" ng-model="contact.mobileNumber">
+                    <input type="text" placeholder="+91 9916357893" ng-model="contact.phone">
                     <p class="error_msg1"ng-show="errorcontact.phone">Enter phone number</p>
                 </div>
                 <div class="landing_page_form_container1">
                     <label>Email ID*</label>
                     <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)">
-                    <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your email id</p>
+                    <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your valid email id</p>
                 </div>
                 <div class="landing_page_form_container1">
                     <label>Message</label>
-                    <textarea name="" id="" >
+                    <textarea name="" id="" ng-model="contact.message">
                      </textarea>
                 </div>
-                <button class="submit_button1" ng-click="toContact('FromLandingPage');">
+                <button class="submit_button1" ng-click="toContact('LandingPage');">
                     <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
                     <span ng-show="!processing">SUBMIT</span>
                 </button>
@@ -416,18 +416,18 @@
     <!--lead form popup starts here-->
     <div class="lead_form_popup_container">
         <div class="lead_form_popup">
-            <img src="images/close.png" alt="close icon" class="close_icon">
+            <img src="images/close.svg" alt="close icon" class="close_icon">
             <h1 class="lead_form_hdr">Send Details to know more</h1>
             <form>
                 <div class="form_row1">
                     <label>Name*</label>
-                    <input type="text" placeholder="John" ng-model="contact.name">
+                    <input type="text" placeholder="John" ng-model="contact.fname">
                     <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
                 </div>
 
                 <div class="form_row1">
                     <label>Phone Number*</label>
-                    <input type="text" placeholder="+91 9916357893" ng-model="contact.mobileNumber">
+                    <input type="text" placeholder="+91 9916357893" ng-model="contact.phone">
                     <p class="error_msg1"ng-show="errorcontact.phone">Enter phone number</p>
                 </div>
                 <div class="form_row1">
@@ -440,7 +440,7 @@
                     <textarea ng-model="contact.message">
                     </textarea>
                 </div>
-                <button class="submit_button1" ng-click="toContact('FromLandingPage');">
+                <button class="submit_button1" ng-click="toContact('LandingPage');">
                     <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
                     <span ng-show="!processing">SUBMIT</span>
                 </button>
@@ -553,6 +553,7 @@
         wow.init();
     });
 </script>
+<script src="//cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="5a548ac0005dfc1c63f9c2cb"></script>
 </body>
 
 </html>

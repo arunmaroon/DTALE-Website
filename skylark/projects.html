@@ -100,15 +100,15 @@
                 <div class="hero_container3a" >
                     <h3 class="form_hdr">Send Details to know more</h3>
                     <form class="skylark_lead_form">
-                        <input type="text" class="input1" placeholder="Name*" ng-model="contact.name">
+                        <input type="text" class="input1" placeholder="Name*" ng-model="contact.fname">
                         <p class="error_msg2" ng-show="errorcontact.name">Enter your name</p>
-                        <input type="text" class="input1" placeholder="Phone Number*" ng-model="contact.mobileNumber">
+                        <input type="text" class="input1" placeholder="Phone Number*" ng-model="contact.phone">
                         <p class="error_msg2" ng-show="errorcontact.phone">Enter phone number</p>
                         <input type="email" class="input1" placeholder="Email ID*" ng-model="contact.email" ng-change="validateEmail(contact.email)" >
                         <p class="error_msg2"   ng-show="errorcontact.email"  >Enter your email id</p>
                         <textarea class="textarea1" placeholder="Message" ng-model="contact.message"></textarea>
                         <!--<button class="submit_button1">SUBMIT</button>-->
-                        <button class="submit_button1" ng-click="toContact('FromProjectPage');">
+                        <button class="submit_button1" ng-click="toContact('Project');">
                             <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
                             <span ng-show="!processing">SUBMIT</span>
                         </button>
@@ -460,13 +460,44 @@
             </div>
         </div>
         <div class="load_more"><span>LOAD MORE</span></div>
+        <section class="contactus">
+            <div class="skylark_contactus_container" >
+                <h1 class="lead_form_hdr">Send Details to know more</h1>
+                <form class="landing_page_form">
+                    <div class="landing_page_form_container1">
+                        <label>Name*</label>
+                        <input type="text" placeholder="John" ng-model="contact.fname">
+                        <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
+                    </div>
+                    <div class="landing_page_form_container1">
+                        <label>Phone Number*</label>
+                        <input type="text" placeholder="+91 9916357893" ng-model="contact.phone">
+                        <p class="error_msg1"ng-show="errorcontact.phone">Enter phone number</p>
+                    </div>
+                    <div class="landing_page_form_container1">
+                        <label>Email ID*</label>
+                        <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)">
+                        <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your email id</p>
+                    </div>
+                    <div class="landing_page_form_container1">
+                        <label>Message</label>
+                        <textarea name="" id="" >
+                     </textarea>
+                    </div>
+                    <button class="submit_button1" ng-click="toContact('FromLandingPage');">
+                        <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
+                        <span ng-show="!processing">SUBMIT</span>
+                    </button>
+                </form>
+            </div>
+        </section>
     </section>
     <section class="footer" id="dynamic_footer">
     </section>
     <!--lead form popup starts here-->
     <div class="lead_form_popup_container">
         <div class="lead_form_popup">
-            <img src="images/close.png" alt="close icon" class="close_icon">
+            <img src="images/close.svg" alt="close icon" class="close_icon">
             <h1 class="lead_form_hdr">Send Details to know more</h1>
             <form>
                 <div class="form_row1">

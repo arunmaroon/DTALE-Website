@@ -141,7 +141,13 @@
         </div>
     </div>
     <div class="oneaboveall">
+        <section class="container1">
+            <i class="ion-social-facebook-outline"></i>
+            <i class="ion-social-twitter-outline"></i>
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+        </section>
         <section class="project_details_section">
+
             <div class="projects_section1">
                 <div class="container2 wow animated fadeInLeft" data-wow-delay="300ms" >
                     <h1 class="skylark_project_name">
@@ -152,11 +158,7 @@
                         Since its establishment in 1992, Skylark has built a rock solid reputation founded on trust, and over the years it has earned trust in plenty from clients, associates and vendors. Trust built brick by brick in the past two decades.
                     </p>
                     <div class="skylark_project_details_container">
-                        <div class="container1">
-                            <i class="ion-social-facebook-outline"></i>
-                            <i class="ion-social-twitter-outline"></i>
-                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                        </div>
+
                         <div class="skylark_project_details_container1">
                             <div class="skylark_project_details">
                                 <h3  class="skylark_project_details_hdr">Type</h3>
@@ -447,9 +449,9 @@
             <div class="hero_container3a" >
                 <h3 class="form_hdr">Send Details to know more</h3>
                 <form class="skylark_lead_form">
-                    <input type="text" class="input1" placeholder="Name*" ng-model="contact.name" >
+                    <input type="text" class="input1" placeholder="Name*" ng-model="contact.fname" >
                     <p class="error_msg" ng-show="errorcontact.name">Enter your name</p>
-                    <input type="text"  max-length="15" class="input1" placeholder="Phone Number*"  ng-model="contact.mobileNumber" >
+                    <input type="text"  max-length="15" class="input1" placeholder="Phone Number*"  ng-model="contact.phone" >
                     <p class="error_msg" ng-show="errorcontact.phone">Enter phone number</p>
                     <input type="email" name="email" class="input1" placeholder="Email ID*"  ng-model="contact.email"  ng-change="validateEmail(contact.email)" >
                     <p class="error_msg"   ng-show="errorcontact.email"  >Enter your email id</p>
@@ -464,6 +466,35 @@
     </div>
     <section class="footer" id="dynamic_footer">
     </section>
+    <div class="floor_plan_container1">
+    <div class="floor_plan_container">
+        <img src="images/close.svg" alt="close icon" class="close_icon close_floor_plan">
+        <div class="images_carousel_container">
+            <div class="slider-for">
+                <img src="images/img1.png" alt="">
+                <img src="images/img5.jpg" alt="">
+                <img src="images/img3.jpg" alt="">
+                <img src="images/img4.jpg" alt="">
+                <img src="images/img5.jpg" alt="">
+                <img src="images/img6.jpg" alt="">
+                <img src="images/img7.jpg" alt="">
+                <img src="images/img8.jpg" alt="">
+
+            </div>
+
+            <div class="slider-nav">
+                <img src="images/thumb_icon.png" alt="">
+                <img src="images/thumb_icon.png" alt="">
+                <img src="images/thumb_icon.png" alt="">
+                <img src="images/thumb_icon.png" alt="">
+                <img src="images/thumb_icon.png" alt="">
+                <img src="images/thumb_icon.png" alt="">
+                <img src="images/thumb_icon.png" alt="">
+                <img src="images/thumb_icon.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
     <!--lead form popup starts here-->
     <div class="lead_form_popup_container">
         <div class="lead_form_popup">
@@ -502,6 +533,9 @@
     <!--lead form popup ends here-->
 </div>
 <!--<script type="text/javascript" src="https://emicalculator.net/wp-content/themes/emicalculator/dist/scripts/loancalculator.js?x61264"></script>-->
+<script type="text/javascript" src="js/slick.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
 <script>
     $( document ).ready(function() {
         $("#header").load("header.html");
@@ -549,7 +583,7 @@
         window.addEventListener("scroll", function (event) {
             var scroll = this.scrollY,
                 left = this.scrollX;
-            var distance = $('#overview').offset().top - 50,
+            var distance = $('#overview').offset().top  - nav_height - nav_height1,
                 $window = $(window);
             if ( $window.scrollTop() >= distance ) {
 
@@ -569,13 +603,14 @@
 
         var sections = $('.sec'),
             nav = $('nav'),
+            nav1 = $('.submenu_container'),
             nav_height = nav.outerHeight();
-
+            nav_height1 = nav1.outerHeight();
         $(window).on('scroll', function () {
             var cur_pos = $(this).scrollTop();
 
             sections.each(function() {
-                var top = $(this).offset().top - nav_height ,
+                var top = $(this).offset().top - nav_height - nav_height1 - 10 ,
                     bottom = top + $(this).outerHeight();
 
                 if (cur_pos >= top && cur_pos <= bottom) {
@@ -595,20 +630,20 @@
             var $el = $(this),
                 id = $el.attr('href');
             $('html, body').animate({
-                scrollTop: $(id).offset().top - nav_height
+                scrollTop: $(id).offset().top - nav_height - nav_height1
             }, 500);
             return false;
         });
         $(".first_section").click(function () {
             $('html, body').animate({
                 //mention first section id name here eg:#overview
-                scrollTop: $("#overview").offset().top
+                scrollTop: $("#overview").offset().top  - nav_height - nav_height1
             }, 2000);
         });
         $(".last_section").click(function () {
             $('html, body').animate({
                 //mention last section id name here eg:#development_photo
-                scrollTop: $("#development_photo").offset().top
+                scrollTop: $("#development_photo").offset().top  - nav_height - nav_height1
             }, 2000);
 
         });
@@ -629,7 +664,30 @@
             }, 1000);
         });
 
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 8,
+            asNavFor: '.slider-for',
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true
+        });
 
+        $('.carousel img').click(function() {
+            $('.floor_plan_container1').css('display', 'block');
+            $('body').css('overflow', 'hidden');
+        });
+
+        $('.close_floor_plan').click(function() {
+            $('.floor_plan_container1').css('display', 'none');
+            $('body').css('overflow', 'auto');
+        });
     });
 </script>
 </body>

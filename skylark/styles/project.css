@@ -121,9 +121,47 @@ background: #f3f3f3;
 }
 .container1{
     display: block;
-    width: 20px;
-    margin-left: -43px;
-    margin-top: 20px;
+    width: 28px;
+    height: 100%;
+    /* margin-left: -43px; */
+    position: sticky;
+    margin-top: 100px;
+    top: 350px;
+    overflow: auto;
+}
+.slider-for .slick-slide img{
+    height:520px;
+    width: 600px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+.slider-nav img{
+    height: auto;
+    width: 45px !important;
+    object-fit: contain;
+    cursor:pointer;
+}
+.floor_plan_container{
+    width: 1360px;
+    margin: 0 auto;
+    background: #ececec;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 50px;
+    /*display: none;*/
+}
+.slider-nav{
+    width:550px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.slick-slide{
+    outline: none;
+}
+.slider-nav .slick-current img{
+    border:1px solid #ed1c24;
 }
 .container1 i{
     margin-bottom: 10px;
@@ -204,7 +242,8 @@ li {
 }
 .projects_section1{
     width: 100%;
-    padding-bottom: 25px;
+
+    padding-bottom: 30px;
     margin-top: 50px;
 }
 .skylark_project_name {
@@ -334,6 +373,20 @@ li {
     width:100%;
     height:100%;
     background: #000000;
+    z-index: 30;
+    overflow-y: auto;
+    display: none;
+}
+.floor_plan_container1{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+
+    background: rgba(0,0,0,0.7);
     z-index: 30;
     overflow-y: auto;
     display: none;
@@ -478,7 +531,7 @@ li {
     background:#ed1c24;
 }
 .oneaboveall{
-    width: 1024px;
+    width: 1044px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -772,12 +825,12 @@ li {
 ::-moz-placeholder{
     color:#999999;
 }
-::-ms-placeholder{
+ ::-ms-placeholder{
     color:#999999;
-}
-::placeholder{
+ }
+ ::placeholder{
     color:#999999;
-}
+ }
 .submenu_container{
     position: absolute;
     width: 100% !important;
@@ -1098,6 +1151,12 @@ button{
     /*width: 100%;*/
     /*z-index: 1;*/
 /*}*/
+@media (min-width:1600px) and (max-width: 1919px){
+.lead_form_popup_container {
+
+    padding-top: 75px;
+}
+}
 @media (min-width:1440px) and (max-width: 1599px){
     .footer_container{
         width:1180px;
@@ -1106,6 +1165,17 @@ button{
 
         margin-top: -340px;
 
+    }
+    .lead_form_popup{
+        width: 768px;
+        padding: 40px 80px;
+    }
+    .lead_form_hdr {
+        font-size: 1.8rem;
+    }
+    .lead_form_popup form {
+        margin-top: 56px;
+        margin-bottom: 24px;
     }
 }
 @media (min-width:1366px) and (max-width: 1439px){
@@ -1116,6 +1186,24 @@ button{
 
         margin-top: -340px;
 
+    }
+    .floor_plan_container{
+     width: 80%;
+    }
+    .slider-for .slick-slide img {
+        height: 400px;
+        object-fit: contain;
+    }
+    .lead_form_popup{
+        width: 768px;
+        padding: 40px 80px;
+    }
+    .lead_form_hdr {
+        font-size: 1.8rem;
+    }
+    .lead_form_popup form {
+        margin-top: 56px;
+        margin-bottom: 24px;
     }
 }
 @media (min-width:1280px) and (max-width: 1365px){
@@ -1130,8 +1218,63 @@ button{
         margin-top: -340px;
 
     }
+    .floor_plan_container{
+        width: 80%;
+    }
+    .slider-for .slick-slide img {
+        height: 400px;
+        object-fit: contain;
+    }
+    .lead_form_popup{
+        width: 768px;
+        padding: 40px 80px;
+    }
+    .lead_form_hdr {
+        font-size: 1.8rem;
+    }
+    .lead_form_popup form {
+        margin-top: 56px;
+        margin-bottom: 24px;
+    }
 }
 @media (min-width:1024px) and (max-width: 1279px){
+    .lead_form_popup{
+        width: 768px;
+        padding: 40px 80px;
+    }
+    .lead_form_hdr {
+        font-size: 1.8rem;
+    }
+    .lead_form_popup form {
+        margin-top: 56px;
+        margin-bottom: 24px;
+    }
+    .form_row1 input, .form_row1 select {
+        width: 294px;
+        height: 42px;
+        margin-top: 8px;
+        font-size: 1.05rem;
+        padding: 0 18px;
+    }
+    .form_row1 textarea {
+        width: 294px;
+        height: 72px;
+        margin-top: 8px;
+        font-size: 1.05rem;
+        padding: 0 18px;
+    }
+    .submit_button1 {
+        width: 214px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .floor_plan_container{
+        width: 80%;
+    }
+    .slider-for .slick-slide img {
+        height: 400px;
+        object-fit: contain;
+    }
     .nav_list1 {
         width: 349px;
 
@@ -1176,6 +1319,25 @@ button{
     }
 }
 @media (max-width:1023px) and (min-width: 768px){
+
+    .lead_form_popup{
+        width: 558px;
+        padding: 35px 70px;
+    }
+    .lead_form_hdr {
+        font-size: 1.575rem;
+    }
+    .lead_form_popup form {
+        margin-top: 49px;
+        margin-bottom: 21px;
+    }
+    .floor_plan_container{
+        width: 80%;
+    }
+    .slider-for .slick-slide img {
+        height: 400px;
+        object-fit: contain;
+    }
     .footer_container{
         width:700px;
     }
@@ -1205,7 +1367,21 @@ button{
         height: 466px;
     }
 }
-@media (max-width:767px){
+@media (max-width:768px){
+    .container1 {
+        display: flex;
+        width: 100px;
+        justify-content: space-around;
+        /* height: 100%; */
+        /* margin-left: -43px; */
+        position: relative;
+        margin-top: 38px;
+        position: relative;
+        overflow: auto;
+        margin-bottom: -50px;
+        top:0;
+
+    }
     #sticker-sticky-wrapper{
         display: none;
     }
@@ -1225,6 +1401,11 @@ button{
         border: 1px solid #ed1c24;
         height: 466px;
     }
+    .submit_button1 {
+        width: 214px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
     .footer_container{
         margin:0 auto;
         width:80%;
@@ -1239,6 +1420,44 @@ button{
     }
 }
 @media (min-width:600px) and (max-width:767px){
+    .lead_form_popup{
+        width: 558px;
+        padding: 35px 70px;
+    }
+    .lead_form_hdr {
+        font-size: 1.575rem;
+    }
+    .lead_form_popup form {
+        margin-top: 49px;
+        margin-bottom: 21px;
+    }
+    .form_row1 {
+        margin-top: 21px;
+    }
+    .form_row1 label{
+        font-size: 0.9rem;
+    }
+    .form_row1 input ,.form_row1 select{
+        width: 200px;
+        height: 38px;
+        margin-top:8px;
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .form_row1 textarea {
+        width: 200px;
+        height: 65px;
+        margin-top: 8px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+    .floor_plan_container{
+        width: 80%;
+    }
+    .slider-for .slick-slide img {
+        height: 400px;
+        object-fit: contain;
+    }
     .oneaboveall {
         width: 100%;
         display: block;
@@ -1267,7 +1486,104 @@ button{
         margin-right: 5px;
     }
 }
+@media (min-width:500px) and (max-width:599px){
+    .lead_form_popup{
+        width: 80%;
+        padding: 35px 70px;
+    }
+    .lead_form_hdr {
+        font-size: 1.1rem;
+    }
+    .lead_form_popup form {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .form_row1 {
+        margin-top: 21px;
+        width: 100%;
+    }
+    .form_row1 label{
+        font-size: 0.9rem;
+    }
+    .form_row1 input ,.form_row1 select{
+        width: 100%;
+        height: 38px;
+        margin-top:8px;
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .form_row1 textarea {
+        width: 100%;
+        height: 65px;
+        margin-top: 8px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+    .lead_form_hdr::after {
+        width: 102px;
+    }
+}
 @media (min-width: 425px) and (max-width: 599px){
+    .lead_form_popup{
+        width: 90%;
+        padding: 35px 40px;
+    }
+    .lead_form_hdr {
+        font-size: 0.8rem;
+    }
+    .lead_form_popup form {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .form_row1 {
+        margin-top: 21px;
+        width: 100%;
+    }
+    .form_row1 label{
+        font-size: 0.9rem;
+    }
+    .form_row1 input ,.form_row1 select{
+        width: 100%;
+        height: 38px;
+        margin-top:8px;
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .form_row1 textarea {
+        width: 100%;
+        height: 65px;
+        margin-top: 8px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+    .lead_form_hdr::after {
+        width: 102px;
+    }
+    .close_icon {
+        margin-right: -20px;
+        margin-top: -18px;
+        margin-bottom: 18px;
+    }
+    .floor_plan_container{
+        width: 80%;
+    }
+    .slider-for .slick-slide img {
+        height: 400px;
+        object-fit: contain;
+    }
+    .slider-nav {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .slick-prev {
+        left: -22px !important;
+        z-index: 10;
+    }
+    .slick-next {
+        right: -22px !important;
+        z-index: 10;
+    }
     .skylark_menu{
         width: 80%;
     }
@@ -1296,7 +1612,7 @@ button{
         display: block;
     }
     .carousel img {
-        width: 135px;
+        width: 49%;
         height: 136px;
         object-fit: contain;
         margin-bottom: 12px;
@@ -1311,6 +1627,74 @@ button{
     }
 }
 @media (max-width:424px){
+    .lead_form_popup{
+        width: 90%;
+        padding: 35px 40px;
+    }
+    .lead_form_hdr {
+        font-size: 0.8rem;
+    }
+    .lead_form_popup form {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .form_row1 {
+        margin-top: 21px;
+        width: 100%;
+    }
+    .form_row1 label{
+        font-size: 0.9rem;
+    }
+    .form_row1 input ,.form_row1 select{
+        width: 100%;
+        height: 38px;
+        margin-top:8px;
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .form_row1 textarea {
+        width: 100%;
+        height: 65px;
+        margin-top: 8px;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+    .lead_form_hdr::after {
+        width: 102px;
+    }
+    .close_icon {
+        margin-right: -20px;
+        margin-top: -18px;
+        margin-bottom: 18px;
+    }
+    .floor_plan_container{
+        width: 80%;
+    }
+    .close_icon {
+        float: right;
+        margin-right: 0;
+        cursor: pointer;
+        width: 16px;
+        z-index: 1;
+        position: relative;
+    }
+    .slider-for .slick-slide img {
+        height: 400px;
+        object-fit: contain;
+    }
+    .slider-nav {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .slick-prev {
+        left: -22px !important;
+        z-index: 10;
+    }
+    .slick-next {
+        right: -22px !important;
+        z-index: 10;
+    }
     .skylark_menu{
         width: 80%;
     }
@@ -1349,6 +1733,8 @@ button{
     .input1 {
         width: 100%;
         height: 35px;
+        padding: 0 11px;
+
     }
     .textarea1 {
         width: 100%;
@@ -1525,13 +1911,13 @@ button{
         float: right;
     }
     .mobile_menu {
-        width: 330px;
+        width: 300px;
         margin: 0 auto;
     }
     #menutitle {
 
         color: #ed5565;
-        width: 230px;
+        width: 203px;
         display: inline-block;
         text-align: center;
     }
@@ -1669,15 +2055,23 @@ button{
     .mobile_menu{
         display: none;
     }
+
 }
 
 @media (max-width:600px){
     .container1 {
         display: flex;
-        width: 80px;
-       margin-left: 0;
-        margin-top: 20px;
-        justify-content: space-between;
+        width: 100px;
+        justify-content: space-around;
+        /* height: 100%; */
+        /* margin-left: -43px; */
+        position: relative;
+        margin-top: 38px;
+        position: relative;
+        overflow: auto;
+        margin-bottom: -50px;
+        top:0;
+
     }
     .skylark_project_name {
         font-family: AvenirNext-Regular;

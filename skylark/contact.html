@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title>Contact us</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/landingpage.css">
@@ -86,12 +86,12 @@
                 <h3>Send Details to know more</h3>
                 <div class="contact_us_div1">
                     <label>Name*</label>
-                    <input type="text" placeholder="John" ng-model="contact.name">
+                    <input type="text" placeholder="John" ng-model="contact.fname">
                     <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
                 </div>
                 <div class="contact_us_div1">
                     <label>Phone Number*</label>
-                    <input type="text" placeholder="+91 9916357893" ng-model="contact.mobileNumber">
+                    <input type="text" placeholder="+91 9916357893" ng-model="contact.phone">
                     <p class="error_msg1" ng-show="errorcontact.phone">Enter phone number</p>
                 </div>
                 <div class="contact_us_div1">
@@ -103,7 +103,7 @@
                     <label>Message </label>
                     <textarea ng-model="contact.message"></textarea>
                 </div>
-                <button class="contactus_button1" ng-click="toContact('FromContactusPage');">
+                <button class="contactus_button1" ng-click="toContact('Contactus');">
                     <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
                     <span ng-show="!processing">SUBMIT</span>
                 </button>
