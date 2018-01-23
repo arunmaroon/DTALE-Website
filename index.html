@@ -201,6 +201,38 @@
 
     gtag('config', 'UA-112112888-1');
 </script>
+    
+    <script type="text/javascript">
+    window.revoiceSettings = {
+        handler: 'DTALEDesignStudio',
+        page_id: '318396175204567',
+        created_at: '1516255143'
+    };
+    (function() {
+        var revoice = window.Revoice;
+        if (typeof revoice === "function") {
+            revoice('init');
+            revoice('update', revoiceSettings);
+        } else {
+
+            function load_revoice_script() {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+                script.src = 'https://www.revoice.me/newrevoice/js/revoice-frame.js';
+                var scriptContent = document.getElementsByTagName('script')[0];
+                scriptContent.parentNode.insertBefore(script, scriptContent);
+            }
+
+            if (window.attachEvent){
+                window.attachEvent('onload', load_revoice_script);
+            }
+            else{
+                window.addEventListener('load', load_revoice_script, false);
+            }
+        }
+    })()
+</script>
 </body>
 
 </html>
