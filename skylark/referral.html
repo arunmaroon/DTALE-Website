@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Skylark Mansions - Referral Scheme - Apartments in Bangalore</title>
     <meta name="description" content="Refer Someone successfully and get 1% off on your sale deed.Buy Villas in Whitefield,Apartments in Whitefield ,Flats in Electronic City">
@@ -39,19 +39,22 @@
             <li>
                 <a href="">ABOUT</a>
             </li>
-            <li>
-                <a href="">BLOG</a>
-            </li>
+            <!--<li>-->
+                <!--<a href="">BLOG</a>-->
+            <!--</li>-->
         </ul>
         <div class="logo">
             <a href="index.html"><img src="images/skylarklogo.png" alt="Skylark logo"></a>
         </div>
         <ul class="nav_list2">
             <li>
-                <a href="contact.html">CONTACTUS</a>
+                <a href="contact.html">CONTACT US</a>
             </li>
             <li>
-                <a href="signup.html">SIGNUP</a>
+                <a href="signup.html">SIGN UP</a>
+            </li>
+            <li>
+                <a href="signin.html">SIGN IN</a>
             </li>
         </ul>
     </nav>
@@ -114,6 +117,11 @@
         $(this).toggleClass('opened');
         $('.main_menu').toggleClass('display_block');
     });
+        $("a").on("click touchend", function(e) {
+            var el = $(this);
+            var link = el.attr("href");
+            window.location = link;
+        });
     });
 </script>
 </body>

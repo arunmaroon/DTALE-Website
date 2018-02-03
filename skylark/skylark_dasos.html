@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Skylark Dasos - Ultra Luxury 2bhk and 3bhk apartments at Hennur</title>
     <meta name="description" content="Choose from Penthouses in Hennur, 2 bhk Flats in Hennur, 3 bhk Flats in Hennur and 4 bhk Flats in Hennur, Bangalore with the best of amenities. Enquire now">
@@ -21,7 +21,7 @@
     <meta name="twitter:image" content="http://www.skylarkmansions.com/img/projects/royaume/slide2.jpg">
     <!-- twitter card -->
     <link rel="stylesheet" href="styles/project.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -33,11 +33,10 @@
             setTimeout(function() {
                 $(".showbox").css("visibility", "hidden");
             }, 0);
-
         };
     </script>
 </head>
-<body  ng-app="skylarkApp" ng-controller="contactUsController">
+<body ng-app="skylarkApp" ng-controller="contactUsController">
 <div class="showbox">
     <div class="loader1">
         <svg class="circular" viewBox="25 25 50 50">
@@ -45,7 +44,6 @@
         </svg>
     </div>
 </div>
-
 <div class="skylark_project_details" >
     <div class="skylark_main_menu">
         <div class="skylark_menu">
@@ -63,9 +61,9 @@
                     <li>
                         <a href="">ABOUT</a>
                     </li>
-                    <li>
-                        <a href="">BLOG</a>
-                    </li>
+                    <!--<li>-->
+                        <!--<a href="">BLOG</a>-->
+                    <!--</li>-->
                 </ul>
                 <div class="logo">
                     <a href="index.html"><img src="images/skylark_logo.svg" alt="Skylark logo" class="main_logo"></a>
@@ -76,6 +74,9 @@
                     </li>
                     <li>
                         <a href="signup.html">SIGN UP</a>
+                    </li>
+                    <li>
+                        <a href="signin.html">SIGN IN</a>
                     </li>
                 </ul>
             </nav>
@@ -90,9 +91,9 @@
         <div class="submenu">
             <nav>
                 <div class="mobile_menu">
-                     <span class="first_section">
-                     <i class="fa fa-backward" aria-hidden="true"></i>
-                     </span>
+                     <!--<span class="first_section">-->
+                     <!--<i class="fa fa-backward" aria-hidden="true"></i>-->
+                     <!--</span>-->
                     <span class="prev_section">
                      <i class="fa fa-caret-left" aria-hidden="true"></i>
                      </span>
@@ -100,9 +101,9 @@
                     <span class="next_section">
                      <i class="fa fa-caret-right" aria-hidden="true"></i>
                      </span>
-                    <span class="last_section">
-                     <i class="fa fa-forward" aria-hidden="true"></i>
-                     </span>
+                    <!--<span class="last_section">-->
+                     <!--<i class="fa fa-forward" aria-hidden="true"></i>-->
+                     <!--</span>-->
                 </div>
                 <ul id="project_menu">
                     <li>
@@ -142,12 +143,23 @@
     </div>
     <div class="oneaboveall">
         <section class="container1">
-            <i class="ion-social-facebook-outline"></i>
-            <i class="ion-social-twitter-outline"></i>
-            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://34.236.8.175/skylark_dasos.html&t=Skylark-dasos"
+               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+               target="_blank" title="Share on Facebook">
+                <i class="ion-social-facebook-outline"></i>
+            </a>
+            <a href="https://twitter.com/share?url=http://34.236.8.175/skylark_dasos.html&via=Skylark-dasos&text=Skylark-dasos"
+               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+               target="_blank" title="Share on Twitter"><i class="ion-social-twitter-outline"></i>
+            </a>
+            <a href=" https://www.linkedin.com/shareArticle?mini=true&url=http://34.236.8.175/skylark_dasos.html&summary=Skylark-dasos&source=LinkedIn&text=Skylark-dasos"
+               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+               target="_blank" title="Share on Linkedin"><i class="ion-social-linkedin-outline"></i>
+            </a>
+
+
         </section>
         <section class="project_details_section">
-
             <div class="projects_section1">
                 <div class="container2 wow animated fadeInLeft" data-wow-delay="300ms" >
                     <h1 class="skylark_project_name">
@@ -158,7 +170,6 @@
                         Since its establishment in 1992, Skylark has built a rock solid reputation founded on trust, and over the years it has earned trust in plenty from clients, associates and vendors. Trust built brick by brick in the past two decades.
                     </p>
                     <div class="skylark_project_details_container">
-
                         <div class="skylark_project_details_container1">
                             <div class="skylark_project_details">
                                 <h3  class="skylark_project_details_hdr">Type</h3>
@@ -193,7 +204,7 @@
                             </div>
                             <div class="enquiry_button_container">
                                 <button class="enquire_btn">ENQUIRE NOW</button>
-                                <h5 class="enquiry">TO GET DISCOUNT</h5>
+                                <!--<h5 class="enquiry">TO GET DISCOUNT</h5>-->
                             </div>
                         </div>
                     </div>
@@ -204,7 +215,6 @@
                     <h3 class="header1 hdr mtop">
                         OVERVIEW
                     </h3>
-
                     <p class="project_para1">
                         Amidst six rolling acres on Hennur Road stands Skylark Dásos, an emerald retreat in the bustle of one of Bangalore's fastest developing areas. Dásos is named after the Greek word for 'forest', and true to its name, 80% of the property features a verdant green space, 50% of which is dedicated to tree cover. In the centre of this tropical paradise, will be three towers of 1, 2 and 3BHK apartments, surrounded by a host of world-class amenities that complete the Dásos experience.
                     </p>
@@ -244,48 +254,40 @@
                         </h3>
                         <div id="map">
                             <iframe width="100%" height="100%" frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/place?q=kylark+Royaume,+Hosa+Road,+Near+E-City,+Bangalore.&key=AIzaSyD6NAnCIgbpffq4baL20YQzdjrBm2Umijs" allowfullscreen></iframe>
+                                    src="https://www.google.com/maps/embed/v1/place?q=Skylark%20D%C3%A1sos%2C%20Kyalasanahalli%20Village%2C%20Hennur%20Road%2C%20KR%20Puram%20Hobli%2C%20Bengaluru.&key=AIzaSyD6NAnCIgbpffq4baL20YQzdjrBm2Umijs" allowfullscreen></iframe>
                         </div>
                         <div class="project_location">
                             <p class="address_line">Skylark Dásos,</p>
                             <p class="address_line">SY No. 17/2, 18/1, 18/2 and SY No. 20,</p>
                             <p class="address_line">Kyalasanahalli Village,</p>
                             <p class="address_line"> Hennur Road, KR Puram Hobli, Bengaluru.</p>
-                            <p class="address_line">  Mobile : 080 4655 4655</p>
+                            <p class="address_line">  Mobile : <a href="tel:080 4655 4655">080 4655 4655</a></p>
                             <p class="address_line"> Mail Us: sales@skylarkmansions.com</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="overview_container  sec" id="master_Plan">
-                <div class="overview_content wow animated fadeInLeft" data-wow-delay="300ms" >
-                    <h3 class="header1 hdr mtop">
-                        MASTER PLAN
-                    </h3>
-                    <h5  class="header2">
-                        PRO
-                    </h5>
-                    <p class="project_para1">
-                        Inspired by the French word for ‘kingdom’, Skylark Royaume has taken the ‘comfort of home’ a notch higher. Because the only way to live life, is king-size.
-                    </p>
-                </div>
-                <div class="overview_container wow animated fadeInRight" data-wow-delay="300ms"  style=" padding: 25px 0 0 0;">
+                <h3 class="header1 mtop cursor">
+                    <span ng-click="subsecToggle();" ng-class="{'activesubmenu':!showMasterPlan}">MASTER PLAN</span><span ng-click="subsecToggle();" ng-class="{'activesubmenu':showMasterPlan}"> FLOOR PLAN</span>
+                </h3>
+                <!--<div class="overview_content wow animated fadeInLeft" data-wow-delay="300ms" >-->
+                    <!--<h3 class="header1 hdr mtop">-->
+                        <!--MASTER PLAN-->
+                    <!--</h3>-->
+                    <!--<h5  class="header2">-->
+                        <!--PRO-->
+                    <!--</h5>-->
+                    <!--<p class="project_para1">-->
+                        <!--Inspired by the French word for ‘kingdom’, Skylark Royaume has taken the ‘comfort of home’ a notch higher. Because the only way to live life, is king-size.-->
+                    <!--</p>-->
+                <!--</div>-->
+                <div class="overview_container wow animated fadeInRight" ng-show="!showMasterPlan" data-wow-delay="300ms"  style=" padding: 25px 0 0 0;">
                     <div class="overview_container1">
                         <img src="images/walkthrough_image.png" alt="" class="walkthrough_image">
                     </div>
                 </div>
-            </div>
-            <div class="development_photos_container sec" id="floor_plan">
-                <div class="carousel_container1 wow animated fadeInLeft" data-wow-delay="300ms" >
-                    <h3 class="header1 hdr mtop" >
-                        FLOOR PLAN
-                    </h3>
-                    <!--<div style="display: flex;">-->
-                    <!--<span class="leftarrrow" ><img src="images/left arrow.png" alt=""></span>-->
-                    <!--<span class="rightarrrow"><img src="images/right arrow.png" alt=""></span>-->
-                    <!--</div>-->
-                </div>
-                <div class="slick_carousel_container wow animated fadeInRight" data-wow-delay="300ms" >
+                <div class="slick_carousel_container wow animated fadeInRight" ng-show="showMasterPlan" data-wow-delay="300ms" >
                     <div class="carousel">
                         <img src="images/Tower A.png" alt="">
                         <img src="images/Tower B.png" alt="">
@@ -296,6 +298,27 @@
                     </div>
                 </div>
             </div>
+            <!--<div class="development_photos_container sec" id="floor_plan">-->
+                <!--<div class="carousel_container1 wow animated fadeInLeft" data-wow-delay="300ms" >-->
+                    <!--<h3 class="header1 hdr mtop" >-->
+                        <!--FLOOR PLAN-->
+                    <!--</h3>-->
+                    <!--&lt;!&ndash;<div style="display: flex;">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="leftarrrow" ><img src="images/left arrow.png" alt=""></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="rightarrrow"><img src="images/right arrow.png" alt=""></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="slick_carousel_container wow animated fadeInRight" data-wow-delay="300ms" >-->
+                    <!--<div class="carousel">-->
+                        <!--<img src="images/Tower A.png" alt="">-->
+                        <!--<img src="images/Tower B.png" alt="">-->
+                        <!--<img src="images/Tower B.png" alt="">-->
+                        <!--<img src="images/Tower B.png" alt="">-->
+                        <!--<img src="images/Tower B.png" alt="">-->
+                        <!--<img src="images/Tower B.png" alt="">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
             <div class="development_photos_container sec" id="amenities">
                 <div class="carousel_container1 wow animated fadeInLeft" data-wow-delay="300ms" >
                     <h3 class="header1 hdr mtop" >
@@ -449,12 +472,14 @@
             <div class="hero_container3a" >
                 <h3 class="form_hdr">Send Details to know more</h3>
                 <form class="skylark_lead_form">
-                    <input type="text" class="input1" placeholder="Name*" ng-model="contact.fname" >
-                    <p class="error_msg" ng-show="errorcontact.name">Enter your name</p>
-                    <input type="text"  max-length="15" class="input1" placeholder="Phone Number*"  ng-model="contact.phone" >
-                    <p class="error_msg" ng-show="errorcontact.phone">Enter phone number</p>
-                    <input type="email" name="email" class="input1" placeholder="Email ID*"  ng-model="contact.email"  ng-change="validateEmail(contact.email)" >
-                    <p class="error_msg"   ng-show="errorcontact.email"  >Enter your email id</p>
+                    <input type="text" class="input1" placeholder="Name*" only-letters-input ng-model="contact.fname" >
+                    <p class="error_msg" ng-show="errorcontact.name && !contact.fname">Enter your name</p>
+                    <input type="text"  only-number-input max-length="15" class="input1" placeholder="Phone Number*" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);" >
+                    <p class="error_msg"ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                    <p class="error_msg"ng-show="focusOutPhone && invalidPhoneNumber">Enter valid phone number</p>
+                    <input type="email" name="email" class="input1" placeholder="Email ID*"  ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;" >
+                    <p class="error_msg"   ng-show="errorcontact.email && !contact.email">Enter your email id</p>
+                    <p class="error_msg"   ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
                     <textarea class="textarea1" placeholder="Message" ng-model="contact.message"></textarea>
                     <button class="submit_button1" ng-click="toContact('SkylarkDasos');">
                         <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
@@ -464,65 +489,65 @@
             </div>
         </section>
     </div>
-    <section class="footer" id="dynamic_footer">
-    </section>
+    <footer class="footer" id="dynamic_footer">
+    </footer>
     <div class="floor_plan_container1">
-    <div class="floor_plan_container">
-        <img src="images/close.svg" alt="close icon" class="close_icon close_floor_plan">
-        <div class="images_carousel_container">
-            <div class="slider-for">
-                <img src="images/img1.png" alt="">
-                <img src="images/img5.jpg" alt="">
-                <img src="images/img3.jpg" alt="">
-                <img src="images/img4.jpg" alt="">
-                <img src="images/img5.jpg" alt="">
-                <img src="images/img6.jpg" alt="">
-                <img src="images/img7.jpg" alt="">
-                <img src="images/img8.jpg" alt="">
-
-            </div>
-
-            <div class="slider-nav">
-                <img src="images/thumb_icon.png" alt="">
-                <img src="images/thumb_icon.png" alt="">
-                <img src="images/thumb_icon.png" alt="">
-                <img src="images/thumb_icon.png" alt="">
-                <img src="images/thumb_icon.png" alt="">
-                <img src="images/thumb_icon.png" alt="">
-                <img src="images/thumb_icon.png" alt="">
-                <img src="images/thumb_icon.png" alt="">
+        <div class="floor_plan_container">
+            <img src="images/close.svg" alt="close icon" class="close_icon close_floor_plan">
+            <div class="images_carousel_container">
+                <div class="slider-for">
+                    <img src="images/img1.png" alt="">
+                    <img src="images/img5.jpg" alt="">
+                    <img src="images/img3.jpg" alt="">
+                    <img src="images/img4.jpg" alt="">
+                    <img src="images/img5.jpg" alt="">
+                    <img src="images/img6.jpg" alt="">
+                    <img src="images/img7.jpg" alt="">
+                    <img src="images/img8.jpg" alt="">
+                </div>
+                <div class="slider-nav">
+                    <img src="images/thumb_icon.png" alt="">
+                    <img src="images/thumb_icon.png" alt="">
+                    <img src="images/thumb_icon.png" alt="">
+                    <img src="images/thumb_icon.png" alt="">
+                    <img src="images/thumb_icon.png" alt="">
+                    <img src="images/thumb_icon.png" alt="">
+                    <img src="images/thumb_icon.png" alt="">
+                    <img src="images/thumb_icon.png" alt="">
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <!--lead form popup starts here-->
     <div class="lead_form_popup_container">
         <div class="lead_form_popup">
-            <img src="images/close.svg" alt="close icon" class="close_icon">
+            <img src="images/close.svg" alt="close icon" class="close_icon" ng-click="clearContact();">
             <h1 class="lead_form_hdr">Send Details to know more</h1>
             <form>
                 <div class="form_row1">
                     <label>Name*</label>
-                    <input type="text" placeholder="John" ng-model="contact.name">
-                    <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
+                    <input type="text" only-letters-input placeholder="John" ng-model="contact.fname">
+                    <p class="error_msg1" ng-show="errorcontact.name && !contact.fname">Enter your name</p>
                 </div>
 
                 <div class="form_row1">
                     <label>Phone Number*</label>
-                    <input type="text" placeholder="+91 9916357893" ng-model="contact.mobileNumber">
-                    <p class="error_msg1"ng-show="errorcontact.phone">Enter phone number</p>
+                    <input type="text" only-number-input placeholder="+91 9916357893" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);">
+                    <p class="error_msg1" ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                    <p class="error_msg1" ng-show="focusOutPhone && invalidPhoneNumber">Enter valid phone number</p>
                 </div>
                 <div class="form_row1">
                     <label>Email ID*</label>
-                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)">
-                    <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your email id</p>
+                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;">
+                    <p class="error_msg1" ng-show="errorcontact.email && !contact.email">Enter your email id</p>
+                    <p class="error_msg1" ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
                 </div>
                 <div class="form_row1">
                     <label>Message</label>
                     <textarea ng-model="contact.message">
                     </textarea>
                 </div>
-                <button class="submit_button1" ng-click="toContact('FromProjectPage');">
+                <button class="submit_button1" ng-click="toContact('LandingPage');">
                     <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
                     <span ng-show="!processing">SUBMIT</span>
                 </button>
@@ -532,7 +557,6 @@
     </div>
     <!--lead form popup ends here-->
 </div>
-<!--<script type="text/javascript" src="https://emicalculator.net/wp-content/themes/emicalculator/dist/scripts/loancalculator.js?x61264"></script>-->
 <script type="text/javascript" src="js/slick.js"></script>
 <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
 <link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
@@ -544,19 +568,14 @@
             $(this).toggleClass('opened');
             $('.main_menu').toggleClass('display_block');
         });
-
-
         $('.brochure_dwnld,.enquire_btn').click(function(){
             $('.lead_form_popup_container').css('display','block');
             $('body ').css('overflow','hidden');
         });
-
         $('.close_icon').click(function(){
             $('.lead_form_popup_container').css('display','none');
             $('body').css('overflow','auto');
         });
-
-
         //for autoplaying the youtube video when its come to view
         var iframe = document.getElementById("autoplay-video"),
             disableAutoPlay = false;
@@ -575,50 +594,36 @@
                 }
             }
         });
-        // $(iframe).on("mouseleave", function () {
-        //     disableAutoPlay = true;
-        // });
-
-
         window.addEventListener("scroll", function (event) {
             var scroll = this.scrollY,
                 left = this.scrollX;
             var distance = $('#overview').offset().top  - nav_height - nav_height1,
                 $window = $(window);
             if ( $window.scrollTop() >= distance ) {
-
                 $(".submenu_container").addClass('slideInDown');
                 $(".submenu_container").css("position","fixed");
                 $(".submenu_container").css("margin-top","0");
             }
             if ( $window.scrollTop() < distance ) {
-
                 $(".submenu_container").removeClass('slideInDown');
-                // $(".submenu_container").addClass('slideInDown');
                 $(".submenu_container").css("position","absolute");
                 $(".submenu_container").css("margin-top","-52px");
             }
-
         }, false);
-
         var sections = $('.sec'),
             nav = $('nav'),
             nav1 = $('.submenu_container'),
             nav_height = nav.outerHeight();
-            nav_height1 = nav1.outerHeight();
+        nav_height1 = nav1.outerHeight();
         $(window).on('scroll', function () {
             var cur_pos = $(this).scrollTop();
-
             sections.each(function() {
                 var top = $(this).offset().top - nav_height - nav_height1 - 10 ,
                     bottom = top + $(this).outerHeight();
-
                 if (cur_pos >= top && cur_pos <= bottom) {
                     nav.find('a').removeClass('active');
                     sections.removeClass('active');
-
                     $(this).addClass('active');
-
                     nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
                     if(window.innerWidth<1024) {
                         $("#menutitle").text($('.active .hdr').text());
@@ -634,36 +639,34 @@
             }, 500);
             return false;
         });
-        $(".first_section").click(function () {
-            $('html, body').animate({
-                //mention first section id name here eg:#overview
-                scrollTop: $("#overview").offset().top  - nav_height - nav_height1
-            }, 2000);
-        });
-        $(".last_section").click(function () {
-            $('html, body').animate({
-                //mention last section id name here eg:#development_photo
-                scrollTop: $("#development_photo").offset().top  - nav_height - nav_height1
-            }, 2000);
-
-        });
+        // $(".first_section").click(function () {
+        //     $('html, body').animate({
+        //         //mention first section id name here eg:#overview
+        //         scrollTop: $("#overview").offset().top  - nav_height - nav_height1
+        //     }, 2000);
+        // });
+        // $(".last_section").click(function () {
+        //     $('html, body').animate({
+        //         //mention last section id name here eg:#development_photo
+        //         scrollTop: $("#development_photo").offset().top  - nav_height - nav_height1
+        //     }, 2000);
+        //
+        // });
         //mention last section id name here eg:#development_photo
-        var $curr = $( "#development_photo" );
-
+        var curr = $( "#development_photo" );
         $( ".prev_section" ).click(function() {
-            $curr = $curr.prev();
-            console.log(" $curr", $curr);
+            curr = curr.prev();
+            console.log(" $curr", curr);
             $('html, body').animate({
-                scrollTop: $curr.offset().top
-            }, 1000);
+                scrollTop: curr.offset().top
+            }, 200);
         });
         $( ".next_section" ).click(function() {
-            $curr = $curr.next();
+            next = curr.next();
             $('html, body').animate({
-                scrollTop: $curr.offset().top
-            }, 1000);
+                scrollTop: next.offset().top
+            }, 200);
         });
-
         $('.slider-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -678,15 +681,18 @@
             centerMode: false,
             focusOnSelect: true
         });
-
         $('.carousel img').click(function() {
             $('.floor_plan_container1').css('display', 'block');
             $('body').css('overflow', 'hidden');
         });
-
         $('.close_floor_plan').click(function() {
             $('.floor_plan_container1').css('display', 'none');
             $('body').css('overflow', 'auto');
+        });
+        $("a").on("click touchend", function(e) {
+            var el = $(this);
+            var link = el.attr("href");
+            window.location = link;
         });
     });
 </script>

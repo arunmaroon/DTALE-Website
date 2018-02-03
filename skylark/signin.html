@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Signin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,7 +40,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
             <script src="js/controller.js"></script>
             <div class="signup_page_container2" ng-app="skylarkApp" ng-controller="signInController">
-                <img src="images/close.svg" alt="close icon" class="close_icon1" ng-click="toHome();">
+                <img src="images/close.svg" alt="close icon" class="close_icon1" ng-click="goBack();">
                 <form class="signin_form">
                     <h1 class="signup_hdr">
                         <span class="signup_hdr_span3"><a href="signup.html">SIGN UP</a></span><span class="signup_hdr_span2">or</span><span class="signup_hdr_span1">sign in</span>
@@ -54,11 +54,14 @@
                     <div class="form_div1 for_width">
                         <label>Password</label>
                         <input type="password" placeholder="Enter your password" ng-model="signInObj.password">
-                        <p class="error_msg1" ng-show="signInError.password">Enter Password</p>
-                        <p class="error_msg1" ng-show="showLoginError">{{errorMsg}}</p>
+                        <p class="error_msg1" ng-show="signInError.password && !signInObj.password">Enter Password</p>
+                        <p class="error_msg1" ng-show="showLoginError" style="margin-top:15px; ">{{errorMsg}}</p>
                     </div>
 
-                    <button class="signin_btn" ng-click="signIn();">SIGN IN</button>
+                    <button class="signin_btn" ng-click="signIn();">
+                        <span ng-show="!signinLoader">SIGN IN</span>
+                        <img src="images/loader.gif" alt="Loader" ng-show="signinLoader" class="loader">
+                    </button>
                     <p class="forgot_password"><a href="reset_password.html">Forgot password?</a></p>
                 </form >
 

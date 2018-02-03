@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Skylark Mansions - Premium Residential Projects in Bangalore</title>
     <meta name="description" content="Buy 2 bhk flats in Bangalore, 3 bhk flats in Bangalore, 4 bhk and 5 bhk Flats, Penthouses and Villas in Bangalore at the best of localities with world class amenities.  Enquire now">
+    <meta name="keywords" content="house for sale in bangalore,villas in bangalore,apartments in bangalore,flats in bangalore,villas for sale in bangalore,2 bhk flat for sale in bangalore,2 bhk flat in bangalore,3 bhk flat for sale in bangalore,1 bhk flat in bangalore,1 bhk in bangalore">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/landingpage.css">
 
@@ -50,9 +51,9 @@
                 <li>
                     <a href="">ABOUT</a>
                 </li>
-                <li>
-                    <a href="">BLOG</a>
-                </li>
+                <!--<li>-->
+                    <!--<a href="">BLOG</a>-->
+                <!--</li>-->
             </ul>
             <div class="logo">
                 <a href="index.html">
@@ -64,6 +65,9 @@
                 </li>
                 <li >
                     <a href="signup.html">SIGN UP</a>
+                </li>
+                <li>
+                    <a href="signin.html">SIGN IN</a>
                 </li>
                 <!--<li class="user_details" style="display: none">-->
                 <!--<div class="user_name">GK</div>-->
@@ -100,12 +104,15 @@
                 <div class="hero_container3a" >
                     <h3 class="form_hdr">Send Details to know more</h3>
                     <form class="skylark_lead_form">
-                        <input type="text" class="input1" placeholder="Name*" ng-model="contact.fname">
-                        <p class="error_msg2" ng-show="errorcontact.name">Enter your name</p>
-                        <input type="text" class="input1" placeholder="Phone Number*" ng-model="contact.phone">
-                        <p class="error_msg2" ng-show="errorcontact.phone">Enter phone number</p>
-                        <input type="email" class="input1" placeholder="Email ID*" ng-model="contact.email" ng-change="validateEmail(contact.email)" >
-                        <p class="error_msg2"   ng-show="errorcontact.email"  >Enter your email id</p>
+                        <input type="text"  only-letters-input class="input1" placeholder="Name*" ng-model="contact.fname">
+                        <p class="error_msg2"  ng-show="errorcontact.name && !contact.fname">Enter your name</p>
+                        <input type="text" class="input1"  only-number-input placeholder="+91 9916357893" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);">
+                        <p class="error_msg2"ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                        <p class="error_msg2"ng-show="focusOutPhone && invalidPhoneNumber">Enter valid phone number</p>
+
+                        <input type="email" class="input1" placeholder="Email ID*" ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;">
+                        <p class="error_msg2"    ng-show="errorcontact.email && !contact.email"  >Enter your email id</p>
+                        <p class="error_msg2"   ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
                         <textarea class="textarea1" placeholder="Message" ng-model="contact.message"></textarea>
                         <!--<button class="submit_button1">SUBMIT</button>-->
                         <button class="submit_button1" ng-click="toContact('Project');">
@@ -114,11 +121,8 @@
                         </button>
                     </form>
                 </div>
-
             </div>
         </div>
-
-
     </section>
     <section class="skylark_project_container parallax ">
 
@@ -171,7 +175,7 @@
                     <div class="project_details_container1">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">1, 2 and 3 BHK & Penthouses</p>
+                            <p class="project_details1_para">Type: 1, 2, 2.5, 3 BHK & Penthouses</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
@@ -203,9 +207,9 @@
             <div class="project_container2 ">
                 <h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">
                     <span class="projectname_hdr_span1">03</span>
-                    <span class="projectname_hdr_span2">/ Skylark Arcadia Phase II</span>
+                    <span class="projectname_hdr_span2">/ Skylark Arcadia II</span>
                 </h1>
-                <h2 class="project_name wow animated fadeInUp" data-wow-delay="200ms">Skylark Arcadia Phase II</h2>
+                <h2 class="project_name wow animated fadeInUp" data-wow-delay="200ms">Skylark Arcadia II</h2>
                 <div class="project_details wow animated fadeInUp" data-wow-delay="400ms">
                     <div class="project_details_container1">
                         <div class="project_details1">
@@ -245,9 +249,9 @@
             <div class="project_container2 ">
                 <h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">
                     <span class="projectname_hdr_span1">01</span>
-                    <span class="projectname_hdr_span2">/Skylark Arcadia</span>
+                    <span class="projectname_hdr_span2">/Skylark Arcadia II</span>
                 </h1>
-                <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Arcadia</h2>
+                <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Arcadia II</h2>
                 <div class="project_details wow animated fadeInUp" data-wow-delay="400ms">
                     <div class="project_details_container1">
                         <div class="project_details1">
@@ -402,7 +406,7 @@
                     <div class="project_details_container1">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">T1, 2 and 3BHK apartments</p>
+                            <p class="project_details1_para">1, 2 and 3BHK apartments</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
@@ -435,7 +439,7 @@
                     <div class="project_details_container1">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Type :</h4>
-                            <p class="project_details1_para">1, 2, 2.5, 3 BHK & Penthouses</p>
+                            <p class="project_details1_para">Luxury Apartments</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
@@ -445,7 +449,7 @@
                     <div class="project_details_container2">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Location :</h4>
-                            <p class="project_details1_para">Medahalli-Belathur Road</p>
+                            <p class="project_details1_para">Richmond Road</p>
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Project Area:</h4>
@@ -466,25 +470,27 @@
                 <form class="landing_page_form">
                     <div class="landing_page_form_container1">
                         <label>Name*</label>
-                        <input type="text" placeholder="John" ng-model="contact.fname">
-                        <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
+                        <input type="text" only-letters-input placeholder="John" ng-model="contact.fname">
+                        <p class="error_msg1" ng-show="errorcontact.name && !contact.fname">Enter your name</p>
                     </div>
                     <div class="landing_page_form_container1">
                         <label>Phone Number*</label>
-                        <input type="text" placeholder="+91 9916357893" ng-model="contact.phone">
-                        <p class="error_msg1"ng-show="errorcontact.phone">Enter phone number</p>
+                        <input type="text" only-number-input placeholder="+91 9916357893" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);">
+                        <p class="error_msg1"ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                        <p class="error_msg1"ng-show="focusOutPhone && invalidPhoneNumber">Enter valid phone number</p>
                     </div>
                     <div class="landing_page_form_container1">
                         <label>Email ID*</label>
-                        <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)">
-                        <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your email id</p>
+                        <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;">
+                        <p class="error_msg1"   ng-show="errorcontact.email && !contact.email">Enter your email id</p>
+                        <p class="error_msg1"   ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
                     </div>
                     <div class="landing_page_form_container1">
                         <label>Message</label>
                         <textarea name="" id="" >
                      </textarea>
                     </div>
-                    <button class="submit_button1" ng-click="toContact('FromLandingPage');">
+                    <button class="submit_button1" ng-click="toContact('FromProjectsPage');">
                         <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
                         <span ng-show="!processing">SUBMIT</span>
                     </button>
@@ -492,40 +498,40 @@
             </div>
         </section>
     </section>
-    <section class="footer" id="dynamic_footer">
-    </section>
+    <footer class="footer" id="dynamic_footer">
+    </footer>
     <!--lead form popup starts here-->
     <div class="lead_form_popup_container">
         <div class="lead_form_popup">
-            <img src="images/close.svg" alt="close icon" class="close_icon">
+            <img src="images/close.svg" alt="close icon" class="close_icon" ng-click="clearContact();">
             <h1 class="lead_form_hdr">Send Details to know more</h1>
             <form>
                 <div class="form_row1">
                     <label>Name*</label>
-                    <input type="text" placeholder="John" ng-model="contact.name">
-                    <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
+                    <input type="text" only-letters-input placeholder="John" ng-model="contact.fname">
+                    <p class="error_msg1" ng-show="errorcontact.name && !contact.fname">Enter your name</p>
                 </div>
-
                 <div class="form_row1">
                     <label>Phone Number*</label>
-                    <input type="text" placeholder="+91 9916357893" ng-model="contact.mobileNumber">
-                    <p class="error_msg1"ng-show="errorcontact.phone">Enter phone number</p>
+                    <input type="text" only-number-input placeholder="+91 9916357893" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);">
+                    <p class="error_msg1"ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                    <p class="error_msg1"ng-show="focusOutPhone && invalidPhoneNumber">Enter valid phone number</p>
                 </div>
                 <div class="form_row1">
                     <label>Email ID*</label>
-                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)">
-                    <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your email id</p>
+                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;">
+                    <p class="error_msg1"   ng-show="errorcontact.email && !contact.email">Enter your email id</p>
+                    <p class="error_msg1"   ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
                 </div>
                 <div class="form_row1">
                     <label>Message</label>
                     <textarea ng-model="contact.message">
                     </textarea>
                 </div>
-                <button class="submit_button1" ng-click="toContact('FromProjectPage');">
+                <button class="submit_button1" ng-click="toContact('FromProjectsPage');">
                     <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
                     <span ng-show="!processing">SUBMIT</span>
                 </button>
-
             </form>
         </div>
     </div>
@@ -543,7 +549,6 @@
             $('.lead_form_popup_container').css('display', 'block');
             $(body).css('overflow', 'hidden');
         });
-
         $('.close_icon').click(function() {
             $('.lead_form_popup_container').css('display', 'none');
             $(body).css('overflow', 'auto');
@@ -565,6 +570,12 @@
             scrollContainer: null
         });
         wow.init();
+        $("a").on("click touchend", function(e) {
+            var el = $(this);
+            var link = el.attr("href");
+            window.location = link;
+
+        });
     });
 </script>
 

@@ -29,6 +29,12 @@ html {
     font-family:Antonio-Light;
     src: url(../fonts/Antonio-Light.ttf);
 }
+.nav_list1 li a{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 70px;
+}
 #project_menu li a{
     display: block;
     height: 100%;
@@ -37,8 +43,22 @@ html {
 #project_menu li .active{
     border-bottom:4px solid #232323;
 }
+textarea{
+    padding-top: 10px !important;
+}
 #project_menu li a:hover{
     border-bottom:4px solid #232323;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.footer_container3b p a:hover{
+    border-bottom:1px solid #000000;
+}
+textarea{
+    color:#000000 !important;
 }
 .call_us{
     font-family:Antonio-Light;
@@ -1135,6 +1155,9 @@ option[value=””][disabled] {
     color:#222222;
     line-height: 1;
 }
+.color_black{
+    color: #000000 !important;
+}
 .referral_form1 input{
     width: 366px;
     height: 54px;
@@ -1679,13 +1702,13 @@ option[value=””][disabled] {
     width:600px;
 }
 .skylark_achievements_para{
-    font-family:AvenirNext-Regular;
-    font-size: 1.5rem;
+    font-family: AvenirNext-Regular;
+    font-size: 1.25rem;
     line-height: 1.5;
     letter-spacing: 0.025em;
-    color:#666666;
-    width:600px;
-    margin-top: 75px;
+    color: #666666;
+    width: 600px;
+    margin-top: 50px;
 }
 .achievements_list{
     margin-top: 75px;
@@ -1849,7 +1872,7 @@ option[value=””][disabled] {
 .project_details1_para{
     font-family:AvenirNext-Regular;
     font-size: 1.125rem;
-    line-height: 1;
+    line-height: 1.2;
     letter-spacing: 0.025em;
     color:#666666;
     margin-top:8px;
@@ -1914,7 +1937,7 @@ option[value=””][disabled] {
     margin-top: 115px;
 }
 .last_li{
-    background-image: url(../images/more_projects.png);
+    background-image: url(../images/project.png);
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -2979,15 +3002,9 @@ option[value=””][disabled] {
     -moz-box-shadow: 0 0 208px rgba(0,0,0,.15);
     box-shadow: 0 0 208px rgba(0,0,0,.15);
     padding: 50px;
-    /*display: flex;
-    */
-    /*display: -webkit-flex;
-    */
-    /*align-items: center;
-    */
     position: sticky;
     position: -webkit-sticky;
-    top:150px;
+    top: 115px;
 }
 .skylark_customer_name{
     font-family:AvenirNext-DemiBold;
@@ -3046,7 +3063,7 @@ option[value=””][disabled] {
     padding: 50px;
     position: sticky;
     position: -webkit-sticky;
-    top:150px;
+    top: 115px;
 }
 .skylark_feed_container{
     width:1720px;
@@ -3249,9 +3266,7 @@ option[value=””][disabled] {
     .hero_container {
         width: 1400px;
     }
-    .project_page_hdr{
-        padding-left: 60px;
-    }
+
     .hero_container4{
         margin-left: 45px;
     }
@@ -3585,9 +3600,7 @@ option[value=””][disabled] {
     .hero_container {
         width: 1360px;
     }
-    .project_page_hdr{
-        padding-left: 60px;
-    }
+
     .hero_container4{
         margin-left: 45px;
     }
@@ -4212,9 +4225,7 @@ option[value=””][disabled] {
         width: 1088px;
         padding-top: 225px;
     }
-    .project_page_hdr{
-        padding-left: 40px;
-    }
+
     .hero_container4{
         margin-left: 45px;
     }
@@ -4499,11 +4510,11 @@ option[value=””][disabled] {
         font-size: 3.6rem;
     }
     .hero_container3a {
-        padding: 40px;
-        width: 385px;
+        padding: 30px;
+        width: 350px;
     }
     .form_hdr {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .form_hdr::after {
         width: 112px;
@@ -4807,9 +4818,7 @@ option[value=””][disabled] {
         width: 1088px;
         padding-top: 225px;
     }
-    .project_page_hdr{
-        padding-left: 40px;
-    }
+
     .hero_container4{
         margin-left: 45px;
     }
@@ -5131,8 +5140,6 @@ option[value=””][disabled] {
         margin-top: 28px;
     }
     .projects_hero_section1 {
-        /*margin-top: -50px;
-        */
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -6513,6 +6520,15 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size(max-width:1023px) ================================================*/
 @media(max-width:1023px){
+    .hero_section video {
+        object-fit: cover;
+    }
+    .nav_list1 li a {
+        /* display: inline-block; */
+        height: 100%;
+        vertical-align: middle;
+        line-height: normal;
+    }
     .logo_mobile {
         display: block;
         float: left;
@@ -6819,6 +6835,15 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size(min-width:768px) ================================================*/
 @media (max-width:767px){
+    .hero_container3a{
+        display: none;
+    }
+    .loader {
+        display: block;
+        height: 20px;
+        width: 20px;
+        margin: 0 auto;
+    }
     .signup_page_container1{
         display: none;
     }
@@ -6836,6 +6861,10 @@ option[value=””][disabled] {
     }
     .user_profile_on_referral_page{
         display: none;
+    }
+    .contact_us_container2 h3 {
+        font-size: 1.25rem;
+        margin-top: 50px;
     }
 }
 /*==============================================for screen size (min-width:600px) and (max-width:767px) ================================================*/
@@ -7538,9 +7567,7 @@ option[value=””][disabled] {
     .project_page_hdr_span2{
         display: inline;
     }
-    .projects_hero_section1 {
-        height: 816px;
-    }
+
 }
 /*==============================================for screen size >=500px and <+ 599px ================================================*/
 @media (min-width:500px) and (max-width:599px) {
@@ -8028,9 +8055,7 @@ option[value=””][disabled] {
     .project_page_hdr_span2{
         display: inline;
     }
-    .projects_hero_section1 {
-        height: 816px;
-    }
+
     .hero_container {
         width: 468px!important;
         display: block;
@@ -8237,6 +8262,12 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size >=425px and <+ 499px ================================================*/
 @media (min-width:425px) and (max-width:499px) {
+    .skylark_dasos img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+    }
     .amenities li {
         width: 170px;
         height: 235px;
@@ -8741,9 +8772,7 @@ option[value=””][disabled] {
     .project_page_hdr_span2{
         display: inline;
     }
-    .projects_hero_section1 {
-        height: 816px;
-    }
+
     .hero_container {
         width: 380px!important;
         display: block;
@@ -8953,7 +8982,12 @@ option[value=””][disabled] {
 }
 /*==============================================for screen size <=424px================================================*/
 @media (max-width:424px) {
-
+    .skylark_dasos,.landing_page_btn_container{
+    margin-top: 0;
+    }
+    .project_page_hdr {
+        padding-left: 10px;
+    }
     .close_icon {
         float: right;
         margin-right: 0;
@@ -9215,9 +9249,13 @@ option[value=””][disabled] {
     .hero_section{
         background-size: cover;
         background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
     .landing_page_hdr{
-        padding-top: 50px;
+        padding-top: 0;
+        margin-top: -70px;
     }
     .hero_section_span1{
         font-size:2rem;
@@ -9452,6 +9490,7 @@ option[value=””][disabled] {
     }
     .lead_form_hdr {
         font-size: 0.8rem;
+        display: inline-block;
     }
     .lead_form_popup form {
         margin-top: 10px;
@@ -9517,9 +9556,7 @@ option[value=””][disabled] {
     .project_page_hdr_span2{
         display: inline;
     }
-    .projects_hero_section1 {
-        height: 816px;
-    }
+
     .hero_container {
         width: 380px!important;
         display: block;

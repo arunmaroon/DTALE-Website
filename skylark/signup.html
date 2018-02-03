@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Skylark-Royaume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,37 +39,37 @@
                 </h3>
             </div>
             <div class="signup_page_container2">
-                <img src="images/close.svg" alt="close icon" class="close_icon1" ng-click="toHome();">
+                <img src="images/close.svg" alt="close icon" class="close_icon1" ng-click="goBack();">
                 <form>
                     <h1 class="signup_hdr">
                         <span class="signup_hdr_span1">SIGN UP</span><span class="signup_hdr_span2">or</span><span class="signup_hdr_span3"><a href="signin.html">sign in</a></span>
                     </h1>
                     <div class="form_div1">
                         <label>Name</label>
-                        <input type="text" placeholder="John" ng-model="signUpObj.fname">
-                        <p class="error_msg1" ng-show="errorField.fname">Enter First Name</p>
+                        <input type="text" only-letters-input placeholder="John" ng-model="signUpObj.fname">
+                        <p class="error_msg1" ng-show="errorField.fname && !signUpObj.fname">Enter First Name</p>
                     </div>
                     <div class="form_div1">
                         <label>Surname</label>
-                        <input type="text" placeholder="Williamson" ng-model="signUpObj.lname">
+                        <input type="text" only-letters-input placeholder="Williamson" ng-model="signUpObj.lname">
                     </div>
                     <div class="form_div1">
                         <label>Email ID</label>
-                        <input type="text" placeholder="john@gmail.com" ng-class="{'valid_field':!invalidEmail,'invalid_field':invalidEmail && isEmailChanged }" ng-model="signUpObj.email" ng-change="isEmailChanged=true; validateEmail(signUpObj.email)">
-                        <p class="error_msg1" ng-show="errorField.validEmail">Enter Valid Email ID</p>
-                        <p class="error_msg1" ng-show="errorField.email" >Enter Email ID</p>
+                        <input type="text" placeholder="john@gmail.com" ng-class="{'valid_field':!invalidEmail,'invalid_field':invalidEmail && focusOut }" ng-model="signUpObj.email" ng-change="validateEmail(signUpObj.email)" ng-blur="focusOut=true">
+                        <p class="error_msg1" ng-show="invalidEmail && focusOut">Enter Valid Email ID</p>
+                        <p class="error_msg1" ng-show="errorField.email && !signUpObj.email">Enter Email ID</p>
                     </div>
                     <div class="form_div1">
                         <label>Phone Number</label>
-                        <input type="text" placeholder="+91 9916357893" ng-model="signUpObj.phone">
-                        <p class="error_msg1" ng-show="errorField.phone">Enter Phone No</p>
-                        <p class="error_msg1" ng-show="errorField.validPhone">Enter Valid Phone No</p>
+                        <input type="text" only-number-input placeholder="+91 9916357893" ng-model="signUpObj.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(signUpObj.phone);">
+                        <p class="error_msg1" ng-show="errorField.phone && !signUpObj.phone">Enter Phone No</p>
+                        <p class="error_msg1" ng-show="invalidPhoneNumber && focusOutPhone">Enter Valid Phone No</p>
                     </div>
                     <div class="form_div1">
                         <label>Password</label>
-                        <input type="password" placeholder="Enter your password" ng-model="signUpObj.password" ng-change="passwordValidator(signUpObj.password)">
-                        <p class="error_msg1" ng-show="errorField.password">Enter password</p>
-                        <p class="error_msg1" ng-show="pswdVerifier">Password must be 8-20 character</p>
+                        <input type="password" placeholder="Enter your password" ng-model="signUpObj.password" ng-change="passwordValidator(signUpObj.password)" ng-blur="focusPasswordOut=true">
+                        <p class="error_msg1" ng-show="errorField.password && !signUpObj.password">Enter password</p>
+                        <p class="error_msg1" ng-show="pswdVerifier && focusPasswordOut">Password must be 8-20 character</p>
                     </div>
                     <div class="form_div1">
                         <label>Repeat Password</label>
@@ -79,18 +79,21 @@
                     <div class="form_div1">
                         <label>Residing</label>
                         <div class="select_project">
-                            <select ng-model="signUpObj.residing" ng-options="val as val for val in projectList">
+                            <select ng-model="signUpObj.residing" ng-class="{'color_black':changeTrue}" ng-change="changeTrue=true" ng-options="val as val for val in projectList">
                                 <option disabled value="">Select Project</option>
                             </select>
                         </div>
-                        <p class="error_msg1" ng-show="errorField.residing">Select Project</p>
+                        <p class="error_msg1" ng-show="errorField.residing && !signUpObj.residing">Select Project</p>
                     </div>
                     <div class="form_div1">
                         <label>House Number</label>
                         <input type="text" placeholder="#A101" ng-model="signUpObj.houseno">
-                        <p class="error_msg1" ng-show="errorField.houseno">Enter House No</p>
+                        <p class="error_msg1" ng-show="errorField.houseno && !signUpObj.houseno">Enter House No</p>
                     </div>
-                    <button class="sign_up_btn" ng-click="signUp();">SIGN UP</button>
+                    <button class="sign_up_btn" ng-click="signUp();">
+                       <span  ng-show="!signinLoader">SIGN UP</span>
+                        <img src="images/loader.gif" alt="Loader" ng-show="signinLoader" class="loader">
+                    </button>
                 </form >
             </div>
         </div>

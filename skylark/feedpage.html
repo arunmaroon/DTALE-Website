@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Skylark</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,7 +18,7 @@
         };
     </script>
 </head>
-<body>
+<body ng-app="skylarkApp" ng-controller="feedController">
 <div class="showbox">
     <div class="loader1">
         <svg class="circular" viewBox="25 25 50 50">
@@ -43,9 +43,9 @@
             <li>
                 <a href="">ABOUT</a>
             </li>
-            <li>
-                <a href="">BLOG</a>
-            </li>
+            <!--<li>-->
+                <!--<a href="">BLOG</a>-->
+            <!--</li>-->
         </ul>
         <div class="logo">
             <a href="index.html"><img src="images/skylark_logo.svg" alt="Skylark logo" class="main_logo"></a>
@@ -55,7 +55,10 @@
                 <a href="contact.html">CONTACT US</a>
             </li>
             <li>
-                <a href="signup.html">SIGNUP</a>
+                <a href="signup.html">SIGN UP</a>
+            </li>
+            <li>
+                <a href="signin.html">SIGN IN</a>
             </li>
         </ul>
     </nav>
@@ -71,7 +74,7 @@
     <button class="view_profile prof_btn">View profile</button>
     <button  class="view_profile refer_btn">Refer someone</button>
 </div>
-<section class="skylark_feed_container" ng-app="skylarkApp" ng-controller="feedController">
+<section class="skylark_feed_container" >
     <div class="user_profile  wow  fadeInDown" data-wow-delay="100ms" >
         <h3 class="skylark_customer_name" ng-hide="!fromLocal.firstname">{{fromLocal.firstname}} {{fromLocal.lastname}}</h3>
         <p class="customer_mailid" ng-hide="!fromLocal.emailid">{{fromLocal.emailid}}</p>
@@ -142,19 +145,23 @@
     <div class="referral_section wow  fadeInDown" data-wow-delay="100ms">
             <h3 class="referral_form_hdr">Referrals</h3>
          <form>
-            <input type="text" placeholder="Name" class="referral_section_input" ng-model="referral.fname">
-            <p class="error_msg" ng-show="errorReferral.fname">Enter Name</p>
-            <input type="text" placeholder="Email ID" class="referral_section_input" ng-class="{'error':invalidEmail && referral.email,'valid_field':!invalidEmail}" ng-model="referral.email" ng-change="validateEmail(referral.email)">
-            <p class="error_msg" ng-show="errorReferral.invalidEmail">Invalid Email ID</p>
-            <p class="error_msg" ng-show="errorReferral.email">Enter Email ID</p>
-            <input type="text" placeholder="Phone Number" class="referral_section_input" ng-model="referral.phone">
-            <p class="error_msg" ng-show="errorReferral.phone">Enter Phone No</p>
+             <input type="text" only-letters-input placeholder="Name" class="referral_section_input" ng-model="referral.fname">
+             <p class="error_msg" ng-show="errorReferral.fname && !referral.fname">Enter Name</p>
+             <input type="text" placeholder="Email ID" class="referral_section_input" ng-class="{'error':invalidEmail && focusOutEmail,'valid_field':!invalidEmail}" ng-model="referral.email" ng-change="validateEmail(referral.email)" ng-blur="focusOutEmail=true;">
+             <p class="error_msg" ng-show="invalidEmail && focusOutEmail">Invalid Email ID</p>
+             <p class="error_msg" ng-show="errorReferral.email && !referral.email">Enter Email ID</p>
+             <input type="text" only-number-input placeholder="Phone Number" class="referral_section_input" ng-model="referral.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(referral.phone);">
+             <p class="error_msg" ng-show="errorReferral.phone && !referral.phone">Enter Phone No</p>
+             <p class="error_msg" ng-show="invalidPhoneNumber && focusOutPhone && referral.phone">Enter valid Phone No</p>
             <select name="" id="" class="referral_section_select" ng-options="val as val for val in projectList" ng-model="referral.residing">
                 <option value="">Projects</option>
             </select>
             <p class="error_msg" ng-show="errorReferral.residing">Select Project</p>
             <p class="error_msg" ng-show="successReferral" style="margin-top: 15px;left: 50px;color: green">Referral sent successfully</p>
-            <button class="add" ng-click="sendReferral();">ADD</button>
+            <button class="add" ng-click="sendReferral();">
+                <span  ng-show="!processing">ADD</span>
+                <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
+                </button>
         </form>
     </div>
 </section>
@@ -165,23 +172,24 @@
         <form>
             <div class="form_row1">
                 <label>Name*</label>
-                <input type="text" placeholder="Name"  ng-model="referral.fname">
-                <p class="error_msg2" ng-show="errorReferral.fname">Enter Name</p>
+                <input type="text"  only-letters-input placeholder="Name"  ng-model="referral.fname">
+                <p class="error_msg2" ng-show="errorReferral.fname && !referral.fname">Enter Name</p>
             </div>
 
             <div class="form_row1">
                 <label>Email ID*</label>
-                <input type="text" placeholder="Email ID"  ng-class="{'error':invalidEmail && referral.email,'valid_field':!invalidEmail}" ng-model="referral.email" ng-change="validateEmail(referral.email)">
-                <p class="error_msg2" ng-show="errorReferral.invalidEmail">Invalid Email ID</p>
-                <p class="error_msg2" ng-show="errorReferral.email">Enter Email ID</p>
+                <input type="text" placeholder="Email ID"  ng-class="{'error':invalidEmail && focusOutEmail,'valid_field':!invalidEmail}" ng-model="referral.email" ng-change="validateEmail(referral.email)" ng-blur="focusOutEmail=true;">
+                <p class="error_msg2" ng-show="invalidEmail && focusOutEmail">Invalid Email ID</p>
+                <p class="error_msg2" ng-show="errorReferral.email && !referral.email">Enter Email ID</p>
             </div>
             <div class="form_row1">
                 <label>Phone*</label>
-                <input type="text" placeholder="Phone Number"  ng-model="referral.phone">
-                <p class="error_msg2" ng-show="errorReferral.phone">Enter Phone No</p>
+                <input type="text" only-number-input placeholder="Phone Number"  ng-model="referral.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(referral.phone);">
+                <p class="error_msg2" ng-show="errorReferral.phone && !referral.phone">Enter Phone No</p>
+                <p class="error_msg2" ng-show="invalidPhoneNumber && focusOutPhone && referral.phone">Enter valid Phone No</p>
             </div>
             <div class="form_row1">
-                <label>project*</label>
+                <label>Project*</label>
                 <select  ng-options="val as val for val in projectList" ng-model="referral.residing">
                     <option value="">Projects</option>
                 </select>
@@ -251,7 +259,11 @@
             scrollContainer: null
         });
         wow.init();
-
+        $("a").on("click touchend", function(e) {
+            var el = $(this);
+            var link = el.attr("href");
+            window.location = link;
+        });
     })
         </script>
 </body>

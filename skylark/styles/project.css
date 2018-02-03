@@ -86,6 +86,30 @@ ul{
         transform: translate3d(0, 0, 0);
     }
 }
+.activesubmenu{
+    border-bottom: 2px solid #ed1c24;
+}
+.cursor{
+    cursor: pointer;
+}
+.close_floor_plan{
+    margin-right: 0 !important;
+    position: relative;
+    z-index: 1;
+}
+.nav_list1 li a{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 70px;
+}
+.error_msg1 {
+    font-size: 0.875rem;
+    position: absolute;
+    right: 15px;
+    color: #ed1c24;
+    font-family: AvenirNext-Regular;
+}
 .mtop{
     margin-top: 0 !important;
 }
@@ -95,6 +119,9 @@ ul{
     right: 30px;
     color: #ed1c24;
     font-family: AvenirNext-Regular;
+}
+textarea{
+    color:#000000 !important;
 }
 #overview{
 background: #f3f3f3;
@@ -114,7 +141,7 @@ background: #f3f3f3;
 .container3{
     margin-top: 20px;
     width: calc(49% - 10px);
-    margin-top: 20px;
+
 }
 .submenu_container{
     margin-top: -52px;
@@ -123,7 +150,8 @@ background: #f3f3f3;
     display: block;
     width: 28px;
     height: 100%;
-    /* margin-left: -43px; */
+    margin-left: -43px;
+    margin-right: 43px;
     position: sticky;
     margin-top: 100px;
     top: 350px;
@@ -795,6 +823,9 @@ li {
 .footer_container3b{
     margin-top:38px;
 }
+.footer_container3b p a:hover{
+    border-bottom:1px solid #000000;
+}
 .footer_container3c{
     margin-top:35px;
     display:flex;
@@ -1368,6 +1399,12 @@ button{
     }
 }
 @media (max-width:768px){
+    .loader {
+        display: block;
+        height: 20px;
+        width: 20px;
+        margin: 0 auto;
+    }
     .container1 {
         display: flex;
         width: 100px;
@@ -1387,19 +1424,9 @@ button{
     }
 
     .sticky_form {
-        padding: 30px;
-        width: 362px;
         top: 112px;
-        position: sticky;
-        margin-top: 0;
         margin: 0 auto;
-        background: #ffffff;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        /* margin-right: 290px; */
-        border: 1px solid #ed1c24;
-        height: 466px;
+        height: auto;
     }
     .submit_button1 {
         width: 214px;
@@ -1607,6 +1634,7 @@ button{
     }
     .project_details_section{
         width: 100%;
+        padding: 25px;
     }
     .skylark_project_details_container{
         display: block;
@@ -1707,7 +1735,7 @@ button{
     }
     .project_details_section{
         width: 100%;
-        padding: 10px;
+        padding:0;
     }
     .skylark_project_details_container{
         display: block;
@@ -1775,6 +1803,15 @@ button{
 
 /*==============================================for screen size(max-width:1023px) ================================================*/
 @media(max-width:1023px){
+    .nav_list1 li a {
+        /* display: inline-block; */
+        height: 100%;
+        vertical-align: middle;
+        line-height: normal;
+    }
+    .error_msg1 {
+        font-size: 0.7rem;
+    }
     .enquiry_button_container{
         display: block;
     }
@@ -1788,6 +1825,7 @@ button{
     }
     .mobile_menu span {
         margin-right: 10px;
+        margin-left: 10px;
     }
     .contact_us_container p{
         font-size: 1.05rem;
@@ -1841,12 +1879,7 @@ button{
         display:block ;
         height: 52px;
     }
-    #menutitle{
-        line-height: 60px;
-        /*margin-left: 10px;
-        */
-        color:#ed5565;
-    }
+
     .submenu ul {
         display:none ;
         /*background: #ffffff;*/
@@ -1911,11 +1944,13 @@ button{
         float: right;
     }
     .mobile_menu {
-        width: 300px;
+        width: 270px;
         margin: 0 auto;
+        display: flex;
+        align-items: center;
     }
     #menutitle {
-
+        line-height: 50px;
         color: #ed5565;
         width: 203px;
         display: inline-block;
@@ -2042,6 +2077,9 @@ button{
     .hero_container {
         width: 80%;
     }
+    .mobile_menu i{
+        font-size: 2rem;
+    }
 }
 
 /*==============================================for screen size(min-width:1024px) ================================================*/
@@ -2063,12 +2101,9 @@ button{
         display: flex;
         width: 100px;
         justify-content: space-around;
-        /* height: 100%; */
-        /* margin-left: -43px; */
-        position: relative;
+         position: relative;
         margin-top: 38px;
-        position: relative;
-        overflow: auto;
+         overflow: auto;
         margin-bottom: -50px;
         top:0;
 
@@ -2079,6 +2114,9 @@ button{
     }
     .container3{
         width: 100%;
+    }
+    .header1 {
+        font-size: 1.1rem;
     }
 }
 @media (min-width: 1920px){

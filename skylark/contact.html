@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Contact us</title>
 
@@ -15,11 +14,9 @@
             setTimeout(function() {
                 $(".showbox").css("visibility", "hidden");
             }, 0);
-
         };
     </script>
 </head>
-
 <body>
 <div class="showbox">
     <div class="loader1">
@@ -45,9 +42,9 @@
                 <li>
                     <a href="">ABOUT</a>
                 </li>
-                <li>
-                    <a href="">BLOG</a>
-                </li>
+                <!--<li>-->
+                    <!--<a href="">BLOG</a>-->
+                <!--</li>-->
             </ul>
             <div class="logo">
                 <a href="index.html">
@@ -58,7 +55,10 @@
                     <a href="contact.html">CONTACT US</a>
                 </li>
                 <li>
-                    <a href="signup.html">SIGNUP</a>
+                    <a href="signup.html">SIGN UP</a>
+                </li>
+                <li>
+                    <a href="signin.html">SIGN IN</a>
                 </li>
             </ul>
         </nav>
@@ -86,18 +86,20 @@
                 <h3>Send Details to know more</h3>
                 <div class="contact_us_div1">
                     <label>Name*</label>
-                    <input type="text" placeholder="John" ng-model="contact.fname">
-                    <p class="error_msg1" ng-show="errorcontact.name">Enter your name</p>
+                    <input type="text" only-letters-input placeholder="John" ng-model="contact.fname">
+                    <p class="error_msg1" ng-show="errorcontact.name && !contact.fname">Enter your name</p>
                 </div>
                 <div class="contact_us_div1">
                     <label>Phone Number*</label>
-                    <input type="text" placeholder="+91 9916357893" ng-model="contact.phone">
-                    <p class="error_msg1" ng-show="errorcontact.phone">Enter phone number</p>
+                    <input type="text" only-number-input placeholder="+91 9916357893" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);">
+                    <p class="error_msg1"ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                    <p class="error_msg1"ng-show="focusOutPhone && invalidPhoneNumber  && contact.phone">Enter valid phone number</p>
                 </div>
                 <div class="contact_us_div1">
                     <label>Email ID*</label>
-                    <input type="email"  name="email" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)">
-                    <p class="error_msg1"   ng-show="errorcontact.email"  >Enter your email id</p>
+                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;">
+                    <p class="error_msg1"   ng-show="errorcontact.email && !contact.email">Enter your email id</p>
+                    <p class="error_msg1"   ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
                 </div>
                <div class="contact_us_div1">
                     <label>Message </label>
@@ -111,29 +113,10 @@
             </form>
         </div>
     </div>
-    <section class="footer" id="dynamic_footer">
-    </section>
+    <footer class="footer" id="dynamic_footer">
+    </footer>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6NAnCIgbpffq4baL20YQzdjrBm2Umijs&callback=myMap">-->
-<!--</script>-->
-<script>
-    // function myMap() {
-    //     var myCenter = new google.maps.LatLng(12.975537,77.615802);
-    //     var mapCanvas = document.getElementById("map");
-    //     var mapOptions = {center: myCenter, zoom: 15};
-    //     var map = new google.maps.Map(mapCanvas, mapOptions);
-    //     var marker = new google.maps.Marker({position:myCenter});
-    //     marker.setMap(map);
-    //
-    //     var infowindow = new google.maps.InfoWindow({
-    //         content: "Hello World!"
-    //     });
-    //     infowindow.open(map,marker);
-    // }
-</script>
-
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6NAnCIgbpffq4baL20YQzdjrBm2Umijs&callback=myMap"></script>-->
 <script>
     $(document).ready(function() {
         $("#dynamic_footer").load("footer.html");
@@ -150,20 +133,12 @@
             $(this).toggleClass('opened');
             $('.main_menu').toggleClass('display_block');
         });
-
+        $("a").on("click touchend", function(e) {
+            var el = $(this);
+            var link = el.attr("href");
+            window.location = link;
+        });
     });
-    // function initialize() {
-    //     var map = new google.maps.Map(document.getElementById('map'), {
-    //         center: {lat: 12.975537, lng: 77.615802},
-    //         zoom: 15,
-    //     });
-    //     var marker = new google.maps.Marker({
-    //
-    //         title:"Hello World!",
-    //         visible: true
-    //     });
-    //     marker.setMap(map);
-    // }
 </script>
 </body>
 </html>
