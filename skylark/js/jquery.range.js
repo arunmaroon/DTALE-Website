@@ -26,7 +26,7 @@
 	};
 	jRange.prototype = {
 		defaults: {
-			onstatechange: function() {},
+	  onstatechange: function() {},
       ondragend: function() {},
       onbarclicked: function() {},
 			isRange: false,

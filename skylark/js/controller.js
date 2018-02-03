@@ -1,22 +1,66 @@
 var app = angular.module('skylarkApp', []);
+(function() {
+    app.directive('onlyLettersInput', onlyLettersInput);
+    function onlyLettersInput() {
+        return {
+            require: 'ngModel',
+            link: function(scope, element, attr, ngModelCtrl) {
+                function fromUser(text) {
+                    var transformedInput = text.replace(/[^a-zA-Z]/g, '');
+                    if (transformedInput !== text) {
+                        ngModelCtrl.$setViewValue(transformedInput);
+                        ngModelCtrl.$render();
+                    }
+                    return transformedInput;
+                }
+                ngModelCtrl.$parsers.push(fromUser);
+            }
+        };
+    };
+})();
+(function() {
+    app.directive('onlyNumberInput', onlyLettersInput);
+    function onlyLettersInput() {
+        return {
+            require: 'ngModel',
+            link: function(scope, element, attr, ngModelCtrl) {
+                function fromUser(text) {
+                    var transformedInput = text.replace(/[^+ 0-9.]/g,'');
+                    if (transformedInput !== text) {
+                        ngModelCtrl.$setViewValue(transformedInput);
+                        ngModelCtrl.$render();
+                    }
+                    return transformedInput;
+                }
+                ngModelCtrl.$parsers.push(fromUser);
+            }
+        };
+    };
+})();
 app.controller('signUpController', function($scope,$http,$filter,$timeout) {
     console.log("Controller loading");
-    const baseUrl = "http://localhost:8080/";
-    const baseUrlWeb = "http://localhost/skylark-website/";
-    /*const baseUrl = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/";
-    const baseUrlWeb = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/skylark-website/";*/
+    /*const baseUrl = "http://localhost:8080/";
+    const baseUrlWeb = "http://localhost/skylark-website/";*/
+    const baseUrl = "http://34.236.8.175:8080/";
+    const baseUrlWeb = "http://34.236.8.175/";
 
-    //============= Sign up call & validation =========================
+    //============= Sign up call & validation =========================+
+    $scope.goBack=function () {
+        window.history.back();
+    };
     $scope.signUpObj={};
     $scope.signUpObj.residing="";
     $scope.projectList=["Skylark Royaume","Skylark Ithaca","Skylark Arcadia"];
     $scope.signUp = function(){
         if (!validationSignupData())
             return;
+        $scope.signinLoader=true;
         const jsonToSend= angular.toJson($scope.signUpObj);
         $http({ method: 'POST', url: baseUrl+"signup",data: jsonToSend }).then(function (res){
-             window.location.href=baseUrlWeb+"Signup_success.html";
+            $scope.signinLoader=false;
+             window.location.href="Signup_success.html";
         }, function (res) {
+            $scope.signinLoader=false;
             $scope.signUpObj={};
             $scope.invalidEmail=true;
             $scope.reVerify=false;
@@ -44,11 +88,6 @@ app.controller('signUpController', function($scope,$http,$filter,$timeout) {
             $scope.errorField.phone = true;
             varToReturn=false;
         }
-        if ($scope.signUpObj.phone && !/^\+?(\d{8,12})$/.test($scope.signUpObj.phone)){
-            $scope.errorField.phone = false;
-            $scope.errorField.validPhone = true;
-            varToReturn=false;
-        }
         if (!$scope.signUpObj.password){
             $scope.errorField.password = true;
             $scope.pswdVerifier = false;
@@ -73,13 +112,6 @@ app.controller('signUpController', function($scope,$http,$filter,$timeout) {
             $scope.errorField.houseno = true;
             varToReturn=false;
         }
-
-
-        $timeout(function () {
-            $scope.errorField={};
-            $scope.changedVal=false;
-        }, 5000);
-        console.log("Return from validation======: ",varToReturn);
         return varToReturn;
     };
 
@@ -90,6 +122,19 @@ app.controller('signUpController', function($scope,$http,$filter,$timeout) {
         }else {
             $scope.invalidEmail=true;
         }
+    };
+
+    $scope.validatePhoneNumber=function (phone) {
+          if (phone){
+              if (phone.indexOf("+")!==phone.lastIndexOf("+") || phone.length < 8 || phone.length > 12){
+                  $scope.invalidPhoneNumber=true;
+              }else {
+                  $scope.invalidPhoneNumber=false;
+              }
+
+          }else {
+              $scope.invalidPhoneNumber=true;
+          }
     };
 
     $scope.passwordValidator = function (passcheck) {
@@ -114,36 +159,43 @@ app.controller('signUpController', function($scope,$http,$filter,$timeout) {
 });
 
 app.controller('signInController', function($scope,$http,$filter,$timeout) {
-    const baseUrl = "http://localhost:8080/";
-    const baseUrlWeb = "http://localhost/skylark-website/";
-    /*const baseUrl = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/";
-    const baseUrlWeb = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/skylark-website/";*/
+    /*const baseUrl = "http://localhost:8080/";
+    const baseUrlWeb = "http://localhost/skylark-website/";*/
+    const baseUrl = "http://34.236.8.175:8080/";
+    const baseUrlWeb = "http://34.236.8.175/";
+    $scope.goBack=function () {
+        window.history.back();
+        window.history.back();
+    };
     $scope.signInObj={};
     $scope.signInError={};
     $scope.signIn = function(){
         if (!signInValidation())
             return;
+        $scope.signinLoader=true;
         const jsonToSend= angular.toJson($scope.signInObj);
         $http({ method: 'POST', url: baseUrl+"login",data: jsonToSend }).then(function (res){
-            window.location.href=baseUrlWeb+"feedpage.html";
+            $scope.signinLoader=false;
+            window.location.href="feedpage.html";
             var usrCompId = localStorage.setItem("customerData", JSON.stringify(res.data.object));
         }, function (res) {
+            $scope.signinLoader=false;
             $scope.showLoginError=true;
             if (res.status===400){
                 $scope.errorMsg="Email not found";
             }
             if (res.status===401){
-                $scope.errorMsg="Customer not verified by skylark";
+                $scope.errorMsg="Your details not verified by skylark";
             }
             if (res.status===402){
-                $scope.errorMsg="Customer rejected by skylark";
+                $scope.errorMsg="Sorry, Your details rejected by skylark";
             }
             if (res.status===403){
                 $scope.errorMsg="Password mismatch";
             }
             $timeout(function () {
                 $scope.showLoginError=false;
-            }, 5000);
+            }, 10000);
         });
     };
 
@@ -158,9 +210,6 @@ app.controller('signInController', function($scope,$http,$filter,$timeout) {
             signInReturn=false;
         }
 
-        $timeout(function () {
-            $scope.signInError={};
-        }, 5000);
         return signInReturn;
     };
     $scope.toHome=function(){
@@ -171,13 +220,13 @@ app.controller('signInController', function($scope,$http,$filter,$timeout) {
 });
 
 app.controller('feedController', function($scope,$http,$filter,$timeout) {
-    const baseUrl = "http://localhost:8080/";
-    const baseUrlWeb = "http://localhost/skylark-website/";
-   /* const baseUrl = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/";
-    const baseUrlWeb = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/skylark-website/";*/
+    /*const baseUrl = "http://localhost:8080/";
+    const baseUrlWeb = "http://localhost/skylark-website/";*/
+    const baseUrl = "http://34.236.8.175:8080/";
+    const baseUrlWeb = "http://34.236.8.175/";
     $scope.fromLocal=JSON.parse(localStorage.getItem("customerData"));
     if ($scope.fromLocal===null || $scope.fromLocal===undefined){
-        window.location.href=baseUrlWeb+"signin.html";
+        window.location.href="signin.html";
     }
 
     $scope.projectList=["Skylark Royaume","Skylark Ithaca","Skylark Arcadia"];
@@ -186,15 +235,17 @@ app.controller('feedController', function($scope,$http,$filter,$timeout) {
     $scope.sendReferral=function () {
         if(!referralValidation())
             return;
+        $scope.processing=true;
         const jsonToSend= angular.toJson($scope.referral);
         $http({ method: 'POST', url: baseUrl+"referral",data: jsonToSend }).then(function (res){
+            $scope.processing=false;
             $scope.successReferral=true;
             $scope.referral={};
             $timeout(function () {
                 $scope.successReferral=false;
             }, 5000);
         }, function (res) {
-
+            $scope.processing=false;
         });
     };
     
@@ -209,11 +260,6 @@ app.controller('feedController', function($scope,$http,$filter,$timeout) {
             referralReturn=false;
             $scope.errorReferral.email=true;
         }
-        if ($scope.referral.email && $scope.invalidEmail){
-            referralReturn=false;
-            $scope.errorReferral.email=false;
-            $scope.errorReferral.invalidEmail=true;
-        }
         if (!$scope.referral.phone){
             referralReturn=false;
             $scope.errorReferral.phone=true;
@@ -223,9 +269,6 @@ app.controller('feedController', function($scope,$http,$filter,$timeout) {
             $scope.errorReferral.residing=true;
         }
 
-        $timeout(function () {
-            $scope.errorReferral={};
-        }, 5000);
         return referralReturn;
 
     };
@@ -239,25 +282,41 @@ app.controller('feedController', function($scope,$http,$filter,$timeout) {
         }
     };
 
+    $scope.validatePhoneNumber=function (phone) {
+        if (phone){
+            if (phone.indexOf("+")!==phone.lastIndexOf("+") || phone.indexOf("+") > 0 || phone.length < 8 || phone.length > 12){
+                $scope.invalidPhoneNumber=true;
+            }else {
+                $scope.invalidPhoneNumber=false;
+            }
+
+        }else {
+            $scope.invalidPhoneNumber=true;
+        }
+    };
+
 });
 
 app.controller('forgotPasswordController', function($scope,$http,$filter,$timeout) {
-    const baseUrl = "http://localhost:8080/";
-    const baseUrlWeb = "http://localhost/skylark-website/";
-    /*const baseUrl = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/";
-    const baseUrlWeb = "http://cirqdevv2.southeastasia.cloudapp.azure.com:8082/skylark-website/";*/
+    /*const baseUrl = "http://localhost:8080/";
+    const baseUrlWeb = "http://localhost/skylark-website/";*/
+    const baseUrl = "http://34.236.8.175:8080/";
+    const baseUrlWeb = "http://34.236.8.175/";
     $scope.forgot={};
     $scope.getForgotPasswordLink=function () {
         if(!forgotValidation())
             return;
+        $scope.signinLoader=true;
         const jsonToSend= angular.toJson($scope.forgot);
         $http({ method: 'POST', url: baseUrl+"login/submitemail",data: jsonToSend }).then(function (res){
+            $scope.signinLoader=false;
             $scope.successForgot=true;
             $scope.forgot={};
             $timeout(function () {
                 $scope.successForgot=false;
             }, 5000);
         }, function (res) {
+            $scope.signinLoader=false;
                 $scope.notRegistered=true;
             $timeout(function () {
                 $scope.notRegistered=false;
@@ -303,7 +362,7 @@ app.controller('forgotPasswordController', function($scope,$http,$filter,$timeou
         const jsonToSend= angular.toJson($scope.change);
         $http({ method: 'POST', url: baseUrl+"login/changepassword",data: jsonToSend }).then(function (res){
             $scope.successChanged=true;
-            window.location.href=baseUrlWeb+"Password_reset_success.html";
+            window.location.href="Password_reset_success.html";
             $timeout(function () {
                 $scope.successChanged=false;
             }, 5000);
@@ -329,71 +388,99 @@ app.controller('forgotPasswordController', function($scope,$http,$filter,$timeou
         }, 5000);
         return varToSend;
     };
+
+    $scope.toHome=function(){
+        window.location.href="index.html";
+    };
+    $scope.passwordValidator = function (passcheck) {
+        if (!passcheck || passcheck.length < 8 || passcheck.length > 20) {
+            $scope.pswdVerifier = true;
+        } else{
+            $scope.pswdVerifier = false;
+        }
+    };
 });
 
 app.controller('contactUsController', function($scope,$http,$filter,$timeout) {
-    const baseUrl = "http://localhost:8080/";
-    const baseUrlWeb = "http://localhost/skylark-website/";
+   /* const baseUrl = "http://localhost:8080/";
+    const baseUrlWeb = "http://localhost/skylark-website/";*/
+    const baseUrl = "http://34.236.8.175:8080/";
+    const baseUrlWeb = "http://34.236.8.175/";
+
     $scope.errorcontact={};
     var contactFormValidation=function () {
-
         var contactReturn=true;
-        if (!$scope.contact.name){
+        if (!$scope.contact.fname){
             contactReturn=false;
             $scope.errorcontact.name=true;
+
         }
         if (!$scope.contact.email){
             contactReturn=false;
             $scope.errorcontact.email=true;
         }
-        if ($scope.contact.email && $scope.invalidEmail){
-            contactReturn=false;
-            $scope.errorcontact.email=false;
-            $scope.errorcontact.invalidEmail=true;
-        }
         if (!$scope.contact.phone){
             contactReturn=false;
             $scope.errorcontact.phone=true;
+            // $scope.invalidPhoneNumber=true;
         }
 
-
-        $timeout(function () {
-            $scope.contactReturn={};
-        }, 5000);
         return contactReturn;
-
     };
 
     $scope.errorcontact.email=false;
     $scope.validateEmail=function (email) {
         if (/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/.test(email)){
-            $scope.errorcontact.email=false;
+            $scope.invalidEmail=false;
         }else {
-            $scope.errorcontact.email=true;
+            $scope.invalidEmail=true;
         }
     };
 
 
     $scope.contact={};
-    console.log("inside the controller");
-    $scope.toContact= function (projectName) {
 
-        if(!contactFormValidation())
+    $scope.toContact= function (projectName) {
+        console.log("inside the controller fun: ",contactFormValidation());
+        if(!(contactFormValidation() && !$scope.invalidPhoneNumber ))
             return;
         $scope.processing=true;
-         $scope.contact.project=projectName;
+        $scope.contact.sourcepage=projectName;
         const jsonToSend= angular.toJson($scope.contact);
         console.log("jsonToSend",jsonToSend);
-        $http({ method: 'POST', url: baseUrl+"contact",data: jsonToSend }).then(function (res){
+     $http({ method: 'POST', url: baseUrl+"contact/save",data: jsonToSend }).then(function (res){
             console.log("success");
             $scope.processing=false;
             $scope.contact={};
+            $scope.errorcontact={};
         }, function (res) {
             console.log("request failed");
             $scope.contact={};
             $scope.processing=false;
         });
     };
+
+    $scope.validatePhoneNumber=function (phone) {
+        if (phone){
+            if (phone.indexOf("+")!==phone.lastIndexOf("+") || phone.length < 8 || phone.length > 12){
+                $scope.invalidPhoneNumber=true;
+            }
+            else {
+                $scope.invalidPhoneNumber=false;
+
+            }
+            }
+            else {
+            $scope.invalidPhoneNumber=true;
+            }
+    };
+    $scope.clearContact=function () {
+        $scope.contact={};
+    };
+    $scope.showMasterPlan=false;
+    $scope.subsecToggle = function(){
+        $scope.showMasterPlan=!$scope.showMasterPlan;
+    }
 });
 
 
