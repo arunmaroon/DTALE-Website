@@ -42,6 +42,24 @@
                     scrollTop: $('#sec1').offset().top -20
                 }, 700);
             });
+            const shareBtn = document.querySelector('.share-btn');
+
+shareBtn.addEventListener('click', () => {
+  if (navigator.share) {
+    navigator.share({
+      title: 'My awesome post!',
+      text: 'This post may or may not contain the answer to the universe',
+      url: window.location.href
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(err => {
+      console.log(`Couldn't share because of`, err.message);
+    });
+  } else {
+    console.log('web share not supported');
+  }
+});
         });
 
    </script>
@@ -66,6 +84,7 @@
                     <div class="page_content">
                         <div class="flipcart">
                             <img src="images/flipcart.svg" alt="Flipkart" class="wow animated fadeInLeft" data-wow-delay="400ms">
+                            <button class="share-btn">Share</button>
                         </div>
                     </div>
                     <div class="page_content1">
