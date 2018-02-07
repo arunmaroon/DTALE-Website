@@ -1,0 +1,341 @@
+<style>
+    .sticky_form_icon{
+        /*position: fixed;*/
+       margin-bottom: 20px;
+       margin-right: 20px;
+        height: 50px;
+        width: 50px;
+        background: #ed1c24;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        cursor:pointer;
+    }
+    .sticky_icon{
+        height: 30px;
+        width: 30px;
+        margin: 0 auto;
+
+        justify-content: center;
+        /*margin-top: 10px;*/
+        display: none;
+    }
+    .sticky_icon2{
+        display: flex !important;
+    }
+    .sticky_btn_list{
+        /*display: -webkit-box;*/
+        /*display: -ms-flexbox;*/
+        /*display: flex;*/
+        display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-line-pack: end;
+        align-content: flex-start;
+        height: -webkit-calc(100vh - 110px);
+        height: calc(100vh - 110px);
+        -webkit-animation: bottomOpen .3s;
+        animation: bottomOpen .3s;
+        visibility: visible;
+        z-index: 1;
+        bottom: 78px;
+        position: absolute;
+    }
+    .icon1{
+        position: relative;
+        display: block;
+        margin: 0 10px 10px 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 8px 6px -6px rgba(33,33,33,.2);
+        -moz-box-shadow: 0 8px 6px -6px rgba(33,33,33,.2);
+        box-shadow: 0 8px 6px -6px rgba(33,33,33,.2);
+        cursor: pointer;
+        background: #ed1c24;
+    }
+    .icon1 img,.icon2 img{
+        /*height: 30px;*/
+        width: 30px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .icon2{
+        position: relative;
+        display: block;
+        margin: 0 10px 10px 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 8px 6px -6px rgba(33,33,33,.2);
+        -moz-box-shadow: 0 8px 6px -6px rgba(33,33,33,.2);
+        box-shadow: 0 8px 6px -6px rgba(33,33,33,.2);
+        cursor: pointer;
+        background: #ed1c24;
+    }
+    .lead_capture_form{
+        position: fixed;
+        right: 10px;
+        z-index: 40;
+        bottom: 30px;
+    }
+.lead_capture_form1{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .11), -4px -5px 10px rgba(0, 0, 0, .11);
+    height: 100%;
+    padding-top: 80px;
+    display: none;
+    z-index: 2;
+    width: 360px;
+    overflow-y: auto;
+}
+    .lead_capture_form2{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 30px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, .11), -4px -5px 10px rgba(0, 0, 0, .11);
+        height: 100%;
+        padding-top: 80px;
+        display: none;
+        z-index: 2;
+        width: 360px;
+        overflow-y: auto;
+    }
+    .telephone{
+        font-size: 1.25rem;
+        font-family: AvenirNext-Regular;
+        letter-spacing: 0.025em;
+        color: #000000;
+        margin: 0;
+        margin-top: 20px;
+    }
+ @keyframes show{
+0% {
+opacity: 0;
+}
+50% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+visibility: visible;
+}
+}
+.overlay_shadow {
+position: fixed;
+background: rgba(33,33,33,.3);
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+visibility: hidden;
+z-index: 10;
+
+}
+.visibility{
+    -webkit-animation: show .3s linear forwards;
+    animation: show .3s linear forwards;
+}
+    .display_block {
+display: block;
+    }
+    .display_flex{
+
+        display: flex;
+    }
+  @keyframes  bottomOpen{
+      0% {
+          opacity: 0;
+          -webkit-transform: translate(0,20px);
+          transform: translate(0,20px);
+      }
+
+      100% {
+          opacity: 1;
+          -webkit-transform: translate(0,0);
+          transform: translate(0,0);
+      }
+  }
+    .contact_close{
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        height: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .sticky_icon1 {
+        height: 22px;
+        width: 22px;
+        margin: 0 auto;
+        justify-content: center;
+        /* margin-top: 10px; */
+        display: none;
+    }
+    .contact_input1{
+        width: 300px;
+        height: 50px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border: 2px solid #ececec;
+        display: block;
+        margin-top: 20px;
+        font-family: AvenirNext-Regular;
+        color: #000000;
+        font-size: 1rem;
+        outline: none;
+        padding: 0 22px
+    }
+    .contact_textarea1{
+        width: 300px;
+        height: 80px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border: 2px solid #ececec;
+        display: block;
+        margin-top: 20px;
+        font-family: AvenirNext-Regular;
+        color: #999999;
+        font-size: 1rem;
+        outline: none;
+        padding: 20px 22px;
+        resize: none;
+    }
+    .form_hdr2 {
+        font-family: AvenirNext-Regular;
+        font-size: 1rem;
+        color: #000000;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .submit_button2{
+        width: 300px;
+        height: 50px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        font-family: AvenirNext-Medium;
+        color: #ffffff;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        margin-top: 20px;
+        text-align: center;
+        background: #ed1c24;
+        outline: none;
+        border: none;
+        box-shadow: 0px 5px 18px 2px rgba(0, 0, 0, 0.2);
+        border: 2px solid #ed1c24;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+    .error_msg_on_form {
+        font-size: 0.875rem;
+        position: absolute;
+        right: 30px;
+        color: #ed1c24;
+        font-family: AvenirNext-Regular;
+    }
+    @media(max-width:424px){
+        .lead_capture_form1,.lead_capture_form2{
+            width: 300px;
+        }
+        .contact_input1,.contact_textarea1{
+            width: 100%;
+            height: 40px;
+        }
+        .submit_button2 {
+            width: 100%;
+        }
+    }
+</style>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
+<!--<script src="js/controller.js"></script>-->
+<div class="overlay_shadow"></div>
+
+<div class="lead_capture_form" ng-controller="stickyFormController">
+    <div class="lead_capture_form1">
+        <img src="images/close.svg" alt="close icon" class="contact_close" >
+        <h3 class="form_hdr2">Send Details to know more</h3>
+        <form class="skylark_lead_form">
+            <input type="text" class="contact_input1" placeholder="Name*" only-letters-input ng-model="formcontact.fname" >
+            <p class="error_msg_on_form" ng-show="formerrorcontact.name && !formcontact.fname">Enter your name</p>
+            <input type="text"  only-number-input max-length="15" class="contact_input1" placeholder="Phone Number*" ng-model="formcontact.phone" ng-blur="formfocusOutPhone=true" ng-change="formvalidatePhoneNumber(formcontact.phone);" >
+            <p class="error_msg_on_form" ng-show="formerrorcontact.phone && !formcontact.phone">Enter phone number</p>
+            <p class="error_msg_on_form" ng-show="formfocusOutPhone && forminvalidPhoneNumber">Enter valid phone number</p>
+            <input type="email" name="email" class="contact_input1" placeholder="Email ID*"  ng-model="formcontact.email" ng-change="formvalidateEmail(formcontact.email)" ng-blur="formfocusOutEmail=true;" >
+            <p class="error_msg_on_form" ng-show="formerrorcontact.email && !formcontact.email">Enter your email id</p>
+            <p class="error_msg_on_form" ng-show="forminvalidEmail && formfocusOutEmail && formcontact.email">Enter your valid email id</p>
+            <textarea class="contact_textarea1" placeholder="Message" ng-model="formcontact.message"></textarea>
+            <button class="submit_button2" ng-click="formtoContact('SkylarkDasos');">
+                <img src="images/loader.gif" alt="Loader" ng-show="formprocessing" class="loader">
+                <span ng-show="!formprocessing">SUBMIT</span>
+            </button>
+        </form>
+    </div>
+    <div class="lead_capture_form2">
+        <img src="images/close.svg" alt="close icon" class="contact_close" >
+        <h3 class="form_hdr2">Call us on</h3>
+        <div class="telephone"><a href="tel:080 41133888">Telephone : 080 41133888</a></div>
+
+    </div>
+    <div class="sticky_btn_list">
+        <div class="icon1">
+            <img src="images/mail.png" alt="mail">
+        </div>
+        <div class="icon2">
+            <img src="images/phone.png" alt="images">
+        </div>
+    </div>
+    <div class="sticky_form_icon">
+        <img src="images/phone.png" alt="phone" class="sticky_icon sticky_icon2">
+        <img src="images/close1.png" alt="close" class="sticky_icon1">
+    </div>
+  <div class="sticky_form1">
+      
+  </div>  
+
+</div>
+<script>
+    $( document ).ready(function() {
+    $('.sticky_form_icon').click(
+        function(){
+        $('.sticky_btn_list').toggleClass('display_flex');
+            $('.overlay_shadow').toggleClass('visibility');
+            $('.sticky_icon,.sticky_icon1').toggleClass('sticky_icon2');
+    });
+    $('.icon1').click(
+        function(){
+        $('.lead_capture_form1').toggleClass('display_block')
+            $('.sticky_icon,.sticky_icon1').toggleClass('sticky_icon2');
+        });
+           $('.icon2').click(
+            function(){
+                $('.lead_capture_form2').toggleClass('display_block')
+                $('.sticky_icon,.sticky_icon1').toggleClass('sticky_icon2');
+            });
+
+    $('.contact_close').click(
+        function(){
+            $('.lead_capture_form2').removeClass('display_block');
+            $('.lead_capture_form1').removeClass('display_block');
+            $('.sticky_btn_list').removeClass('display_flex');
+            $('.overlay_shadow').removeClass('visibility');
+        });
+    });
+</script>

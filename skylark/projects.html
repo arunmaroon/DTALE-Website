@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/controller.js"></script>
     <link rel="stylesheet" href="styles/loader.css">
@@ -21,9 +22,10 @@
             }, 0);
 
         };
+
     </script>
 </head>
-<body>
+<body  ng-app="skylarkApp" ng-controller="contactUsController">
 <div class="showbox">
     <div class="loader1">
         <svg class="circular" viewBox="25 25 50 50">
@@ -31,7 +33,7 @@
         </svg>
     </div>
 </div>
-<div class="skylark_projectpage_container"  ng-app="skylarkApp" ng-controller="contactUsController">
+<div class="skylark_projectpage_container" >
     <!--hero section starts here-->
     <!--<div id="header">-->
 
@@ -160,7 +162,11 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="650ms"><a href="skylark_dasos.html">Know More <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects wow animated fadeInUp" data-wow-delay="350ms">
+                    <a href="skylark_royaume.html">Know More
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                </p>
             </div>
         </div>
 
@@ -193,7 +199,11 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects wow animated fadeInUp" data-wow-delay="350ms">
+                    <a href="skylark_dasos.html">Know More
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                </p>
             </div>
             <div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">
                 <img src="images/skylark_ithaca.png" alt="Skylark ithaca">
@@ -232,13 +242,13 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms">
+                <p class="view_projects wow animated fadeInUp" data-wow-delay="350ms">
                     <a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a>
                 </p>
             </div>
 
         </div>
-        <div class="load_more"><span>LOAD MORE</span></div>
+        <!--<div class="load_more"><span>LOAD MORE</span></div>-->
     </section>
     <section class="skylark_project_container parallax ">
         <h1 class="all_projects_hdr wow animated fadeInDown" data-wow-delay="100ms">COMPLETED  PROJECTS</h1>
@@ -249,7 +259,7 @@
             <div class="project_container2 ">
                 <h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">
                     <span class="projectname_hdr_span1">01</span>
-                    <span class="projectname_hdr_span2">/Skylark Arcadia II</span>
+                    <span class="projectname_hdr_span2">/Skylark Arcadia I</span>
                 </h1>
                 <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Arcadia II</h2>
                 <div class="project_details wow animated fadeInUp" data-wow-delay="400ms">
@@ -274,7 +284,11 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects wow animated fadeInUp" data-wow-delay="350ms">
+                    <a href="skylark_dasos.html">Know More
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                </p>
             </div>
         </div>
 
@@ -307,86 +321,16 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark-dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects wow animated fadeInUp" data-wow-delay="350ms">
+                    <a href="skylark-dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                </p>
             </div>
             <div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">
                 <img src="images/skylark_esta.png" alt="Skylark Esta">
-                <!--<div  data-paroller-type="background" data-paroller-direction="horizontal" data-paroller-factor="-0.1">-->
-
             </div>
         </div>
-        <!--<div class="projects parallaxsub">-->
-        <!--<div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">-->
-        <!--<img src="images/skylark_royaume.png" alt="Skylark royaume">-->
-        <!--</div>-->
 
-        <!--<div class="project_container2 ">-->
-        <!--<h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">-->
-        <!--<span class="projectname_hdr_span1">03</span>-->
-        <!--<span class="projectname_hdr_span2">/ Skylark EDEN</span>-->
-        <!--</h1>-->
-        <!--<h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Eden</h2>-->
-        <!--<div class="project_details wow animated fadeInUp" data-wow-delay="400ms">-->
-        <!--<div class="project_details_container1">-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Type :</h4>-->
-        <!--<p class="project_details1_para">4 & 5 Bedroom Villas</p>-->
-        <!--</div>-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Area Range :</h4>-->
-        <!--<p class="project_details1_para">2888 - 6877 sq ft.</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="project_details_container2">-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Location :</h4>-->
-        <!--<p class="project_details1_para">Near Hoodi Junction, Whitefield</p>-->
-        <!--</div>-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Project Area:</h4>-->
-        <!--<p class="project_details1_para">18 Acres</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">LOAD MORE DETAILS<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="projects parallaxsub">-->
-        <!--<div class="project_container2 ">-->
-        <!--<h1 class="projectname_hdr wow animated fadeInUp" data-wow-delay="200ms">-->
-        <!--<span class="projectname_hdr_span1">04</span>-->
-        <!--<span class="projectname_hdr_span2">/ Skylark ZENITH</span>-->
-        <!--</h1>-->
-        <!--<h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Zenith</h2>-->
-        <!--<div class="project_details wow animated fadeInUp" data-wow-delay="400ms">-->
-        <!--<div class="project_details_container1">-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Type :</h4>-->
-        <!--<p class="project_details1_para">1, 2, 2.5, 3 BHK & Penthouses</p>-->
-        <!--</div>-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Area Range :</h4>-->
-        <!--<p class="project_details1_para">605 – 3060 sq ft.</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="project_details_container2">-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Location :</h4>-->
-        <!--<p class="project_details1_para">Medahalli-Belathur Road</p>-->
-        <!--</div>-->
-        <!--<div class="project_details1">-->
-        <!--<h4 class="project_details1_hdr">Project Area:</h4>-->
-        <!--<p class="project_details1_para">20 Acres</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">LOAD MORE DETAILS<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>-->
-        <!--</div>-->
-        <!--<div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">-->
-        <!--<img src="images/skylark_ithaca.png" alt="Skylark ithaca">-->
-        <!--</div>-->
-        <!--</div>-->
-        <div class="load_more"><span>LOAD MORE</span></div>
     </section>
 
     <section class="skylark_project_container parallax ">
@@ -410,7 +354,7 @@
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
-                            <p class="project_details1_para">615 - 1533 sq ft.</p>
+                            <p class="project_details1_para">-</p>
                         </div>
                     </div>
                     <div class="project_details_container2">
@@ -420,11 +364,14 @@
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Project Area:</h4>
-                            <p class="project_details1_para">7.5 Acres</p>
+                            <p class="project_details1_para">-</p>
                         </div>
                     </div>
                 </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects wow animated fadeInUp" data-wow-delay="350ms">
+                    <a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                </p>
             </div>
         </div>
 
@@ -435,7 +382,7 @@
                     <span class="projectname_hdr_span2">/  Skylark RICHMOND</span>
                 </h1>
                 <h2 class="project_name wow animated fadeInUp" data-wow-delay="300ms">Skylark Richmond</h2>
-                <div class="project_details wow animated fadeInUp" data-wow-delay="400">
+                <div class="project_details wow animated fadeInUp" data-wow-delay="400ms">
                     <div class="project_details_container1">
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Type :</h4>
@@ -443,7 +390,7 @@
                         </div>
                         <div class="project_details1">
                             <h4 class="project_details1_hdr">Area Range :</h4>
-                            <p class="project_details1_para">605 – 3060 sq ft.</p>
+                            <p class="project_details1_para">-</p>
                         </div>
                     </div>
                     <div class="project_details_container2">
@@ -452,18 +399,21 @@
                             <p class="project_details1_para">Richmond Road</p>
                         </div>
                         <div class="project_details1">
-                            <h4 class="project_details1_hdr">Project Area:</h4>
-                            <p class="project_details1_para">20 Acres</p>
+                            <h4 class="project_details1_hdr">Unit:</h4>
+                            <p class="project_details1_para">40</p>
                         </div>
                     </div>
                 </div>
-                <p class="view_projects wow animated fadeInUp" data-wow-delay="450ms"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects wow animated fadeInUp" data-wow-delay="350ms">
+                    <a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                </p>
             </div>
             <div class="project_container1 wow animated fadeInUp" data-wow-delay="100ms">
                 <img src="images/skylark_richmond.png" alt="Skylark Richmond">
             </div>
         </div>
-        <div class="load_more"><span>LOAD MORE</span></div>
+        <!--<div class="load_more"><span>LOAD MORE</span></div>-->
         <section class="contactus">
             <div class="skylark_contactus_container" >
                 <h1 class="lead_form_hdr">Send Details to know more</h1>
@@ -537,14 +487,16 @@
     </div>
     <!--lead form popup ends here-->
 </div>
+<div id="stickyform">
+    <div ng-include src="sticky.url"></div>
+</div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-
 <script>
     $(document).ready(function() {
         $("#dynamic_footer").load("footer.html");
         $("#header").load("header.html");
+        // $("#stickyform").load("stickycontactform.html");
         $('.load_more').click(function() {
             $('.lead_form_popup_container').css('display', 'block');
             $(body).css('overflow', 'hidden');
@@ -570,12 +522,18 @@
             scrollContainer: null
         });
         wow.init();
-        $("a").on("click touchend", function(e) {
-            var el = $(this);
-            var link = el.attr("href");
-            window.location = link;
 
-        });
+    });
+    $( document ).ready(function() {
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                $('head').append(' <script src="js/mac.js">');
+            }
+
+        }
+
+        getMobileOperatingSystem();
     });
 </script>
 

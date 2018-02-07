@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/loader.css">
     <!--<link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
         window.onload = function() {
             setTimeout(function() {
@@ -18,11 +19,23 @@
             }, 0);
 
         };
+        $( document ).ready(function() {
+            function getMobileOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    $('head').append(' <script src="js/mac.js">');
+                }
+
+            }
+
+            getMobileOperatingSystem();
+        });
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="js/controller.js"></script>
 </head>
-<body  ng-app="skylarkApp" ng-controller="contactUsController">
+<body  ng-app="skylarkApp" ng-controller="contactUsController"  style="background: url(images/homepagebgnd.png)  repeat center;"    data-paroller-factor="0.4"
+       data-paroller-direction="vertical"  >
 <div class="showbox">
     <div class="loader1">
         <svg class="circular" viewBox="25 25 50 50">
@@ -51,7 +64,7 @@
             <button class="landing_page_contactus_btn wow  fadeInDown" data-wow-delay="1100ms" >CONTACT US</button>
             <div class=" wow  fadeInDown" data-wow-delay="1100ms">
                 <span class="call_us"> OR CALL </span>
-                <span class="call_us_number"><a href="tel:080 41133888">080 41133888</a></span>
+                <span class="call_us_number"><a href="tel:080 46554655">080 4655 4655</a></span>
             </div>
         </div>
         </div>
@@ -141,13 +154,13 @@
         <div class="projects_section" style="padding:0;">
             <h3 class="project_section_hdr"  data-paroller-factor="-0.1" data-paroller-type="foreground">PROJECTS</h3>
         </div>
-        <div class="projects_section parallaxsub "  data-paroller-factor="0 " data-paroller-type="foreground">
+        <div class="projects_section parallaxsub sec3"  data-paroller-factor="0" data-paroller-type="foreground">
             <div class="project_container1" >
-                <div  class="bg1" style="background: url('images/skylark_royamue_projext_image.png') repeat center;"    data-paroller-factor="0.2"
-                      data-paroller-direction="horizontal">
+                <div class="bg3" style="background: url('images/skylark_royamue_projext_image.png') repeat center;"    data-paroller-factor="0.2"
+                     data-paroller-direction="horizontal">
                 </div>
             </div>
-            <div class="project_container2 sec1" data-paroller-factor="0.1" data-paroller-type="foreground">
+            <div class="project_container2 " data-paroller-factor="0.1" data-paroller-type="foreground">
                 <h1 class="projectname_hdr">
                     <span class="projectname_hdr_span1">01</span>
                     <span class="projectname_hdr_span2">/ Skylark Royaume</span>
@@ -175,14 +188,15 @@
                         </div>
                     </div>
                 </div>
-                <p class="view_projects"><a href="skylark_dasos.html">Know More <i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+                <p class="view_projects"><a href="skylark_royaume.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
             </div>
         </div>
+
         <div style="background: url('images/royaume_cover_image.png') no-repeat center;" class="contactus_image"
              data-paroller-factor="0.2">
         </div>
-        <div class="projects_section parallaxsub "   data-paroller-factor="0.01" data-paroller-type="foreground">
-            <div class="project_container2 " data-paroller-factor="0.2" data-paroller-type="foreground">
+        <div class="projects_section parallaxsub "   data-paroller-factor="0" data-paroller-type="foreground">
+            <div class="project_container2 " data-paroller-factor="0.1" data-paroller-type="foreground">
                 <h1 class="projectname_hdr">
                     <span class="projectname_hdr_span1">02</span>
                     <span class="projectname_hdr_span2">/ Skylark Ithaca</span>
@@ -221,7 +235,7 @@
         <div style="background: url('images/arcadia_cover_image.png') no-repeat center;" class="contactus_image"
              data-paroller-factor="0.2">
         </div>
-        <div class="projects_section parallaxsub sec3"  data-paroller-factor="0.1" data-paroller-type="foreground">
+        <div class="projects_section parallaxsub sec3"  data-paroller-factor="0" data-paroller-type="foreground">
             <div class="project_container1" >
                 <div class="bg3" style="background: url('images/arcadia.png') repeat center;"    data-paroller-factor="0.2"
                      data-paroller-direction="horizontal">
@@ -461,8 +475,10 @@
     </div>
     <!--lead form popup ends here-->
 </div>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+<div id="stickyform">
+    <div ng-include src="sticky.url"></div>
+</div>
+
 <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
 <link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
 <script type="text/javascript" src="js/slick.js"></script>
@@ -549,24 +565,19 @@
 
         var wow = new WOW(
             {
-                boxClass:     'wow',      // animated element css class (default is wow)
-                animateClass: 'animated', // animation css class (default is animated)
-                offset:       0,          // distance to the element when triggering the animation (default is 0)
-                mobile:       true,       // trigger animations on mobile devices (default is true)
-                live:         true,       // act on asynchronously loaded content (default is true)
+                boxClass:     'wow',
+                animateClass: 'animated',
+                offset:       0,
+                mobile:       true,
+                live:         true,
                 callback:     function(box) {
-                    // the callback is fired every time an animation is started
-                    // the argument that is passed in is the DOM node being animated
+
                 },
-                scrollContainer: null // optional scroll container selector, otherwise use window
+                scrollContainer: null
             }
         );
         wow.init();
-        $("a").on("click touchend", function(e) {
-            var el = $(this);
-            var link = el.attr("href");
-            window.location = link;
-        });
+
     });
 </script>
 

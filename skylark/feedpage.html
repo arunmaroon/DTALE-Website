@@ -16,6 +16,17 @@
                 $(".showbox").css("visibility", "hidden");
             }, 0);
         };
+        $( document ).ready(function() {
+            function getMobileOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    $('head').append(' <script src="js/mac.js">');
+                }
+
+            }
+
+            getMobileOperatingSystem();
+        });
     </script>
 </head>
 <body ng-app="skylarkApp" ng-controller="feedController">
