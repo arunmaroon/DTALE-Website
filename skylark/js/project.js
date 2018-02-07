@@ -1,9 +1,9 @@
 
 $( document ).ready(function() {
-    function load_home() {
-        document.getElementById("360degVideo").innerHTML='<object type="text/html" data="2_Bhk_Vtour/index.html" class="video_container"></object>';
-    };
-    load_home();
+//     function load_home() {
+//         document.getElementById("360degVideo").innerHTML='<object type="text/html" data="2_Bhk_Vtour/index.html" class="video_container"></object>';
+//     };
+//     load_home();
     // $("#content").load("content.html");
     $('.show_fullscreen').click(function() {
         $('.animation360').addClass('full_screen');
