@@ -37,7 +37,7 @@ var app = angular.module('skylarkApp', []);
         };
     };
 })();
-app.controller('signUpController', function($scope,$http,$filter,$timeout) {
+app.controller('signUpController', function($scope,$rootScope,$http,$filter,$timeout) {
     console.log("Controller loading");
     /*const baseUrl = "http://localhost:8080/";
     const baseUrlWeb = "http://localhost/skylark-website/";*/
@@ -45,8 +45,19 @@ app.controller('signUpController', function($scope,$http,$filter,$timeout) {
     const baseUrlWeb = "http://34.236.8.175/";
 
     //============= Sign up call & validation =========================+
+    $rootScope.prevLocationSignUp = document.referrer;
+    console.log("lchnsjvbd vkjhsvf ",$rootScope.prevLocationSignUp);
+
+
+
+    if ($rootScope.prevLocationSignUp.indexOf("signin.html") > -1) {
+        $rootScope.prevLocationSignUp = localStorage.getItem("signin");
+    }else {
+        localStorage.setItem("signup", $rootScope.prevLocationSignUp);
+    }
+
     $scope.goBack=function () {
-        window.history.back();
+        window.open($rootScope.prevLocationSignUp,'_self');
     };
     $scope.signUpObj={};
     $scope.signUpObj.residing="";
@@ -158,14 +169,28 @@ app.controller('signUpController', function($scope,$http,$filter,$timeout) {
     }
 });
 
-app.controller('signInController', function($scope,$http,$filter,$timeout) {
+app.controller('signInController', function($scope,$rootScope,$http,$filter,$timeout,$window ) {
     /*const baseUrl = "http://localhost:8080/";
     const baseUrlWeb = "http://localhost/skylark-website/";*/
     const baseUrl = "http://34.236.8.175:8080/";
     const baseUrlWeb = "http://34.236.8.175/";
+
+    $rootScope.prevLocationSignIn = document.referrer;
+    console.log($rootScope.prevLocationSignUp," sjhfhjbv skjvh login: ",$rootScope.prevLocationSignIn);
+
+
+    if ($rootScope.prevLocationSignIn.indexOf("signup.html") > -1)
+        $rootScope.prevLocationSignIn = localStorage.getItem("signup");
+    else
+
+
+        localStorage.setItem("signin", $rootScope.prevLocationSignIn);
+
+
+        console.log("sjhfhjbv skjvh login: ",$rootScope.prevLocationSignIn);
     $scope.goBack=function () {
-        window.history.back();
-        window.history.back();
+        window.open($rootScope.prevLocationSignIn,'_self');
+        // $window.open(newState, _blank);
     };
     $scope.signInObj={};
     $scope.signInError={};
@@ -402,11 +427,11 @@ app.controller('forgotPasswordController', function($scope,$http,$filter,$timeou
 });
 
 app.controller('contactUsController', function($scope,$http,$filter,$timeout) {
-   /* const baseUrl = "http://localhost:8080/";
-    const baseUrlWeb = "http://localhost/skylark-website/";*/
+    /* const baseUrl = "http://localhost:8080/";
+     const baseUrlWeb = "http://localhost/skylark-website/";*/
     const baseUrl = "http://34.236.8.175:8080/";
     const baseUrlWeb = "http://34.236.8.175/";
-
+    $scope.sticky = {name: "stickycontactform.html", url: "stickycontactform.html"};
     $scope.errorcontact={};
     var contactFormValidation=function () {
         var contactReturn=true;
@@ -448,7 +473,7 @@ app.controller('contactUsController', function($scope,$http,$filter,$timeout) {
         $scope.contact.sourcepage=projectName;
         const jsonToSend= angular.toJson($scope.contact);
         console.log("jsonToSend",jsonToSend);
-     $http({ method: 'POST', url: baseUrl+"contact/save",data: jsonToSend }).then(function (res){
+        $http({ method: 'POST', url: baseUrl+"contact/save",data: jsonToSend }).then(function (res){
             console.log("success");
             $scope.processing=false;
             $scope.contact={};
@@ -469,10 +494,10 @@ app.controller('contactUsController', function($scope,$http,$filter,$timeout) {
                 $scope.invalidPhoneNumber=false;
 
             }
-            }
-            else {
+        }
+        else {
             $scope.invalidPhoneNumber=true;
-            }
+        }
     };
     $scope.clearContact=function () {
         $scope.contact={};
@@ -480,6 +505,90 @@ app.controller('contactUsController', function($scope,$http,$filter,$timeout) {
     $scope.showMasterPlan=false;
     $scope.subsecToggle = function(){
         $scope.showMasterPlan=!$scope.showMasterPlan;
+    }
+});
+
+app.controller('stickyFormController', function($scope,$http,$filter,$timeout) {
+    /* const baseUrl = "http://localhost:8080/";
+     const baseUrlWeb = "http://localhost/skylark-website/";*/
+    const baseUrl = "http://34.236.8.175:8080/";
+    const baseUrlWeb = "http://34.236.8.175/";
+
+    console.log("dfvdsv df gd",location.href);
+
+    $scope.formerrorcontact={};
+    var formcontactFormValidation=function () {
+        var formcontactReturn=true;
+        if (!$scope.formcontact.fname){
+            formcontactReturn=false;
+            $scope.formerrorcontact.name=true;
+
+        }
+        if (!$scope.formcontact.email){
+            formcontactReturn=false;
+            $scope.formerrorcontact.email=true;
+        }
+        if (!$scope.formcontact.phone){
+            formcontactReturn=false;
+            $scope.formerrorcontact.phone=true;
+            // $scope.invalidPhoneNumber=true;
+        }
+
+        return formcontactReturn;
+    };
+
+    $scope.formerrorcontact.email=false;
+    $scope.formvalidateEmail=function (email) {
+        if (/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/.test(email)){
+            $scope.forminvalidEmail=false;
+        }else {
+            $scope.forminvalidEmail=true;
+        }
+    };
+
+
+    $scope.formcontact={};
+
+    $scope.formtoContact= function (projectName) {
+        console.log("inside the controller fun: ",formcontactFormValidation());
+        if(!(formcontactFormValidation() && !$scope.forminvalidPhoneNumber ))
+            return;
+        $scope.formprocessing=true;
+        $scope.formcontact.sourcepage=projectName;
+        const jsonToSend= angular.toJson($scope.formcontact);
+        console.log("jsonToSend",jsonToSend);
+        $http({ method: 'POST', url: baseUrl+"contact/save",data: jsonToSend }).then(function (res){
+            console.log("success");
+            $scope.formprocessing=false;
+            $scope.formcontact={};
+            $scope.formerrorcontact={};
+        }, function (res) {
+            console.log("request failed");
+            $scope.formcontact={};
+            $scope.formprocessing=false;
+        });
+    };
+
+    $scope.formvalidatePhoneNumber=function (phone) {
+        if (phone){
+            if (phone.indexOf("+")!==phone.lastIndexOf("+") || phone.length < 8 || phone.length > 12){
+                $scope.forminvalidPhoneNumber=true;
+            }
+            else {
+                $scope.forminvalidPhoneNumber=false;
+
+            }
+        }
+        else {
+            $scope.forminvalidPhoneNumber=true;
+        }
+    };
+    $scope.formclearContact=function () {
+        $scope.formcontact={};
+    };
+    $scope.formshowMasterPlan=false;
+    $scope.formsubsecToggle = function(){
+        $scope.formshowMasterPlan=!$scope.formshowMasterPlan;
     }
 });
 
