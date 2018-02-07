@@ -1,257 +1,586 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-
-
-    <title>DTALE Design Studio</title>
-    <link rel="icon" href="images/dtalefavicon.png" type="image/png" sizes="16x16">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/jquery.fullpage.css">
-    <meta name="keywords" content="User Interface design, user experience design, user experience design studio, UI Design for Flipkart, UI design for ecommerce, Design studio India, Mobile App Design, Web Design Studio, UX Design Studio, UI Design Studio, UX Studio, UI Studio, UX Studio in India, UI Studio in India, DTALE Design Studio, Bangalore, Delhi, Best Design Studio, UI Design Agency" />
-    <meta name="description" content="We DESIGN experiences that tell a STORY">
-
-    <link rel="canonical" href="https://dtale.io/">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Website - We DESIGN experiences that tell a STORY">
-    <meta property="og:description" content="We DESIGN experiences that tell a STORY">
-    <meta property="og:url" content="https://dtale.io/">
-    <meta property="og:site_name" content="Website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:description" content="We DESIGN experiences that tell a STORY">
-    <meta name="twitter:title" content="Website - We DESIGN experiences that tell a STORY">
-    <meta name="twitter:site" content="@DTaleStudio">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="js/custom.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <title>Skylark Mansions - Premier Villas and Apartments in Bangalore</title>
+    <meta name="description" content="Builders of Luxury Villas and Flats in Bangalore. 2bhk flats, 3 bhk flats, 4 bhk flats, Penthouses and Villas in Bangalore at great locations with the best of Amenities. Enquire now.">
+    <meta name="keywords" content="apartments in bangalore,construction companies in bangalore,flats in bangalore,builders in bangalore,top builders in bangalore,builders and developers in bangalore,real estate companies in bangalore,best builders in bangalore">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/landingpage.css">
+    <link rel="stylesheet" href="styles/loader.css">
+    <!--<link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
+        window.onload = function() {
+            setTimeout(function() {
+                $(".showbox").css("visibility", "hidden");
 
+            }, 0);
 
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                scrollOverflow: true,
-                scrollBar: true,
-            });
-            $('.scroll-link').click(function(e){
-                $('body,html').animate({
-                    scrollTop: $('#sec1').offset().top -20
-                }, 700);
-            });
-            const shareBtn = document.querySelector('.share-btn');
+        };
+        $( document ).ready(function() {
+            function getMobileOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    $('head').append(' <script src="js/mac.js">');
+                }
 
-shareBtn.addEventListener('click', () => {
-  if (navigator.share) {
-    navigator.share({
-      title: 'My awesome post!',
-      text: 'This post may or may not contain the answer to the universe',
-      url: window.location.href
-    }).then(() => {
-      console.log('Thanks for sharing!');
-    })
-    .catch(err => {
-      console.log(`Couldn't share because of`, err.message);
-    });
-  } else {
-    console.log('web share not supported');
-  }
-});
+            }
+
+            getMobileOperatingSystem();
         });
-
-   </script>
-
-
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/controller.js"></script>
 </head>
-<body class="landingpage">
-<div class="loader">
-    <li class="three-bounce selected">
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
-    </li>
+<body  ng-app="skylarkApp" ng-controller="contactUsController"  style="background: url(images/homepagebgnd.png)  repeat center;"    data-paroller-factor="0.4"
+       data-paroller-direction="vertical"  >
+<div class="showbox">
+    <div class="loader1">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div>
 </div>
-    <!-- Header -->
-    <div id="loader"></div>
-    <div class="main homepage_header">
-        <div id="header" class="content"></div>
-          <div id="fullpage">
-            <section class="section intialpage">
-                <div class="content">
-                    <div class="page_content">
-                        <div class="flipcart">
-                            <img src="images/flipcart.svg" alt="Flipkart" class="wow animated fadeInLeft" data-wow-delay="400ms">
-                            <button class="share-btn">Share</button>
-                        </div>
-                    </div>
-                    <div class="page_content1">
-                        <div class="subcontainer1">
-                            <h1 class="wow animated fadeInLeft" data-wow-delay="50ms"><span class="light"> ekart </span></h1>
-                            <h2  class="wow animated fadeInLeft" data-wow-delay="100ms">Helping Flipkart to rethink Logistic experience</h2>
-                            <button class="view_button wow animated fadeInLeft" data-wow-delay="100ms"><a href="flipkart.html">VIEW</a></button>
-                        </div>
-                    </div>
-                    <div class="scroll-link wow animated fadeInDown" data-wow-delay="50ms" >
-                        <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYmid meet">
-                        <g fill="none" fill-rule="evenodd">
-                            <rect width="70" height="118" x="1.5" y="1.5" stroke="#000000" stroke-width="3" rx="36"/>
-                            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#000000"/>
-                        </g>
-                    </svg>
-                    </div>
-                </div>
-            </section>
-            <section class="section " id="sec1">
-                <div class="content">
-                    <div class="page_content">
-                        <div class="flipcart">
-                            <img src="images/sap_localization.svg" alt="SAP" class=" wow animated fadeInLeft" data-wow-delay="400ms">
-                        </div>
-                    </div>
-                    <div class="page_content1">
-                        <div class="subcontainer1">
-                            <h1 class="wow animated fadeInLeft" data-wow-delay="50ms"><span class="light"> SAP </span></h1>
-                            <h2 class="wow animated fadeInLeft" data-wow-delay="100ms">Defining the purpose for SAP Localisation Hub</h2>
-                           <button class="view_button wow animated fadeInLeft" data-wow-delay="100ms"> <a href="SAP-Localization.html">VIEW</a></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section">
-                <div class="content">
-                    <div class="page_content">
-                        <div class="flipcart">
-                            <img src="images/alore.svg" alt="Alore" class="wow animated fadeInLeft" data-wow-delay="400ms">
-                        </div>
-                    </div>
-                    <div class="page_content1">
-                        <div class="subcontainer1">
-                            <h1 class="wow animated fadeInLeft" data-wow-delay="50ms"><span class="light">Alore </span></h1>
-                            <h2 class="wow animated fadeInLeft" data-wow-delay="100ms">Improving productivity that directly translates into growth</h2>
-                            <button class="view_button wow animated fadeInLeft" data-wow-delay="100ms"><a href="alore.html">VIEW</a></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section">
-                <div class="content">
-                    <div class="page_content">
-                        <div class="flipcart">
-                            <img src="images/cognihealth.svg" alt="cognihealth" class="wow animated fadeInLeft" data-wow-delay="400ms">
-                        </div>
-                    </div>
-                    <div class="page_content1">
-                        <div class="subcontainer1">
-                            <h1 class="wow animated fadeInLeft" data-wow-delay="50ms"><span class="light">CogniHealth</span> </h1>
-                            <h2 class="wow animated fadeInLeft" data-wow-delay="100ms">Making sense of data for Dementia Care homes</h2>
-                            <button class="view_button wow animated fadeInLeft" data-wow-delay="100ms"><a href="cognihealth.html">VIEW</a></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section">
-                <div class="content">
-                    <div class="page_content">
-                        <div class="flipcart">
-                            <img src="images/bordo.svg" alt="Bordo" class="wow animated fadeInLeft" data-wow-delay="400ms">
-                        </div>
-                    </div>
-                    <div class="page_content1">
-                        <div class="subcontainer1">
-                            <h1 class="wow animated fadeInLeft" data-wow-delay="50ms"><span class="light">Bordo</span></h1>
-                            <h2  class="wow animated fadeInLeft" data-wow-delay="100ms">Simplifying OOH advertising experience with technology</h2>
-                            <button class="view_button wow animated fadeInLeft" data-wow-delay="100ms"><a href="bordo.html">VIEW</a></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section">
-                <div class="content">
-                    <div class="page_content">
-                        <div class="flipcart">
-                            <img src="images/jiyo.svg" alt="Jiyo" class="wow animated fadeInLeft" data-wow-delay="400ms">
-                        </div>
-                    </div>
-                    <div class="page_content1">
-                        <div class="subcontainer1">
-                            <h1 class="wow animated fadeInLeft" data-wow-delay="50ms"><span class="light">Jiyo </span></h1>
-                            <h2 class="wow animated fadeInLeft" data-wow-delay="100ms">Designing E-Commerce for personalised wellbeing</h2>
-                             <button class="view_button wow animated fadeInLeft" data-wow-delay="100ms"><a href="jiyo.html">VIEW</a></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-              <section class="section">
-                  <h2 class="future_experiences">FUTURE EXPERIENCES</h2>
-                  <div class="content">
-                     <div class="subsection1 wow animated fadeInLeft" data-wow-delay="100ms">
-                         <img src="images/vr.png" alt="VR">
-                         <h3 class="section_title1">VR</h3>
-                     </div>
-                      <div class="subsection2 wow animated fadeInLeft" data-wow-delay="200ms">
-                          <img src="images/iot.png" alt="IOT">
-                          <h3 class="section_title1">IOT</h3>
-                      </div>
-                  </div>
-              </section>
-              <section class="section">
-                   <div class="content">
-                      <h1 class="section_content_hdr">
-                          <span class="section_content_hdr_span wow animated fadeInDown" data-wow-delay="200ms">We <span class="bold">DESIGN</span></span>
-                          <span class="section_content_hdr_span wow animated fadeInDown"><span class="bold">DIGITAL</span> Experiences</span>
-                          <span class="section_content_hdr_span wow animated fadeInDown">that tell a <span class="bold">STORY</span></span>
-                      </h1>
-                       <button id="emailLink" class="mailto_btn wow animated fadeInDown"><a target="_blank" href="mailto:contact@dtale.io">Write to us</a></button>
-                  </div>
-              </section>
-            <section class="section  fp-auto-height" id="dynamic_footer">
-            </section>
+<div class="skylark_landingpage_container "  id="parallax-container" >
+    <!--hero section starts here-->
+    <section class="hero_section" >
+        <video  id="bgvid" playsinline autoplay muted loop>
+
+            <source src="images/skylarkdasosbgnd.mp4" type="video/mp4">
+        </video>
+        <div>
+        <h4 class="landing_page_hdr " data-paroller-factor="0.3" data-paroller-type="foreground">
+            <span class="hero_section_span1 wow  fadeInDown" data-wow-delay="500ms">Experience serenity with</span>
+            <span class="hero_section_span2  wow  fadeInDown" data-wow-delay="700ms">80% OPEN SPACES</span>
+
+        </h4>
+        <div class="skylark_dasos "  data-paroller-factor="0.3" data-paroller-type="foreground" >
+            <img src="images/skylark_dasos.svg" alt="Skylark dasos" class="wow  fadeInDown" data-wow-delay="900ms">
+         </div>
+
+        <div class="landing_page_btn_container " data-paroller-factor="0.3" data-paroller-type="foreground">
+            <button class="landing_page_contactus_btn wow  fadeInDown" data-wow-delay="1100ms" >CONTACT US</button>
+            <div class=" wow  fadeInDown" data-wow-delay="1100ms">
+                <span class="call_us"> OR CALL </span>
+                <span class="call_us_number"><a href="tel:080 46554655">080 4655 4655</a></span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="skylark_landing_menu " >
+        <div class="logo_mobile">
+            <a href="index.html"><img src="images/skylark_logo.svg" alt="Skylark logo"></a>
+        </div>
+        <nav class="main_menu">
+            <ul class="nav_list1">
+                <li  class="active_menu">
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="projects.html">PROJECTS</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <!--<li>-->
+                    <!--<a href="">BLOG</a>-->
+                <!--</li>-->
+            </ul>
+            <div class="logo">
+                <a href="index.html"><img src="images/skylark_logo.svg" alt="Skylark logo" class="main_logo"></a>
+            </div>
+            <ul class="nav_list2">
+                <li>
+                    <a href="contact.html">CONTACT US</a>
+                </li>
+                <li>
+                    <a href="signup.html">SIGN UP</a>
+                </li>
+                <li>
+                    <a href="signin.html">SIGN IN</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav-toggle">
+            <span class="bar-top"></span>
+            <span class="bar-mid"></span>
+            <span class="bar-bot"></span>
         </div>
     </div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112112888-1"></script>
+    <!--hero section ends here-->
+    <section class="skylark_achievements"  data-paroller-factor="-0.02" data-paroller-type="foreground" >
+        <div class="skylark_achievements_subsection1 ">
+            <h3 class="skylark_achievements_hdr">
+                WE ARE THE LEADERS IN THE CONSTRUCTION.
+            </h3>
+            <p class="skylark_achievements_para">
+                Skylark Mansions was founded with a dream to build homes for all citizens. This dream has been impeccably nurtured and grown by our Chairman & Managing Director, Mr. Saleem Sheriff. Based in Bangalore, he emphasizes strongly on innovation and has steered the Skylark Group into being a customer centric, profitable and responsible organization.
+
+            </p>
+            <div class="achievements_list">
+                <ul>
+                    <li>
+                        <div class="content1">126</div>
+                        <h5 class="content2">PROJECTS</h5>
+                    </li>
+                    <li>
+                        <div class="content1">1105</div>
+                        <h5 class="content2">CLIENTS</h5>
+                    </li>
+                    <li>
+                        <div class="content1">1702</div>
+                        <h5 class="content2">HOUSES</h5>
+                    </li>
+                    <li>
+                        <div class="content1">36</div>
+                        <h5 class="content2">AWARDS</h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="skylark_achievements_subsection2"  data-depth='0.1' data-type='parallax'>
+            <div class="skylark_experience">
+                <h1>
+                    <span class="exp_span1">26</span>
+                    <span class="exp_span2">YEARS OF EXPERIENCE</span>
+                    <span  class="exp_span2">IN THE INDUSTRY</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="skylark_project_container_1 "  data-paroller-factor="0.01" data-paroller-type="foreground">
+        <div class="projects_section" style="padding:0;">
+            <h3 class="project_section_hdr"  data-paroller-factor="-0.1" data-paroller-type="foreground">PROJECTS</h3>
+        </div>
+        <div class="projects_section parallaxsub sec3"  data-paroller-factor="0" data-paroller-type="foreground">
+            <div class="project_container1" >
+                <div class="bg3" style="background: url('images/skylark_royamue_projext_image.png') repeat center;"    data-paroller-factor="0.2"
+                     data-paroller-direction="horizontal">
+                </div>
+            </div>
+            <div class="project_container2 " data-paroller-factor="0.1" data-paroller-type="foreground">
+                <h1 class="projectname_hdr">
+                    <span class="projectname_hdr_span1">01</span>
+                    <span class="projectname_hdr_span2">/ Skylark Royaume</span>
+                </h1>
+                <h2 class="project_name">Skylark Royaume</h2>
+                <div class="project_details">
+                    <div class="project_details_container1">
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Type :</h4>
+                            <p class="project_details1_para">1, 2 and 3 BHK & Penthouses</p>
+                        </div>
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Area Range :</h4>
+                            <p class="project_details1_para">615 - 1533 sq ft.</p>
+                        </div>
+                    </div>
+                    <div class="project_details_container2">
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Location :</h4>
+                            <p class="project_details1_para">Near Electronic City, Off Hosa Road</p>
+                        </div>
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Project Area:</h4>
+                            <p class="project_details1_para">7.5 Acres</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="view_projects"><a href="skylark_royaume.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+            </div>
+        </div>
+
+        <div style="background: url('images/royaume_cover_image.png') no-repeat center;" class="contactus_image"
+             data-paroller-factor="0.2">
+        </div>
+        <div class="projects_section parallaxsub "   data-paroller-factor="0" data-paroller-type="foreground">
+            <div class="project_container2 " data-paroller-factor="0.1" data-paroller-type="foreground">
+                <h1 class="projectname_hdr">
+                    <span class="projectname_hdr_span1">02</span>
+                    <span class="projectname_hdr_span2">/ Skylark Ithaca</span>
+                </h1>
+                <h2 class="project_name">Skylark Ithaca</h2>
+                <div class="project_details">
+                    <div class="project_details_container1">
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Type :</h4>
+                            <p class="project_details1_para">Type: 1, 2, 2.5, 3 BHK & Penthouses</p>
+                        </div>
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Area Range :</h4>
+                            <p class="project_details1_para">605 – 3060 sq ft.</p>
+                        </div>
+                    </div>
+                    <div class="project_details_container2">
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Location :</h4>
+                            <p class="project_details1_para">Medahalli-Belathur Road</p>
+                        </div>
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Project Area:</h4>
+                            <p class="project_details1_para">20 Acres</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="view_projects"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+            </div>
+            <div class="project_container1" >
+                <div class="bg2" style="background: url('images/ithaca.png') repeat center;"   data-paroller-factor="0.2"
+                     data-paroller-direction="horizontal">
+                </div>
+            </div>
+        </div>
+        <div style="background: url('images/arcadia_cover_image.png') no-repeat center;" class="contactus_image"
+             data-paroller-factor="0.2">
+        </div>
+        <div class="projects_section parallaxsub sec3"  data-paroller-factor="0" data-paroller-type="foreground">
+            <div class="project_container1" >
+                <div class="bg3" style="background: url('images/arcadia.png') repeat center;"    data-paroller-factor="0.2"
+                     data-paroller-direction="horizontal">
+                </div>
+            </div>
+            <div class="project_container2 " data-paroller-factor="0.1" data-paroller-type="foreground">
+                <h1 class="projectname_hdr">
+                    <span class="projectname_hdr_span1">03</span>
+                    <span class="projectname_hdr_span2">/ Skylark Arcadia II</span>
+                </h1>
+                <h2 class="project_name">Skylark Arcadia II</h2>
+                <div class="project_details">
+                    <div class="project_details_container1">
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Type :</h4>
+                            <p class="project_details1_para">4 & 5 Bedroom Villas</p>
+                        </div>
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Area Range :</h4>
+                            <p class="project_details1_para">2888 - 6877 sq ft.</p>
+                        </div>
+                    </div>
+                    <div class="project_details_container2">
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Location :</h4>
+                            <p class="project_details1_para">Near Hoodi Junction, Whitefield</p>
+                        </div>
+                        <div class="project_details1">
+                            <h4 class="project_details1_hdr">Project Area:</h4>
+                            <p class="project_details1_para">18 Acres</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="view_projects"><a href="skylark_dasos.html">Know More<i class="fa fa-caret-right" aria-hidden="true"></i></a></p>
+            </div>
+        </div>
+    </section>
+    <section class="image_section">
+        <div style="background: url('images/ithacia_cover_image.png') no-repeat center; " class="contactus_image"  data-paroller-factor="0.2">
+            <!--<img src="images/image1.png" alt="" class="contactus_image">-->
+        </div>
+    </section>
+    <section class="skylark_specialities "  data-paroller-factor="0.1" data-paroller-type="foreground" >
+        <h3 class="section_hdr">why choose us</h3>
+        <ul>
+            <li class="list1 wow animated fadeInLeft" data-wow-delay="50ms">
+                <div>
+                    <img src="images/smiley.png" alt="Professional" class="icon">
+                    <h4 class="title1">Professional</h4>
+                    <p class="para1">
+                        Every project we make is an individual attempt to
+                        meet the requirements with maintaining the highest
+                        quality of the Home.
+                    </p>
+                </div>
+            </li>
+            <li class="list1 wow animated fadeInLeft" data-wow-delay="75ms">
+                <div>
+                    <img src="images/creative_design.png" alt="Creative Design" class="icon">
+                    <h4 class="title1">Creative Design</h4>
+                    <p class="para1">We approach each client individually and we undertake exclusively those challenges,
+                        that we're able to perform at the highest level. Timeliness and quality are inviolable for us
+                    </p>
+                </div>
+            </li>
+            <li class="list1 wow animated fadeInLeft" data-wow-delay="100ms">
+                <div>
+                    <img src="images/building_fast.png" alt="Building Fastly" class="icon">
+                    <h4 class="title1">Building Fastly</h4>
+                    <p class="para1">
+                        We are touch with every client during the whole project to get to know each other and satisfy all project requirements.
+                        We are at your service after completion of the project as well.
+                    </p>
+                </div>
+            </li>
+            <li class="list1 wow animated fadeInLeft" data-wow-delay="50ms">
+                <div>
+                    <img src="images/support.png" alt="Dedicated Support" class="icon">
+                    <h4 class="title1">Dedicated Support</h4>
+                    <p class="para1">
+                        During the years of working together, i have executed my own methodology, which fits everyone of Admiral team.
+                        i always work together on every project detail, never individually.I'm a real team.
+                    </p>
+                </div>
+            </li>
+            <li class="list1 wow animated fadeInLeft" data-wow-delay="75ms">
+                <div>
+                    <img src="images/currency.png" alt="Value for Money" class="icon">
+                    <h4 class="title1">Value for Money</h4>
+                    <p class="para1">
+                        I love what we do. Every project is made with passion and engagement.
+                        My work profits so i can make my dreams come true, and find even more inspiration for my future work.
+                        Even when i'm not working, i still think about new solutions, ideas, and improvements.
+                    </p>
+                </div>
+            </li>
+            <li class="list1 wow animated fadeInLeft" data-wow-delay="100ms">
+                <div class="last_li">
+                    <a href="projects.html" class="more_projects">View all Projects</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <div style="background: url('images/richmond_cover_image.png') no-repeat center;" class="contactus_image"
+         data-paroller-factor="0.2">
+        <!--<img src="images/image1.png" alt="" class="contactus_image">-->
+    </div>
+    <section class="contactus">
+        <div class="skylark_contactus_container" >
+            <h1 class="lead_form_hdr">Send Details to know more</h1>
+            <form class="landing_page_form">
+                <div class="landing_page_form_container1">
+                    <label>Name*</label>
+                    <input type="text" placeholder="John" ng-model="contact.fname">
+                    <p class="error_msg1" ng-show="errorcontact.name && !contact.fname">Enter your name</p>
+                </div>
+                <div class="landing_page_form_container1">
+                    <label>Phone Number*</label>
+                    <input type="text" only-number-input placeholder="+91 9916357893" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);">
+                    <p class="error_msg1" ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                    <p class="error_msg1" ng-show="focusOutPhone && invalidPhoneNumber && contact.phone">Enter valid phone number</p>
+                </div>
+                <div class="landing_page_form_container1">
+                    <label>Email ID*</label>
+                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;">
+                    <p class="error_msg1"   ng-show="errorcontact.email && !contact.email">Enter your email id</p>
+                    <p class="error_msg1"   ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
+                </div>
+                <div class="landing_page_form_container1">
+                    <label>Message</label>
+                    <textarea  ng-model="contact.message">
+                     </textarea>
+                </div>
+                <button class="submit_button1" ng-click="toContact('LandingPage');">
+                    <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
+                    <span ng-show="!processing">SUBMIT</span>
+                </button>
+            </form>
+        </div>
+    </section>
+    <section class="testimonials " >
+        <h3 class="section_hdr" >TESTIMONIALS</h3>
+        <div class="testimonials_container">
+            <div class="testimonials_container1 ">
+
+
+                <p class="customer_feedback">
+                    "I booked 3 BHK recently , As a NRI, booking process was easy and smooth. CRM team are very professional. Sales executive Ankita Jain was very responsive in all queries. I am very happy with the location of project As the builder is trust worthy in terms of quality and brand. Previous projects they delivered on time."
+                </p>
+                <img src="images/customerimage.png" alt="" >
+                <h3 class="customer_name">SANJEEV GUBYAD</h3>
+            </div>
+            <div class="testimonials_container1" >
+
+
+                <p class="customer_feedback">
+                    "I booked 3 BHK recently , As a NRI, booking process was easy and smooth. CRM team are very professional. I am very happy with the location of project As the builder is trust worthy in terms of quality and brand. Previous projects they delivered on time."
+                </p>
+                <img src="images/imd2.png" alt="" >
+                <h3 class="customer_name">SANJEEV GUBYAD</h3>
+            </div>
+            <div class="testimonials_container1" >
+
+
+                <p class="customer_feedback">
+                    "I booked 3 BHK recently , As a NRI, booking process was easy and smooth. CRM team are very professional. Sales executive Ankita Jain was very responsive in all queries. I am very happy with the location of project As the builder is trust worthy in terms of quality and brand. Previous projects they delivered on time."
+                </p>
+                <img src="images/customerimage.png" alt=""  >
+                <h3 class="customer_name">SANJEEV GUBYAD</h3>
+            </div>
+            <div class="testimonials_container1" >
+
+
+                <p class="customer_feedback">
+                    "I booked 3 BHK recently , As a NRI, booking process was easy and smooth. CRM team are very professional. Sales executive Ankita Jain was very responsive in all queries. I am very happy with the location of project As the builder is trust worthy in terms of quality and brand. Previous projects they delivered on time."
+                </p>
+                <img src="images/imd2.png" alt="" >
+                <h3 class="customer_name">SANJEEV GUBYAD</h3>
+            </div>
+            <div class="testimonials_container1" >
+
+
+                <p class="customer_feedback">
+                    "I booked 3 BHK recently , As a NRI, booking process was easy and smooth. Sales executive Ankita Jain was very responsive in all queries. I am very happy with the location of project As the builder is trust worthy in terms of quality and brand. Previous projects they delivered on time."
+                </p>
+                <img src="images/customerimage.png" alt=""  >
+                <h3 class="customer_name">SANJEEV GUBYAD</h3>
+            </div>
+        </div>
+    </section>
+    <!--<section class="our_story_container  wow  fadeInDown" data-wow-delay="400ms"  >-->
+        <!--<div class="our_story_container1">-->
+            <!--<div class="story_video_container">-->
+                <!--<h3 class="contactus_hdr">Our Story</h3>-->
+                <!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/q0Ngszo9K4k?enablejsapi=1" frameborder="0" allowfullscreen id="autoplay-video">-->
+                <!--</iframe>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+    <footer class="footer" id="dynamic_footer">
+    </footer>
+    <!--lead form popup starts here-->
+    <div class="lead_form_popup_container">
+        <div class="lead_form_popup">
+            <img src="images/close.svg" alt="close icon" class="close_icon" ng-click="clearContact();">
+            <h1 class="lead_form_hdr">Send Details to know more</h1>
+            <form>
+                <div class="form_row1">
+                    <label>Name*</label>
+                    <input type="text" only-letters-input placeholder="John" ng-model="contact.fname">
+                    <p class="error_msg1" ng-show="errorcontact.name && !contact.fname">Enter your name</p>
+                </div>
+                <div class="form_row1">
+                    <label>Phone Number*</label>
+                    <input type="text" only-number-input placeholder="+91 9916357893" ng-model="contact.phone" ng-blur="focusOutPhone=true" ng-change="validatePhoneNumber(contact.phone);">
+                    <p class="error_msg1"ng-show="errorcontact.phone && !contact.phone">Enter phone number</p>
+                    <p class="error_msg1"ng-show="focusOutPhone && invalidPhoneNumber">Enter valid phone number</p>
+                </div>
+                <div class="form_row1">
+                    <label>Email ID*</label>
+                    <input type="text" placeholder="john@gmail.com" ng-model="contact.email" ng-change="validateEmail(contact.email)" ng-blur="focusOutEmail=true;">
+                    <p class="error_msg1"   ng-show="errorcontact.email && !contact.email">Enter your email id</p>
+                    <p class="error_msg1"   ng-show="invalidEmail && focusOutEmail && contact.email">Enter your valid email id</p>
+                </div>
+                <div class="form_row1">
+                    <label>Message</label>
+                    <textarea ng-model="contact.message">
+                    </textarea>
+                </div>
+                <button class="submit_button1" ng-click="toContact('LandingPage');">
+                    <img src="images/loader.gif" alt="Loader" ng-show="processing" class="loader">
+                    <span ng-show="!processing">SUBMIT</span>
+                </button>
+
+            </form>
+        </div>
+    </div>
+    <!--lead form popup ends here-->
+</div>
+<div id="stickyform">
+    <div ng-include src="sticky.url"></div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
+<script type="text/javascript" src="js/slick.js"></script>
+<script src="js/jquery.paroller.min.js"></script>
+<script src="js/slick-animation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    $( document ).ready(function() {
+        $("#dynamic_footer").load("footer.html");
+        $('.nav-toggle').click(function() {
+            $(this).toggleClass('opened');
+            $('.main_menu').toggleClass('display_block');
+        });
+        $('.landing_page_contactus_btn').click(function() {
+            $('.lead_form_popup_container').css('display', 'block');
+            $(body).css('overflow', 'hidden');
+        });
 
-    gtag('config', 'UA-112112888-1');
+        $('.close_icon').click(function() {
+            $('.lead_form_popup_container').css('display', 'none');
+            $(body).css('overflow', 'auto');
+        });
+        $("body").paroller();
+        $(window).on('load', function() {
+
+        var wow = new WOW(
+            {
+                boxClass:     'wow',      // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset:       0,          // distance to the element when triggering the animation (default is 0)
+                mobile:       true,       // trigger animations on mobile devices (default is true)
+                live:         true,       // act on asynchronously loaded content (default is true)
+                callback:     function(box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                },
+                scrollContainer: null // optional scroll container selector, otherwise use window
+            }
+        );
+        wow.init();
+        });
+        $('.testimonials_container').slick({
+
+            slidesToShow: 1,
+            autoplay:false,
+            autoplaySpeed: 5000,
+            adaptiveHeight: true,
+            speed: 200,
+            // fade: true,
+            // cssEase: 'ease-in-out',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+
+        //uncommand the below code for autoplaying the youtubevideo
+        //for autoplaying the youtube video when its come to view
+    //     var iframe = document.getElementById("autoplay-video"),
+    //         disableAutoPlay = false;
+    //     function isScrolledIntoView(el) {
+    //         var elemTop = el.getBoundingClientRect().top,
+    //             elemBottom = el.getBoundingClientRect().bottom,
+    //             isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    //         return isVisible;
+    //     }
+    //     $(window).scroll(function () {
+    //         if (!disableAutoPlay) {
+    //             if (isScrolledIntoView(iframe)) {
+    //                 iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    //             } else {
+    //                 iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    //             }
+    //         }
+    //     });
+    //
+     });
+    $(window).on('load', function() {
+
+        var wow = new WOW(
+            {
+                boxClass:     'wow',
+                animateClass: 'animated',
+                offset:       0,
+                mobile:       true,
+                live:         true,
+                callback:     function(box) {
+
+                },
+                scrollContainer: null
+            }
+        );
+        wow.init();
+
+    });
 </script>
-    
-    <script type="text/javascript">
-    window.revoiceSettings = {
-        handler: 'DTALEDesignStudio',
-        page_id: '318396175204567',
-        created_at: '1516255143'
-    };
-    (function() {
-        var revoice = window.Revoice;
-        if (typeof revoice === "function") {
-            revoice('init');
-            revoice('update', revoiceSettings);
-        } else {
 
-            function load_revoice_script() {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.async = true;
-                script.src = 'https://www.revoice.me/newrevoice/js/revoice-frame.js';
-                var scriptContent = document.getElementsByTagName('script')[0];
-                scriptContent.parentNode.insertBefore(script, scriptContent);
-            }
-
-            if (window.attachEvent){
-                window.attachEvent('onload', load_revoice_script);
-            }
-            else{
-                window.addEventListener('load', load_revoice_script, false);
-            }
-        }
-    })()
-</script>
 </body>
 
 </html>
